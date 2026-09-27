@@ -1,0 +1,26 @@
+{
+  "phase1_technical_checks_passed": true,
+  "fit_budget_linear_estimates": {
+    "prophet": {
+      "estimated_fits": 22,
+      "pilot_fit_seconds": 16.148995833999834,
+      "linear_fit_budget_hours": 0.09868830787444342
+    },
+    "statsmodels": {
+      "estimated_fits": 24,
+      "pilot_fit_seconds": 168.5706749910005,
+      "pilot_iterations": 10,
+      "pilot_converged": false,
+      "linear_budget_hours_50_iterations": 5.619022499700017,
+      "linear_budget_hours_200_iterations": 22.476089998800067
+    },
+    "neuralprophet": {
+      "core_and_sensitivity_fits": 54,
+      "candidate_fits": 2,
+      "pilot_epochs": 2,
+      "pilot_fit_seconds": 11.367215616999601,
+      "linear_budget_hours_30_epochs": 2.6839259095693504,
+      "linear_budget_hours_50_epochs": 4.38900825211929
+    }
+  }
+}

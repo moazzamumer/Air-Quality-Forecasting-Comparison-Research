@@ -1,0 +1,15 @@
+test_bias_is_applied_before_current_outcomes_update_it (test_protocol.ProtocolTests.test_bias_is_applied_before_current_outcomes_update_it) ... ok
+test_duplicate_origins_and_nonfinite_predictions_are_errors (test_protocol.ProtocolTests.test_duplicate_origins_and_nonfinite_predictions_are_errors) ... ok
+test_future_targets_never_enter_predictor_input (test_protocol.ProtocolTests.test_future_targets_never_enter_predictor_input) ... ok
+test_hourly_calendar_preserves_all_original_values (test_protocol.ProtocolTests.test_hourly_calendar_preserves_all_original_values) ... ok
+test_neural_training_segments_never_bridge_or_fill_gaps (test_protocol.ProtocolTests.test_neural_training_segments_never_bridge_or_fill_gaps) ... ok
+test_persistence_repeats_history_only (test_protocol.ProtocolTests.test_persistence_repeats_history_only) ... ok
+test_raw_forecast_extracts_one_origin_and_all_leads (test_protocol.ProtocolTests.test_raw_forecast_extracts_one_origin_and_all_leads) ... ok
+test_scaling_and_clipping_ignore_future_values (test_protocol.ProtocolTests.test_scaling_and_clipping_ignore_future_values) ... ok
+test_strict_shared_coverage (test_protocol.ProtocolTests.test_strict_shared_coverage) ... ok
+test_unavailable_pp_covariates_cannot_be_silently_filled (test_protocol.ProtocolTests.test_unavailable_pp_covariates_cannot_be_silently_filled) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.247s
+
+OK

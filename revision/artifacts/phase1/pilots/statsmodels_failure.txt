@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/code/pilots.py", line 191, in main
+    parser.add_argument("--models",nargs="+",default=["prophet","statsmodels","neuralprophet"],choices=["prophet","statsmodels","neuralprophet"])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/code/pilots.py", line 84, in run_model
+    refreshed = fit.extend(observed_week.pm2_5, exog=observed_week[features])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/venv/lib/python3.11/site-packages/statsmodels/tsa/statespace/sarimax.py", line 1894, in extend
+    return super().extend(endog, exog=exog, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/venv/lib/python3.11/site-packages/statsmodels/tsa/statespace/mlemodel.py", line 4450, in extend
+    mod.k_states, 'known', constant=self.predicted_state[..., -1],
+                                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable

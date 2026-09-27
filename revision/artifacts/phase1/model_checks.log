@@ -1,0 +1,46 @@
+Importing plotly failed. Interactive plots will not work.
+Importing plotly failed. Interactive plots will not work.
+WARNING - (py.warnings._showwarnmsg) - /home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/venv/lib/python3.11/site-packages/pytorch_lightning/utilities/data.py:79: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 32. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+WARNING - (py.warnings._showwarnmsg) - /home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/venv/lib/python3.11/site-packages/pytorch_lightning/utilities/data.py:79: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 6. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+Synthetic training trace: [{'train_loss': 1.033203125, 'reg_loss': 0.0, 'MAE': 9.616430282592773, 'RMSE': 12.042616844177246, 'Loss': 1.0837385654449463, 'RegLoss': 0.0, 'epoch': 0}, {'train_loss': 1.024072289466858, 'reg_loss': 0.0, 'MAE': 9.071310997009277, 'RMSE': 11.34435749053955, 'Loss': 1.0381267070770264, 'RegLoss': 0.0, 'epoch': 1}]
+{
+  "sarimax": {
+    "missing_endog_accepted": true,
+    "parameters_unchanged_after_extend": true,
+    "forecast_index_after_state_update_correct": true,
+    "low_memory_state_refresh_matches_standard_extend": true
+  },
+  "neuralprophet": {
+    "missing_source_values": 4,
+    "finite_training_loss": true,
+    "training_episodes": [
+      {
+        "ID": "episode_000",
+        "start": "2024-01-01 00:00:00",
+        "end": "2024-01-02 05:00:00",
+        "observed_hours": 30,
+        "retained": true,
+        "training_samples": 19
+      },
+      {
+        "ID": "episode_001",
+        "start": "2024-01-02 10:00:00",
+        "end": "2024-01-07 15:00:00",
+        "observed_hours": 126,
+        "retained": true,
+        "training_samples": 115
+      }
+    ],
+    "gap_crossing_training_samples": 0,
+    "raw_vs_target_diagonal_equal": true,
+    "valid_future_yhat1": 1,
+    "normalization_training_only_parameters_checked": true,
+    "physical_unit_translation_check_passed": true,
+    "original_no_imputation_prediction_error": "UnboundLocalError: cannot access local variable 'conditional_cols' where it is not associated with a value",
+    "prediction_only_compatibility_path_passed": true,
+    "fit_target_imputation_disabled": true
+  },
+  "elapsed_seconds_including_imports": 5.218340722999528
+}

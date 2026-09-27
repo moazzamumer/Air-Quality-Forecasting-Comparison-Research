@@ -1,0 +1,160 @@
+cell_index_zero_based,type,lines,execution_count,outputs,first_line
+0,markdown,1,,0,# Phase 0: EDA 
+1,markdown,1,,0,### Basic Overview
+2,code,11,8.0,1,import pandas as pd
+3,code,1,9.0,1,df.isna().sum()
+4,markdown,1,,0,### Missing Values Heatmap
+5,code,7,10.0,1,import seaborn as sns
+6,markdown,1,,0,### Histograms of Key Variables
+7,code,7,12.0,1,"pollutants = ['pm2_5', 'pm10', 'co', 'no2', 'so2', 'o3', 'no', 'nh3']"
+8,markdown,1,,0,### Time Series Plots
+9,code,10,13.0,8,# Parse datetime
+10,markdown,1,,0,### Correlation Heatmap
+11,code,15,17.0,1,import matplotlib.pyplot as plt
+12,code,17,5.0,1,"plt.figure(figsize=(12, 10))"
+13,markdown,1,,0,# Phase 1: Data Preparation
+14,markdown,1,,0,### Load Data & Parse Datetime
+15,code,16,5.0,1,# Load CSV
+16,markdown,1,,0,### Outlier Handling
+17,code,7,6.0,1,from scipy.stats import zscore
+18,markdown,1,,0,### Cleanup and Scaling
+19,code,7,159.0,0,# Standardize features
+20,markdown,1,,0,### Data Splitting
+21,code,21,8.0,1,"df = pd.read_csv(""./data/beijing_preprocessed_unscaled.csv"", parse_dates=['datetime'])"
+22,markdown,1,,0,# Phase 2: Feature Selection
+23,markdown,1,,0,### Mutual Information (MI)
+24,code,46,18.0,1,from sklearn.feature_selection import mutual_info_regression
+25,markdown,1,,0,### mRMR (Minimum Redundancy Maximum Relevance)
+26,code,14,162.0,1,import pymrmr
+27,markdown,1,,0,# PHASE 3: Forecasting with NeuralProphet (PM2.5 Target)
+28,markdown,1,,0,### Prepare Data
+29,code,30,32.0,1,# Load and format data
+30,code,15,164.0,0,from sklearn.preprocessing import StandardScaler
+31,markdown,1,,0,### Initial training to determine autoregression lags
+32,code,23,165.0,5,"from neuralprophet import NeuralProphet, set_log_level"
+33,code,1,166.0,1,metrics.tail(1)
+34,code,3,167.0,3,forecast = model.predict(df)
+35,code,3,168.0,1,from statsmodels.graphics.tsaplots import plot_acf
+36,markdown,1,,0,### Final Model Forecasting
+37,code,20,33.0,1,"from neuralprophet import NeuralProphet, set_log_level"
+38,code,6,34.0,56,"pm2_5_model_np.set_plotting_backend(""matplotlib"")"
+39,code,1,35.0,1,metrics.tail(1)
+40,code,19,39.0,5,forecast = pm2_5_model_np.predict(df_train)
+41,markdown,1,,0,### Test Results
+42,code,28,41.0,3,import matplotlib.pyplot as plt
+43,code,13,174.0,1,"from sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_score"
+44,markdown,1,,0,# PHASE 4: Forecasting with NeuralProphet (PM10 Target)
+45,markdown,1,,0,### Prepare Data
+46,code,30,42.0,1,# Load and format data
+47,code,15,43.0,0,from sklearn.preprocessing import StandardScaler
+48,markdown,1,,0,### Final Model Forecasting
+49,code,21,44.0,0,"from neuralprophet import NeuralProphet, set_log_level"
+50,code,6,45.0,54,"pm10_model_np.set_plotting_backend(""matplotlib"")"
+51,code,1,46.0,1,metrics.tail(1)
+52,code,18,47.0,5,forecast = pm10_model_np.predict(df_train)
+53,markdown,1,,0,### Test Results
+54,markdown,1,,0,#### Prediction on 168 hours
+55,code,28,50.0,3,import matplotlib.pyplot as plt
+56,code,13,182.0,1,"from sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_score"
+57,markdown,1,,0,#### Prediction on 24 hours
+58,code,21,183.0,3,import matplotlib.pyplot as plt
+59,code,13,184.0,1,"from sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_score"
+60,markdown,1,,0,# FB Prophet (PM2.5 Target)
+61,markdown,1,,0,### Prepare Data
+62,code,21,68.0,1,# Load and format data
+63,code,15,186.0,1,from sklearn.preprocessing import StandardScaler
+64,markdown,1,,0,### Model Implementation
+65,code,17,69.0,0,from prophet import Prophet
+66,code,2,70.0,2,# Fit the model
+67,markdown,1,,0,### Training Results
+68,code,28,71.0,1,import matplotlib.pyplot as plt
+69,code,11,52.0,1,"from sklearn.metrics import mean_absolute_error, root_mean_squared_error"
+70,markdown,1,,0,### Test Results
+71,code,28,72.0,1,import matplotlib.pyplot as plt
+72,code,13,,1,"from sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_score"
+73,markdown,1,,0,# FB Prophet (PM10 Target)
+74,markdown,1,,0,### Prepare Data
+75,code,21,59.0,1,# Load and format data
+76,code,12,,0,from sklearn.preprocessing import StandardScaler
+77,markdown,1,,0,### Model Implemetation
+78,code,17,60.0,0,from prophet import Prophet
+79,code,2,61.0,2,# Fit the model
+80,markdown,1,,0,### Training Results
+81,code,28,62.0,1,import matplotlib.pyplot as plt
+82,code,11,,1,"from sklearn.metrics import mean_absolute_error, root_mean_squared_error"
+83,markdown,1,,0,### Test Results
+84,code,29,63.0,1,import matplotlib.pyplot as plt
+85,code,13,,1,"from sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_score"
+86,markdown,1,,0,# LightGBM for PM2.5
+87,markdown,1,,0,### Prepare Data
+88,code,31,2.0,1,# Load and format data for LightGBM (PM2.5 target)
+89,markdown,1,,0,### Model Implementation
+90,code,39,6.0,1,import lightgbm as lgb
+91,markdown,1,,0,### Results
+92,code,47,10.0,2,# === Evaluation: predictions + metrics + plots ===
+93,markdown,1,,0,# LightGBM for PM10
+94,markdown,1,,0,### Prepare Data
+95,code,31,14.0,1,# Load and format data for LightGBM (PM10 target)
+96,markdown,1,,0,### Model Implementation
+97,code,39,15.0,1,import lightgbm as lgb
+98,markdown,1,,0,### Results
+99,code,47,18.0,2,# === Evaluation: predictions + metrics + plots ===
+100,markdown,1,,0,# LSTM for PM 2.5
+101,markdown,1,,0,### Prepare Data
+102,code,66,26.0,1,"# LSTM | Cell 1: Load, split, scale (X only), and windowed sequences"
+103,markdown,1,,0,### Model Implementaiton
+104,code,38,27.0,1,"# LSTM | Cell 2: Define, compile, train with early stopping"
+105,markdown,1,,0,### Results
+106,code,55,28.0,2,# LSTM | Cell 3: Evaluation & Plot
+107,markdown,1,,0,# LSTM for PM 10
+108,markdown,1,,0,### Prepare Data
+109,code,62,29.0,1,"# LSTM (PM10) | Cell 1: Load, split, scale (X only), and windowed sequences"
+110,markdown,1,,0,### Model Implementation
+111,code,38,31.0,1,"# LSTM (PM10) | Cell 2: Define, compile, train with early stopping"
+112,markdown,1,,0,### Results
+113,code,52,33.0,2,# LSTM (PM10) | Cell 3: Evaluation & Plot
+114,markdown,1,,0,# SARIMAX for PM 2.5
+115,markdown,1,,0,### Data Preparation
+116,code,59,,1,"# SARIMAX (PM2.5) | Cell 1: Load, split, scale (X only)"
+117,markdown,1,,0,### Model Implementation
+118,code,49,12.0,1,# SARIMAX (PM2.5) | Cell 2 (robust): Define & fit
+119,markdown,1,,0,### Results
+120,code,40,13.0,2,# SARIMAX (PM2.5) | Cell 3: Evaluation & Plot
+121,markdown,1,,0,# SARIMAX for PM 10
+122,markdown,1,,0,### Data Preparation
+123,code,59,7.0,1,"# SARIMAX (PM10) | Cell 1: Load, split, scale (X only)"
+124,markdown,1,,0,### Model Implementation
+125,code,49,9.0,1,# SARIMAX (PM10) | Cell 2 (robust): Define & fit
+126,markdown,1,,0,### Results
+127,code,40,10.0,2,# SARIMAX (PM10) | Cell 3: Evaluation & Plot
+128,markdown,1,,0,# Results
+129,code,70,51.0,1,import matplotlib.pyplot as plt
+130,markdown,9,,0,# Regime 1: Weekly Walk-forward Refit (Enhanced)
+131,code,13,1.0,1,import pandas as pd
+132,code,32,2.0,1,# Load data and create 90/10 split
+133,markdown,1,,0,## Model 1: NeuralProphet
+134,code,92,12.0,20,# NeuralProphet - PM2.5
+135,code,91,,0,# NeuralProphet - PM10
+136,markdown,1,,0,## Model 2: FBProphet
+137,code,68,3.0,43,# FBProphet - PM2.5
+138,code,68,5.0,43,# FBProphet - PM10
+139,markdown,1,,0,## Model 3: SARIMAX
+140,code,57,6.0,2,# SARIMAX - PM2.5
+141,code,57,,0,# SARIMAX - PM10
+142,markdown,1,,0,## Results Comparison
+143,code,33,,0,# Comparison tables
+144,code,35,,0,# Overall visualization
+145,markdown,17,,0,# Regime 2: Frozen Model + Online Residual Correction
+146,code,24,,0,# Regime 2 Setup
+147,markdown,1,,0,## Model 1: NeuralProphet with EWMA
+148,code,116,,0,# NeuralProphet - PM2.5 (Frozen + EWMA)
+149,code,105,,0,# NeuralProphet - PM10 (Frozen + EWMA)
+150,markdown,1,,0,## Model 2: FBProphet with EWMA
+151,code,102,,0,# FBProphet - PM2.5 (Frozen + EWMA)
+152,code,97,,0,# FBProphet - PM10 (Frozen + EWMA)
+153,markdown,1,,0,## Model 3: SARIMAX with EWMA
+154,code,78,,0,# SARIMAX - PM2.5 (Frozen + EWMA)
+155,code,76,,0,# SARIMAX - PM10 (Frozen + EWMA)
+156,markdown,1,,0,## Results Comparison
+157,code,68,,0,# Regime 2 Results Comparison
+158,code,39,,0,# Regime 2 Overall Visualization

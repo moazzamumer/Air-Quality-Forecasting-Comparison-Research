@@ -1,0 +1,38 @@
+[
+  {
+    "model": "prophet",
+    "returncode": 0,
+    "elapsed_seconds_including_imports": 18.030160494000484,
+    "process_group_peak_rss_mib_sampled": 401.16796875,
+    "memory_guard_mib": 3507.802734375,
+    "guard_reason": null,
+    "memory_sampling_seconds": 0.5
+  },
+  {
+    "model": "statsmodels",
+    "returncode": 1,
+    "elapsed_seconds_including_imports": 172.71720295600062,
+    "process_group_peak_rss_mib_sampled": 240.0703125,
+    "memory_guard_mib": 3574.4677734375,
+    "guard_reason": null,
+    "memory_sampling_seconds": 0.5
+  },
+  {
+    "model": "statsmodels",
+    "returncode": 0,
+    "elapsed_seconds_including_imports": 169.72155350600042,
+    "process_group_peak_rss_mib_sampled": 239.78515625,
+    "memory_guard_mib": 4901.0126953125,
+    "guard_reason": null,
+    "memory_sampling_seconds": 0.5
+  },
+  {
+    "model": "neuralprophet",
+    "returncode": 0,
+    "elapsed_seconds_including_imports": 17.52571824000006,
+    "process_group_peak_rss_mib_sampled": 1635.984375,
+    "memory_guard_mib": 4888.6875,
+    "guard_reason": null,
+    "memory_sampling_seconds": 0.5
+  }
+]

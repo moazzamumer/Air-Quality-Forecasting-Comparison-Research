@@ -1,0 +1,1676 @@
+{
+  "created_utc": "2026-09-27T22:06:51.583665+00:00",
+  "purpose": "Organization only; original contents preserved",
+  "moves": [
+    {
+      "from": "regime1_all_models.py",
+      "to": "legacy/scripts/regime1_all_models.py"
+    },
+    {
+      "from": "regime1_enhanced.py",
+      "to": "legacy/scripts/regime1_enhanced.py"
+    },
+    {
+      "from": "weather_data_extraction.ipynb",
+      "to": "legacy/notebooks/weather_data_extraction.ipynb"
+    },
+    {
+      "from": "figures",
+      "to": "legacy/outputs/figures"
+    },
+    {
+      "from": "regime1_weekly_plots",
+      "to": "legacy/outputs/regime1_weekly_plots"
+    },
+    {
+      "from": "Nixtlaverse Models",
+      "to": "legacy/exploratory/Nixtlaverse Models"
+    },
+    {
+      "from": "lightning_logs",
+      "to": "legacy/logs/lightning_logs"
+    }
+  ],
+  "files": {
+    "regime1_all_models.py": {
+      "current_path": "legacy/scripts/regime1_all_models.py",
+      "sha256": "3c32fba1337a6bcd444075dca9e59353c779ca8d99acb13baa19324325cc5244",
+      "bytes": 10838
+    },
+    "regime1_enhanced.py": {
+      "current_path": "legacy/scripts/regime1_enhanced.py",
+      "sha256": "a024560494cc5991507d3830446917067b8136327f55bc4ea60c959d08334002",
+      "bytes": 17438
+    },
+    "weather_data_extraction.ipynb": {
+      "current_path": "legacy/notebooks/weather_data_extraction.ipynb",
+      "sha256": "195f9e9657f4509ea18956b53c875ab561251c93eb04fcd8a8cd52200d11fe7f",
+      "bytes": 30163
+    },
+    "figures/fbp_pm10_train.png": {
+      "current_path": "legacy/outputs/figures/fbp_pm10_train.png",
+      "sha256": "afc86aec251bca2c7aa32500eb9b056c1caed6fff2c5817299428b25f123a005",
+      "bytes": 141678
+    },
+    "figures/np_pm25_train.png": {
+      "current_path": "legacy/outputs/figures/np_pm25_train.png",
+      "sha256": "a62ff5052e7b09e165833d98560fd4568ab0e32f39c3de2b83c374b06e8512eb",
+      "bytes": 147236
+    },
+    "figures/fbp_test.jpg": {
+      "current_path": "legacy/outputs/figures/fbp_test.jpg",
+      "sha256": "291f6126ee2b882ceadb6a9eb259e97d368a53fff94a214a023b1ad60f62df4e",
+      "bytes": 506409
+    },
+    "figures/np_pm25_test.png": {
+      "current_path": "legacy/outputs/figures/np_pm25_test.png",
+      "sha256": "899ddfcd4407f5200a13b5564f35370471f1418af82966a6167be6ffd92b9756",
+      "bytes": 68238
+    },
+    "figures/compare_test.png": {
+      "current_path": "legacy/outputs/figures/compare_test.png",
+      "sha256": "0ae30251baac149611037d89b69912974e6c21c11b68f65b8464ba5463de6c72",
+      "bytes": 30714
+    },
+    "figures/avg_pollution_levels.png": {
+      "current_path": "legacy/outputs/figures/avg_pollution_levels.png",
+      "sha256": "5d4281f3b6846fd3fd74e2375bf19925e737858e645059a8ab25f5ad221a3b20",
+      "bytes": 33246
+    },
+    "figures/fbp_pm25_test.png": {
+      "current_path": "legacy/outputs/figures/fbp_pm25_test.png",
+      "sha256": "fcc95fcafd254771cabff8b240c9ee216b24b3dd46f47842599f3265f666b631",
+      "bytes": 65003
+    },
+    "figures/fbp_pm25_train.png": {
+      "current_path": "legacy/outputs/figures/fbp_pm25_train.png",
+      "sha256": "90d31daeca6902dc0224926463dc8cab188afc58ab8bc96144434e9be2d7aa43",
+      "bytes": 138156
+    },
+    "figures/np_test.png": {
+      "current_path": "legacy/outputs/figures/np_test.png",
+      "sha256": "9f10bbbfe2e95b0a9e350477df8f63d4a63a08df01cbb98798ff70b2f492e575",
+      "bytes": 1413807
+    },
+    "figures/framework.png": {
+      "current_path": "legacy/outputs/figures/framework.png",
+      "sha256": "7f35bd9c3713ce0bca49526ff74a86d53af35445acc6ad5a7557750353221f2d",
+      "bytes": 577059
+    },
+    "figures/compare_metrics.jpg": {
+      "current_path": "legacy/outputs/figures/compare_metrics.jpg",
+      "sha256": "627a5c716a7e8c21d111bfa930d258c0c5910d2863ff318f704f7b99b0231fb6",
+      "bytes": 427941
+    },
+    "figures/mi_pm2.5.png": {
+      "current_path": "legacy/outputs/figures/mi_pm2.5.png",
+      "sha256": "49a9a432aea411119b11a532ad3a9443f5c12c0a3437fea171dee3d0c83ad762",
+      "bytes": 15613
+    },
+    "figures/compare_train.png": {
+      "current_path": "legacy/outputs/figures/compare_train.png",
+      "sha256": "0f35fd5a3d272867776fe834ff1b92d93ea8ffc5e0fc9ecfb8c4013b1bbe6cda",
+      "bytes": 28982
+    },
+    "figures/fbp_train.jpg": {
+      "current_path": "legacy/outputs/figures/fbp_train.jpg",
+      "sha256": "4df21fe56a06445041c1743188a9480918f3a2050bc793bd2ab4e1377f580ff0",
+      "bytes": 1241292
+    },
+    "figures/mi_pm10.png": {
+      "current_path": "legacy/outputs/figures/mi_pm10.png",
+      "sha256": "def6670418ba76af4e620d99e034e3a7a7594b5c77676213d7ca16d979e5378b",
+      "bytes": 15382
+    },
+    "figures/compare_all.png": {
+      "current_path": "legacy/outputs/figures/compare_all.png",
+      "sha256": "dbec5c5c9134b0863afa8d36418f7dd8059f7b9a156482c994dbb51d8b2f168b",
+      "bytes": 37640
+    },
+    "figures/np_pm10_test.png": {
+      "current_path": "legacy/outputs/figures/np_pm10_test.png",
+      "sha256": "0ac6f9b8540e8f6f50dfb19bafb6ecad69daf76ab74902335de77892df8fd8b0",
+      "bytes": 65149
+    },
+    "figures/mi_combined.png": {
+      "current_path": "legacy/outputs/figures/mi_combined.png",
+      "sha256": "b227bd9853a565802bea57b61761354d5a5ed873f70e495f341e5c34c6b968d4",
+      "bytes": 84919
+    },
+    "figures/fbp_pm10_test.png": {
+      "current_path": "legacy/outputs/figures/fbp_pm10_test.png",
+      "sha256": "d9eb65487c6d01b04642bfcc5eca8d9ead37349da5bfd21b18f69f3e0306b31f",
+      "bytes": 64519
+    },
+    "figures/compare_all_five.png": {
+      "current_path": "legacy/outputs/figures/compare_all_five.png",
+      "sha256": "6de8850a88675328b8e06f640b0168f82518ad8885154c5e852d8d1560e21dde",
+      "bytes": 57826
+    },
+    "figures/correlation_heatmap.png": {
+      "current_path": "legacy/outputs/figures/correlation_heatmap.png",
+      "sha256": "53a7a1aa72dc8c10a44da727d5341b0ecaf9a01f008ff8eacc8b4e8cddfdd659",
+      "bytes": 141996
+    },
+    "figures/np_train.jpg": {
+      "current_path": "legacy/outputs/figures/np_train.jpg",
+      "sha256": "5333b3aeb824d5d665b13340ff8be730010e0f81e84a36293734b87d8c8e0849",
+      "bytes": 2564390
+    },
+    "figures/np_pm10_train.png": {
+      "current_path": "legacy/outputs/figures/np_pm10_train.png",
+      "sha256": "b752e736e4a0954cd5ba7b70820971f31517af0ecc743dae7cedccfad457e5c2",
+      "bytes": 154332
+    },
+    "regime1_weekly_plots/fbp_pm10_w7.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w7.png",
+      "sha256": "42300b5c325aceb9168bfce9d32a17710a417fd63a1e5ac8337c9329b7316334",
+      "bytes": 148812
+    },
+    "regime1_weekly_plots/fbp_pm25_w14.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w14.png",
+      "sha256": "55d51b26abf4f01f4a1a6a7a161efdee282ab5999ecd6d62aac7a5d2040f70e1",
+      "bytes": 124469
+    },
+    "regime1_weekly_plots/fbp_pm25_w1.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w1.png",
+      "sha256": "281e9d825ace77fc84fc1b2962832ac96cc07653e7a1005848fbf5bcef155dcb",
+      "bytes": 114938
+    },
+    "regime1_weekly_plots/fbp_pm25_w9.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w9.png",
+      "sha256": "67cc78c3633be50dfed55249e6c997e511c83cde986296e1ce6bd28dedefc262",
+      "bytes": 136665
+    },
+    "regime1_weekly_plots/fbp_pm25_w12.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w12.png",
+      "sha256": "7f26414827a9b1fa3abf709b6ceb9638fc21e30ed3f0b322a00cc05ec886b4be",
+      "bytes": 105044
+    },
+    "regime1_weekly_plots/fbp_pm25_w13.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w13.png",
+      "sha256": "ef3155563c9266938935676e774f07d4e5e31a9da6a14cb06265ef6fcf8dfb52",
+      "bytes": 107005
+    },
+    "regime1_weekly_plots/fbp_pm25_w19.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w19.png",
+      "sha256": "03e2f126af4318283e26fd04a06b7a9dfbaba71b28886488bac2729bb93cb67b",
+      "bytes": 114792
+    },
+    "regime1_weekly_plots/fbp_pm25_w8.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w8.png",
+      "sha256": "415dc2965f688de5e8c84f9d1f997dc05d73d8b22fca66b79393e00a4159b79c",
+      "bytes": 138282
+    },
+    "regime1_weekly_plots/fbp_pm10_w13.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w13.png",
+      "sha256": "d55f2778da0dcb1aa063d9c321588b870f317ab951560a8c9431083b7712b744",
+      "bytes": 103773
+    },
+    "regime1_weekly_plots/fbp_pm10_w11.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w11.png",
+      "sha256": "a34151efe601ea40ccf3ee7f2d6bd88314f7b1b71aa3233ad48d3f33341f7f51",
+      "bytes": 94847
+    },
+    "regime1_weekly_plots/fbp_pm25_w4.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w4.png",
+      "sha256": "35fd2a42085d067eda436f28cf3277e0e2c7291d0bce817a04a70e7570bb5051",
+      "bytes": 114809
+    },
+    "regime1_weekly_plots/fbp_pm10_w9.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w9.png",
+      "sha256": "2e009ddc362d66739a43aba876551535b6abc20b34a4ae058e06ed64c9b441fe",
+      "bytes": 139580
+    },
+    "regime1_weekly_plots/fbp_pm10_w3.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w3.png",
+      "sha256": "3b4d4af0d81241742232f55ae84248c5e7f659385331c03a8ba2f95df0263eb0",
+      "bytes": 135693
+    },
+    "regime1_weekly_plots/fbp_pm10_w19.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w19.png",
+      "sha256": "7caf02c85f96835e42fc1d616122778fac7861846c23066a936e557740bac6e4",
+      "bytes": 120735
+    },
+    "regime1_weekly_plots/fbp_pm25_w6.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w6.png",
+      "sha256": "dfb55f93a32345d767497753ee9de5f88299d5cd2b25a9a9b2dcd22212ce1008",
+      "bytes": 145387
+    },
+    "regime1_weekly_plots/fbp_pm10_w16.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w16.png",
+      "sha256": "66f63c84f55ea5bff5f520f57fece65142fc7e68a26c8cf8df005512a1f47606",
+      "bytes": 98593
+    },
+    "regime1_weekly_plots/fbp_pm25_w3.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w3.png",
+      "sha256": "7fe6000c6716112102c5e134fee6224f0ad3a1fa26438bd50068c6cf161e27e1",
+      "bytes": 130170
+    },
+    "regime1_weekly_plots/fbp_pm10_w15.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w15.png",
+      "sha256": "326fbccf194e37f068f016db21c4a034e277c76dff2f731b6b2bb5e53b9772c2",
+      "bytes": 102465
+    },
+    "regime1_weekly_plots/fbp_pm25_w10.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w10.png",
+      "sha256": "bc32391926b426f46be6f855c8d245f134f1a8de98ae8b6511b53245997371e2",
+      "bytes": 138461
+    },
+    "regime1_weekly_plots/fbp_pm10_w4.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w4.png",
+      "sha256": "fae020106e8c9b6cad455c3a9dbfc31502eed6dc06016c6bb01020a0d1ce573f",
+      "bytes": 118559
+    },
+    "regime1_weekly_plots/fbp_pm10_w21.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w21.png",
+      "sha256": "4bdde77b8d5e5cc10a45b47d24ec64d3a91cf7d2f92aff9c8c074a242472df9c",
+      "bytes": 133269
+    },
+    "regime1_weekly_plots/fbp_pm10_w14.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w14.png",
+      "sha256": "6e732e047fa2550d88de0e191dc7b069b32deac27b79f45714277baf33696fe6",
+      "bytes": 93957
+    },
+    "regime1_weekly_plots/fbp_pm10_w2.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w2.png",
+      "sha256": "9df1e585e3b41ef34fdae9d6aa776dc1cfe036187d53dfe7cb1568a2e105e552",
+      "bytes": 151405
+    },
+    "regime1_weekly_plots/fbp_pm25_w16.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w16.png",
+      "sha256": "6ebdf447ea67e253e893148d884d53042068a8c9eaa2908804912b6e6c2abced",
+      "bytes": 115312
+    },
+    "regime1_weekly_plots/fbp_pm10_w5.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w5.png",
+      "sha256": "ac9d2a1c4fe7c16a323a2e3649b5b60e5f18802d046d47fafb09e0bff9b98f78",
+      "bytes": 134921
+    },
+    "regime1_weekly_plots/fbp_pm25_w21.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w21.png",
+      "sha256": "a671ca2da935c027c9e89003607195b82b45c57244a05dc5d295bbddf6754254",
+      "bytes": 127216
+    },
+    "regime1_weekly_plots/fbp_pm10_w12.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w12.png",
+      "sha256": "22d602c3b3c6f08738b1c6ef6baf4a954de02e7fa451f7e099fdc4dd130151c3",
+      "bytes": 104212
+    },
+    "regime1_weekly_plots/fbp_pm10_w20.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w20.png",
+      "sha256": "46874ace3cebb2c0fa3a95aa5328283eb148d595fa1ed2413fd9870fa3a9f19a",
+      "bytes": 130056
+    },
+    "regime1_weekly_plots/fbp_pm10_w8.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w8.png",
+      "sha256": "68a0de1aad68f82e4a0a7f9eae514f886c421a76b908564f8fb6d293082883a2",
+      "bytes": 137641
+    },
+    "regime1_weekly_plots/fbp_pm25_w2.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w2.png",
+      "sha256": "692ae8162a0ef20ca603b1444cac7be164310ab6ebf67d037bfa5feff435b7bd",
+      "bytes": 145929
+    },
+    "regime1_weekly_plots/fbp_pm10_w1.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w1.png",
+      "sha256": "ab85ccf7d2af0f9d8846948aaad4fbdba96ef654b689ca7c58fdb4609c52c253",
+      "bytes": 118449
+    },
+    "regime1_weekly_plots/fbp_pm25_w5.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w5.png",
+      "sha256": "0942e8f2eb488b28eaa2e5bed4742dc3d8b3ce09339eb0e15a9b2f0af8d59551",
+      "bytes": 137847
+    },
+    "regime1_weekly_plots/fbp_pm25_w20.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w20.png",
+      "sha256": "c21a3f30986865632a9154a1a4168ba95f38092406850a929b845d50d018c4da",
+      "bytes": 123560
+    },
+    "regime1_weekly_plots/fbp_pm25_w15.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w15.png",
+      "sha256": "e705c79993e400e028bfa672e845e74ba2790400572e43f880bade726377cf19",
+      "bytes": 108789
+    },
+    "regime1_weekly_plots/np_pm25_w1.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/np_pm25_w1.png",
+      "sha256": "c242e5f6eb9ecd1f0cc05f974f8be68fa8b9ea873665f29b185eb0541d1a6c80",
+      "bytes": 80043
+    },
+    "regime1_weekly_plots/fbp_pm10_w18.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w18.png",
+      "sha256": "f5a738c427032aec734b94e61e359feda44a92f45758bae4ad78fb1a26d644b5",
+      "bytes": 118151
+    },
+    "regime1_weekly_plots/fbp_pm10_w17.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w17.png",
+      "sha256": "6f91a81fa51a3c63f65fd579ae846dd74fd9808c9e5d89fb8706963bb544b425",
+      "bytes": 109816
+    },
+    "regime1_weekly_plots/fbp_pm25_w7.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w7.png",
+      "sha256": "37025f3811d5211a7d053950377da14380cb2e12c74746c4a40dd8e18de877fc",
+      "bytes": 148053
+    },
+    "regime1_weekly_plots/fbp_pm10_w10.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w10.png",
+      "sha256": "1e734edc13f2b3368cf575c1ad554be1b2330119f4c4dd68b5983c7406c485fb",
+      "bytes": 123448
+    },
+    "regime1_weekly_plots/fbp_pm25_w17.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w17.png",
+      "sha256": "1a2078a39546b2ec0fb00300811bae5828de3cc35b59935eec9a864d6837c7d7",
+      "bytes": 107455
+    },
+    "regime1_weekly_plots/fbp_pm10_w6.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm10_w6.png",
+      "sha256": "4de3f5be209d51ae88dbf05f4a20d7814ac3f5da9c906fab95f46fe0ca6075d6",
+      "bytes": 141731
+    },
+    "regime1_weekly_plots/fbp_pm25_w11.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w11.png",
+      "sha256": "5b48cc93b7febc4b0a5e2637fd84aeea3913619a628c698ed4e1730552e63846",
+      "bytes": 127044
+    },
+    "regime1_weekly_plots/fbp_pm25_w18.png": {
+      "current_path": "legacy/outputs/regime1_weekly_plots/fbp_pm25_w18.png",
+      "sha256": "0a6d12d515fef6984b09eb4ef294bb6e7edba4ba1327c28b9ffb01df57a50e68",
+      "bytes": 115720
+    },
+    "Nixtlaverse Models/prev_model.ipynb": {
+      "current_path": "legacy/exploratory/Nixtlaverse Models/prev_model.ipynb",
+      "sha256": "4639933d16006c0c64a2cfd3896ccd17f34907b2c51f7264eb17a3b9d1b58af7",
+      "bytes": 247496
+    },
+    "Nixtlaverse Models/model_nhits.ipynb": {
+      "current_path": "legacy/exploratory/Nixtlaverse Models/model_nhits.ipynb",
+      "sha256": "9b1c723440f865be26944b60c8dd5b1ecaaa05f6691c4c424682d7040530eb14",
+      "bytes": 29465
+    },
+    "lightning_logs/version_47/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_47/hparams.yaml",
+      "sha256": "272ba03220e13b0ac2f818ab909c4b0499e5e9ff477dc9a5f25044142b3548d8",
+      "bytes": 9210
+    },
+    "lightning_logs/version_47/events.out.tfevents.1770589310.moazzam-hp.21423.6": {
+      "current_path": "legacy/logs/lightning_logs/version_47/events.out.tfevents.1770589310.moazzam-hp.21423.6",
+      "sha256": "29cac55f9a92de9b93921ea78653d81a4dd30ae58de66db91b6f6d47ff67c035",
+      "bytes": 27182
+    },
+    "lightning_logs/version_47/events.out.tfevents.1770589521.moazzam-hp.21423.7": {
+      "current_path": "legacy/logs/lightning_logs/version_47/events.out.tfevents.1770589521.moazzam-hp.21423.7",
+      "sha256": "3f0095ce156027d5e5b4e50ed715932bca3a1d8edf03c5b87993213add89a0cc",
+      "bytes": 11482
+    },
+    "lightning_logs/version_55/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_55/hparams.yaml",
+      "sha256": "157c7ea9674a9e84d4e6f11517990e37da3f9de22b954154af0d2fe2d3717a41",
+      "bytes": 6245
+    },
+    "lightning_logs/version_55/events.out.tfevents.1790541493.moazzam-hp.3.0": {
+      "current_path": "legacy/logs/lightning_logs/version_55/events.out.tfevents.1790541493.moazzam-hp.3.0",
+      "sha256": "1592b7457870479d42fece5ab4472d4bb9211cfa8b64e7342144e34430f76ae9",
+      "bytes": 9239
+    },
+    "lightning_logs/version_55/events.out.tfevents.1790541493.moazzam-hp.3.2": {
+      "current_path": "legacy/logs/lightning_logs/version_55/events.out.tfevents.1790541493.moazzam-hp.3.2",
+      "sha256": "715157ffee67f696ba940902dd10dcb34cc4a472687155e366a3fa14d6894ea3",
+      "bytes": 8625
+    },
+    "lightning_logs/version_55/events.out.tfevents.1790541493.moazzam-hp.3.1": {
+      "current_path": "legacy/logs/lightning_logs/version_55/events.out.tfevents.1790541493.moazzam-hp.3.1",
+      "sha256": "80268a154c46d66bff69b1454d8618a027c185a565931f6c1c79d91e0851f3ac",
+      "bytes": 8625
+    },
+    "lightning_logs/version_3/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_3/hparams.yaml",
+      "sha256": "83856b3f48351924c91f1bfb40f7f278fb189eb6ab72725bbbf13f3d34b0f658",
+      "bytes": 11006
+    },
+    "lightning_logs/version_3/events.out.tfevents.1753305843.moazzam-hp.17178.1": {
+      "current_path": "legacy/logs/lightning_logs/version_3/events.out.tfevents.1753305843.moazzam-hp.17178.1",
+      "sha256": "a7a6b598cb5ffdcdc6d4a85023e77521848097451facd50ddb281a796994cdfc",
+      "bytes": 13382
+    },
+    "lightning_logs/version_3/events.out.tfevents.1753305792.moazzam-hp.17178.0": {
+      "current_path": "legacy/logs/lightning_logs/version_3/events.out.tfevents.1753305792.moazzam-hp.17178.0",
+      "sha256": "40ceecb87b92fc57e2cc1d3d23b74ca1288b418ddd492d93bb30d88787fdba39",
+      "bytes": 25942
+    },
+    "lightning_logs/version_49/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_49/hparams.yaml",
+      "sha256": "86df4b989ec5b7d8032c3d085fa79e8ec992b7e78576cd3293663a8bf0ab5cad",
+      "bytes": 5028
+    },
+    "lightning_logs/version_49/events.out.tfevents.1790540565.moazzam-hp.3.0": {
+      "current_path": "legacy/logs/lightning_logs/version_49/events.out.tfevents.1790540565.moazzam-hp.3.0",
+      "sha256": "0ee6a8a50b1bb121b4e76e499d5fd5d64cf006ef5a0f7c07eb445e756e7e7fe6",
+      "bytes": 6840
+    },
+    "lightning_logs/version_7/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_7/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_7/events.out.tfevents.1753309124.moazzam-hp.17178.13": {
+      "current_path": "legacy/logs/lightning_logs/version_7/events.out.tfevents.1753309124.moazzam-hp.17178.13",
+      "sha256": "e229be1e4244f0244fe2687776bcc0f6549ffe51aa3f3eea5821b2e9c74cea08",
+      "bytes": 88
+    },
+    "lightning_logs/version_7/events.out.tfevents.1753309236.moazzam-hp.17178.16": {
+      "current_path": "legacy/logs/lightning_logs/version_7/events.out.tfevents.1753309236.moazzam-hp.17178.16",
+      "sha256": "2e3b31b7b2c8650e88320927005cde217a0a3199c13b5dca80c87aa7bb47f20c",
+      "bytes": 13379
+    },
+    "lightning_logs/version_7/events.out.tfevents.1753309223.moazzam-hp.17178.15": {
+      "current_path": "legacy/logs/lightning_logs/version_7/events.out.tfevents.1753309223.moazzam-hp.17178.15",
+      "sha256": "9732ceee302ec905fd4ce3be514c000736c0bb20ff9413a44892f1964334a694",
+      "bytes": 13379
+    },
+    "lightning_logs/version_7/events.out.tfevents.1753309126.moazzam-hp.17178.14": {
+      "current_path": "legacy/logs/lightning_logs/version_7/events.out.tfevents.1753309126.moazzam-hp.17178.14",
+      "sha256": "1db4ddcb7c27aa932873cd8ed67579d94b30e2c6d88076c8f105804415f73928",
+      "bytes": 25939
+    },
+    "lightning_logs/version_39/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_39/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_39/events.out.tfevents.1754775485.moazzam-hp.7403.44": {
+      "current_path": "legacy/logs/lightning_logs/version_39/events.out.tfevents.1754775485.moazzam-hp.7403.44",
+      "sha256": "9de7c1b97c1c06b4d85f3e987435ae8550ec835959596692b02fce07f5e7ffce",
+      "bytes": 88
+    },
+    "lightning_logs/version_39/events.out.tfevents.1754775487.moazzam-hp.7403.45": {
+      "current_path": "legacy/logs/lightning_logs/version_39/events.out.tfevents.1754775487.moazzam-hp.7403.45",
+      "sha256": "4941acb169aa686a70a1aece2ccae77309cfc7a92f2a47677bebd318b4cb4b16",
+      "bytes": 39268
+    },
+    "lightning_logs/version_39/events.out.tfevents.1754775578.moazzam-hp.7403.47": {
+      "current_path": "legacy/logs/lightning_logs/version_39/events.out.tfevents.1754775578.moazzam-hp.7403.47",
+      "sha256": "aff9dc21ff7977ccbd453e34ec5ad294dd8fc2140569808cb24b8b6918468129",
+      "bytes": 11868
+    },
+    "lightning_logs/version_39/events.out.tfevents.1754775577.moazzam-hp.7403.46": {
+      "current_path": "legacy/logs/lightning_logs/version_39/events.out.tfevents.1754775577.moazzam-hp.7403.46",
+      "sha256": "ba5db830f5627a543dd4b79d839b279ae4f772ca91cba406087c8af969707e59",
+      "bytes": 11868
+    },
+    "lightning_logs/version_39/events.out.tfevents.1754775578.moazzam-hp.7403.48": {
+      "current_path": "legacy/logs/lightning_logs/version_39/events.out.tfevents.1754775578.moazzam-hp.7403.48",
+      "sha256": "f256087978ba67ec656ced5dd24dbe8003d249f66b53291346c8adc6730211ce",
+      "bytes": 11868
+    },
+    "lightning_logs/version_48/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_48/hparams.yaml",
+      "sha256": "b5a84f7fbda54e9b1a5a49c88f335dd7e2ce2faf5f266bfece43bfae911f65fc",
+      "bytes": 9210
+    },
+    "lightning_logs/version_48/events.out.tfevents.1770589548.moazzam-hp.21423.8": {
+      "current_path": "legacy/logs/lightning_logs/version_48/events.out.tfevents.1770589548.moazzam-hp.21423.8",
+      "sha256": "77957c9d44afe48b0352b50a2172783d7b0fc7e15e8c4ef57e5b0b2ea470c130",
+      "bytes": 15878
+    },
+    "lightning_logs/version_9/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_9/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_9/events.out.tfevents.1753314809.moazzam-hp.17178.28": {
+      "current_path": "legacy/logs/lightning_logs/version_9/events.out.tfevents.1753314809.moazzam-hp.17178.28",
+      "sha256": "cbecdf3fdfa8c3e9f37eafc2b8f7ff1ae8a63f3f4dd7b9da9777b403e1527feb",
+      "bytes": 25939
+    },
+    "lightning_logs/version_9/events.out.tfevents.1753314807.moazzam-hp.17178.27": {
+      "current_path": "legacy/logs/lightning_logs/version_9/events.out.tfevents.1753314807.moazzam-hp.17178.27",
+      "sha256": "ded22d3933c6d117aab00ab058c9320d3402c010f170d4b3dfdd082e02672d90",
+      "bytes": 88
+    },
+    "lightning_logs/version_9/events.out.tfevents.1753315066.moazzam-hp.17178.29": {
+      "current_path": "legacy/logs/lightning_logs/version_9/events.out.tfevents.1753315066.moazzam-hp.17178.29",
+      "sha256": "b66877980dfe9d9045780fd9a3ea0dd2dda67478fe401a41ecfab28e643dae37",
+      "bytes": 13379
+    },
+    "lightning_logs/version_40/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_40/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_40/events.out.tfevents.1763847223.moazzam-hp.38999.3": {
+      "current_path": "legacy/logs/lightning_logs/version_40/events.out.tfevents.1763847223.moazzam-hp.38999.3",
+      "sha256": "d73a91cd33a583658cacf985c029c85f23ec383329756fd0e7f2b9642486ab4e",
+      "bytes": 11852
+    },
+    "lightning_logs/version_40/events.out.tfevents.1763847401.moazzam-hp.38999.6": {
+      "current_path": "legacy/logs/lightning_logs/version_40/events.out.tfevents.1763847401.moazzam-hp.38999.6",
+      "sha256": "327ea42165e1c8dd7a7a05bdb5d93c494f766d680d30d7633e3a48c620e0cbe5",
+      "bytes": 11852
+    },
+    "lightning_logs/version_40/events.out.tfevents.1763846152.moazzam-hp.38999.1": {
+      "current_path": "legacy/logs/lightning_logs/version_40/events.out.tfevents.1763846152.moazzam-hp.38999.1",
+      "sha256": "76fc5c475eac47babe6954861064b06547b7a06188b07bd80ea3e0be19686c30",
+      "bytes": 39252
+    },
+    "lightning_logs/version_40/events.out.tfevents.1763847276.moazzam-hp.38999.4": {
+      "current_path": "legacy/logs/lightning_logs/version_40/events.out.tfevents.1763847276.moazzam-hp.38999.4",
+      "sha256": "bf771cb01cca3af2b57627b0d809c346b46fc4a53b80ce2f30456e7bb7adb618",
+      "bytes": 11852
+    },
+    "lightning_logs/version_40/events.out.tfevents.1763847163.moazzam-hp.38999.2": {
+      "current_path": "legacy/logs/lightning_logs/version_40/events.out.tfevents.1763847163.moazzam-hp.38999.2",
+      "sha256": "f08e1dc0c9e8d0fd906d48071ab56c10edb2ebb0e7ecc54d2f9b45cad30fa100",
+      "bytes": 11852
+    },
+    "lightning_logs/version_40/events.out.tfevents.1763847443.moazzam-hp.38999.7": {
+      "current_path": "legacy/logs/lightning_logs/version_40/events.out.tfevents.1763847443.moazzam-hp.38999.7",
+      "sha256": "50bc2bab42803634911bfeb2acc0513ff4f890fad9c05eb5619cf1062e878341",
+      "bytes": 11852
+    },
+    "lightning_logs/version_40/events.out.tfevents.1763846150.moazzam-hp.38999.0": {
+      "current_path": "legacy/logs/lightning_logs/version_40/events.out.tfevents.1763846150.moazzam-hp.38999.0",
+      "sha256": "0a0bde27c779ece99032a91df77dc3b9c1ad256bc6ab225813697c760f7ede03",
+      "bytes": 88
+    },
+    "lightning_logs/version_40/events.out.tfevents.1763847321.moazzam-hp.38999.5": {
+      "current_path": "legacy/logs/lightning_logs/version_40/events.out.tfevents.1763847321.moazzam-hp.38999.5",
+      "sha256": "ce4117029e6648d353fec81d9355f83d3319442f7914ebbfe6feb7ebc1a32628",
+      "bytes": 11852
+    },
+    "lightning_logs/version_34/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_34/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_34/events.out.tfevents.1754769179.moazzam-hp.7403.20": {
+      "current_path": "legacy/logs/lightning_logs/version_34/events.out.tfevents.1754769179.moazzam-hp.7403.20",
+      "sha256": "b8c97b56f54294c93c1a61610466bac445ea818ff921a69a140f12a987eaecdc",
+      "bytes": 39268
+    },
+    "lightning_logs/version_34/events.out.tfevents.1754770200.moazzam-hp.7403.22": {
+      "current_path": "legacy/logs/lightning_logs/version_34/events.out.tfevents.1754770200.moazzam-hp.7403.22",
+      "sha256": "3ce79be45692b99fa7cb75c876ccc780f62420911cb9fef68d1f3567891dd33c",
+      "bytes": 11868
+    },
+    "lightning_logs/version_34/events.out.tfevents.1754769178.moazzam-hp.7403.19": {
+      "current_path": "legacy/logs/lightning_logs/version_34/events.out.tfevents.1754769178.moazzam-hp.7403.19",
+      "sha256": "f6e1c7b9d51d14b24728fe9960d442b0bc3f6bd1ce8aa0f9b0b9c036ae04af3a",
+      "bytes": 88
+    },
+    "lightning_logs/version_34/events.out.tfevents.1754770262.moazzam-hp.7403.23": {
+      "current_path": "legacy/logs/lightning_logs/version_34/events.out.tfevents.1754770262.moazzam-hp.7403.23",
+      "sha256": "b31186c49515cd0acff5ba871379aeb477df0a0af50141dd853f0ed449f9cbda",
+      "bytes": 11868
+    },
+    "lightning_logs/version_34/events.out.tfevents.1754770191.moazzam-hp.7403.21": {
+      "current_path": "legacy/logs/lightning_logs/version_34/events.out.tfevents.1754770191.moazzam-hp.7403.21",
+      "sha256": "ce06c869d0c71c3d6db58a9fc9b92894ebe9df884a6e626599879d74da19d213",
+      "bytes": 11868
+    },
+    "lightning_logs/version_42/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_42/hparams.yaml",
+      "sha256": "1eff76ad7db49ec5deaaedae0d8f31dca25689d3245f0c0422fcd7bdd351ac7f",
+      "bytes": 5570
+    },
+    "lightning_logs/version_42/events.out.tfevents.1770581240.moazzam-hp.14270.0": {
+      "current_path": "legacy/logs/lightning_logs/version_42/events.out.tfevents.1770581240.moazzam-hp.14270.0",
+      "sha256": "dbb55d77456680969c0e896751de4227041030f03721b67fa67abc80dca6f67a",
+      "bytes": 23768
+    },
+    "lightning_logs/version_42/events.out.tfevents.1770581435.moazzam-hp.14270.1": {
+      "current_path": "legacy/logs/lightning_logs/version_42/events.out.tfevents.1770581435.moazzam-hp.14270.1",
+      "sha256": "c1e57ffa74846f5b5d2268567d56c94da6527654e19b29d7a92c3adeed5f767f",
+      "bytes": 8068
+    },
+    "lightning_logs/version_44/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_44/hparams.yaml",
+      "sha256": "9b7a833bd1f653d3e00863314de870c751e7bb973b30ec3bd33fbf12759be996",
+      "bytes": 9210
+    },
+    "lightning_logs/version_44/events.out.tfevents.1770587421.moazzam-hp.21423.1": {
+      "current_path": "legacy/logs/lightning_logs/version_44/events.out.tfevents.1770587421.moazzam-hp.21423.1",
+      "sha256": "987fed8d272e1858b7036d824e6a2a072127a98669e1d6236694f6af511e3918",
+      "bytes": 11482
+    },
+    "lightning_logs/version_44/events.out.tfevents.1770587217.moazzam-hp.21423.0": {
+      "current_path": "legacy/logs/lightning_logs/version_44/events.out.tfevents.1770587217.moazzam-hp.21423.0",
+      "sha256": "efa16e618dbb67d6e47ce7dfb58e2b0c9ee1ca9de4b18ac2cd9088f29661081f",
+      "bytes": 27182
+    },
+    "lightning_logs/version_11/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_11/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_11/events.out.tfevents.1753317570.moazzam-hp.17178.32": {
+      "current_path": "legacy/logs/lightning_logs/version_11/events.out.tfevents.1753317570.moazzam-hp.17178.32",
+      "sha256": "b11a1357453e3152cd1521c08296e53f61a5fd65a35205f78a82a98add4a0044",
+      "bytes": 88
+    },
+    "lightning_logs/version_11/events.out.tfevents.1753317706.moazzam-hp.17178.34": {
+      "current_path": "legacy/logs/lightning_logs/version_11/events.out.tfevents.1753317706.moazzam-hp.17178.34",
+      "sha256": "2b7a64c0ede121720f6165750578b292230a6cf2b0313fcbc98e6a3ccc663aca",
+      "bytes": 13377
+    },
+    "lightning_logs/version_11/events.out.tfevents.1753317757.moazzam-hp.17178.35": {
+      "current_path": "legacy/logs/lightning_logs/version_11/events.out.tfevents.1753317757.moazzam-hp.17178.35",
+      "sha256": "81d817b4df8b0077d0523c240dc85a365cf1794c3ed4d8dc909b093aeefe2ebb",
+      "bytes": 13377
+    },
+    "lightning_logs/version_11/events.out.tfevents.1753317573.moazzam-hp.17178.33": {
+      "current_path": "legacy/logs/lightning_logs/version_11/events.out.tfevents.1753317573.moazzam-hp.17178.33",
+      "sha256": "072ab043e268edc4a2d56153a36af4b8197cd7b0c108ec90c946af28e2ebae59",
+      "bytes": 35297
+    },
+    "lightning_logs/version_53/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_53/hparams.yaml",
+      "sha256": "551af3f7d7629a46788bcf9f9f1d8f44b63265c5b49405594360c4df62ab0ba9",
+      "bytes": 21655
+    },
+    "lightning_logs/version_53/events.out.tfevents.1790541293.moazzam-hp.11.0": {
+      "current_path": "legacy/logs/lightning_logs/version_53/events.out.tfevents.1790541293.moazzam-hp.11.0",
+      "sha256": "4e23521a94291af0c1d2895a1e6edf15fa9845f478dac55d6a5da87e9a08040e",
+      "bytes": 35872
+    },
+    "lightning_logs/version_53/events.out.tfevents.1790541301.moazzam-hp.11.1": {
+      "current_path": "legacy/logs/lightning_logs/version_53/events.out.tfevents.1790541301.moazzam-hp.11.1",
+      "sha256": "ec099b68715db17671c64fd032e04771b20b033f9afee25235abd640c09c74a0",
+      "bytes": 35244
+    },
+    "lightning_logs/version_13/events.out.tfevents.1753598125.moazzam-hp.59047.1": {
+      "current_path": "legacy/logs/lightning_logs/version_13/events.out.tfevents.1753598125.moazzam-hp.59047.1",
+      "sha256": "8f206f0556eb83bf40e4181b72c21de4b871f7bb9455b086ce58c0f1218e5995",
+      "bytes": 35297
+    },
+    "lightning_logs/version_13/events.out.tfevents.1753598123.moazzam-hp.59047.0": {
+      "current_path": "legacy/logs/lightning_logs/version_13/events.out.tfevents.1753598123.moazzam-hp.59047.0",
+      "sha256": "056f6a2137e8cc4ca32d2182b7fa3df9052baccbcf3ff5a4b16e1ff43ea01241",
+      "bytes": 88
+    },
+    "lightning_logs/version_13/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_13/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_13/events.out.tfevents.1753598216.moazzam-hp.59047.2": {
+      "current_path": "legacy/logs/lightning_logs/version_13/events.out.tfevents.1753598216.moazzam-hp.59047.2",
+      "sha256": "f189f638076786c827d9ec6bda772f9d7032f7b33e8e5a109cf5bf85fbdfee4b",
+      "bytes": 13377
+    },
+    "lightning_logs/version_13/events.out.tfevents.1753598224.moazzam-hp.59047.3": {
+      "current_path": "legacy/logs/lightning_logs/version_13/events.out.tfevents.1753598224.moazzam-hp.59047.3",
+      "sha256": "914f43c9c64e47fb96edbeba182c09903005b02b941ae5466d2c10739bf20d5e",
+      "bytes": 13377
+    },
+    "lightning_logs/version_14/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_14/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_14/events.out.tfevents.1753598257.moazzam-hp.59047.5": {
+      "current_path": "legacy/logs/lightning_logs/version_14/events.out.tfevents.1753598257.moazzam-hp.59047.5",
+      "sha256": "d88dca3f14cb8adb953d3e13230e31d78a6850485fed9731cb8f589b35f9f503",
+      "bytes": 25939
+    },
+    "lightning_logs/version_14/events.out.tfevents.1753598255.moazzam-hp.59047.4": {
+      "current_path": "legacy/logs/lightning_logs/version_14/events.out.tfevents.1753598255.moazzam-hp.59047.4",
+      "sha256": "8ba1ba92a35d5dea92ed171824a95faba9394715967a134dae2a67d5664b6850",
+      "bytes": 88
+    },
+    "lightning_logs/version_14/events.out.tfevents.1753598340.moazzam-hp.59047.6": {
+      "current_path": "legacy/logs/lightning_logs/version_14/events.out.tfevents.1753598340.moazzam-hp.59047.6",
+      "sha256": "9d2f9eb76b27c51d03dc79aed3aaaa1d01325cc9bf04e83266a843c12f76e31f",
+      "bytes": 13379
+    },
+    "lightning_logs/version_38/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_38/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_38/events.out.tfevents.1754775395.moazzam-hp.7403.41": {
+      "current_path": "legacy/logs/lightning_logs/version_38/events.out.tfevents.1754775395.moazzam-hp.7403.41",
+      "sha256": "511661ffa91fcaa148b6cfb4a85d7f332c6754a057595531830eef82058cfcf3",
+      "bytes": 39252
+    },
+    "lightning_logs/version_38/events.out.tfevents.1754775481.moazzam-hp.7403.42": {
+      "current_path": "legacy/logs/lightning_logs/version_38/events.out.tfevents.1754775481.moazzam-hp.7403.42",
+      "sha256": "76b90b2a9c499b002c94e01300e70c608958f6ab042ed4a635b60c1d71418532",
+      "bytes": 11852
+    },
+    "lightning_logs/version_38/events.out.tfevents.1754775482.moazzam-hp.7403.43": {
+      "current_path": "legacy/logs/lightning_logs/version_38/events.out.tfevents.1754775482.moazzam-hp.7403.43",
+      "sha256": "6d7d72503be59a30d0613f2d20440c4a8dba0b2fb923e4c12943ecf5e92cf00e",
+      "bytes": 11852
+    },
+    "lightning_logs/version_38/events.out.tfevents.1754775393.moazzam-hp.7403.40": {
+      "current_path": "legacy/logs/lightning_logs/version_38/events.out.tfevents.1754775393.moazzam-hp.7403.40",
+      "sha256": "8b68b94a012e417463184be457a2949bbf7cf0b8bd7c071c9e7b64af2c336e7b",
+      "bytes": 88
+    },
+    "lightning_logs/version_15/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_15/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_15/events.out.tfevents.1753598389.moazzam-hp.59047.8": {
+      "current_path": "legacy/logs/lightning_logs/version_15/events.out.tfevents.1753598389.moazzam-hp.59047.8",
+      "sha256": "dadc35e7ae296d968504846ed2ab34476e911562a3821a053508457e300f1354",
+      "bytes": 35313
+    },
+    "lightning_logs/version_15/events.out.tfevents.1753598456.moazzam-hp.59047.9": {
+      "current_path": "legacy/logs/lightning_logs/version_15/events.out.tfevents.1753598456.moazzam-hp.59047.9",
+      "sha256": "45714806dd01fd80f5e8a434b9141c3305cbd842b5c1a2b277614781ced05e71",
+      "bytes": 13393
+    },
+    "lightning_logs/version_15/events.out.tfevents.1753598387.moazzam-hp.59047.7": {
+      "current_path": "legacy/logs/lightning_logs/version_15/events.out.tfevents.1753598387.moazzam-hp.59047.7",
+      "sha256": "41b8630fdfa4bc73d18980fc1011919dacab16e212f92dd447aa3d95917ad012",
+      "bytes": 88
+    },
+    "lightning_logs/version_15/events.out.tfevents.1753598460.moazzam-hp.59047.10": {
+      "current_path": "legacy/logs/lightning_logs/version_15/events.out.tfevents.1753598460.moazzam-hp.59047.10",
+      "sha256": "b155cdf74b3c0c2a43887e60002764c75e97e6697b759d7270caaa470d8fa9a8",
+      "bytes": 13393
+    },
+    "lightning_logs/version_36/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_36/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_36/events.out.tfevents.1754773441.moazzam-hp.7403.31": {
+      "current_path": "legacy/logs/lightning_logs/version_36/events.out.tfevents.1754773441.moazzam-hp.7403.31",
+      "sha256": "194be87c5e9fbda344dbbfa19739bb02bb91c7426ea445df4072f75eb8d4cc0f",
+      "bytes": 11868
+    },
+    "lightning_logs/version_36/events.out.tfevents.1754773607.moazzam-hp.7403.34": {
+      "current_path": "legacy/logs/lightning_logs/version_36/events.out.tfevents.1754773607.moazzam-hp.7403.34",
+      "sha256": "ff54769e0ba0843e26242b477a09b4e0ab62f4c23953464047bc42fe6001f1a2",
+      "bytes": 11868
+    },
+    "lightning_logs/version_36/events.out.tfevents.1754773225.moazzam-hp.7403.29": {
+      "current_path": "legacy/logs/lightning_logs/version_36/events.out.tfevents.1754773225.moazzam-hp.7403.29",
+      "sha256": "e64458cad531c19b8d4de0c00bc0fc846560f9178ab187dfa39efe6b35d58800",
+      "bytes": 88
+    },
+    "lightning_logs/version_36/events.out.tfevents.1754773226.moazzam-hp.7403.30": {
+      "current_path": "legacy/logs/lightning_logs/version_36/events.out.tfevents.1754773226.moazzam-hp.7403.30",
+      "sha256": "eebf09077cb3412f66806718bb4df7bda6883f1e048c7ed86182ddf55a691812",
+      "bytes": 39268
+    },
+    "lightning_logs/version_36/events.out.tfevents.1754773584.moazzam-hp.7403.33": {
+      "current_path": "legacy/logs/lightning_logs/version_36/events.out.tfevents.1754773584.moazzam-hp.7403.33",
+      "sha256": "0745c28320b95935f8e7e5e2cf1ad43ed864a1c17e818cbb60b5b4ddbf3d4d76",
+      "bytes": 11868
+    },
+    "lightning_logs/version_36/events.out.tfevents.1754773459.moazzam-hp.7403.32": {
+      "current_path": "legacy/logs/lightning_logs/version_36/events.out.tfevents.1754773459.moazzam-hp.7403.32",
+      "sha256": "b295414d37063b0a6deb339c6f5a80e2f8c1599b081869561f1a0e0bce198295",
+      "bytes": 11868
+    },
+    "lightning_logs/version_36/events.out.tfevents.1754773628.moazzam-hp.7403.35": {
+      "current_path": "legacy/logs/lightning_logs/version_36/events.out.tfevents.1754773628.moazzam-hp.7403.35",
+      "sha256": "a95861617622f010b4870b430ad738fe8cb2f90023a478a4ee306aaaf02cde4f",
+      "bytes": 11868
+    },
+    "lightning_logs/version_22/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_22/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_22/events.out.tfevents.1753768747.moazzam-hp.3320.15": {
+      "current_path": "legacy/logs/lightning_logs/version_22/events.out.tfevents.1753768747.moazzam-hp.3320.15",
+      "sha256": "1bc32b34d919c74f957a59f8ba470cc038615243bd073ed4c030fa95b5fa135d",
+      "bytes": 67617
+    },
+    "lightning_logs/version_22/events.out.tfevents.1753768937.moazzam-hp.3320.17": {
+      "current_path": "legacy/logs/lightning_logs/version_22/events.out.tfevents.1753768937.moazzam-hp.3320.17",
+      "sha256": "d72a80df9cebf8005d220c14ea96b50cc518b87ab48c4617d6200af05edb0194",
+      "bytes": 12373
+    },
+    "lightning_logs/version_22/events.out.tfevents.1753768745.moazzam-hp.3320.14": {
+      "current_path": "legacy/logs/lightning_logs/version_22/events.out.tfevents.1753768745.moazzam-hp.3320.14",
+      "sha256": "06a3f407747124f976ac5eea8336694700c4232c5010a5ba7a2187bd5410c671",
+      "bytes": 88
+    },
+    "lightning_logs/version_22/events.out.tfevents.1753768932.moazzam-hp.3320.16": {
+      "current_path": "legacy/logs/lightning_logs/version_22/events.out.tfevents.1753768932.moazzam-hp.3320.16",
+      "sha256": "6c1a5ecfaabf3f7b33ce26bca89af0219672b378b1ef0ec8f984c9f233a8ff6a",
+      "bytes": 12373
+    },
+    "lightning_logs/version_50/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_50/hparams.yaml",
+      "sha256": "86df4b989ec5b7d8032c3d085fa79e8ec992b7e78576cd3293663a8bf0ab5cad",
+      "bytes": 5028
+    },
+    "lightning_logs/version_50/events.out.tfevents.1790540689.moazzam-hp.3.0": {
+      "current_path": "legacy/logs/lightning_logs/version_50/events.out.tfevents.1790540689.moazzam-hp.3.0",
+      "sha256": "58de5df89b2e3da9eb712c5b6b0343550c10164a9905e90d46c6f9024972d4d3",
+      "bytes": 6840
+    },
+    "lightning_logs/version_31/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_31/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_31/events.out.tfevents.1754768108.moazzam-hp.7403.11": {
+      "current_path": "legacy/logs/lightning_logs/version_31/events.out.tfevents.1754768108.moazzam-hp.7403.11",
+      "sha256": "3ed5eb991d2b8e27f6ffbadd77fbc75ccdb988e33f624a19d3b382094730dd63",
+      "bytes": 39252
+    },
+    "lightning_logs/version_31/events.out.tfevents.1754768106.moazzam-hp.7403.10": {
+      "current_path": "legacy/logs/lightning_logs/version_31/events.out.tfevents.1754768106.moazzam-hp.7403.10",
+      "sha256": "c14339e5f9aef19b059ce513e96a8b6ff3239d6ccba442d5a6bfbed9a3555735",
+      "bytes": 88
+    },
+    "lightning_logs/version_46/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_46/hparams.yaml",
+      "sha256": "9b7a833bd1f653d3e00863314de870c751e7bb973b30ec3bd33fbf12759be996",
+      "bytes": 9210
+    },
+    "lightning_logs/version_46/events.out.tfevents.1770589282.moazzam-hp.21423.5": {
+      "current_path": "legacy/logs/lightning_logs/version_46/events.out.tfevents.1770589282.moazzam-hp.21423.5",
+      "sha256": "9a7f59e32a07c0e8ac2e726e3adfab0cb44ecad85bfa3b41636e533839d4f81e",
+      "bytes": 11482
+    },
+    "lightning_logs/version_46/events.out.tfevents.1770589074.moazzam-hp.21423.4": {
+      "current_path": "legacy/logs/lightning_logs/version_46/events.out.tfevents.1770589074.moazzam-hp.21423.4",
+      "sha256": "2b3794e3f822f7157fe92c6517aa07db331f6a18ee783165c13869ce38a6424a",
+      "bytes": 27182
+    },
+    "lightning_logs/version_19/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_19/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_19/events.out.tfevents.1753767750.moazzam-hp.3320.4": {
+      "current_path": "legacy/logs/lightning_logs/version_19/events.out.tfevents.1753767750.moazzam-hp.3320.4",
+      "sha256": "843587d3a5b91061b297789ad14fb9791f357b873be364057e862fa8461a2ba8",
+      "bytes": 88
+    },
+    "lightning_logs/version_19/events.out.tfevents.1753767878.moazzam-hp.3320.6": {
+      "current_path": "legacy/logs/lightning_logs/version_19/events.out.tfevents.1753767878.moazzam-hp.3320.6",
+      "sha256": "10e5faa6c46925b61d04c87506a03338641791da8cc0f034da265f776f317293",
+      "bytes": 12373
+    },
+    "lightning_logs/version_19/events.out.tfevents.1753767752.moazzam-hp.3320.5": {
+      "current_path": "legacy/logs/lightning_logs/version_19/events.out.tfevents.1753767752.moazzam-hp.3320.5",
+      "sha256": "1385e21c3ecf987e46362ca5174a45e52fc29304d36ee70690cacbf948e23bf1",
+      "bytes": 24933
+    },
+    "lightning_logs/version_52/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_52/hparams.yaml",
+      "sha256": "157c7ea9674a9e84d4e6f11517990e37da3f9de22b954154af0d2fe2d3717a41",
+      "bytes": 6245
+    },
+    "lightning_logs/version_52/events.out.tfevents.1790541085.moazzam-hp.3.0": {
+      "current_path": "legacy/logs/lightning_logs/version_52/events.out.tfevents.1790541085.moazzam-hp.3.0",
+      "sha256": "a0bf4f77feb767a7ec56ba302dbe1547f52d8d026dda291e9bdc436aaa2fae64",
+      "bytes": 9239
+    },
+    "lightning_logs/version_52/events.out.tfevents.1790541085.moazzam-hp.3.2": {
+      "current_path": "legacy/logs/lightning_logs/version_52/events.out.tfevents.1790541085.moazzam-hp.3.2",
+      "sha256": "b5dfcf5fcfa096fe4139a56e6ac208ac76dec1541a7cbbb70b8ae548c015c088",
+      "bytes": 8625
+    },
+    "lightning_logs/version_52/events.out.tfevents.1790541085.moazzam-hp.3.1": {
+      "current_path": "legacy/logs/lightning_logs/version_52/events.out.tfevents.1790541085.moazzam-hp.3.1",
+      "sha256": "ee59284e0cb14ec6394bd2e37ae24a5a3c41d907379b3719134bd62ac1c161d9",
+      "bytes": 8625
+    },
+    "lightning_logs/version_30/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_30/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_30/events.out.tfevents.1754767881.moazzam-hp.7403.9": {
+      "current_path": "legacy/logs/lightning_logs/version_30/events.out.tfevents.1754767881.moazzam-hp.7403.9",
+      "sha256": "01f5c8cdf9813fbceb3a0bffcaa444505e358d326303210bd3273908a9b36257",
+      "bytes": 39252
+    },
+    "lightning_logs/version_30/events.out.tfevents.1754767879.moazzam-hp.7403.8": {
+      "current_path": "legacy/logs/lightning_logs/version_30/events.out.tfevents.1754767879.moazzam-hp.7403.8",
+      "sha256": "b4e3caee1a0f10a58e8009cafb170277b8df3a7e0885ad99489e8f283fc0c075",
+      "bytes": 88
+    },
+    "lightning_logs/version_25/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_25/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_25/events.out.tfevents.1753775089.moazzam-hp.3320.29": {
+      "current_path": "legacy/logs/lightning_logs/version_25/events.out.tfevents.1753775089.moazzam-hp.3320.29",
+      "sha256": "e78ed8d37000f0404409206059b821f95f1bf6893a845abf125d6e3b5d01a2d9",
+      "bytes": 11868
+    },
+    "lightning_logs/version_25/events.out.tfevents.1753775100.moazzam-hp.3320.30": {
+      "current_path": "legacy/logs/lightning_logs/version_25/events.out.tfevents.1753775100.moazzam-hp.3320.30",
+      "sha256": "76543ab03b472925f717695dc271ed2a1684d4d02486f3247cd0c8fe3f391019",
+      "bytes": 11868
+    },
+    "lightning_logs/version_25/events.out.tfevents.1753775144.moazzam-hp.3320.31": {
+      "current_path": "legacy/logs/lightning_logs/version_25/events.out.tfevents.1753775144.moazzam-hp.3320.31",
+      "sha256": "403ae6f8771f3d59c95032e3460a498ec5e494478c99d2809fa0119cf58b4d9a",
+      "bytes": 11868
+    },
+    "lightning_logs/version_25/events.out.tfevents.1753775006.moazzam-hp.3320.27": {
+      "current_path": "legacy/logs/lightning_logs/version_25/events.out.tfevents.1753775006.moazzam-hp.3320.27",
+      "sha256": "287c3b07310d98dec75c79a7225886899d329b2b1d30a2f598249a4877d574b1",
+      "bytes": 88
+    },
+    "lightning_logs/version_25/events.out.tfevents.1753775008.moazzam-hp.3320.28": {
+      "current_path": "legacy/logs/lightning_logs/version_25/events.out.tfevents.1753775008.moazzam-hp.3320.28",
+      "sha256": "dba8ec256d51ffa6eb30e2e0c00354bf37048d08009df76daf93e32040c5daa3",
+      "bytes": 33788
+    },
+    "lightning_logs/version_27/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_27/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_27/events.out.tfevents.1754020790.moazzam-hp.13557.2": {
+      "current_path": "legacy/logs/lightning_logs/version_27/events.out.tfevents.1754020790.moazzam-hp.13557.2",
+      "sha256": "2b68f045d730327acca20f80bdf647822eaac2bd7fdb0b355342a13507e4f401",
+      "bytes": 11852
+    },
+    "lightning_logs/version_27/events.out.tfevents.1754020795.moazzam-hp.13557.3": {
+      "current_path": "legacy/logs/lightning_logs/version_27/events.out.tfevents.1754020795.moazzam-hp.13557.3",
+      "sha256": "c91466607ee7c43bd60a37a052779d98cda26d979e709ab958ff82a11853cdfa",
+      "bytes": 11852
+    },
+    "lightning_logs/version_27/events.out.tfevents.1754020684.moazzam-hp.13557.1": {
+      "current_path": "legacy/logs/lightning_logs/version_27/events.out.tfevents.1754020684.moazzam-hp.13557.1",
+      "sha256": "82199a93242f3446ef71d40d8803d075f65d42498e3b1a7963462ba13d30446b",
+      "bytes": 39252
+    },
+    "lightning_logs/version_27/events.out.tfevents.1754020681.moazzam-hp.13557.0": {
+      "current_path": "legacy/logs/lightning_logs/version_27/events.out.tfevents.1754020681.moazzam-hp.13557.0",
+      "sha256": "de75a84092200b5e6c2a9a9f819f0adc37b7007370585a29408ce650051034a4",
+      "bytes": 88
+    },
+    "lightning_logs/version_29/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_29/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_29/events.out.tfevents.1754767005.moazzam-hp.7403.4": {
+      "current_path": "legacy/logs/lightning_logs/version_29/events.out.tfevents.1754767005.moazzam-hp.7403.4",
+      "sha256": "d502cda658949bbee51349e9a4724ab6977e8ec25b5847aa65e761a938f27def",
+      "bytes": 88
+    },
+    "lightning_logs/version_29/events.out.tfevents.1754767007.moazzam-hp.7403.5": {
+      "current_path": "legacy/logs/lightning_logs/version_29/events.out.tfevents.1754767007.moazzam-hp.7403.5",
+      "sha256": "645dcd0e96ff311bd48fb0f69d79bb0249135e4e767a5070da2c69e7df950510",
+      "bytes": 39252
+    },
+    "lightning_logs/version_29/events.out.tfevents.1754767800.moazzam-hp.7403.7": {
+      "current_path": "legacy/logs/lightning_logs/version_29/events.out.tfevents.1754767800.moazzam-hp.7403.7",
+      "sha256": "a969d01ed06761cec4335e4763aeff277a2b6e2eb82ea860f15931ac873ca97e",
+      "bytes": 11852
+    },
+    "lightning_logs/version_29/events.out.tfevents.1754767788.moazzam-hp.7403.6": {
+      "current_path": "legacy/logs/lightning_logs/version_29/events.out.tfevents.1754767788.moazzam-hp.7403.6",
+      "sha256": "47e7e0a3cb4a9fa5b5e3c978dd4acb3571bc76b673f517d5497d8461c3d03fe8",
+      "bytes": 11852
+    },
+    "lightning_logs/version_33/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_33/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_33/events.out.tfevents.1754768696.moazzam-hp.7403.18": {
+      "current_path": "legacy/logs/lightning_logs/version_33/events.out.tfevents.1754768696.moazzam-hp.7403.18",
+      "sha256": "301d5b43d18dce4187380259885e3a311d51b165ade172299ab065c3fcf8ca84",
+      "bytes": 11852
+    },
+    "lightning_logs/version_33/events.out.tfevents.1754768680.moazzam-hp.7403.16": {
+      "current_path": "legacy/logs/lightning_logs/version_33/events.out.tfevents.1754768680.moazzam-hp.7403.16",
+      "sha256": "b8a524ee4c57278a83fa8f048086e221746b1171d33489c39978bcf6d7c03523",
+      "bytes": 11852
+    },
+    "lightning_logs/version_33/events.out.tfevents.1754768684.moazzam-hp.7403.17": {
+      "current_path": "legacy/logs/lightning_logs/version_33/events.out.tfevents.1754768684.moazzam-hp.7403.17",
+      "sha256": "4f35e1291842e30db5badbed7bc57906870c10df0338303fb29c1fc44b6a209f",
+      "bytes": 11852
+    },
+    "lightning_logs/version_33/events.out.tfevents.1754768521.moazzam-hp.7403.15": {
+      "current_path": "legacy/logs/lightning_logs/version_33/events.out.tfevents.1754768521.moazzam-hp.7403.15",
+      "sha256": "a5ddba17c8d144e047a05229d627ecb74240263f627ad7369f5bbf023daff1b2",
+      "bytes": 39252
+    },
+    "lightning_logs/version_33/events.out.tfevents.1754768520.moazzam-hp.7403.14": {
+      "current_path": "legacy/logs/lightning_logs/version_33/events.out.tfevents.1754768520.moazzam-hp.7403.14",
+      "sha256": "30c729747c32b6697479f0862e9e05a45160dc5288095226562e19643607b67f",
+      "bytes": 88
+    },
+    "lightning_logs/version_1/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_1/hparams.yaml",
+      "sha256": "368edabd1ff0b5932dc9971099c38b139f54006a048181aab6eab81db0f50fb3",
+      "bytes": 11049
+    },
+    "lightning_logs/version_1/events.out.tfevents.1753159773.moazzam-hp.132867.2": {
+      "current_path": "legacy/logs/lightning_logs/version_1/events.out.tfevents.1753159773.moazzam-hp.132867.2",
+      "sha256": "8d9a68caef6b5b6cd19e28791872f31d29b7e3b25c7af2b4fbf693469f085bca",
+      "bytes": 25942
+    },
+    "lightning_logs/version_51/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_51/hparams.yaml",
+      "sha256": "a66dd2cc47048ea860bcbd7cd5b087e754394882cf29c0411f7d07cbf97c966e",
+      "bytes": 5676
+    },
+    "lightning_logs/version_51/events.out.tfevents.1790540841.moazzam-hp.3.3": {
+      "current_path": "legacy/logs/lightning_logs/version_51/events.out.tfevents.1790540841.moazzam-hp.3.3",
+      "sha256": "b550985f91c0e27432910ffdb7ca1d351a4a812ba494bda6e3f962007a019c86",
+      "bytes": 7148
+    },
+    "lightning_logs/version_51/events.out.tfevents.1790540841.moazzam-hp.3.1": {
+      "current_path": "legacy/logs/lightning_logs/version_51/events.out.tfevents.1790540841.moazzam-hp.3.1",
+      "sha256": "66e76a15e1474695d6b80f2910c9377bd1a9acfe5dd851ac019fb834eca33d49",
+      "bytes": 7148
+    },
+    "lightning_logs/version_51/events.out.tfevents.1790540841.moazzam-hp.3.0": {
+      "current_path": "legacy/logs/lightning_logs/version_51/events.out.tfevents.1790540841.moazzam-hp.3.0",
+      "sha256": "52fbc30500e00f1ef72d4a6e1ef9261708ef5188780d35cf254a60ee806ff9db",
+      "bytes": 7762
+    },
+    "lightning_logs/version_51/events.out.tfevents.1790540841.moazzam-hp.3.2": {
+      "current_path": "legacy/logs/lightning_logs/version_51/events.out.tfevents.1790540841.moazzam-hp.3.2",
+      "sha256": "ed7c76c0f98d933f5f1f8d48d5c2158898ba96294eed2ac7bbffb60b6eba17cb",
+      "bytes": 7148
+    },
+    "lightning_logs/version_35/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_35/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_35/events.out.tfevents.1754772873.moazzam-hp.7403.27": {
+      "current_path": "legacy/logs/lightning_logs/version_35/events.out.tfevents.1754772873.moazzam-hp.7403.27",
+      "sha256": "80b158643857b4ca838bd63ff9b4ceaab9742eea9456e25aa0cedc44192927d2",
+      "bytes": 11852
+    },
+    "lightning_logs/version_35/events.out.tfevents.1754773151.moazzam-hp.7403.28": {
+      "current_path": "legacy/logs/lightning_logs/version_35/events.out.tfevents.1754773151.moazzam-hp.7403.28",
+      "sha256": "9a857f93e6fa7cbe265fc6721b479a4431d6cd951b68fc19eee141469da0ca58",
+      "bytes": 11852
+    },
+    "lightning_logs/version_35/events.out.tfevents.1754772710.moazzam-hp.7403.24": {
+      "current_path": "legacy/logs/lightning_logs/version_35/events.out.tfevents.1754772710.moazzam-hp.7403.24",
+      "sha256": "acad030d46776d9a4d6d3f2259e98ea171d3f5654faf721bdceace310350709c",
+      "bytes": 88
+    },
+    "lightning_logs/version_35/events.out.tfevents.1754772712.moazzam-hp.7403.25": {
+      "current_path": "legacy/logs/lightning_logs/version_35/events.out.tfevents.1754772712.moazzam-hp.7403.25",
+      "sha256": "d710cefefa821d3b7c0e5264bd091faee75c1c003b59f0ee13aa2a78dec6d4a3",
+      "bytes": 39252
+    },
+    "lightning_logs/version_35/events.out.tfevents.1754772834.moazzam-hp.7403.26": {
+      "current_path": "legacy/logs/lightning_logs/version_35/events.out.tfevents.1754772834.moazzam-hp.7403.26",
+      "sha256": "b9d13065d0a3871eafb135939dded7f182e7d4bc702f847d82d7d914c1461df9",
+      "bytes": 11852
+    },
+    "lightning_logs/version_35/events.out.tfevents.1754773701.moazzam-hp.7403.36": {
+      "current_path": "legacy/logs/lightning_logs/version_35/events.out.tfevents.1754773701.moazzam-hp.7403.36",
+      "sha256": "a5cea116510b1b23def22bd6d76aa2faf13d533b4487e5cb44b235ee7ab7eba4",
+      "bytes": 11852
+    },
+    "lightning_logs/version_23/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_23/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_23/events.out.tfevents.1753773353.moazzam-hp.3320.25": {
+      "current_path": "legacy/logs/lightning_logs/version_23/events.out.tfevents.1753773353.moazzam-hp.3320.25",
+      "sha256": "fc290dbeb477c50af743bdde113ae21005cbdef6db9834aaa4955ee433cf746d",
+      "bytes": 12389
+    },
+    "lightning_logs/version_23/events.out.tfevents.1753773064.moazzam-hp.3320.21": {
+      "current_path": "legacy/logs/lightning_logs/version_23/events.out.tfevents.1753773064.moazzam-hp.3320.21",
+      "sha256": "9f84a61ef6f66ef6cfe60e82ff7c4b0ed00051311a99197a32a2fa6be84eefa1",
+      "bytes": 88
+    },
+    "lightning_logs/version_23/events.out.tfevents.1753773278.moazzam-hp.3320.23": {
+      "current_path": "legacy/logs/lightning_logs/version_23/events.out.tfevents.1753773278.moazzam-hp.3320.23",
+      "sha256": "d52594f177f79050d0273957af407f008447c23c2b9867bed7bcd08be2a840ea",
+      "bytes": 12389
+    },
+    "lightning_logs/version_23/events.out.tfevents.1753773065.moazzam-hp.3320.22": {
+      "current_path": "legacy/logs/lightning_logs/version_23/events.out.tfevents.1753773065.moazzam-hp.3320.22",
+      "sha256": "39323fa356ff95b0b0e93e6b3acb6cb9bfc031b5166bdffdc3db80be4eaea2de",
+      "bytes": 67633
+    },
+    "lightning_logs/version_23/events.out.tfevents.1753773315.moazzam-hp.3320.24": {
+      "current_path": "legacy/logs/lightning_logs/version_23/events.out.tfevents.1753773315.moazzam-hp.3320.24",
+      "sha256": "9c788c9538a30360549adfa20ac7509761aaf0c7d70e47530ceca5317eeb86cd",
+      "bytes": 12389
+    },
+    "lightning_logs/version_4/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_4/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_4/events.out.tfevents.1753306671.moazzam-hp.17178.3": {
+      "current_path": "legacy/logs/lightning_logs/version_4/events.out.tfevents.1753306671.moazzam-hp.17178.3",
+      "sha256": "0769dd1e3b6a3b0634e9163b5ad23802fe1f40bf77d8a3f59acc98c8c1a9ddcf",
+      "bytes": 25939
+    },
+    "lightning_logs/version_4/events.out.tfevents.1753306765.moazzam-hp.17178.4": {
+      "current_path": "legacy/logs/lightning_logs/version_4/events.out.tfevents.1753306765.moazzam-hp.17178.4",
+      "sha256": "1ab4c1ac7125446d54bf96906b8edc288b9370820a043d7930e1acc56451e368",
+      "bytes": 13379
+    },
+    "lightning_logs/version_4/events.out.tfevents.1753306972.moazzam-hp.17178.6": {
+      "current_path": "legacy/logs/lightning_logs/version_4/events.out.tfevents.1753306972.moazzam-hp.17178.6",
+      "sha256": "8cf0405e204c99f02e30d621058d94fc4d068f66a31939430d7b46446abcfcd7",
+      "bytes": 13379
+    },
+    "lightning_logs/version_4/events.out.tfevents.1753306669.moazzam-hp.17178.2": {
+      "current_path": "legacy/logs/lightning_logs/version_4/events.out.tfevents.1753306669.moazzam-hp.17178.2",
+      "sha256": "d7c696e86250d4bcf52e5930dc92babc9725e13f293b8a1a5c22d018292d6497",
+      "bytes": 88
+    },
+    "lightning_logs/version_4/events.out.tfevents.1753306850.moazzam-hp.17178.5": {
+      "current_path": "legacy/logs/lightning_logs/version_4/events.out.tfevents.1753306850.moazzam-hp.17178.5",
+      "sha256": "3efdfea8b0d9428f3883c6bed206209b220446711604380158c597a11876a94f",
+      "bytes": 13379
+    },
+    "lightning_logs/version_12/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_12/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_12/events.out.tfevents.1753319079.moazzam-hp.17178.37": {
+      "current_path": "legacy/logs/lightning_logs/version_12/events.out.tfevents.1753319079.moazzam-hp.17178.37",
+      "sha256": "71f87693d044eb66f78cb38e40895ac3e670c86dbf847e74e4dd1ccb2769e703",
+      "bytes": 35313
+    },
+    "lightning_logs/version_12/events.out.tfevents.1753319252.moazzam-hp.17178.39": {
+      "current_path": "legacy/logs/lightning_logs/version_12/events.out.tfevents.1753319252.moazzam-hp.17178.39",
+      "sha256": "c4daf561dd96e0af76d866534fc1fb0492e7aadf70874e156266084502e00c1d",
+      "bytes": 13393
+    },
+    "lightning_logs/version_12/events.out.tfevents.1753319174.moazzam-hp.17178.38": {
+      "current_path": "legacy/logs/lightning_logs/version_12/events.out.tfevents.1753319174.moazzam-hp.17178.38",
+      "sha256": "a8b0675ec94b3f585462ab7cf96b7b7173ee9215bc1ddea9184c661781294b4a",
+      "bytes": 13393
+    },
+    "lightning_logs/version_12/events.out.tfevents.1753319077.moazzam-hp.17178.36": {
+      "current_path": "legacy/logs/lightning_logs/version_12/events.out.tfevents.1753319077.moazzam-hp.17178.36",
+      "sha256": "a72d6949b4a8ba8bfe02239f36261b468fc32ebed100eb88564e1b3ac4ca764d",
+      "bytes": 88
+    },
+    "lightning_logs/version_54/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_54/hparams.yaml",
+      "sha256": "157c7ea9674a9e84d4e6f11517990e37da3f9de22b954154af0d2fe2d3717a41",
+      "bytes": 6245
+    },
+    "lightning_logs/version_54/events.out.tfevents.1790541397.moazzam-hp.3.2": {
+      "current_path": "legacy/logs/lightning_logs/version_54/events.out.tfevents.1790541397.moazzam-hp.3.2",
+      "sha256": "a8365351492de2bcde5892115cc6f72b832978e8bb13e26b7c36748d818fb812",
+      "bytes": 8625
+    },
+    "lightning_logs/version_54/events.out.tfevents.1790541397.moazzam-hp.3.1": {
+      "current_path": "legacy/logs/lightning_logs/version_54/events.out.tfevents.1790541397.moazzam-hp.3.1",
+      "sha256": "3468c70668e0cb2f33824b0040e49332f3a6e175bd8c22b5526c9e00eca706d5",
+      "bytes": 8625
+    },
+    "lightning_logs/version_54/events.out.tfevents.1790541397.moazzam-hp.3.0": {
+      "current_path": "legacy/logs/lightning_logs/version_54/events.out.tfevents.1790541397.moazzam-hp.3.0",
+      "sha256": "581a98724ecbda8fb286f35cb17a213d967642155f5d41c3d757da2a6e57121f",
+      "bytes": 9239
+    },
+    "lightning_logs/version_2/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_2/hparams.yaml",
+      "sha256": "368edabd1ff0b5932dc9971099c38b139f54006a048181aab6eab81db0f50fb3",
+      "bytes": 11049
+    },
+    "lightning_logs/version_2/events.out.tfevents.1753159990.moazzam-hp.132867.3": {
+      "current_path": "legacy/logs/lightning_logs/version_2/events.out.tfevents.1753159990.moazzam-hp.132867.3",
+      "sha256": "097fc9e151e1b0bbecf922d657fd4e325af381d97ce1e82909639d0b85785695",
+      "bytes": 25942
+    },
+    "lightning_logs/version_2/events.out.tfevents.1753160051.moazzam-hp.132867.4": {
+      "current_path": "legacy/logs/lightning_logs/version_2/events.out.tfevents.1753160051.moazzam-hp.132867.4",
+      "sha256": "ce57371a78e42dde5ef22b4e2c1abbb04fa4dfafb86d2422d87cd4684fc9cb5f",
+      "bytes": 13382
+    },
+    "lightning_logs/version_41/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_41/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_41/events.out.tfevents.1763847743.moazzam-hp.38999.13": {
+      "current_path": "legacy/logs/lightning_logs/version_41/events.out.tfevents.1763847743.moazzam-hp.38999.13",
+      "sha256": "fe17d14ace8caa630b817272395e03b55b43e9f7fbdfb38d7c4e4f84b4af036f",
+      "bytes": 11868
+    },
+    "lightning_logs/version_41/events.out.tfevents.1763847638.moazzam-hp.38999.10": {
+      "current_path": "legacy/logs/lightning_logs/version_41/events.out.tfevents.1763847638.moazzam-hp.38999.10",
+      "sha256": "0a7a3925e427ad5cbdce3d12f85f6ccf81a1657485608895861cf276b84649a7",
+      "bytes": 11868
+    },
+    "lightning_logs/version_41/events.out.tfevents.1763847697.moazzam-hp.38999.11": {
+      "current_path": "legacy/logs/lightning_logs/version_41/events.out.tfevents.1763847697.moazzam-hp.38999.11",
+      "sha256": "530a2ffe30288085b696a7d1812d78400f4c00e4fb771d05c5335bbcb54a04b2",
+      "bytes": 11868
+    },
+    "lightning_logs/version_41/events.out.tfevents.1763847485.moazzam-hp.38999.8": {
+      "current_path": "legacy/logs/lightning_logs/version_41/events.out.tfevents.1763847485.moazzam-hp.38999.8",
+      "sha256": "91995daa7d7820ae0a5a2737784ba540c128a27522c29a5209cc923d3376638f",
+      "bytes": 88
+    },
+    "lightning_logs/version_41/events.out.tfevents.1763847487.moazzam-hp.38999.9": {
+      "current_path": "legacy/logs/lightning_logs/version_41/events.out.tfevents.1763847487.moazzam-hp.38999.9",
+      "sha256": "bc79d7b9cfadbfb30049c23605264daac28f72f47efdbe99f73f447a8fb56fb8",
+      "bytes": 39268
+    },
+    "lightning_logs/version_41/events.out.tfevents.1763847707.moazzam-hp.38999.12": {
+      "current_path": "legacy/logs/lightning_logs/version_41/events.out.tfevents.1763847707.moazzam-hp.38999.12",
+      "sha256": "3b0ab881b46bc3c7f5ee15f845292fe3db132aebfeaa262b63af200eb782d0a0",
+      "bytes": 11868
+    },
+    "lightning_logs/version_26/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_26/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_26/events.out.tfevents.1753775220.moazzam-hp.3320.33": {
+      "current_path": "legacy/logs/lightning_logs/version_26/events.out.tfevents.1753775220.moazzam-hp.3320.33",
+      "sha256": "a970ec9571d326feedbde4e82bd63474c425424bc0c81fb012181127252ae1e5",
+      "bytes": 66202
+    },
+    "lightning_logs/version_26/events.out.tfevents.1753775218.moazzam-hp.3320.32": {
+      "current_path": "legacy/logs/lightning_logs/version_26/events.out.tfevents.1753775218.moazzam-hp.3320.32",
+      "sha256": "4764eb23b10091be14f29269cbc8cc89c431ea9345d709489b1e03c43fe29d1b",
+      "bytes": 88
+    },
+    "lightning_logs/version_26/events.out.tfevents.1753775400.moazzam-hp.3320.34": {
+      "current_path": "legacy/logs/lightning_logs/version_26/events.out.tfevents.1753775400.moazzam-hp.3320.34",
+      "sha256": "85078ff71a78d99422aadc2c4e35be979ebf3e07d9c12f0cfd5d5d8481707869",
+      "bytes": 10958
+    },
+    "lightning_logs/version_26/events.out.tfevents.1753775407.moazzam-hp.3320.35": {
+      "current_path": "legacy/logs/lightning_logs/version_26/events.out.tfevents.1753775407.moazzam-hp.3320.35",
+      "sha256": "29ccab914eb4bccf636e90163ceb65f15de20fbb54dbd5b054d50435b4c03659",
+      "bytes": 10958
+    },
+    "lightning_logs/version_26/events.out.tfevents.1753775424.moazzam-hp.3320.36": {
+      "current_path": "legacy/logs/lightning_logs/version_26/events.out.tfevents.1753775424.moazzam-hp.3320.36",
+      "sha256": "ebc4ff8f86f6a77cfc9a80cb97a3715fcdaccf279b97003a43dc78ce594597d3",
+      "bytes": 10958
+    },
+    "lightning_logs/version_6/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_6/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_6/events.out.tfevents.1753307450.moazzam-hp.17178.11": {
+      "current_path": "legacy/logs/lightning_logs/version_6/events.out.tfevents.1753307450.moazzam-hp.17178.11",
+      "sha256": "8304b4befbffe21133346e668b8049fbc59095938fa3b37980a0fadd977decdb",
+      "bytes": 25955
+    },
+    "lightning_logs/version_6/events.out.tfevents.1753307509.moazzam-hp.17178.12": {
+      "current_path": "legacy/logs/lightning_logs/version_6/events.out.tfevents.1753307509.moazzam-hp.17178.12",
+      "sha256": "fd91a2c6360d3558b08cd9b8c8279ab64781f9b79fd5c4d258724784ce86f850",
+      "bytes": 13395
+    },
+    "lightning_logs/version_6/events.out.tfevents.1753307448.moazzam-hp.17178.10": {
+      "current_path": "legacy/logs/lightning_logs/version_6/events.out.tfevents.1753307448.moazzam-hp.17178.10",
+      "sha256": "989a8d721c3f2dc95c3725c113420a46713b4e436517850ac58c85dc09fc3a95",
+      "bytes": 88
+    },
+    "lightning_logs/version_45/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_45/hparams.yaml",
+      "sha256": "9b7a833bd1f653d3e00863314de870c751e7bb973b30ec3bd33fbf12759be996",
+      "bytes": 9210
+    },
+    "lightning_logs/version_45/events.out.tfevents.1770588686.moazzam-hp.21423.3": {
+      "current_path": "legacy/logs/lightning_logs/version_45/events.out.tfevents.1770588686.moazzam-hp.21423.3",
+      "sha256": "0dca4d293300cb69240758b08f031ae49c1db007e15611c33642ebf95613f05d",
+      "bytes": 11482
+    },
+    "lightning_logs/version_45/events.out.tfevents.1770588485.moazzam-hp.21423.2": {
+      "current_path": "legacy/logs/lightning_logs/version_45/events.out.tfevents.1770588485.moazzam-hp.21423.2",
+      "sha256": "5918504d0aad2ebe4e9fe619506c54f33919ecd90162c5bcba2520db77082519",
+      "bytes": 27182
+    },
+    "lightning_logs/version_17/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_17/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_17/events.out.tfevents.1753600425.moazzam-hp.59047.16": {
+      "current_path": "legacy/logs/lightning_logs/version_17/events.out.tfevents.1753600425.moazzam-hp.59047.16",
+      "sha256": "af3881857fc019fb8a50a1cc53e3dacd7de8acf33e7de654ce27ad66d0391591",
+      "bytes": 88
+    },
+    "lightning_logs/version_17/events.out.tfevents.1753600624.moazzam-hp.59047.20": {
+      "current_path": "legacy/logs/lightning_logs/version_17/events.out.tfevents.1753600624.moazzam-hp.59047.20",
+      "sha256": "9c19f6522e03b67fc3b938c6dee36ee6c00690cbe5c3a274e4b051c3be6f9706",
+      "bytes": 12371
+    },
+    "lightning_logs/version_17/events.out.tfevents.1753600427.moazzam-hp.59047.17": {
+      "current_path": "legacy/logs/lightning_logs/version_17/events.out.tfevents.1753600427.moazzam-hp.59047.17",
+      "sha256": "0313f49712f3794be62f9634a1ba2c2c1e679c9ea9fb893a034af2c848975afc",
+      "bytes": 67219
+    },
+    "lightning_logs/version_17/events.out.tfevents.1753600590.moazzam-hp.59047.18": {
+      "current_path": "legacy/logs/lightning_logs/version_17/events.out.tfevents.1753600590.moazzam-hp.59047.18",
+      "sha256": "078619839c5bad5853f0f2dee927af7d21a6d6be678cac955d4132b9b8d58901",
+      "bytes": 12371
+    },
+    "lightning_logs/version_17/events.out.tfevents.1753600615.moazzam-hp.59047.19": {
+      "current_path": "legacy/logs/lightning_logs/version_17/events.out.tfevents.1753600615.moazzam-hp.59047.19",
+      "sha256": "57bdaf3f850a32b7c90b7e2359c262d86f53c7d72cdb03d7e07e986976a0ceff",
+      "bytes": 12371
+    },
+    "lightning_logs/version_8/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_8/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753311979.moazzam-hp.17178.18": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753311979.moazzam-hp.17178.18",
+      "sha256": "b75d2ed424493c9a72def53742ed691416ef1050b9e238a1cde09f1e7bef6c91",
+      "bytes": 35297
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753313089.moazzam-hp.17178.26": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753313089.moazzam-hp.17178.26",
+      "sha256": "7b28be31eae0ecd8580a9bf8c1795b1ba9dfc19bd4d39840b4a1533ab2fbfde4",
+      "bytes": 13377
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753313082.moazzam-hp.17178.25": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753313082.moazzam-hp.17178.25",
+      "sha256": "9462e776b4cacaaf3cd012cde1681ec16bbfc3da1ebcb68cc09e4092a82f4306",
+      "bytes": 13377
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753312940.moazzam-hp.17178.22": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753312940.moazzam-hp.17178.22",
+      "sha256": "dc08b081c77f5420756597591172493c36437011c7026b52c2c14f7401e4955d",
+      "bytes": 13377
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753313010.moazzam-hp.17178.24": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753313010.moazzam-hp.17178.24",
+      "sha256": "ed11f8ecb299f101374468a5770d867434c1d2047ac084aacbeb322c2e9a0bf3",
+      "bytes": 13377
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753312073.moazzam-hp.17178.19": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753312073.moazzam-hp.17178.19",
+      "sha256": "3e5a4502383ad4e4ab2e1feaf17449d3834d9943ced0a977d2abcbef61fc08e6",
+      "bytes": 13377
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753311977.moazzam-hp.17178.17": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753311977.moazzam-hp.17178.17",
+      "sha256": "9350238f72d7f37dcedef7aa6985546e00e1c9eac4140c5328dd50c008f887fc",
+      "bytes": 88
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753312950.moazzam-hp.17178.23": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753312950.moazzam-hp.17178.23",
+      "sha256": "7f1500a74963486c9a652c1079acc9b79b1813604701fcb3ced8e1c2e3d2c81e",
+      "bytes": 13377
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753312924.moazzam-hp.17178.21": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753312924.moazzam-hp.17178.21",
+      "sha256": "0c456725b3ec952fc6e2be17e21acf65c8072c2676a32d1e7409383466e66b59",
+      "bytes": 13377
+    },
+    "lightning_logs/version_8/events.out.tfevents.1753312815.moazzam-hp.17178.20": {
+      "current_path": "legacy/logs/lightning_logs/version_8/events.out.tfevents.1753312815.moazzam-hp.17178.20",
+      "sha256": "eab94df7298b154f4c7622a1df356ab9752e05397058259792509a3ddab7f32e",
+      "bytes": 13377
+    },
+    "lightning_logs/version_24/events.out.tfevents.1753774990.moazzam-hp.3320.26": {
+      "current_path": "legacy/logs/lightning_logs/version_24/events.out.tfevents.1753774990.moazzam-hp.3320.26",
+      "sha256": "6639a9a680b463d921434080db11fa737d280168d13b313fb4218e1be101538e",
+      "bytes": 88
+    },
+    "lightning_logs/version_32/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_32/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_32/events.out.tfevents.1754768268.moazzam-hp.7403.12": {
+      "current_path": "legacy/logs/lightning_logs/version_32/events.out.tfevents.1754768268.moazzam-hp.7403.12",
+      "sha256": "128cd7ef1e277ae5e9f86f73a0c650d2bbfba10ddbdd7933419db4c85fcc24bf",
+      "bytes": 88
+    },
+    "lightning_logs/version_32/events.out.tfevents.1754768270.moazzam-hp.7403.13": {
+      "current_path": "legacy/logs/lightning_logs/version_32/events.out.tfevents.1754768270.moazzam-hp.7403.13",
+      "sha256": "9ef9e69fc2ea5a7327678117af26ef3df7ac3eff88d24bf8bb5a86f010239f34",
+      "bytes": 39252
+    },
+    "lightning_logs/version_43/events.out.tfevents.1770581443.moazzam-hp.14270.2": {
+      "current_path": "legacy/logs/lightning_logs/version_43/events.out.tfevents.1770581443.moazzam-hp.14270.2",
+      "sha256": "74d0e227487c21237aa6c2c32a93e09689dc7af2acbb46155302efc9f62c7434",
+      "bytes": 11208
+    },
+    "lightning_logs/version_43/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_43/hparams.yaml",
+      "sha256": "ae91b427c19a6bfce619b7e40f8a408b115b9fc6917be5fcadb84ce9f054c56e",
+      "bytes": 5570
+    },
+    "lightning_logs/version_28/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_28/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_28/events.out.tfevents.1754766916.moazzam-hp.7403.3": {
+      "current_path": "legacy/logs/lightning_logs/version_28/events.out.tfevents.1754766916.moazzam-hp.7403.3",
+      "sha256": "d3b054fe3aec879d0a6d7d9bacd412ee58867f91254de866fbde87b1e72e7eb0",
+      "bytes": 11852
+    },
+    "lightning_logs/version_28/events.out.tfevents.1754766911.moazzam-hp.7403.2": {
+      "current_path": "legacy/logs/lightning_logs/version_28/events.out.tfevents.1754766911.moazzam-hp.7403.2",
+      "sha256": "a41edcf6afd72dc8e5c91204c20e165b6a596c9d24d0e7fe80054d75206b2014",
+      "bytes": 11852
+    },
+    "lightning_logs/version_28/events.out.tfevents.1754766782.moazzam-hp.7403.1": {
+      "current_path": "legacy/logs/lightning_logs/version_28/events.out.tfevents.1754766782.moazzam-hp.7403.1",
+      "sha256": "c729080a737b70e9599a00ab94cf221dda11c1a7a20c9ddaa2d1f49e15228b47",
+      "bytes": 39252
+    },
+    "lightning_logs/version_28/events.out.tfevents.1754766780.moazzam-hp.7403.0": {
+      "current_path": "legacy/logs/lightning_logs/version_28/events.out.tfevents.1754766780.moazzam-hp.7403.0",
+      "sha256": "63f4e5d3e10dfb1b2ac1229f6901104fb884aa92991bc68f10e2e5920b96505e",
+      "bytes": 88
+    },
+    "lightning_logs/version_20/events.out.tfevents.1753768127.moazzam-hp.3320.8": {
+      "current_path": "legacy/logs/lightning_logs/version_20/events.out.tfevents.1753768127.moazzam-hp.3320.8",
+      "sha256": "9f1d1d40f44125521fee8764cc0268c8a89692b05c755a4cda0b47a1209e2dd6",
+      "bytes": 34309
+    },
+    "lightning_logs/version_20/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_20/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_20/events.out.tfevents.1753768125.moazzam-hp.3320.7": {
+      "current_path": "legacy/logs/lightning_logs/version_20/events.out.tfevents.1753768125.moazzam-hp.3320.7",
+      "sha256": "d306181ef80aec31ad24077cc64f0f97f3b085467bac8d1fd3d29edb19974860",
+      "bytes": 88
+    },
+    "lightning_logs/version_21/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_21/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_21/events.out.tfevents.1753773011.moazzam-hp.3320.19": {
+      "current_path": "legacy/logs/lightning_logs/version_21/events.out.tfevents.1753773011.moazzam-hp.3320.19",
+      "sha256": "4890eb5ca98c4ae64dfa8dd90abab418ad56a42947f4d827b63a217fd5111fde",
+      "bytes": 12389
+    },
+    "lightning_logs/version_21/events.out.tfevents.1753768224.moazzam-hp.3320.9": {
+      "current_path": "legacy/logs/lightning_logs/version_21/events.out.tfevents.1753768224.moazzam-hp.3320.9",
+      "sha256": "21297f9c1929841c926c0ef71f87875b4a39a5e3410995574b54825ee5ac90f9",
+      "bytes": 88
+    },
+    "lightning_logs/version_21/events.out.tfevents.1753773017.moazzam-hp.3320.20": {
+      "current_path": "legacy/logs/lightning_logs/version_21/events.out.tfevents.1753773017.moazzam-hp.3320.20",
+      "sha256": "fcf8bc573bd58b11aaa3e680b987d0ce668b2646c4537ddedf146696815d676a",
+      "bytes": 12389
+    },
+    "lightning_logs/version_21/events.out.tfevents.1753772993.moazzam-hp.3320.18": {
+      "current_path": "legacy/logs/lightning_logs/version_21/events.out.tfevents.1753772993.moazzam-hp.3320.18",
+      "sha256": "6d36022207f3a4230b998ef4b380944d53215b629d68e2a9c86b022d110c4f6e",
+      "bytes": 12389
+    },
+    "lightning_logs/version_21/events.out.tfevents.1753768226.moazzam-hp.3320.10": {
+      "current_path": "legacy/logs/lightning_logs/version_21/events.out.tfevents.1753768226.moazzam-hp.3320.10",
+      "sha256": "03f8f263261772522c179920d7c2f31b631435201d4bf7476d56be89c87c54e7",
+      "bytes": 67633
+    },
+    "lightning_logs/version_21/events.out.tfevents.1753768559.moazzam-hp.3320.13": {
+      "current_path": "legacy/logs/lightning_logs/version_21/events.out.tfevents.1753768559.moazzam-hp.3320.13",
+      "sha256": "ad7679802071fa7326ba2b710ed1ff0d982d163e2058dbdbb56b53696722998a",
+      "bytes": 12389
+    },
+    "lightning_logs/version_21/events.out.tfevents.1753768447.moazzam-hp.3320.11": {
+      "current_path": "legacy/logs/lightning_logs/version_21/events.out.tfevents.1753768447.moazzam-hp.3320.11",
+      "sha256": "4e38eb3c1e191cfb3293533f08f4ce9b8efe1c28edddc19e7d9f59a7e0a52778",
+      "bytes": 12389
+    },
+    "lightning_logs/version_21/events.out.tfevents.1753768504.moazzam-hp.3320.12": {
+      "current_path": "legacy/logs/lightning_logs/version_21/events.out.tfevents.1753768504.moazzam-hp.3320.12",
+      "sha256": "e91592b146d3d9cbc35fe31bce4363c3d2cdf89f080ef870d8a1f5101b70284a",
+      "bytes": 12389
+    },
+    "lightning_logs/version_37/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_37/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_37/events.out.tfevents.1754775311.moazzam-hp.7403.37": {
+      "current_path": "legacy/logs/lightning_logs/version_37/events.out.tfevents.1754775311.moazzam-hp.7403.37",
+      "sha256": "db7e549936dd5bbccebd67e778a092cc44a95056bd20eb509d58160e8a938430",
+      "bytes": 88
+    },
+    "lightning_logs/version_37/events.out.tfevents.1754775313.moazzam-hp.7403.38": {
+      "current_path": "legacy/logs/lightning_logs/version_37/events.out.tfevents.1754775313.moazzam-hp.7403.38",
+      "sha256": "f5ef7a1a0962741994855eedef6307b63e5b80abeb8e40d9bc608ad558998cd6",
+      "bytes": 24933
+    },
+    "lightning_logs/version_37/events.out.tfevents.1754775391.moazzam-hp.7403.39": {
+      "current_path": "legacy/logs/lightning_logs/version_37/events.out.tfevents.1754775391.moazzam-hp.7403.39",
+      "sha256": "20edfbb66e99779b3784ec2e0c82fc3cf278d0421f09221a6b0d567c65b015c2",
+      "bytes": 12373
+    },
+    "lightning_logs/version_5/events.out.tfevents.1753307136.moazzam-hp.17178.9": {
+      "current_path": "legacy/logs/lightning_logs/version_5/events.out.tfevents.1753307136.moazzam-hp.17178.9",
+      "sha256": "f4abdfc43ce65f72556ed3b55783b70187807233069a8b93f6f971756378c608",
+      "bytes": 13379
+    },
+    "lightning_logs/version_5/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_5/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_5/events.out.tfevents.1753307037.moazzam-hp.17178.7": {
+      "current_path": "legacy/logs/lightning_logs/version_5/events.out.tfevents.1753307037.moazzam-hp.17178.7",
+      "sha256": "9203af90e921283b74500f8c7dbb609d90ff3ca46e715570608c2994c83687c4",
+      "bytes": 88
+    },
+    "lightning_logs/version_5/events.out.tfevents.1753307039.moazzam-hp.17178.8": {
+      "current_path": "legacy/logs/lightning_logs/version_5/events.out.tfevents.1753307039.moazzam-hp.17178.8",
+      "sha256": "01eabf23aaf4d117db19cf008eea356838c4a4acc41197a86f114a74c638987f",
+      "bytes": 25939
+    },
+    "lightning_logs/version_16/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_16/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_16/events.out.tfevents.1753598678.moazzam-hp.59047.13": {
+      "current_path": "legacy/logs/lightning_logs/version_16/events.out.tfevents.1753598678.moazzam-hp.59047.13",
+      "sha256": "4137727b53c556699f763d5421ccc07bc352c2a3229962b1d202823c73ec242f",
+      "bytes": 13377
+    },
+    "lightning_logs/version_16/events.out.tfevents.1753598543.moazzam-hp.59047.12": {
+      "current_path": "legacy/logs/lightning_logs/version_16/events.out.tfevents.1753598543.moazzam-hp.59047.12",
+      "sha256": "7582aacb9e8da3c533568bcf3a0b435be83c27597f6307e79dea6b0bf03bf5c6",
+      "bytes": 68225
+    },
+    "lightning_logs/version_16/events.out.tfevents.1753598541.moazzam-hp.59047.11": {
+      "current_path": "legacy/logs/lightning_logs/version_16/events.out.tfevents.1753598541.moazzam-hp.59047.11",
+      "sha256": "9d9d6fdd8643184158af965a640408bb40c20a39b96c55941db480f721fd2c6d",
+      "bytes": 88
+    },
+    "lightning_logs/version_16/events.out.tfevents.1753598690.moazzam-hp.59047.15": {
+      "current_path": "legacy/logs/lightning_logs/version_16/events.out.tfevents.1753598690.moazzam-hp.59047.15",
+      "sha256": "a8289594688ebb419168958328b4b27c12c85c05a67f33ffeed393ed5d96a4f8",
+      "bytes": 13377
+    },
+    "lightning_logs/version_16/events.out.tfevents.1753598683.moazzam-hp.59047.14": {
+      "current_path": "legacy/logs/lightning_logs/version_16/events.out.tfevents.1753598683.moazzam-hp.59047.14",
+      "sha256": "1acd24921cc99b89a0d110053334bd39c08d69e0b2f2ecac25340bf8a7c10356",
+      "bytes": 13377
+    },
+    "lightning_logs/version_10/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_10/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_10/events.out.tfevents.1753317215.moazzam-hp.17178.31": {
+      "current_path": "legacy/logs/lightning_logs/version_10/events.out.tfevents.1753317215.moazzam-hp.17178.31",
+      "sha256": "0936903cbe66e3b5acf8bcc6752c5e28a259f4fcaf3ab4255126c0dd7a5e42c5",
+      "bytes": 35297
+    },
+    "lightning_logs/version_10/events.out.tfevents.1753317212.moazzam-hp.17178.30": {
+      "current_path": "legacy/logs/lightning_logs/version_10/events.out.tfevents.1753317212.moazzam-hp.17178.30",
+      "sha256": "f7d9b78af44a7b15f9cf21e25e94aaf8ff58defd284bc4001354828c53355f66",
+      "bytes": 88
+    },
+    "lightning_logs/version_0/events.out.tfevents.1753159580.moazzam-hp.132867.0": {
+      "current_path": "legacy/logs/lightning_logs/version_0/events.out.tfevents.1753159580.moazzam-hp.132867.0",
+      "sha256": "683ba30af79a671afbbf7a06d4c1ba12f7fc513edc559b88c5bb8d6a481e2ac7",
+      "bytes": 88
+    },
+    "lightning_logs/version_0/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_0/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_0/events.out.tfevents.1753159582.moazzam-hp.132867.1": {
+      "current_path": "legacy/logs/lightning_logs/version_0/events.out.tfevents.1753159582.moazzam-hp.132867.1",
+      "sha256": "34685bce5fbae483a0e953ac485731288745c421b774fd95d37d95d90589aef5",
+      "bytes": 25939
+    },
+    "lightning_logs/version_56/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_56/hparams.yaml",
+      "sha256": "ccb44641d4a3889a0fe7cf5501c4ae6ef19dbff7185ab605eb68860f61a07bc1",
+      "bytes": 6245
+    },
+    "lightning_logs/version_56/events.out.tfevents.1790541493.moazzam-hp.3.4": {
+      "current_path": "legacy/logs/lightning_logs/version_56/events.out.tfevents.1790541493.moazzam-hp.3.4",
+      "sha256": "655272ab4a8725961e6525175b96f3ebdecdf03bfd01674cfc2d4019d6089ef6",
+      "bytes": 8625
+    },
+    "lightning_logs/version_56/events.out.tfevents.1790541493.moazzam-hp.3.3": {
+      "current_path": "legacy/logs/lightning_logs/version_56/events.out.tfevents.1790541493.moazzam-hp.3.3",
+      "sha256": "0f677640b342a5b6ee52794edd88173243b8085607174e91affaeaaddbf283f1",
+      "bytes": 9239
+    },
+    "lightning_logs/version_18/hparams.yaml": {
+      "current_path": "legacy/logs/lightning_logs/version_18/hparams.yaml",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "lightning_logs/version_18/events.out.tfevents.1753767457.moazzam-hp.3320.0": {
+      "current_path": "legacy/logs/lightning_logs/version_18/events.out.tfevents.1753767457.moazzam-hp.3320.0",
+      "sha256": "7ee96540556276819875047a876f413330648c2c00e9997edc2033260acc877f",
+      "bytes": 88
+    },
+    "lightning_logs/version_18/events.out.tfevents.1753767691.moazzam-hp.3320.3": {
+      "current_path": "legacy/logs/lightning_logs/version_18/events.out.tfevents.1753767691.moazzam-hp.3320.3",
+      "sha256": "591f194eba62fe512e9c660691dc96d778a2dc90850ee25471a2edba09be81a5",
+      "bytes": 12373
+    },
+    "lightning_logs/version_18/events.out.tfevents.1753767459.moazzam-hp.3320.1": {
+      "current_path": "legacy/logs/lightning_logs/version_18/events.out.tfevents.1753767459.moazzam-hp.3320.1",
+      "sha256": "55d1c6a56e46b0de40186337cf65aa06e76ef050908cc857d5b838df20ac9100",
+      "bytes": 67617
+    },
+    "lightning_logs/version_18/events.out.tfevents.1753767680.moazzam-hp.3320.2": {
+      "current_path": "legacy/logs/lightning_logs/version_18/events.out.tfevents.1753767680.moazzam-hp.3320.2",
+      "sha256": "5ca4b9f8ad87d202b9d53a38a7996396f70163fd59a9aa3c74259f935d32552c",
+      "bytes": 12373
+    }
+  }
+}

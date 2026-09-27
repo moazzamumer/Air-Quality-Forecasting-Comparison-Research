@@ -1,0 +1,79 @@
+{
+  "counts": {
+    "raw_rows": 39523,
+    "raw_missing_values": 0,
+    "calendar_hours": 40267,
+    "missing_hours": 744,
+    "gap_intervals": 21,
+    "training_calendar_hours": 36240,
+    "training_observed_targets": 35736,
+    "test_calendar_hours": 4027,
+    "test_observed_targets": 3787,
+    "full_test_windows": 23,
+    "eligible_test_windows": 16,
+    "evaluated_hours": 2688,
+    "tail_hours": 163,
+    "preprocessed_rows": 36830,
+    "removed_original_rows": 2693,
+    "preprocessed_matches_notebook_global_zscore_filter": true
+  },
+  "first_timestamp": "2020-11-25 01:00:00",
+  "last_timestamp": "2025-06-29 19:00:00",
+  "train_start": "2020-11-25 01:00:00",
+  "train_end": "2025-01-13 00:00:00",
+  "test_start": "2025-01-13 01:00:00",
+  "test_end": "2025-06-29 19:00:00",
+  "coordinates_csv": [
+    {
+      "latitude": 39.9062,
+      "longitude": 116.3913
+    }
+  ],
+  "duplicates": 0,
+  "descriptive": {
+    "all_observed": {
+      "observed_n": 39523,
+      "mean": 211.5775224552792,
+      "sd": 227.03259286852182,
+      "median": 132.0,
+      "q25": 53.35,
+      "q75": 289.45,
+      "iqr": 236.1,
+      "min": 0.0,
+      "max": 1825.93
+    },
+    "training": {
+      "observed_n": 35736,
+      "mean": 217.53739758226996,
+      "sd": 227.30260085797076,
+      "median": 140.595,
+      "q25": 58.24,
+      "q75": 297.84499999999997,
+      "iqr": 239.60499999999996,
+      "min": 0.91,
+      "max": 1825.93
+    },
+    "test": {
+      "observed_n": 3787,
+      "mean": 155.33720095062054,
+      "sd": 216.5650999803786,
+      "median": 72.02,
+      "q25": 27.68,
+      "q75": 163.115,
+      "iqr": 135.435,
+      "min": 0.0,
+      "max": 1407.51
+    },
+    "removed_by_original_filter": {
+      "observed_n": 2693,
+      "mean": 651.00874489417,
+      "sd": 359.4277842329215,
+      "median": 655.52,
+      "q25": 331.14,
+      "q75": 927.05,
+      "iqr": 595.91,
+      "min": 33.85,
+      "max": 1825.93
+    }
+  }
+}

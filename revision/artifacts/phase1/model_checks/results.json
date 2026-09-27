@@ -1,0 +1,39 @@
+{
+  "sarimax": {
+    "missing_endog_accepted": true,
+    "parameters_unchanged_after_extend": true,
+    "forecast_index_after_state_update_correct": true,
+    "low_memory_state_refresh_matches_standard_extend": true
+  },
+  "neuralprophet": {
+    "missing_source_values": 4,
+    "finite_training_loss": true,
+    "training_episodes": [
+      {
+        "ID": "episode_000",
+        "start": "2024-01-01 00:00:00",
+        "end": "2024-01-02 05:00:00",
+        "observed_hours": 30,
+        "retained": true,
+        "training_samples": 19
+      },
+      {
+        "ID": "episode_001",
+        "start": "2024-01-02 10:00:00",
+        "end": "2024-01-07 15:00:00",
+        "observed_hours": 126,
+        "retained": true,
+        "training_samples": 115
+      }
+    ],
+    "gap_crossing_training_samples": 0,
+    "raw_vs_target_diagonal_equal": true,
+    "valid_future_yhat1": 1,
+    "normalization_training_only_parameters_checked": true,
+    "physical_unit_translation_check_passed": true,
+    "original_no_imputation_prediction_error": "UnboundLocalError: cannot access local variable 'conditional_cols' where it is not associated with a value",
+    "prediction_only_compatibility_path_passed": true,
+    "fit_target_imputation_disabled": true
+  },
+  "elapsed_seconds_including_imports": 5.218340722999528
+}

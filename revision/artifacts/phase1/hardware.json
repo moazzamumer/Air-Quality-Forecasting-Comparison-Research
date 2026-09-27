@@ -1,0 +1,9 @@
+{
+  "cpu": "AMD Ryzen 5 5500U with Radeon Graphics",
+  "logical_cpus": 12,
+  "system_ram_gib": 14.956512451171875,
+  "numerical_threads": 2,
+  "model_device": "cpu",
+  "python": "3.11.2",
+  "sampling_guard_note": "Pilot group RSS sampled every 0.5 seconds; shared memory may be counted more than once"
+}

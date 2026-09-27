@@ -1,0 +1,34 @@
+{
+  "endpoints_in_source": [
+    "https://api.openweathermap.org/data/2.5/air_pollution/history",
+    "https://archive-api.open-meteo.com/v1/era5"
+  ],
+  "requested_coordinates_source": {
+    "latitude": 39.906217,
+    "longitude": 116.3912757
+  },
+  "retrieval_date": "not recorded in available artifacts; filesystem dates are not retrieval evidence",
+  "timestamp_evidence": "pandas conversion from UNIX seconds without timezone localization; Open-Meteo request omits timezone (provider default GMT); UTC interpretation supported, original raw JSON/execution logs unavailable",
+  "requested_bounds_in_source": [
+    "2019-01-01",
+    "2025-06-30"
+  ],
+  "actual_bounds": [
+    "2020-11-25 01:00:00",
+    "2025-06-29 19:00:00"
+  ],
+  "pollutant_units": "micrograms per cubic metre, per provider documentation",
+  "weather_units": "degrees Celsius under provider defaults; archived response metadata unavailable",
+  "source_kind": "API-derived gridded/model estimates; not identified station observations",
+  "recovery_limitations": [
+    "Extraction deletes temporary response JSONs",
+    "merge is inner join followed by dropna",
+    "AQI copies first response value to every row; AQI is excluded from this study",
+    "components.values() uses JSON key order rather than named field lookup; archived responses cannot independently authenticate the mapping",
+    "Current OpenWeather documentation says history starts 2020-11-27, while CSV begins 2020-11-25; source-date discrepancy unresolved"
+  ],
+  "documentation": [
+    "https://openweathermap.org/api/air-pollution",
+    "https://open-meteo.com/en/docs/historical-weather-api"
+  ]
+}
