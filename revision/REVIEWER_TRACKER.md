@@ -1,6 +1,6 @@
 # Reviewer revision tracker
 
-Status: Phase 3 publication analysis is complete from the verified broader primary evaluation: 23 weekly origins / 3,624 observed hours (19 complete weeks and four partial weeks). The 16-week strict experiment remains a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 tables, five PDF/PNG figures, paired intervals, model interpretation and resource accounting are in `reports/PHASE3_RESULTS.md` and `artifacts/phase3/`; 26 scientific-contract tests pass. Manuscript and point-by-point response edits remain pending.
+Status: Phase 3 publication analysis is complete from the verified broader primary evaluation: 23 weekly origins / 3,624 observed hours (19 complete weeks and four partial weeks). The 16-week strict experiment remains a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 tables, five PDF/PNG figures, paired intervals, model interpretation and resource accounting are in `reports/PHASE3_RESULTS.md` and `artifacts/phase3/`; 26 scientific-contract tests pass. Phase 4A author review is prepared in `PHASE4A_AUTHOR_REVIEW.md`. The submitted manuscript and point-by-point response remain unedited.
 
 The [Phase 3 findings ledger](reports/PHASE3_FINDINGS_LEDGER.md) maps the new analysis evidence to individual reviewer points. Evidence alone does not close a comment.
 
@@ -93,7 +93,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** 23-origin matched metrics and preserved 16-week sensitivity: artifacts/phase3/performance.csv; artifacts/phase3/strict_sensitivity.csv. Original manuscript 21/23 limitation is corrected in the revised experiment; writing remains pending.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R1.2
 
@@ -108,7 +108,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** reports/EXPERIMENTAL_PROTOCOL.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** PP-only route agreed; manuscript/response claim boundaries remain to be written.
 
 ### R1.3
 
@@ -124,7 +124,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Frozen and 23-refit SARIMAX/Prophet coefficient scales and frozen Prophet components: artifacts/phase3/coefficients.csv; artifacts/phase3/prophet_components.csv. Interpretation remains conditional/noncausal.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R1.4
 
@@ -140,7 +140,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** NeuralProphet three-seed weekly/pooled results and lead patterns: artifacts/phase3/performance.csv; artifacts/phase3/lead_hour.csv. Seed-specific high-concentration result weakens blanket rankings.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R1.5
 
@@ -155,7 +155,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** artifacts/phase2/selection.json; artifacts/phase2/validation_summary.csv; artifacts/phase2/runs/validate_*/; reports/PHASE2_SUMMARY.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Protocol/experiment evidence is available; manuscript/response wording remains pending.
 
 ### R1.6
 
@@ -171,7 +171,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** CPU-only local fit/forecast/state-update and supervisor resource evidence: artifacts/phase3/core_timing.csv; artifacts/phase3/resource_events.csv; artifacts/phase3/correction_timing.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R1.7
 
@@ -187,7 +187,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Predefined alpha grid, previous-week residual comparator, weekwise diagnostics and paired differences: artifacts/phase3/correction_alpha_summary.csv; artifacts/phase3/correction_weekly.csv; artifacts/phase3/paired_contrasts.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R1.8
 
@@ -203,7 +203,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Pooled versus weekly mean/SD and 2/3/4-week paired-block intervals: artifacts/phase3/performance.csv; artifacts/phase3/paired_contrasts.csv; artifacts/phase3/figures/weekly_mae_distribution.pdf.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R1.9
 
@@ -218,7 +218,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** Pending.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Writing action remains pending; do not mark this reviewer point closed before the manuscript and response are checked.
 
 ### R1.10
 
@@ -234,7 +234,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Original observed training/test distributions: artifacts/phase3/target_descriptive.csv. Manuscript insertion pending.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M1
 
@@ -250,7 +250,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** reports/EXPERIMENTAL_PROTOCOL.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** PP-only route agreed; manuscript/response claim boundaries remain to be written.
 
 ### R2.M2
 
@@ -267,7 +267,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** 23-origin/3,624-hour matched primary evidence, strict 16-week sensitivity and original-target descriptions: artifacts/phase3/performance.csv; artifacts/phase3/strict_sensitivity.csv; artifacts/phase3/target_descriptive.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Historical retrieval dates and raw API responses are unavailable; report this honestly. Manuscript/response pending.
 
 ### R2.M3
 
@@ -284,7 +284,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Training 95th-percentile threshold 691.335, 158 high hours in six weeks, and unclipped-target sensitivity: artifacts/phase3/high_concentration.csv; artifacts/phase3/high_concentration_by_week.csv; artifacts/phase3/performance.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M4
 
@@ -301,7 +301,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** All three model families and persistence/daily/weekly persistence baselines share 23 origins and 3,624 scored hours: artifacts/phase3/performance.csv; artifacts/phase3/paired_contrasts.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M5
 
@@ -318,7 +318,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Three NeuralProphet seeds and the selected SARIMAX/Prophet configurations evaluated with lead-time, weekly and high-event checks: artifacts/phase3/performance.csv; artifacts/phase3/forecast_day.csv; artifacts/phase3/high_concentration.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M6
 
@@ -334,7 +334,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** config/coverage_reconsideration.json; code/coverage_protocol.py; code/coverage_checks.py; tests/test_coverage.py; artifacts/coverage_reconsideration/verification.json.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Protocol/experiment evidence is available; manuscript/response wording remains pending.
 
 ### R2.M7
 
@@ -351,7 +351,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Frozen no-input, selected-gas, broader-input and clipped-input comparisons: artifacts/phase3/performance.csv. Broad inputs include future PM10 and have an information advantage.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M8
 
@@ -368,7 +368,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Alpha grid and residual/bias plots show model- and seed-dependent correction effects: artifacts/phase3/correction_alpha_summary.csv; artifacts/phase3/figures/correction_diagnostics.pdf; artifacts/phase3/paired_contrasts.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M9
 
@@ -385,7 +385,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Pooled/weekly MAE/RMSE, all-week spread, paired 2/3/4-week intervals and exact lead-hour/day summaries: artifacts/phase3/performance.csv; artifacts/phase3/paired_contrasts.csv; artifacts/phase3/lead_hour.csv; artifacts/phase3/forecast_day.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M10
 
@@ -402,7 +402,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Frozen/refit SARIMAX and Prophet effects and auditable local timing/CPU/no-GPU resource accounting: artifacts/phase3/coefficients.csv; artifacts/phase3/prophet_components.csv; artifacts/phase3/core_timing.csv; artifacts/phase3/resource_events.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M11
 
@@ -419,7 +419,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** Pending.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Suggested-study source assessment and critical positioning remain pending in Phase 4B.
 
 ### R2.m1
 
@@ -434,7 +434,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** Pending.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Writing action remains pending; do not mark this reviewer point closed before the manuscript and response are checked.
 
 ### R2.m2
 
@@ -449,7 +449,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** Pending.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Writing action remains pending; do not mark this reviewer point closed before the manuscript and response are checked.
 
 ### R2.m3
 
@@ -464,7 +464,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** Pending.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Writing action remains pending; do not mark this reviewer point closed before the manuscript and response are checked.
 
 ### R2.m4
 
@@ -480,7 +480,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** All 23 weeks included in chronological and distribution figures: artifacts/phase3/figures/weekly_mae_chronology.pdf; artifacts/phase3/figures/weekly_mae_distribution.pdf.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.m5
 
@@ -496,7 +496,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Phase 3 evidence:** Phase 3 tables/contrasts derive differences from unrounded saved predictions; the manuscript’s original 7.93/7.94 statement must be replaced by revised values: artifacts/phase3/performance.csv; artifacts/phase3/paired_contrasts.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.m6
 
@@ -511,7 +511,7 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Evidence/artifacts:** README.md; main_revision.ipynb; requirements-observed.txt; artifacts/coverage_reconsideration/verification.json; code/coverage_checks.py; reports/COVERAGE_RECONSIDERATION_RESULTS.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
-- **Limitations or deviation:** Pending results; do not assume the requested conclusion.
+- **Limitations or deviation:** Clean-environment reproduction, data redistribution decision and versioned DOI release remain pending in Phases 4B–5.
 
 ## Editorial obligations
 

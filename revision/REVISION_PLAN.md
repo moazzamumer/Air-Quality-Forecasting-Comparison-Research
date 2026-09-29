@@ -1,6 +1,6 @@
 # Scientific Reports revision plan
 
-Status: Phase 3 analysis completed from the verified 23-origin / 3,624-observed-hour primary evaluation; 19 weeks are complete and four partial. The 16-week strict experiment remains a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 regenerates matched tables, five publication PDF/PNG figures, paired block-bootstrap sensitivity, high-concentration/lead-time diagnostics, interpretability and resource accounting from saved forecasts. The result and reviewer-linked finding records are `reports/PHASE3_RESULTS.md` and `reports/PHASE3_FINDINGS_LEDGER.md`. Manuscript/response edits remain Phase 4 work.
+Status: Phase 3 analysis completed from the verified 23-origin / 3,624-observed-hour primary evaluation; 19 weeks are complete and four partial. The 16-week strict experiment remains a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 regenerates matched tables, five publication PDF/PNG figures, paired block-bootstrap sensitivity, high-concentration/lead-time diagnostics, interpretability and resource accounting from saved forecasts. The result and reviewer-linked finding records are `reports/PHASE3_RESULTS.md` and `reports/PHASE3_FINDINGS_LEDGER.md`. Phase 4A author review is prepared in `PHASE4A_AUTHOR_REVIEW.md`; no manuscript copy or edits have been made. Phase 4B writing follows the author's review.
 
 First author: Moazzam Umer Gondal. Corresponding author: Asma Ahmad Farhan.
 Decision: Major Revision. Submission deadline: October 6, 2026.
@@ -110,9 +110,26 @@ Purpose: answer the reviewers using one consistent set of saved predictions.
 
 Exit evidence: complete. `artifacts/phase3/` contains regenerable tables and figures, `reports/PHASE3_RESULTS.md` records the interpretation and limitations, and `reports/PHASE3_FINDINGS_LEDGER.md` maps findings to comments. Twenty-six scientific-contract tests pass. The manuscript and reviewer response have not yet been edited to cite these outputs.
 
-## Phase 4 — Revise the manuscript and response together
+## Phase 4 — Author review, then manuscript and response revision
 
-Purpose: write to the completed evidence, while keeping each comment traceable.
+### Phase 4A — Moazzam's high-level evidence review
+
+Purpose: confirm the paper's revised scope, headline findings, limitations and
+complete 27-point treatment map before editing the submitted paper. Use
+`PHASE4A_AUTHOR_REVIEW.md`, the Phase 3 report, figures and reviewer tracker.
+Distinguish completed experimental evidence from writing-only obligations;
+no reviewer comment is closed solely by this checkpoint. Record concerns and
+any decisions in the tracker. Do not copy or edit the submitted manuscript in
+Phase 4A.
+
+Exit evidence: author-reviewed treatment map and agreed scientific/presentation
+scope. The original manuscript remains unchanged.
+
+### Phase 4B — Create a working manuscript copy and write the response
+
+Purpose: after Phase 4A, preserve the submitted source and PDF, make a separate
+working copy of the manuscript, and revise its text alongside the point-by-point
+response. Every completed claim must cite the saved evidence.
 
 - Revise Methods and add concise pseudocode specifying each model's information set, state/history updates, forecast horizon, and correction timing. Correct the multiplicative SARIMAX equation and describe horizon-specific forecast errors rather than one-step residuals. Remove the unevaluated Kalman alternative.
 - Rewrite Abstract, Results, Discussion and Conclusion around revised results and PP scope. Avoid claims of superiority to untested advanced models or inherent NeuralProphet weakness. Describe original versus revised configurations transparently.
@@ -121,7 +138,7 @@ Purpose: write to the completed evidence, while keeping each comment traceable.
 - Prepare versioned reproducibility material: pinned dependencies, seeds, data-processing instructions, configuration, experiment commands and table/figure reproduction commands. Prepare a DOI repository deposit; first check data redistribution terms, so code-only publication with acquisition instructions remains possible. Do not invent retrieval dates or claim a DOI exists before publication.
 - Update each response entry with the actual action, evidence, changed manuscript section, and remaining limitations. Shared work may resolve multiple entries; every original comment still receives its own answer.
 
-Exit evidence: revised manuscript, complete response draft, reproducibility package ready for release, and no unsupported completed-action claims.
+Exit evidence: revised working manuscript, complete response draft, reproducibility package ready for release, and no unsupported completed-action claims. The submitted original remains preserved.
 
 ## Phase 5 — Verify and package the submission
 
@@ -138,7 +155,7 @@ Exit evidence: final manuscript PDF/source, response PDF/source, required supple
 
 `REVIEWER_TRACKER.md` preserves each original comment and maps it to work, evidence, dependencies and status. `RESPONSE_TO_REVIEWERS.md` is a response scaffold, not a claim that revisions are complete.
 
-Main dependency chain: provenance/calendar → forecast correctness and information sets → validation → core/ablation predictions → metrics and interpretation → evidence-based writing → DOI/PDF/submission checks.
+Main dependency chain: provenance/calendar → forecast correctness and information sets → validation → core/ablation predictions → metrics and interpretation → Phase 4A author review → Phase 4B evidence-based writing → DOI/PDF/submission checks.
 
 Independent writing edits can proceed after the protocol is settled: terminology, removal of unevaluated alternatives, literature compression, and PP claim boundaries. Final result-dependent prose must wait for Phase 3. Reviewer 2's stronger requests extend Reviewer 1's requests; they do not erase the need to answer Reviewer 1 individually.
 

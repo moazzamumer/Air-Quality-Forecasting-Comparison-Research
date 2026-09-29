@@ -186,3 +186,13 @@ skip/carry policy. Paired intervals use moving blocks of adjacent calendar
 weeks and are reported with block-length sensitivity. The notebook presents
 the generated outputs without rerunning fits. Twenty-six scientific-contract
 tests currently pass. Manuscript and point-by-point response editing is Phase 4.
+
+## Phase 4 author checkpoint
+
+Phase 4 is split in two. Read `PHASE4A_AUTHOR_REVIEW.md` for Moazzam's
+high-level review of the primary 23-week findings, limitations, saved figures
+and all 27 reviewer points. The evidence can be reviewed without running code.
+The submitted manuscript remains untouched during Phase 4A. Once the author
+has accepted or corrected the treatment map, Phase 4B creates a separate
+working manuscript copy and revises it together with the point-by-point
+response. A completed experiment is not yet a completed reviewer response.
