@@ -1,6 +1,6 @@
 # Scientific Reports revision plan
 
-Status: Coverage reconsideration completed before Phase 3. The broader primary evaluation retains 23 weekly origins / 3,624 observed hours (19 complete weeks and four partial weeks); the 16-week strict experiment is preserved as a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 and manuscript/response edits remain pending.
+Status: Phase 3 analysis completed from the verified 23-origin / 3,624-observed-hour primary evaluation; 19 weeks are complete and four partial. The 16-week strict experiment remains a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 regenerates matched tables, five publication PDF/PNG figures, paired block-bootstrap sensitivity, high-concentration/lead-time diagnostics, interpretability and resource accounting from saved forecasts. The result and reviewer-linked finding records are `reports/PHASE3_RESULTS.md` and `reports/PHASE3_FINDINGS_LEDGER.md`. Manuscript/response edits remain Phase 4 work.
 
 First author: Moazzam Umer Gondal. Corresponding author: Asma Ahmad Farhan.
 Decision: Major Revision. Submission deadline: October 6, 2026.
@@ -108,7 +108,7 @@ Purpose: answer the reviewers using one consistent set of saved predictions.
 - Present SARIMAX exogenous coefficients with input scaling/units and relevant fit identified; present Prophet trend/seasonality and regressor contributions. Summarize sign/magnitude variation across available refits. Discuss collinearity, model dependence and noncausal interpretation.
 - Benchmark runtime on the same machine and controlled thread configuration, with the same timing boundaries. Separate initial fitting, subsequent refitting/state updates, forecasting and correction; label plotting/export exclusions. State GPU use explicitly, report process RAM measurement limitations, and do not compare revised local timings directly with original Colab timings as model speedups.
 
-Exit evidence: regenerated tables/figures and a reviewer-linked findings ledger, including changed rankings, failed hypotheses and limitations. Every numerical claim must trace to a saved artifact.
+Exit evidence: complete. `artifacts/phase3/` contains regenerable tables and figures, `reports/PHASE3_RESULTS.md` records the interpretation and limitations, and `reports/PHASE3_FINDINGS_LEDGER.md` maps findings to comments. Twenty-six scientific-contract tests pass. The manuscript and reviewer response have not yet been edited to cite these outputs.
 
 ## Phase 4 — Revise the manuscript and response together
 
@@ -150,4 +150,4 @@ Phase 1 resolutions: strict availability retains 16 matched weeks (2,688 hours);
 - Statsmodels documents state-space forecasting and updating fitted results without parameter refitting: [Forecasting in statsmodels](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_forecasting.html).
 - Zenodo documents versioned software archiving through GitHub: [GitHub and software](https://help.zenodo.org/docs/github/).
 
-Phase 1 feasibility checks and Phase 2 revised comparison experiments are complete. All 21 fingerprinted original files remain unchanged. The new work is isolated below `revision/`. Phase 3 analysis must establish the defensible interpretation before writing the manuscript and point-by-point response.
+Phase 1 feasibility checks, Phase 2 revised comparison experiments, the coverage reconsideration, and Phase 3 publication analysis are complete. All 21 fingerprinted original files remain unchanged. The new work is isolated below `revision/`. Phase 4 can now rewrite the manuscript and point-by-point response against the documented findings.
