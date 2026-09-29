@@ -1,6 +1,6 @@
 # Reviewer revision tracker
 
-Status: Phases 1 and 2 completed. All 94 planned core/ablation tasks have verified evidence, including six separately recorded SARIMAX numerical recoveries. Analysis, manuscript revision and response writing remain pending.
+Status: Strict-availability Phases 1/2 evidence is preserved. At Moazzam's request, coverage is being reconsidered before Phase 3: retain all 23 calendar origins, score only observed hours, and test explicit historical-context handling. See `reports/COVERAGE_RECONSIDERATION.md`. Phase 3 and manuscript/response edits remain pending.
 
 ## Phase 2 evidence log
 

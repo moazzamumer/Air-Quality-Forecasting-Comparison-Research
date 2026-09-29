@@ -1,6 +1,6 @@
 # Scientific Reports revision plan
 
-Status: Phases 1 and 2 completed. The agreed matrix has verified evidence for all 94 core/ablation tasks, three baselines and 35 correction streams. Six SARIMAX numerical recoveries retain selected settings and cutoffs with original failure records preserved. Phase 3 analysis and manuscript/response edits are pending. See `reports/PHASE2_SUMMARY.md` and `reports/PHASE2_VERIFICATION.md`.
+Status: Strict-availability Phases 1/2 evidence is preserved. At Moazzam's request, coverage is being reconsidered before Phase 3: retain all 23 calendar origins, score only observed hours, and test explicit historical-context handling. See `reports/COVERAGE_RECONSIDERATION.md`. Phase 3 and manuscript/response edits remain pending.
 
 First author: Moazzam Umer Gondal. Corresponding author: Asma Ahmad Farhan.
 Decision: Major Revision. Submission deadline: October 6, 2026.

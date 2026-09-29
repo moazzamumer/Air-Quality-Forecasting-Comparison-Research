@@ -126,3 +126,24 @@ elapsed time and sampled peak group RSS; shared first-origin fits are marked as
 reused. Rejected Powell recovery code/policy/logs are archived under
 `recovery_attempts/powell_v1/`. Its supervisor entries also remain in the main
 recovery log, so do not count the archived copy a second time.
+
+## Coverage reconsideration before Phase 3
+
+The completed 16-week matrix remains a strict-availability sensitivity reference.
+Moazzam requested a broader evaluation preserving all 23 calendar origins.
+`config/coverage_reconsideration.json` records the separate amendment; its
+runner writes only to `artifacts/coverage_reconsideration/`. Original source,
+training split/configuration selection and fitting-target policies are unchanged.
+Observed-hour scoring, explicit causal historical inference filling and actual
+model placeholder-invariance checks must pass before the broader protocol is
+adopted. Read `reports/COVERAGE_RECONSIDERATION.md` for the assumptions.
+
+```bash
+venv/bin/python -m revision.code.coverage_runner audit
+venv/bin/python -m revision.code.coverage_runner run
+venv/bin/python -m revision.code.coverage_runner finish
+```
+
+The author does not need to execute these commands; the revision work runs and
+verifies them. Broader and strict artifacts have separate signatures. Do not
+rerun candidate selection or replace strict evidence when changing coverage.

@@ -1,0 +1,27 @@
+{
+  "protocol_signature": "f1b785fcfd49bf50207714991659a0525b71ebbfb2b0f88d8ff0985494af6cdd",
+  "scientific_contract_tests_passed": 21,
+  "actual_models": [
+    {
+      "run_id": "core_sarimax_frozen_s42",
+      "status": "completed",
+      "hours": 3624,
+      "strict_reproduction_max_difference": 2.2737367544323206e-13,
+      "maximum_placeholder_effect": 0.0
+    },
+    {
+      "run_id": "core_prophet_frozen_s42",
+      "status": "completed",
+      "hours": 3624,
+      "strict_reproduction_max_difference": 2.2737367544323206e-13,
+      "maximum_placeholder_effect": 0.0
+    },
+    {
+      "run_id": "core_neuralprophet_frozen_s42",
+      "status": "completed",
+      "hours": 3624,
+      "strict_reproduction_max_difference": 1.1368683772161603e-13,
+      "maximum_placeholder_effect": 0.0
+    }
+  ]
+}

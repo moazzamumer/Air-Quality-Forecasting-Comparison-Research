@@ -40,3 +40,26 @@ placeholder invariance and preservation of the 16-week evidence. Compare the
 broader result with the strict subset transparently; coverage decisions are not
 selected to reproduce model rankings or errors. The broader protocol changes
 will have their own configuration/signature and artifacts.
+
+## Preflight result and execution
+
+Twenty-one scientific-contract tests passed, including a trained installed-version
+NeuralProphet check for independence of other forecast leads from missing-input
+placeholders. Actual frozen SARIMAX, Prophet and NeuralProphet seed 42 completed
+all 23 origins: placeholder perturbations had zero effect on scored forecasts,
+and every saved strict-week base forecast was reproduced within floating-point
+precision (maximum differences about 1e-13). Machine-readable evidence is in
+`artifacts/coverage_reconsideration/preflight_checks.json`.
+
+The broader matrix is now running: 129 tasks (14 frozen core/control streams and
+115 model/seed/origin refits). Eighty existing strict walk-forward forecasts can
+be reused with exact source provenance. Frozen SARIMAX states are reconstructed
+from recorded parameters; frozen Prophet/NeuralProphet use same-configuration,
+same-seed refits with mandatory strict-week reproduction checks. New weekly fits
+use the same training observations/settings. No test-performance criterion
+selects the coverage or history-fill policy.
+
+Training-only reconstruction checks show large errors for the fixed seasonal
+history-fill rule; it must not be described as accurate recovery of missing
+observations. The strict sensitivity, context-fill counts and partial-week labels
+remain necessary limitations of the broader evaluation. Phase 3 has not begun.
