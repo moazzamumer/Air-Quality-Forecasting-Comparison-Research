@@ -1,11 +1,49 @@
 """Additional evidence checks, independent of fitting-code signatures."""
 import json
+import hashlib
 from pathlib import Path
 import numpy as np
 import pandas as pd
 from .protocol import ROOT,REVISION,configuration,load_calendar
 from .coverage_protocol import OUT,windows,seasonal_past_fill,metrics,signature
 from .coverage_runner import tasks,verify_and_report
+
+
+def latest_observed_persistence(history,horizon=168):
+    observed=history.pm2_5.dropna()
+    if observed.empty:raise ValueError('Persistence needs an original observed historical target')
+    return np.repeat(float(observed.iloc[-1]),horizon)
+
+
+def enforce_baseline_definitions():
+    """Persistence needs the last genuine observation, not a synthetic last hour.
+
+    The generic dense-pattern producer is suitable for the seasonal baselines.
+    This final evidence stage preserves the original persistence definition even
+    when the hour immediately preceding an origin is absent. No model fit or
+    forecast changes; this is deterministic baseline generation without tuning.
+    """
+    _,grid=load_calendar();table=windows(grid);folder=OUT/'baselines'
+    definitions={}
+    for name,cycle in [('persistence',1),('daily_persistence',24),('weekly_persistence',168)]:
+        file=folder/f'{name}.csv';frame=pd.read_csv(file)
+        frame['variant']='no_inputs'
+        if name=='persistence':
+            for row in table[table.full_week].itertuples():
+                p=int(row.position);history=grid.iloc[:p][['pm2_5']];section=frame.window==int(row.window)
+                values=latest_observed_persistence(history)
+                frame.loc[section,'base_prediction']=values
+                frame.loc[section,'corrected_prediction']=values
+                frame.loc[section,'history_target_filled_hours']=0
+                frame.loc[section,'source_last_observed_timestamp']=str(history.pm2_5.dropna().index[-1])
+        frame.to_csv(file,index=False)
+        definitions[name]=dict(horizon_hours=168,exogenous_inputs=[],
+            definition='Repeat the last original observed historical target' if cycle==1 else
+                f'Repeat the preceding {cycle} calendar hours, with the explicit causal seasonal history fill where necessary',
+            forecast_csv_sha256=hashlib.sha256(file.read_bytes()).hexdigest())
+    (folder/'definitions.json').write_text(json.dumps(dict(protocol_signature=signature(),
+        definitions=definitions,final_baseline_producer='revision/code/coverage_checks.py',
+        final_baseline_producer_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()),indent=2)+'\n')
 
 
 def check_frame(frame,grid,expected_windows):
@@ -25,6 +63,7 @@ def check_frame(frame,grid,expected_windows):
 
 
 def main():
+    enforce_baseline_definitions()
     verify_and_report()
     info=json.loads((OUT/'verification.json').read_text())
     if not info['ready']:raise RuntimeError('Broader evidence not ready')
@@ -65,7 +104,8 @@ def main():
         frame=check_frame(pd.read_csv(OUT/'baselines'/f'{name}.csv'),grid,range(1,24))
         for row in full.itertuples():
             p=int(row.position);history=seasonal_past_fill(grid.iloc[:p][['pm2_5']])
-            predicted=np.resize(history.pm2_5.iloc[-cycle:].to_numpy(),168)
+            predicted=(latest_observed_persistence(grid.iloc[:p][['pm2_5']]) if cycle==1 else
+                       np.resize(history.pm2_5.iloc[-cycle:].to_numpy(),168))
             np.testing.assert_allclose(frame.loc[frame.window==row.window,'base_prediction'],predicted,rtol=0,atol=1e-10)
     files=list((OUT/'corrections').glob('*_alpha_*.csv'))
     expected={f"{t['id']}_alpha_{str(a).replace('.','p')}.csv" for t in tasks() if t['stage']=='core' and t['regime']=='frozen'

@@ -63,3 +63,15 @@ Training-only reconstruction checks show large errors for the fixed seasonal
 history-fill rule; it must not be described as accurate recovery of missing
 observations. The strict sensitivity, context-fill counts and partial-week labels
 remain necessary limitations of the broader evaluation. Phase 3 has not begun.
+
+## Baseline definition check
+
+Persistence repeats the last genuinely observed historical target. At week 12,
+the immediate preceding hour is absent; the last observation is 257.0 at
+2025-03-30 00:00, and that original value is repeated. It does not use the
+synthetic last hour from the dense seasonal context fill. Daily/weekly seasonal
+baselines retain their explicitly filled calendar patterns. The final evidence
+stage `revision.code.coverage_checks` enforces these definitions, labels all
+baselines as no-input methods and saves their producer/checksum metadata in
+`artifacts/coverage_reconsideration/baselines/definitions.json`. This definition
+check does not alter any fitted model or select methods by forecast error.

@@ -7,6 +7,7 @@ import pandas as pd
 from revision.code.protocol import load_calendar,split_position
 from revision.code.phase2_models import Fitted
 from revision.code.coverage_protocol import seasonal_past_fill,windows,forecast,metrics,dense_prediction
+from revision.code.coverage_checks import latest_observed_persistence
 
 
 class CoverageTests(unittest.TestCase):
@@ -33,6 +34,11 @@ class CoverageTests(unittest.TestCase):
 
     def test_missing_initial_history_rejected(self):
         with self.assertRaises(ValueError):seasonal_past_fill(pd.DataFrame({'pm2_5':[np.nan,1.]}))
+
+    def test_persistence_uses_last_genuine_observation_despite_trailing_gap(self):
+        history=pd.DataFrame({'pm2_5':[12.,42.,np.nan,np.nan]})
+        np.testing.assert_array_equal(latest_observed_persistence(history,4),[42.]*4)
+        with self.assertRaises(ValueError):latest_observed_persistence(pd.DataFrame({'pm2_5':[np.nan]}))
 
     def test_masks_and_target_isolation_at_partially_observed_origin(self):
         p=self.position+7*168;fitted=Fitted('prophet',None,['no'],SimpleNamespace(mean_=np.array([10.]),scale_=np.array([2.]),transform=lambda x:(x-10)/2),None,p,{})
