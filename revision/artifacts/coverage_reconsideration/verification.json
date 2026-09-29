@@ -1,0 +1,16 @@
+{
+  "protocol_signature": "f1b785fcfd49bf50207714991659a0525b71ebbfb2b0f88d8ff0985494af6cdd",
+  "expected_tasks": 129,
+  "complete_tasks": 129,
+  "pending_tasks": [],
+  "integrity_errors": [],
+  "ready": true,
+  "scheduled_weeks": 23,
+  "scheduled_hours": 3864,
+  "observed_scoring_hours": 3624,
+  "full_observed_weeks": 19,
+  "partially_observed_weeks": 4,
+  "strict_reference_originals_verified": 21,
+  "additional_checks_passed": true,
+  "checks_source": "revision/code/coverage_checks.py"
+}

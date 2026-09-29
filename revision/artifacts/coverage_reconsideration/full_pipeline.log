@@ -1,0 +1,253 @@
+Coverage: 23 full origins, 3,864 scheduled hours, 3,624 observed scoring hours; 19 full and 4 partial weeks
+START core_neuralprophet_frozen_s123
+END {"task_id": "core_neuralprophet_frozen_s123", "returncode": 0, "elapsed_seconds": 191.29040525099845, "sampled_peak_rss_mib": 1651.52734375, "guard_reason": null}
+START core_neuralprophet_frozen_s2026
+END {"task_id": "core_neuralprophet_frozen_s2026", "returncode": 0, "elapsed_seconds": 190.78122025500124, "sampled_peak_rss_mib": 1655.234375, "guard_reason": null}
+START core_sarimax_walk_w01_s42
+END {"task_id": "core_sarimax_walk_w01_s42", "returncode": 0, "elapsed_seconds": 1.0022023460005585, "sampled_peak_rss_mib": 155.61328125, "guard_reason": null}
+START core_sarimax_walk_w02_s42
+END {"task_id": "core_sarimax_walk_w02_s42", "returncode": 0, "elapsed_seconds": 1.0014647749994765, "sampled_peak_rss_mib": 149.265625, "guard_reason": null}
+START core_sarimax_walk_w03_s42
+END {"task_id": "core_sarimax_walk_w03_s42", "returncode": 0, "elapsed_seconds": 1.0013146230012353, "sampled_peak_rss_mib": 155.68359375, "guard_reason": null}
+START core_sarimax_walk_w04_s42
+END {"task_id": "core_sarimax_walk_w04_s42", "returncode": 0, "elapsed_seconds": 1.007781069001794, "sampled_peak_rss_mib": 155.5390625, "guard_reason": null}
+START core_sarimax_walk_w05_s42
+END {"task_id": "core_sarimax_walk_w05_s42", "returncode": 0, "elapsed_seconds": 1.0028782580011466, "sampled_peak_rss_mib": 155.8125, "guard_reason": null}
+START core_sarimax_walk_w06_s42
+END {"task_id": "core_sarimax_walk_w06_s42", "returncode": 0, "elapsed_seconds": 1.0014723169988429, "sampled_peak_rss_mib": 153.99609375, "guard_reason": null}
+START core_sarimax_walk_w07_s42
+END {"task_id": "core_sarimax_walk_w07_s42", "returncode": 0, "elapsed_seconds": 1.0023337140009971, "sampled_peak_rss_mib": 153.1953125, "guard_reason": null}
+START core_sarimax_walk_w08_s42
+END {"task_id": "core_sarimax_walk_w08_s42", "returncode": 0, "elapsed_seconds": 61.58702033100053, "sampled_peak_rss_mib": 231.109375, "guard_reason": null}
+START core_sarimax_walk_w09_s42
+END {"task_id": "core_sarimax_walk_w09_s42", "returncode": 0, "elapsed_seconds": 65.0920774369988, "sampled_peak_rss_mib": 231.7890625, "guard_reason": null}
+START core_sarimax_walk_w10_s42
+END {"task_id": "core_sarimax_walk_w10_s42", "returncode": 0, "elapsed_seconds": 1.0024191400007112, "sampled_peak_rss_mib": 156.24609375, "guard_reason": null}
+START core_sarimax_walk_w11_s42
+END {"task_id": "core_sarimax_walk_w11_s42", "returncode": 0, "elapsed_seconds": 70.59933195300255, "sampled_peak_rss_mib": 231.453125, "guard_reason": null}
+START core_sarimax_walk_w12_s42
+END {"task_id": "core_sarimax_walk_w12_s42", "returncode": 0, "elapsed_seconds": 122.16873045100147, "sampled_peak_rss_mib": 236.7265625, "guard_reason": null}
+START core_sarimax_walk_w13_s42
+END {"task_id": "core_sarimax_walk_w13_s42", "returncode": 0, "elapsed_seconds": 113.15487021000081, "sampled_peak_rss_mib": 231.67578125, "guard_reason": null}
+START core_sarimax_walk_w14_s42
+END {"task_id": "core_sarimax_walk_w14_s42", "returncode": 0, "elapsed_seconds": 132.67051448599886, "sampled_peak_rss_mib": 231.8046875, "guard_reason": null}
+START core_sarimax_walk_w15_s42
+END {"task_id": "core_sarimax_walk_w15_s42", "returncode": 0, "elapsed_seconds": 127.17894383900057, "sampled_peak_rss_mib": 231.9140625, "guard_reason": null}
+START core_sarimax_walk_w16_s42
+END {"task_id": "core_sarimax_walk_w16_s42", "returncode": 0, "elapsed_seconds": 1.0014932539997972, "sampled_peak_rss_mib": 155.86328125, "guard_reason": null}
+START core_sarimax_walk_w17_s42
+END {"task_id": "core_sarimax_walk_w17_s42", "returncode": 0, "elapsed_seconds": 1.0024531650014978, "sampled_peak_rss_mib": 156.21875, "guard_reason": null}
+START core_sarimax_walk_w18_s42
+END {"task_id": "core_sarimax_walk_w18_s42", "returncode": 0, "elapsed_seconds": 1.0019936249991588, "sampled_peak_rss_mib": 156.046875, "guard_reason": null}
+START core_sarimax_walk_w19_s42
+END {"task_id": "core_sarimax_walk_w19_s42", "returncode": 0, "elapsed_seconds": 1.0016313230007654, "sampled_peak_rss_mib": 156.0, "guard_reason": null}
+START core_sarimax_walk_w20_s42
+END {"task_id": "core_sarimax_walk_w20_s42", "returncode": 0, "elapsed_seconds": 1.0020493890006037, "sampled_peak_rss_mib": 156.0234375, "guard_reason": null}
+START core_sarimax_walk_w21_s42
+END {"task_id": "core_sarimax_walk_w21_s42", "returncode": 0, "elapsed_seconds": 1.0020255710005586, "sampled_peak_rss_mib": 154.921875, "guard_reason": null}
+START core_sarimax_walk_w22_s42
+END {"task_id": "core_sarimax_walk_w22_s42", "returncode": 0, "elapsed_seconds": 1.002556152001489, "sampled_peak_rss_mib": 156.2109375, "guard_reason": null}
+START core_sarimax_walk_w23_s42
+END {"task_id": "core_sarimax_walk_w23_s42", "returncode": 0, "elapsed_seconds": 1.0019865719987138, "sampled_peak_rss_mib": 156.5625, "guard_reason": null}
+START core_prophet_walk_w01_s42
+END {"task_id": "core_prophet_walk_w01_s42", "returncode": 0, "elapsed_seconds": 1.0016560609983571, "sampled_peak_rss_mib": 155.9140625, "guard_reason": null}
+START core_prophet_walk_w02_s42
+END {"task_id": "core_prophet_walk_w02_s42", "returncode": 0, "elapsed_seconds": 1.0020721740002045, "sampled_peak_rss_mib": 156.69140625, "guard_reason": null}
+START core_prophet_walk_w03_s42
+END {"task_id": "core_prophet_walk_w03_s42", "returncode": 0, "elapsed_seconds": 1.002486522000254, "sampled_peak_rss_mib": 156.01953125, "guard_reason": null}
+START core_prophet_walk_w04_s42
+END {"task_id": "core_prophet_walk_w04_s42", "returncode": 0, "elapsed_seconds": 1.0022006690014678, "sampled_peak_rss_mib": 156.75390625, "guard_reason": null}
+START core_prophet_walk_w05_s42
+END {"task_id": "core_prophet_walk_w05_s42", "returncode": 0, "elapsed_seconds": 1.0017395180002495, "sampled_peak_rss_mib": 155.7578125, "guard_reason": null}
+START core_prophet_walk_w06_s42
+END {"task_id": "core_prophet_walk_w06_s42", "returncode": 0, "elapsed_seconds": 1.0020902329997625, "sampled_peak_rss_mib": 155.609375, "guard_reason": null}
+START core_prophet_walk_w07_s42
+END {"task_id": "core_prophet_walk_w07_s42", "returncode": 0, "elapsed_seconds": 1.0020396860018081, "sampled_peak_rss_mib": 156.703125, "guard_reason": null}
+START core_prophet_walk_w08_s42
+END {"task_id": "core_prophet_walk_w08_s42", "returncode": 0, "elapsed_seconds": 21.034143423003115, "sampled_peak_rss_mib": 415.296875, "guard_reason": null}
+START core_prophet_walk_w09_s42
+END {"task_id": "core_prophet_walk_w09_s42", "returncode": 0, "elapsed_seconds": 25.040538340999774, "sampled_peak_rss_mib": 418.19921875, "guard_reason": null}
+START core_prophet_walk_w10_s42
+END {"task_id": "core_prophet_walk_w10_s42", "returncode": 0, "elapsed_seconds": 1.0019445800026006, "sampled_peak_rss_mib": 155.91015625, "guard_reason": null}
+START core_prophet_walk_w11_s42
+END {"task_id": "core_prophet_walk_w11_s42", "returncode": 0, "elapsed_seconds": 24.53808086999925, "sampled_peak_rss_mib": 419.09375, "guard_reason": null}
+START core_prophet_walk_w12_s42
+END {"task_id": "core_prophet_walk_w12_s42", "returncode": 0, "elapsed_seconds": 17.53113989999838, "sampled_peak_rss_mib": 419.828125, "guard_reason": null}
+START core_prophet_walk_w13_s42
+END {"task_id": "core_prophet_walk_w13_s42", "returncode": 0, "elapsed_seconds": 24.04142202300136, "sampled_peak_rss_mib": 420.31640625, "guard_reason": null}
+START core_prophet_walk_w14_s42
+END {"task_id": "core_prophet_walk_w14_s42", "returncode": 0, "elapsed_seconds": 24.53993522300152, "sampled_peak_rss_mib": 420.71484375, "guard_reason": null}
+START core_prophet_walk_w15_s42
+END {"task_id": "core_prophet_walk_w15_s42", "returncode": 0, "elapsed_seconds": 21.03859367000041, "sampled_peak_rss_mib": 422.2109375, "guard_reason": null}
+START core_prophet_walk_w16_s42
+END {"task_id": "core_prophet_walk_w16_s42", "returncode": 0, "elapsed_seconds": 1.0019928289984819, "sampled_peak_rss_mib": 155.86328125, "guard_reason": null}
+START core_prophet_walk_w17_s42
+END {"task_id": "core_prophet_walk_w17_s42", "returncode": 0, "elapsed_seconds": 1.0016609609992884, "sampled_peak_rss_mib": 156.00390625, "guard_reason": null}
+START core_prophet_walk_w18_s42
+END {"task_id": "core_prophet_walk_w18_s42", "returncode": 0, "elapsed_seconds": 1.0023599299966008, "sampled_peak_rss_mib": 156.0390625, "guard_reason": null}
+START core_prophet_walk_w19_s42
+END {"task_id": "core_prophet_walk_w19_s42", "returncode": 0, "elapsed_seconds": 1.0025601150009606, "sampled_peak_rss_mib": 156.1171875, "guard_reason": null}
+START core_prophet_walk_w20_s42
+END {"task_id": "core_prophet_walk_w20_s42", "returncode": 0, "elapsed_seconds": 1.0022055109984649, "sampled_peak_rss_mib": 156.28515625, "guard_reason": null}
+START core_prophet_walk_w21_s42
+END {"task_id": "core_prophet_walk_w21_s42", "returncode": 0, "elapsed_seconds": 1.0019600779996836, "sampled_peak_rss_mib": 157.02734375, "guard_reason": null}
+START core_prophet_walk_w22_s42
+END {"task_id": "core_prophet_walk_w22_s42", "returncode": 0, "elapsed_seconds": 1.0016765040018072, "sampled_peak_rss_mib": 155.921875, "guard_reason": null}
+START core_prophet_walk_w23_s42
+END {"task_id": "core_prophet_walk_w23_s42", "returncode": 0, "elapsed_seconds": 1.002338903999771, "sampled_peak_rss_mib": 156.71875, "guard_reason": null}
+START core_neuralprophet_walk_w01_s42
+END {"task_id": "core_neuralprophet_walk_w01_s42", "returncode": 0, "elapsed_seconds": 1.0021991549983795, "sampled_peak_rss_mib": 156.296875, "guard_reason": null}
+START core_neuralprophet_walk_w02_s42
+END {"task_id": "core_neuralprophet_walk_w02_s42", "returncode": 0, "elapsed_seconds": 1.0023227509991557, "sampled_peak_rss_mib": 156.13671875, "guard_reason": null}
+START core_neuralprophet_walk_w03_s42
+END {"task_id": "core_neuralprophet_walk_w03_s42", "returncode": 0, "elapsed_seconds": 1.0020269619999453, "sampled_peak_rss_mib": 156.92578125, "guard_reason": null}
+START core_neuralprophet_walk_w04_s42
+END {"task_id": "core_neuralprophet_walk_w04_s42", "returncode": 0, "elapsed_seconds": 1.0022051949999877, "sampled_peak_rss_mib": 156.3515625, "guard_reason": null}
+START core_neuralprophet_walk_w05_s42
+END {"task_id": "core_neuralprophet_walk_w05_s42", "returncode": 0, "elapsed_seconds": 1.0023064079978212, "sampled_peak_rss_mib": 156.17578125, "guard_reason": null}
+START core_neuralprophet_walk_w06_s42
+END {"task_id": "core_neuralprophet_walk_w06_s42", "returncode": 0, "elapsed_seconds": 1.0022357310008374, "sampled_peak_rss_mib": 156.48828125, "guard_reason": null}
+START core_neuralprophet_walk_w07_s42
+END {"task_id": "core_neuralprophet_walk_w07_s42", "returncode": 0, "elapsed_seconds": 1.0017174759996124, "sampled_peak_rss_mib": 155.984375, "guard_reason": null}
+START core_neuralprophet_walk_w08_s42
+END {"task_id": "core_neuralprophet_walk_w08_s42", "returncode": 0, "elapsed_seconds": 191.77783502400052, "sampled_peak_rss_mib": 1665.6015625, "guard_reason": null}
+START core_neuralprophet_walk_w09_s42
+END {"task_id": "core_neuralprophet_walk_w09_s42", "returncode": 0, "elapsed_seconds": 223.30977054699906, "sampled_peak_rss_mib": 1664.46484375, "guard_reason": null}
+START core_neuralprophet_walk_w10_s42
+END {"task_id": "core_neuralprophet_walk_w10_s42", "returncode": 0, "elapsed_seconds": 1.50229086300169, "sampled_peak_rss_mib": 186.640625, "guard_reason": null}
+START core_neuralprophet_walk_w11_s42
+END {"task_id": "core_neuralprophet_walk_w11_s42", "returncode": 0, "elapsed_seconds": 221.31955881100293, "sampled_peak_rss_mib": 1669.02734375, "guard_reason": null}
+START core_neuralprophet_walk_w12_s42
+END {"task_id": "core_neuralprophet_walk_w12_s42", "returncode": 0, "elapsed_seconds": 219.2954893990027, "sampled_peak_rss_mib": 1672.06640625, "guard_reason": null}
+START core_neuralprophet_walk_w13_s42
+END {"task_id": "core_neuralprophet_walk_w13_s42", "returncode": 0, "elapsed_seconds": 219.79781878599897, "sampled_peak_rss_mib": 1669.66015625, "guard_reason": null}
+START core_neuralprophet_walk_w14_s42
+END {"task_id": "core_neuralprophet_walk_w14_s42", "returncode": 0, "elapsed_seconds": 223.79761601200153, "sampled_peak_rss_mib": 1667.75, "guard_reason": null}
+START core_neuralprophet_walk_w15_s42
+END {"task_id": "core_neuralprophet_walk_w15_s42", "returncode": 0, "elapsed_seconds": 221.29504624199762, "sampled_peak_rss_mib": 1670.66796875, "guard_reason": null}
+START core_neuralprophet_walk_w16_s42
+END {"task_id": "core_neuralprophet_walk_w16_s42", "returncode": 0, "elapsed_seconds": 1.5021568200027104, "sampled_peak_rss_mib": 187.53515625, "guard_reason": null}
+START core_neuralprophet_walk_w17_s42
+END {"task_id": "core_neuralprophet_walk_w17_s42", "returncode": 0, "elapsed_seconds": 1.5025691039991216, "sampled_peak_rss_mib": 187.41015625, "guard_reason": null}
+START core_neuralprophet_walk_w18_s42
+END {"task_id": "core_neuralprophet_walk_w18_s42", "returncode": 0, "elapsed_seconds": 1.5028504820002127, "sampled_peak_rss_mib": 188.390625, "guard_reason": null}
+START core_neuralprophet_walk_w19_s42
+END {"task_id": "core_neuralprophet_walk_w19_s42", "returncode": 0, "elapsed_seconds": 1.5026732000042102, "sampled_peak_rss_mib": 187.48046875, "guard_reason": null}
+START core_neuralprophet_walk_w20_s42
+END {"task_id": "core_neuralprophet_walk_w20_s42", "returncode": 0, "elapsed_seconds": 1.5028748379991157, "sampled_peak_rss_mib": 154.87109375, "guard_reason": null}
+START core_neuralprophet_walk_w21_s42
+END {"task_id": "core_neuralprophet_walk_w21_s42", "returncode": 0, "elapsed_seconds": 1.5023688429937465, "sampled_peak_rss_mib": 187.484375, "guard_reason": null}
+START core_neuralprophet_walk_w22_s42
+END {"task_id": "core_neuralprophet_walk_w22_s42", "returncode": 0, "elapsed_seconds": 1.5030728009951417, "sampled_peak_rss_mib": 188.57421875, "guard_reason": null}
+START core_neuralprophet_walk_w23_s42
+END {"task_id": "core_neuralprophet_walk_w23_s42", "returncode": 0, "elapsed_seconds": 1.5026391930005047, "sampled_peak_rss_mib": 188.4296875, "guard_reason": null}
+START core_neuralprophet_walk_w01_s123
+END {"task_id": "core_neuralprophet_walk_w01_s123", "returncode": 0, "elapsed_seconds": 1.5033395550053683, "sampled_peak_rss_mib": 188.0, "guard_reason": null}
+START core_neuralprophet_walk_w02_s123
+END {"task_id": "core_neuralprophet_walk_w02_s123", "returncode": 0, "elapsed_seconds": 1.5021323020046111, "sampled_peak_rss_mib": 155.58203125, "guard_reason": null}
+START core_neuralprophet_walk_w03_s123
+END {"task_id": "core_neuralprophet_walk_w03_s123", "returncode": 0, "elapsed_seconds": 1.5023431260051439, "sampled_peak_rss_mib": 187.49609375, "guard_reason": null}
+START core_neuralprophet_walk_w04_s123
+END {"task_id": "core_neuralprophet_walk_w04_s123", "returncode": 0, "elapsed_seconds": 1.5019189059967175, "sampled_peak_rss_mib": 155.1953125, "guard_reason": null}
+START core_neuralprophet_walk_w05_s123
+END {"task_id": "core_neuralprophet_walk_w05_s123", "returncode": 0, "elapsed_seconds": 1.5029076139981044, "sampled_peak_rss_mib": 177.4140625, "guard_reason": null}
+START core_neuralprophet_walk_w06_s123
+END {"task_id": "core_neuralprophet_walk_w06_s123", "returncode": 0, "elapsed_seconds": 1.5029089509989717, "sampled_peak_rss_mib": 186.84375, "guard_reason": null}
+START core_neuralprophet_walk_w07_s123
+END {"task_id": "core_neuralprophet_walk_w07_s123", "returncode": 0, "elapsed_seconds": 1.502046811998298, "sampled_peak_rss_mib": 188.3671875, "guard_reason": null}
+START core_neuralprophet_walk_w08_s123
+END {"task_id": "core_neuralprophet_walk_w08_s123", "returncode": 0, "elapsed_seconds": 216.79367806699884, "sampled_peak_rss_mib": 1666.22265625, "guard_reason": null}
+START core_neuralprophet_walk_w09_s123
+END {"task_id": "core_neuralprophet_walk_w09_s123", "returncode": 0, "elapsed_seconds": 213.81557349899958, "sampled_peak_rss_mib": 1665.7109375, "guard_reason": null}
+START core_neuralprophet_walk_w10_s123
+END {"task_id": "core_neuralprophet_walk_w10_s123", "returncode": 0, "elapsed_seconds": 1.5020569600019371, "sampled_peak_rss_mib": 187.3359375, "guard_reason": null}
+START core_neuralprophet_walk_w11_s123
+END {"task_id": "core_neuralprophet_walk_w11_s123", "returncode": 0, "elapsed_seconds": 216.7979253320009, "sampled_peak_rss_mib": 1671.0390625, "guard_reason": null}
+START core_neuralprophet_walk_w12_s123
+END {"task_id": "core_neuralprophet_walk_w12_s123", "returncode": 0, "elapsed_seconds": 214.79010474299866, "sampled_peak_rss_mib": 1672.13671875, "guard_reason": null}
+START core_neuralprophet_walk_w13_s123
+END {"task_id": "core_neuralprophet_walk_w13_s123", "returncode": 0, "elapsed_seconds": 216.28378854200128, "sampled_peak_rss_mib": 1672.703125, "guard_reason": null}
+START core_neuralprophet_walk_w14_s123
+END {"task_id": "core_neuralprophet_walk_w14_s123", "returncode": 0, "elapsed_seconds": 218.3031052669976, "sampled_peak_rss_mib": 1670.20703125, "guard_reason": null}
+START core_neuralprophet_walk_w15_s123
+END {"task_id": "core_neuralprophet_walk_w15_s123", "returncode": 0, "elapsed_seconds": 217.30140180200397, "sampled_peak_rss_mib": 1670.13671875, "guard_reason": null}
+START core_neuralprophet_walk_w16_s123
+END {"task_id": "core_neuralprophet_walk_w16_s123", "returncode": 0, "elapsed_seconds": 1.5025787129998207, "sampled_peak_rss_mib": 154.87109375, "guard_reason": null}
+START core_neuralprophet_walk_w17_s123
+END {"task_id": "core_neuralprophet_walk_w17_s123", "returncode": 0, "elapsed_seconds": 1.502355771001021, "sampled_peak_rss_mib": 187.41796875, "guard_reason": null}
+START core_neuralprophet_walk_w18_s123
+END {"task_id": "core_neuralprophet_walk_w18_s123", "returncode": 0, "elapsed_seconds": 1.5016767240012996, "sampled_peak_rss_mib": 187.4296875, "guard_reason": null}
+START core_neuralprophet_walk_w19_s123
+END {"task_id": "core_neuralprophet_walk_w19_s123", "returncode": 0, "elapsed_seconds": 1.502405675004411, "sampled_peak_rss_mib": 155.06640625, "guard_reason": null}
+START core_neuralprophet_walk_w20_s123
+END {"task_id": "core_neuralprophet_walk_w20_s123", "returncode": 0, "elapsed_seconds": 1.5030630699984613, "sampled_peak_rss_mib": 155.45703125, "guard_reason": null}
+START core_neuralprophet_walk_w21_s123
+END {"task_id": "core_neuralprophet_walk_w21_s123", "returncode": 0, "elapsed_seconds": 1.5032549940005993, "sampled_peak_rss_mib": 153.26171875, "guard_reason": null}
+START core_neuralprophet_walk_w22_s123
+END {"task_id": "core_neuralprophet_walk_w22_s123", "returncode": 0, "elapsed_seconds": 1.5026859650024562, "sampled_peak_rss_mib": 155.53125, "guard_reason": null}
+START core_neuralprophet_walk_w23_s123
+END {"task_id": "core_neuralprophet_walk_w23_s123", "returncode": 0, "elapsed_seconds": 1.5023986610030988, "sampled_peak_rss_mib": 186.11328125, "guard_reason": null}
+START core_neuralprophet_walk_w01_s2026
+END {"task_id": "core_neuralprophet_walk_w01_s2026", "returncode": 0, "elapsed_seconds": 1.0019111419969704, "sampled_peak_rss_mib": 155.16015625, "guard_reason": null}
+START core_neuralprophet_walk_w02_s2026
+END {"task_id": "core_neuralprophet_walk_w02_s2026", "returncode": 0, "elapsed_seconds": 1.5026562180064502, "sampled_peak_rss_mib": 188.44921875, "guard_reason": null}
+START core_neuralprophet_walk_w03_s2026
+END {"task_id": "core_neuralprophet_walk_w03_s2026", "returncode": 0, "elapsed_seconds": 1.001773971998773, "sampled_peak_rss_mib": 155.671875, "guard_reason": null}
+START core_neuralprophet_walk_w04_s2026
+END {"task_id": "core_neuralprophet_walk_w04_s2026", "returncode": 0, "elapsed_seconds": 1.0016725890018279, "sampled_peak_rss_mib": 155.5, "guard_reason": null}
+START core_neuralprophet_walk_w05_s2026
+END {"task_id": "core_neuralprophet_walk_w05_s2026", "returncode": 0, "elapsed_seconds": 1.502771767001832, "sampled_peak_rss_mib": 188.390625, "guard_reason": null}
+START core_neuralprophet_walk_w06_s2026
+END {"task_id": "core_neuralprophet_walk_w06_s2026", "returncode": 0, "elapsed_seconds": 1.5034872719988925, "sampled_peak_rss_mib": 155.2421875, "guard_reason": null}
+START core_neuralprophet_walk_w07_s2026
+END {"task_id": "core_neuralprophet_walk_w07_s2026", "returncode": 0, "elapsed_seconds": 1.0020359679983812, "sampled_peak_rss_mib": 154.94140625, "guard_reason": null}
+START core_neuralprophet_walk_w08_s2026
+END {"task_id": "core_neuralprophet_walk_w08_s2026", "returncode": 0, "elapsed_seconds": 223.30022088600526, "sampled_peak_rss_mib": 1667.48046875, "guard_reason": null}
+START core_neuralprophet_walk_w09_s2026
+END {"task_id": "core_neuralprophet_walk_w09_s2026", "returncode": 0, "elapsed_seconds": 226.81626746999973, "sampled_peak_rss_mib": 1668.3125, "guard_reason": null}
+START core_neuralprophet_walk_w10_s2026
+END {"task_id": "core_neuralprophet_walk_w10_s2026", "returncode": 0, "elapsed_seconds": 1.0014998830010882, "sampled_peak_rss_mib": 155.9453125, "guard_reason": null}
+START core_neuralprophet_walk_w11_s2026
+END {"task_id": "core_neuralprophet_walk_w11_s2026", "returncode": 0, "elapsed_seconds": 220.30420523000066, "sampled_peak_rss_mib": 1674.64453125, "guard_reason": null}
+START core_neuralprophet_walk_w12_s2026
+END {"task_id": "core_neuralprophet_walk_w12_s2026", "returncode": 0, "elapsed_seconds": 232.82379622500594, "sampled_peak_rss_mib": 1672.81640625, "guard_reason": null}
+START core_neuralprophet_walk_w13_s2026
+END {"task_id": "core_neuralprophet_walk_w13_s2026", "returncode": 0, "elapsed_seconds": 242.8421782200021, "sampled_peak_rss_mib": 1667.73828125, "guard_reason": null}
+START core_neuralprophet_walk_w14_s2026
+END {"task_id": "core_neuralprophet_walk_w14_s2026", "returncode": 0, "elapsed_seconds": 248.3433225789995, "sampled_peak_rss_mib": 1670.18359375, "guard_reason": null}
+START core_neuralprophet_walk_w15_s2026
+END {"task_id": "core_neuralprophet_walk_w15_s2026", "returncode": 0, "elapsed_seconds": 215.80034152999724, "sampled_peak_rss_mib": 1670.57421875, "guard_reason": null}
+START core_neuralprophet_walk_w16_s2026
+END {"task_id": "core_neuralprophet_walk_w16_s2026", "returncode": 0, "elapsed_seconds": 1.001922449999256, "sampled_peak_rss_mib": 154.36328125, "guard_reason": null}
+START core_neuralprophet_walk_w17_s2026
+END {"task_id": "core_neuralprophet_walk_w17_s2026", "returncode": 0, "elapsed_seconds": 1.5024670670027263, "sampled_peak_rss_mib": 186.6640625, "guard_reason": null}
+START core_neuralprophet_walk_w18_s2026
+END {"task_id": "core_neuralprophet_walk_w18_s2026", "returncode": 0, "elapsed_seconds": 1.5024573670016252, "sampled_peak_rss_mib": 187.23046875, "guard_reason": null}
+START core_neuralprophet_walk_w19_s2026
+END {"task_id": "core_neuralprophet_walk_w19_s2026", "returncode": 0, "elapsed_seconds": 1.5022825449996162, "sampled_peak_rss_mib": 188.6484375, "guard_reason": null}
+START core_neuralprophet_walk_w20_s2026
+END {"task_id": "core_neuralprophet_walk_w20_s2026", "returncode": 0, "elapsed_seconds": 1.50242925099883, "sampled_peak_rss_mib": 154.96484375, "guard_reason": null}
+START core_neuralprophet_walk_w21_s2026
+END {"task_id": "core_neuralprophet_walk_w21_s2026", "returncode": 0, "elapsed_seconds": 1.5022725840026396, "sampled_peak_rss_mib": 188.546875, "guard_reason": null}
+START core_neuralprophet_walk_w22_s2026
+END {"task_id": "core_neuralprophet_walk_w22_s2026", "returncode": 0, "elapsed_seconds": 1.002299731997482, "sampled_peak_rss_mib": 155.37109375, "guard_reason": null}
+START core_neuralprophet_walk_w23_s2026
+END {"task_id": "core_neuralprophet_walk_w23_s2026", "returncode": 0, "elapsed_seconds": 1.5026199399944744, "sampled_peak_rss_mib": 187.640625, "guard_reason": null}
+START ablate_sarimax_no_inputs
+END {"task_id": "ablate_sarimax_no_inputs", "returncode": 0, "elapsed_seconds": 2.5037490199974854, "sampled_peak_rss_mib": 238.63671875, "guard_reason": null}
+START ablate_sarimax_broad
+END {"task_id": "ablate_sarimax_broad", "returncode": 0, "elapsed_seconds": 3.0449299690008047, "sampled_peak_rss_mib": 263.0078125, "guard_reason": null}
+START ablate_sarimax_clip
+END {"task_id": "ablate_sarimax_clip", "returncode": 0, "elapsed_seconds": 2.5046814200031804, "sampled_peak_rss_mib": 252.8984375, "guard_reason": null}
+START ablate_prophet_no_inputs
+END {"task_id": "ablate_prophet_no_inputs", "returncode": 0, "elapsed_seconds": 14.023328759001743, "sampled_peak_rss_mib": 391.83984375, "guard_reason": null}
+START ablate_prophet_broad
+END {"task_id": "ablate_prophet_broad", "returncode": 0, "elapsed_seconds": 22.03616858899477, "sampled_peak_rss_mib": 436.5, "guard_reason": null}
+START ablate_prophet_clip
+END {"task_id": "ablate_prophet_clip", "returncode": 0, "elapsed_seconds": 23.041069427003094, "sampled_peak_rss_mib": 413.546875, "guard_reason": null}
+START ablate_neuralprophet_no_inputs
+END {"task_id": "ablate_neuralprophet_no_inputs", "returncode": 0, "elapsed_seconds": 195.27051735499845, "sampled_peak_rss_mib": 1467.2578125, "guard_reason": null}
+START ablate_neuralprophet_broad
+END {"task_id": "ablate_neuralprophet_broad", "returncode": 0, "elapsed_seconds": 211.28217752800265, "sampled_peak_rss_mib": 1858.55078125, "guard_reason": null}
+START ablate_neuralprophet_clip
+END {"task_id": "ablate_neuralprophet_clip", "returncode": 0, "elapsed_seconds": 206.78380414799904, "sampled_peak_rss_mib": 1652.0, "guard_reason": null}

@@ -1,0 +1,7 @@
+Coverage: 23 full origins, 3,864 scheduled hours, 3,624 observed scoring hours; 19 full and 4 partial weeks
+START core_sarimax_frozen_s42
+END {"task_id": "core_sarimax_frozen_s42", "returncode": 0, "elapsed_seconds": 3.004334058998211, "sampled_peak_rss_mib": 253.03125, "guard_reason": null}
+START core_prophet_frozen_s42
+END {"task_id": "core_prophet_frozen_s42", "returncode": 0, "elapsed_seconds": 28.549295116001304, "sampled_peak_rss_mib": 411.13671875, "guard_reason": null}
+START core_neuralprophet_frozen_s42
+END {"task_id": "core_neuralprophet_frozen_s42", "returncode": 0, "elapsed_seconds": 205.77586399600114, "sampled_peak_rss_mib": 1652.53125, "guard_reason": null}

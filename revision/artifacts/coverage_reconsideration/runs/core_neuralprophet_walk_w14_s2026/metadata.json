@@ -1,0 +1,105 @@
+{
+  "task": {
+    "id": "core_neuralprophet_walk_w14_s2026",
+    "stage": "core",
+    "family": "neuralprophet",
+    "regime": "walk",
+    "seed": 2026,
+    "week": 14,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "variant": "selected",
+    "candidate": {
+      "epochs": 50
+    }
+  },
+  "status": "completed",
+  "protocol_signature": "f1b785fcfd49bf50207714991659a0525b71ebbfb2b0f88d8ff0985494af6cdd",
+  "strict_protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "fit_origin": "2025-04-14 01:00:00",
+  "started_utc": "2026-09-29T16:29:18.893334+00:00",
+  "fit": {
+    "family": "neuralprophet",
+    "candidate": {
+      "epochs": 50,
+      "n_lags": 168,
+      "n_forecasts": 168
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 2026,
+    "fit_end_exclusive": "2025-04-14 01:00:00",
+    "training_calendar_hours": 38424,
+    "observed_training_targets": 37704,
+    "preparation_seconds": 0.009667028003605083,
+    "scaler": {
+      "mean": {
+        "no": 151.0722284107787,
+        "no2": 94.66484855718227,
+        "co": 2443.3612866008907,
+        "so2": 139.51020740504987
+      },
+      "scale": {
+        "no": 184.30812645355223,
+        "no2": 92.35514312630517,
+        "co": 2502.947413030006,
+        "so2": 126.1744065784491
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "training_episodes_retained": 16,
+    "training_samples": 31768,
+    "training_loss_first": 2.136488199234009,
+    "training_loss_last": 0.010385341010987759,
+    "training_loss_min": 0.010379242710769176,
+    "epochs_completed": 50,
+    "target_normalization": {
+      "shift": 0.91,
+      "scale": 701.0660000000001
+    },
+    "fit_seconds": 242.93488194199745
+  },
+  "fit_executed": true,
+  "restored_parameters_from": null,
+  "completed_weeks": [
+    {
+      "window": 14,
+      "history_context_consumed": true,
+      "history_context_missing_target_hours": 0,
+      "history_target_filled_hours": 0,
+      "history_input_filled_cells": 0,
+      "future_placeholder_cells": 96,
+      "scored_hours": 144,
+      "placeholder_max_scored_prediction_difference": 0.0,
+      "placeholder_invariance_passed": true,
+      "forecast_seconds": 0.12827637000009418,
+      "invariance_check_seconds": 0.12173798200092278,
+      "state_update_seconds": 0.0
+    }
+  ],
+  "strict_reproduction_max_difference": 0.0,
+  "completed_utc": "2026-09-29T16:33:22.196358+00:00",
+  "windows": 1,
+  "hours": 144,
+  "pooled_mae": 30.069560528679023,
+  "pooled_rmse": 42.764881882495025,
+  "mean_weekly_mae": 30.069560528679023,
+  "weekly_mae_sd": NaN,
+  "mean_weekly_rmse": 42.764881882495025,
+  "weekly_rmse_sd": NaN,
+  "sampled_self_peak_rss_mib": 1668.984375
+}

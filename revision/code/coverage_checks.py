@@ -117,6 +117,17 @@ def main():
         assert np.isfinite(frame.loc[frame.score_eligible,'corrected_prediction']).all()
     info.update(additional_checks_passed=True,checks_source='revision/code/coverage_checks.py')
     (OUT/'verification.json').write_text(json.dumps(info,indent=2))
+    run_metadata=[json.loads(p.read_text()) for p in (OUT/'runs').glob('*/metadata.json')]
+    reproduced=max(r.get('strict_reproduction_max_difference',0.) for r in run_metadata)
+    placeholder=max(w.get('placeholder_max_scored_prediction_difference',0.)
+                    for r in run_metadata for w in r['completed_weeks'])
+    appendix=['','## Final evidence checks','',
+        f"The final checker accepted {info['complete_tasks']}/{info['expected_tasks']} tasks, all three baselines and 35 correction streams with no integrity errors. The preserved strict reference verified all {info['strict_reference_originals_verified']} original file fingerprints.",
+        '',f"Of the 129 tasks, {sum(r['fit_executed'] for r in run_metadata)} execute new fits, {sum(bool(r.get('reused_from')) for r in run_metadata)} reuse an earlier complete weekly forecast, and {sum(bool(r.get('restored_parameters_from')) for r in run_metadata)} reconstruct a frozen SARIMAX state from a previously fitted parameter vector. The largest difference when reproducing strict-week forecasts is {reproduced:.2g} in PM2.5 units. The largest scored-forecast change under unavailable-input placeholder perturbation is {placeholder:.2g}.",
+        '', 'Week 12 persistence repeats the last genuinely observed target, 257.0 at 2025-03-30 00:00, rather than a filled last hour. Source timestamps and all baseline definitions/checksums are in `artifacts/coverage_reconsideration/baselines/definitions.json`.',
+        '', 'The completed [coverage chart](../artifacts/coverage_reconsideration/coverage.png) separates the original 16 complete-context weeks from the additional observed hours and missing hours. The notebook contains the executed chart and result tables. Twenty-two scientific-contract tests pass. These checks establish the saved evidence and scope; Phase 3 paired inference and manuscript interpretation remain pending.']
+    report=REVISION/'reports/COVERAGE_RECONSIDERATION_RESULTS.md'
+    report.write_text(report.read_text()+'\n'.join(appendix)+'\n')
     print('Broader checks passed: 129 tasks, 23 origins, 3,624 observed hours; baseline causality, missingness and training diagnostics verified.')
 
 

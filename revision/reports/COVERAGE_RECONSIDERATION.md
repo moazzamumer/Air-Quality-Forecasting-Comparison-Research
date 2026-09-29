@@ -75,3 +75,13 @@ stage `revision.code.coverage_checks` enforces these definitions, labels all
 baselines as no-input methods and saves their producer/checksum metadata in
 `artifacts/coverage_reconsideration/baselines/definitions.json`. This definition
 check does not alter any fitted model or select methods by forecast error.
+
+## Final adoption
+
+The broader matrix completed and passed full verification: 129/129 tasks,
+three baselines and 35 correction streams, with 21 original fingerprints
+preserved. Every family/regime/seed covers the same 23 origins and 3,624 observed
+scoring hours. The broader observed-hour protocol is the primary evaluation;
+the preserved 16-week protocol is the strict sensitivity. See
+`COVERAGE_RECONSIDERATION_RESULTS.md` and the executed revision notebook.
+Phase 3 analysis and manuscript/point-by-point response writing remain pending.

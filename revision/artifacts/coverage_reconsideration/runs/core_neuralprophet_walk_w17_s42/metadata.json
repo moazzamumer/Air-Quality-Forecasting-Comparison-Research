@@ -1,0 +1,103 @@
+{
+  "task": {
+    "id": "core_neuralprophet_walk_w17_s42",
+    "stage": "core",
+    "family": "neuralprophet",
+    "regime": "walk",
+    "seed": 42,
+    "week": 17,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "variant": "selected",
+    "candidate": {
+      "epochs": 50
+    }
+  },
+  "status": "completed",
+  "protocol_signature": "f1b785fcfd49bf50207714991659a0525b71ebbfb2b0f88d8ff0985494af6cdd",
+  "strict_protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "fit_origin": "2025-05-05 01:00:00",
+  "started_utc": "2026-09-29T15:44:12.175352+00:00",
+  "fit": {
+    "family": "neuralprophet",
+    "candidate": {
+      "epochs": 50,
+      "n_lags": 168,
+      "n_forecasts": 168
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-05-05 01:00:00",
+    "training_calendar_hours": 38928,
+    "observed_training_targets": 38184,
+    "preparation_seconds": 0.008627716000773944,
+    "scaler": {
+      "mean": {
+        "no": 149.19191965221034,
+        "no2": 93.70550099518124,
+        "co": 2416.4815302220823,
+        "so2": 137.99912266918082
+      },
+      "scale": {
+        "no": 183.90297669006733,
+        "no2": 92.17463472735155,
+        "co": 2498.578779401549,
+        "so2": 126.09710589739132
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "training_episodes_retained": 17,
+    "training_samples": 31793,
+    "training_loss_first": 1.4872190952301025,
+    "training_loss_last": 0.008550417609512806,
+    "training_loss_min": 0.008550417609512806,
+    "epochs_completed": 50,
+    "target_normalization": {
+      "shift": 0.0,
+      "scale": 699.0845000000002
+    },
+    "fit_seconds": 208.65416015200026
+  },
+  "fit_executed": false,
+  "reused_from": "revision/artifacts/phase2/runs/core_neuralprophet_walk_w17_s42",
+  "original_source_metadata_sha256": "07f4c1c8319c99eddd82d9f5b891df0f47df130179aff6fab8b447fbfe6b1e9b",
+  "completed_weeks": [
+    {
+      "window": 17,
+      "history_target_filled_hours": 0,
+      "history_input_filled_cells": 0,
+      "future_placeholder_cells": 0,
+      "scored_hours": 168,
+      "placeholder_invariance_passed": true,
+      "placeholder_max_scored_prediction_difference": 0.0,
+      "forecast_seconds": 0.0,
+      "invariance_check_seconds": 0.0,
+      "reused_strict_forecast": true
+    }
+  ],
+  "completed_utc": "2026-09-29T15:44:12.182695+00:00",
+  "windows": 1,
+  "hours": 168,
+  "pooled_mae": 42.00399644755182,
+  "pooled_rmse": 56.37347830109299,
+  "mean_weekly_mae": 42.00399644755182,
+  "weekly_mae_sd": NaN,
+  "mean_weekly_rmse": 56.37347830109299,
+  "weekly_rmse_sd": NaN,
+  "sampled_self_peak_rss_mib": 199.27734375
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "ID": "episode_000",
+    "start": "2020-11-25 01:00:00",
+    "end": "2021-01-27 00:00:00",
+    "observed_hours": 1512,
+    "retained": true,
+    "training_samples": 1177
+  },
+  {
+    "ID": "episode_001",
+    "start": "2021-01-28 01:00:00",
+    "end": "2022-01-23 00:00:00",
+    "observed_hours": 8640,
+    "retained": true,
+    "training_samples": 8305
+  },
+  {
+    "ID": "episode_002",
+    "start": "2022-01-24 01:00:00",
+    "end": "2022-02-20 00:00:00",
+    "observed_hours": 648,
+    "retained": true,
+    "training_samples": 313
+  },
+  {
+    "ID": "episode_003",
+    "start": "2022-02-21 01:00:00",
+    "end": "2022-07-20 00:00:00",
+    "observed_hours": 3576,
+    "retained": true,
+    "training_samples": 3241
+  },
+  {
+    "ID": "episode_004",
+    "start": "2022-07-22 01:00:00",
+    "end": "2022-12-09 00:00:00",
+    "observed_hours": 3360,
+    "retained": true,
+    "training_samples": 3025
+  },
+  {
+    "ID": "episode_005",
+    "start": "2022-12-11 01:00:00",
+    "end": "2022-12-25 00:00:00",
+    "observed_hours": 336,
+    "retained": true,
+    "training_samples": 1
+  },
+  {
+    "ID": "episode_006",
+    "start": "2022-12-26 01:00:00",
+    "end": "2023-02-23 00:00:00",
+    "observed_hours": 1416,
+    "retained": true,
+    "training_samples": 1081
+  },
+  {
+    "ID": "episode_007",
+    "start": "2023-02-25 01:00:00",
+    "end": "2023-03-04 00:00:00",
+    "observed_hours": 168,
+    "retained": false,
+    "training_samples": 0
+  },
+  {
+    "ID": "episode_008",
+    "start": "2023-03-05 01:00:00",
+    "end": "2023-07-19 00:00:00",
+    "observed_hours": 3264,
+    "retained": true,
+    "training_samples": 2929
+  },
+  {
+    "ID": "episode_009",
+    "start": "2023-07-20 01:00:00",
+    "end": "2023-09-24 00:00:00",
+    "observed_hours": 1584,
+    "retained": true,
+    "training_samples": 1249
+  },
+  {
+    "ID": "episode_010",
+    "start": "2023-09-25 01:00:00",
+    "end": "2023-09-30 00:00:00",
+    "observed_hours": 120,
+    "retained": false,
+    "training_samples": 0
+  },
+  {
+    "ID": "episode_011",
+    "start": "2023-10-02 01:00:00",
+    "end": "2024-01-09 00:00:00",
+    "observed_hours": 2376,
+    "retained": true,
+    "training_samples": 2041
+  },
+  {
+    "ID": "episode_012",
+    "start": "2024-01-10 01:00:00",
+    "end": "2024-04-06 00:00:00",
+    "observed_hours": 2088,
+    "retained": true,
+    "training_samples": 1753
+  },
+  {
+    "ID": "episode_013",
+    "start": "2024-04-07 01:00:00",
+    "end": "2024-06-16 00:00:00",
+    "observed_hours": 1680,
+    "retained": true,
+    "training_samples": 1345
+  },
+  {
+    "ID": "episode_014",
+    "start": "2024-06-17 01:00:00",
+    "end": "2024-07-22 00:00:00",
+    "observed_hours": 840,
+    "retained": true,
+    "training_samples": 505
+  },
+  {
+    "ID": "episode_015",
+    "start": "2024-07-24 01:00:00",
+    "end": "2024-09-09 00:00:00",
+    "observed_hours": 1128,
+    "retained": true,
+    "training_samples": 793
+  },
+  {
+    "ID": "episode_016",
+    "start": "2024-09-10 01:00:00",
+    "end": "2025-03-05 00:00:00",
+    "observed_hours": 4224,
+    "retained": true,
+    "training_samples": 3889
+  },
+  {
+    "ID": "episode_017",
+    "start": "2025-03-07 01:00:00",
+    "end": "2025-03-24 00:00:00",
+    "observed_hours": 408,
+    "retained": true,
+    "training_samples": 73
+  }
+]

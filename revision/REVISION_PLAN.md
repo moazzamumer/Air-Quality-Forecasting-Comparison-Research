@@ -1,6 +1,6 @@
 # Scientific Reports revision plan
 
-Status: Strict-availability Phases 1/2 evidence is preserved. At Moazzam's request, coverage is being reconsidered before Phase 3: retain all 23 calendar origins, score only observed hours, and test explicit historical-context handling. See `reports/COVERAGE_RECONSIDERATION.md`. Phase 3 and manuscript/response edits remain pending.
+Status: Coverage reconsideration completed before Phase 3. The broader primary evaluation retains 23 weekly origins / 3,624 observed hours (19 complete weeks and four partial weeks); the 16-week strict experiment is preserved as a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 and manuscript/response edits remain pending.
 
 First author: Moazzam Umer Gondal. Corresponding author: Asma Ahmad Farhan.
 Decision: Major Revision. Submission deadline: October 6, 2026.
@@ -15,6 +15,32 @@ Decision: Major Revision. Submission deadline: October 6, 2026.
 - Keep `main.ipynb` at the project root and use `revision/main_revision.ipynb` as the single revision notebook entry point. Supporting code implements reusable checks and experiment functions; the notebook presents the workflow and results. Old supporting files/outputs are archived under `legacy/`, with relocation paths/checksums recorded in `revision/archive_locations.json`.
 - Treat all reported numerical results as subject to replacement by corrected experiments. Do not tune to recover the submitted rankings or error values.
 - Acceptance is not guaranteed. The response must report evidence honestly, including findings that weaken the original claims.
+
+## Coverage amendment adopted before Phase 3
+
+At Moazzam's request, the strict whole-week exclusion rule was reconsidered.
+The primary evaluation now retains all 23 full calendar origins and scores
+3,624 original observed hours: 19 complete and four partial weeks. The original
+16-week / 2,688-hour matrix is retained as a strict-availability sensitivity.
+The 163-hour terminal remainder stays separate. Original fitting targets,
+training split, model selection/settings and seeds are unchanged.
+
+Dense inference histories use an explicit causal 168-hour seasonal fill only
+where historical observations are missing. Missing future-input hours are not
+scored; actual fitted-model placeholder perturbations leave scored forecasts
+unchanged. Strict frozen forecasts are reproduced, and 80 compatible weekly
+forecasts are reused with exact provenance. The 129-task broader matrix,
+baselines and 35 recomputed corrections pass full verification. New work
+includes 45 fits and four frozen SARIMAX state reconstructions.
+
+Partial-week coverage, uncertain context filling (including a 120-hour gap),
+observed-only scoring and altered correction-update coverage must remain visible
+in Phase 3/4. Mean weekly MAE and pooled MAE now differ in weighting. Phase 3
+should use the broader streams as primary and the strict streams as sensitivity;
+no comparisons may silently mix their masks or correction histories. See
+`reports/COVERAGE_RECONSIDERATION_RESULTS.md` and
+`config/coverage_reconsideration.json`. Earlier strict rules below document the
+preserved reference and are superseded only where this amendment says so.
 
 ## Phase 1 — Establish and check the experimental protocol
 

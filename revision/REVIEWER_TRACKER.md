@@ -1,8 +1,18 @@
 # Reviewer revision tracker
 
-Status: Strict-availability Phases 1/2 evidence is preserved. At Moazzam's request, coverage is being reconsidered before Phase 3: retain all 23 calendar origins, score only observed hours, and test explicit historical-context handling. See `reports/COVERAGE_RECONSIDERATION.md`. Phase 3 and manuscript/response edits remain pending.
+Status: Coverage reconsideration completed before Phase 3. The broader primary evaluation retains 23 weekly origins / 3,624 observed hours (19 complete weeks and four partial weeks); the 16-week strict experiment is preserved as a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 and manuscript/response edits remain pending.
 
-## Phase 2 evidence log
+## Broader coverage amendment before Phase 3
+
+| Reviewer points | Action and result | Evidence |
+|---|---|---|
+| R1.1; R2.M2; R2.M4 | Retain 23 weekly calendar origins, score the same 3,624 original observed hours for all methods; label 19 complete/four partial weeks and the separate 163-hour remainder. | `artifacts/coverage_reconsideration/windows.csv`; `coverage.png`; `verification.json` |
+| R1.4; R2.M5–M6 | Keep selected settings/fitting targets unchanged; handle dense inference history with a documented causal seasonal fill; verify actual model placeholder invariance and strict-week reproduction. All 129 tasks and 22 tests pass. | `config/coverage_reconsideration.json`; `runs/*/`; `preflight_checks.json`; `history_fill_validation.csv` |
+| R2.M3; R2.M7 | Extend all frozen clipping and predictor controls to the same wider mask; preserve the strict reference. | `experimental_summary.csv`; `runs/ablate_*/` |
+| R1.7; R2.M8 | Recompute 35 correction streams using each week's observed residual mean after outcomes; retain the old strict skip/carry policy as a separate sensitivity. | `corrections/`; `artifacts/phase2/corrections/` |
+| R1.6; R1.8; R2.M9–M10; R2.m6 | Save pooled versus weekly metrics, 80 exact weekly-forecast reuses, 45 new fits/four SARIMAX reconstructions, resources and executed notebook/chart. Analysis and writing remain pending. | `supervisor.jsonl`; `main_revision.ipynb`; `reports/COVERAGE_RECONSIDERATION_RESULTS.md` |
+
+## Strict Phase 2 evidence log
 
 | Reviewer points | Phase 2 action | Evidence | Current state |
 |---|---|---|---|
@@ -67,8 +77,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R2.M4; matched coverage before rankings.
 - **Planned action / closure evidence:** Complete-run or failure log, matched-period comparison, coverage labels in every relevant passage.
 - **Status:** Evidence ready
-- **Changes performed:** All three families and both updating regimes now cover the same 16 eligible calendar weeks / 2,688 observed hours. Five nonconverged SARIMAX weekly refits were recovered with the selected orders and original cutoffs; original failures, numerical amendment and recovery effort are retained. The revised mask excludes unavailable weeks and the incomplete terminal window; revised counts do not equal the submitted 23-week row-based evaluation.
-- **Evidence/artifacts:** reports/PHASE2_VERIFICATION.md; artifacts/phase2/verified_coverage.csv; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** The broader primary comparison now retains all 23 calendar origins and uses the same 3,624 observed scoring hours for every family/regime/seed: 19 complete and four partial weeks. All SARIMAX refits are valid; five strict-run numerical recoveries and the additional-origin solver policy remain explicit. The original 16-week strict subset is preserved as sensitivity evidence. Partial weeks are labeled, and their missing hours are not scored.
+- **Evidence/artifacts:** reports/COVERAGE_RECONSIDERATION_RESULTS.md; artifacts/coverage_reconsideration/windows.csv; artifacts/coverage_reconsideration/verification.json; artifacts/coverage_reconsideration/experimental_summary.csv; reports/PHASE2_VERIFICATION.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -112,8 +122,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R2.M5; alignment and convergence checks first.
 - **Planned action / closure evidence:** Horizon-extraction check, convergence/normalization records, seeded results and evidence-based diagnosis.
 - **Status:** In progress
-- **Changes performed:** Corrected single-origin 168-lead NeuralProphet forecasts completed both regimes for seeds 42, 123 and 2026 on 16 matched weeks. Fifty training epochs were selected using training-only validation. Training traces, continuous-episode boundaries and normalization are saved. Comparative diagnosis and interpretation remain pending; no claim of inherent weakness is retained from the old experiment.
-- **Evidence/artifacts:** artifacts/phase2/runs/core_neuralprophet_*/; artifacts/phase2/experimental_summary.csv; artifacts/phase2/verification.json.
+- **Changes performed:** Corrected 168-step NeuralProphet forecasts now cover all 23 origins for seeds 42, 123 and 2026 in both regimes, using 3,624 original observed scoring hours. Fifty epochs remain training-validation-selected; fitting targets are never filled. Missing inference history is filled with an explicit causal seasonal rule, with counts and training-only reconstruction limitations recorded. Frozen strict-week forecasts reproduce their preserved reference. Diagnostics and manuscript interpretation remain Phase 3/4 work.
+- **Evidence/artifacts:** artifacts/coverage_reconsideration/runs/core_neuralprophet_*/; artifacts/coverage_reconsideration/history_fill_validation.csv; artifacts/coverage_reconsideration/verification.json; reports/COVERAGE_RECONSIDERATION_RESULTS.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -142,8 +152,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R2.M10; controlled machine and timing scope.
 - **Planned action / closure evidence:** Per-model actual acceleration, CPU/RAM/software inventory, timing definitions and measured breakdown.
 - **Status:** In progress
-- **Changes performed:** Full local experiment and recovery supervisor records, per-fit timing, prediction/state-update timing, sampled peak RSS, software versions and two-thread CPU configuration have been saved. Shared initial fits, failed attempts, rejected recovery attempts and successful recoveries are explicitly identified. Phase 3 must produce comparable totals and explain differing fit-timer boundaries.
-- **Evidence/artifacts:** artifacts/phase2/supervisor.jsonl; artifacts/phase2/recovery_supervisor.jsonl; artifacts/phase2/runs/*/metadata.json; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** Strict and broader resource records distinguish original fitting, failed/recovered attempts, new weekly fitting, frozen-state reconstruction, same-configuration frozen refitting, exact forecast reuse and placeholder checks. Eighty strict walk-forward forecasts are reused with source provenance; the broader matrix has 45 newly executed fits and four frozen SARIMAX reconstructions. Phase 3 must aggregate these costs without double-counting source fits and explain fit-timer boundaries.
+- **Evidence/artifacts:** artifacts/phase2/supervisor.jsonl; artifacts/phase2/recovery_supervisor.jsonl; artifacts/coverage_reconsideration/supervisor.jsonl; artifacts/coverage_reconsideration/runs/*/metadata.json.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -157,8 +167,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R2.M8 requires more than acknowledging missing sensitivity.
 - **Planned action / closure evidence:** All predefined alpha results, fixed primary alpha justification, and previous-week residual comparator.
 - **Status:** In progress
-- **Changes performed:** All five frozen core forecast streams have no correction and alpha 0.1/0.2/0.3/0.5/0.7/1.0 replays, giving 35 complete matched streams. Verification confirms the bias is applied before current outcomes update it, and each replay retains its exact base forecasts. Alpha 0.3 stays predefined; no test-optimal alpha is selected. Descriptive benefits vary across NeuralProphet seeds. Residual-bias diagnostics and paired uncertainty remain Phase 3 work.
-- **Evidence/artifacts:** artifacts/phase2/corrections/*.csv; artifacts/phase2/corrections/summary.csv; artifacts/phase2/verification.json; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** Five broader frozen core streams have no correction plus the predefined alpha grid, giving 35 verified streams across all 23 origins. Bias is applied before current outcomes; each week updates from its observed-hour base residual mean after the forecast horizon. Alpha 0.3 stays predefined. The preserved strict sensitivity retains its original skip/carry policy, so subset correction values can differ even when base forecasts agree. Paired/residual diagnostics and writing remain pending.
+- **Evidence/artifacts:** artifacts/coverage_reconsideration/corrections/*.csv; artifacts/coverage_reconsideration/corrections/summary.csv; artifacts/phase2/corrections/; reports/COVERAGE_RECONSIDERATION_RESULTS.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -172,8 +182,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R2.M9; R2.m4; aligned saved predictions.
 - **Planned action / closure evidence:** Mean weekly metrics with dispersion, separately labeled pooled errors, and dependence-aware paired intervals.
 - **Status:** In progress
-- **Changes performed:** Reloadable descriptive summaries now include mean weekly MAE/RMSE, their sample standard deviations, pooled MAE/RMSE, coverage and seed. Publication tables/figures and uncertainty interpretation remain Phase 3 work.
-- **Evidence/artifacts:** artifacts/phase2/experimental_summary.csv; artifacts/phase2/baseline_summary.csv; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** Strict and broader descriptive summaries include weekly MAE/RMSE means/sample SD and pooled hourly metrics. In the broader 23-origin evaluation, partial-week counts differ, so mean weekly MAE and pooled MAE must not be equated. Publication tables/plots and paired uncertainty remain Phase 3 work.
+- **Evidence/artifacts:** artifacts/coverage_reconsideration/experimental_summary.csv; artifacts/coverage_reconsideration/baseline_summary.csv; artifacts/phase2/experimental_summary.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -233,9 +243,9 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Shared work:** X8.
 - **Dependencies / overlap:** Precedes all experiments; R1.10.
 - **Planned action / closure evidence:** Provenance/coverage report, exact split and evaluated hours, incomplete-window handling, gridded-target and seasonal-coverage limitations.
-- **Status:** In progress.
-- **Changes performed:** Coordinates/endpoints, supported timestamp convention, exact calendar/split/coverage and provenance limits audited. Retrieval dates and archived response metadata unavailable; not invented.
-- **Evidence/artifacts:** reports/PHASE1_DATA_AUDIT.md; artifacts/phase1/provenance.json; artifacts/phase1/data_audit.json.
+- **Status:** In progress
+- **Changes performed:** The raw source, provenance limitations and reconstructed calendar remain documented. The wider evaluation retains 23 full calendar origins with 3,624 of 3,864 hours scored, including four partial weeks; the final 163-hour remainder is separately reported. Exact original observation masks, gap/context counts and a coverage plot are saved. No missing scoring targets are invented. Source retrieval/date/measurement limitations remain unresolved where historical evidence is absent.
+- **Evidence/artifacts:** reports/PHASE1_DATA_AUDIT.md; artifacts/phase1/provenance.json; artifacts/coverage_reconsideration/windows.csv; artifacts/coverage_reconsideration/coverage.png; reports/COVERAGE_RECONSIDERATION_RESULTS.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -250,8 +260,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** Original targets and gap policy before all scoring.
 - **Planned action / closure evidence:** Raw-target primary metrics, explicit transformation table, predictor-clipping sensitivity and high-concentration analysis.
 - **Status:** In progress
-- **Changes performed:** All three frozen families completed predictor-only clipping at training-derived 1st/99th percentiles, with the original target retained for fitting/scoring. The clipped SARIMAX fit required a separately documented numerical recovery. Each control covers the same 16 weeks / 2,688 hours as its unclipped reference. Distribution plots, extreme-episode diagnostics and manuscript interpretation remain pending.
-- **Evidence/artifacts:** artifacts/phase2/runs/ablate_*_clip/; artifacts/phase2/runs/recover_ablate_sarimax_clip/; artifacts/phase2/experimental_summary.csv; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** All three frozen predictor-clipping controls now cover the broader 23-origin schedule and identical 3,624 original observed targets. Training-derived predictor bounds remain fixed; fitting/scoring targets are unclipped and unfilled. The strict 16-week sensitivity is preserved and reproduced. Inference context filling is separately identified; distribution/extreme-event analysis and writing remain pending.
+- **Evidence/artifacts:** artifacts/coverage_reconsideration/runs/ablate_*_clip/; artifacts/coverage_reconsideration/experimental_summary.csv; artifacts/phase2/runs/; reports/COVERAGE_RECONSIDERATION_RESULTS.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -266,8 +276,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R1.1; scope excludes unsupported advanced-model superiority.
 - **Planned action / closure evidence:** Three persistence references, shared-period table, full SARIMAX attempt or documented failure, narrowed competitiveness claims.
 - **Status:** Evidence ready
-- **Changes performed:** Persistence, daily seasonal persistence and weekly seasonal persistence, plus all core models/regimes, now cover the same 16 eligible weeks / 2,688 hours. Exact coverage, five weekly SARIMAX numerical recoveries and excluded calendar windows are recorded. Matched point estimates are saved; publication comparisons and PP scope wording remain pending.
-- **Evidence/artifacts:** artifacts/phase2/baselines/*.csv; artifacts/phase2/experimental_summary.csv; artifacts/phase2/verified_coverage.csv; reports/PHASE2_VERIFICATION.md.
+- **Changes performed:** All core methods/regimes/seeds and three persistence baselines share the broader 23-origin schedule and the exact 3,624-hour observed-only scoring mask. Nineteen weeks are fully observed; four have 120, 120, 48 and 144 scored hours. The original strict 16-week comparison remains a sensitivity reference. Missing history is handled explicitly for methods requiring dense context; partial weeks do not support full-week accuracy claims. Publication/PP-scope wording remains pending.
+- **Evidence/artifacts:** artifacts/coverage_reconsideration/baselines/*.csv; artifacts/coverage_reconsideration/experimental_summary.csv; artifacts/coverage_reconsideration/windows.csv; reports/COVERAGE_RECONSIDERATION_RESULTS.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -282,8 +292,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R1.4–R1.5; must precede interpretation.
 - **Planned action / closure evidence:** Chronological candidate-selection table, validity checks, convergence records, and repeated-seed results.
 - **Status:** In progress
-- **Changes performed:** Bounded training-only selection, correctly scaled single-origin 168-step forecasting and three-seed NeuralProphet repeats have completed. All 94 core/ablation tasks have accepted evidence; six SARIMAX numerical recoveries preserve selected settings/cutoffs and original failure records. Fourteen scientific-contract tests and full saved-stream verification pass. Training diagnostics and seed analysis remain Phase 3 work.
-- **Evidence/artifacts:** tests/test_phase2.py; artifacts/phase2/selection.json; artifacts/phase2/runs/*/training_trace.csv; artifacts/phase2/verification.json; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** Training-only configuration selection remains locked, and all 129 broader tasks have accepted evidence, including all three NeuralProphet seeds in both regimes. Same-configuration frozen refits reproduce their strict-week forecasts; additional SARIMAX fits use the recorded training-only numerical initialization policy. Twenty-two scientific-contract tests and complete broader evidence checks pass. Epoch traces, context-fill counts and seed analysis inputs are saved; diagnosis/writing remain pending.
+- **Evidence/artifacts:** artifacts/phase2/selection.json; tests/test_coverage.py; artifacts/coverage_reconsideration/preflight_checks.json; artifacts/coverage_reconsideration/verification.json; artifacts/coverage_reconsideration/runs/*/training_trace.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -298,8 +308,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R2.M5; state and context behavior precedes core runs.
 - **Planned action / closure evidence:** Per-model fixed-parameter/refreshed-history definition, pseudocode and checks that current-week targets are unavailable.
 - **Status:** Evidence ready
-- **Changes performed:** Both regimes now have complete matched forecast streams for every family/seed. Frozen SARIMAX states refresh through newly revealed calendar history without parameter refitting, Prophet uses current target timestamps, and NeuralProphet receives only the latest eligible observed context plus PP future covariates. Saved origins/leads/masks and tests verify information-set and alignment contracts. Manuscript pseudocode and explanation remain pending.
-- **Evidence/artifacts:** code/phase2_models.py; code/protocol.py; tests/test_phase2.py; artifacts/phase2/verification.json; artifacts/phase2/runs/core_*/forecasts.csv.
+- **Changes performed:** The broader protocol preserves selected configurations and fitting policies while retaining all 23 origins. SARIMAX refreshes native filtered state through observed/missing calendar history; Prophet predicts current timestamps; NeuralProphet receives only pre-origin history with explicit missing-context filling. Future targets never enter inference. Scored PP inputs are original observations; unavailable-input timestamps are unscored, and actual fitted-model perturbation checks confirm their computational placeholders do not affect scored predictions. Manuscript pseudocode remains pending.
+- **Evidence/artifacts:** config/coverage_reconsideration.json; code/coverage_protocol.py; code/coverage_checks.py; tests/test_coverage.py; artifacts/coverage_reconsideration/verification.json.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -314,8 +324,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R2.M2; mRMR target/configuration checks.
 - **Planned action / closure evidence:** Training-only rankings and selection account, mRMR details or explicit correction of unsupported claims, no/selected/broad-input ablation.
 - **Status:** In progress
-- **Changes performed:** All three families completed no-input, predefined four-gas and broad-input frozen comparisons using selected settings and the exact common mask. Broad PP inputs include PM10 and therefore supply companion-particulate information; they are not operational covariate forecasts. These are controlled fixed-setting ablations, not independently tuned configurations. Interpretation and manuscript edits remain pending.
-- **Evidence/artifacts:** artifacts/phase2/runs/ablate_*_no_inputs/; artifacts/phase2/runs/ablate_*_broad/; artifacts/phase2/experimental_summary.csv; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** No-input, four-gas and broad-input frozen comparisons now share all 23 origins and the common 3,624-hour mask. Settings stay fixed across controlled ablations. Broad PP inputs include PM10; their information advantage must be explicit. Strict-week forecasts reproduce preserved references. Feature interpretation and manuscript edits remain pending.
+- **Evidence/artifacts:** artifacts/coverage_reconsideration/runs/ablate_*_no_inputs/; artifacts/coverage_reconsideration/runs/ablate_*_broad/; artifacts/coverage_reconsideration/experimental_summary.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -330,8 +340,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R1.7; residuals from valid base predictions.
 - **Planned action / closure evidence:** Alpha sensitivity, alpha=1 comparator, residual-bias plots and established-method positioning.
 - **Status:** In progress
-- **Changes performed:** All five frozen core forecast streams have no correction and alpha 0.1/0.2/0.3/0.5/0.7/1.0 replays, giving 35 complete matched streams. Verification confirms the bias is applied before current outcomes update it, and each replay retains its exact base forecasts. Alpha 0.3 stays predefined; no test-optimal alpha is selected. Descriptive benefits vary across NeuralProphet seeds. Residual-bias diagnostics and paired uncertainty remain Phase 3 work.
-- **Evidence/artifacts:** artifacts/phase2/corrections/*.csv; artifacts/phase2/corrections/summary.csv; artifacts/phase2/verification.json; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** Five broader frozen core streams have no correction plus the predefined alpha grid, giving 35 verified streams across all 23 origins. Bias is applied before current outcomes; each week updates from its observed-hour base residual mean after the forecast horizon. Alpha 0.3 stays predefined. The preserved strict sensitivity retains its original skip/carry policy, so subset correction values can differ even when base forecasts agree. Paired/residual diagnostics and writing remain pending.
+- **Evidence/artifacts:** artifacts/coverage_reconsideration/corrections/*.csv; artifacts/coverage_reconsideration/corrections/summary.csv; artifacts/phase2/corrections/; reports/COVERAGE_RECONSIDERATION_RESULTS.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -346,8 +356,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** R1.8; exact timestamps and matched coverage.
 - **Planned action / closure evidence:** Pooled versus weekly metric definitions, weekly distributions, paired block-bootstrap intervals and lead-time results.
 - **Status:** In progress
-- **Changes performed:** The summary CSV distinguishes pooled errors from means/sample standard deviations of weekly errors and includes exact windows/hours. Saved timestamped forecasts support paired comparisons and lead-time diagnostics; uncertainty and figures remain Phase 3 work.
-- **Evidence/artifacts:** artifacts/phase2/experimental_summary.csv; artifacts/phase2/verified_coverage.csv; artifacts/phase2/runs/*/forecasts.csv.
+- **Changes performed:** The wider summary distinguishes equally weighted weekly metrics from pooled observed-hour metrics because four weeks are partial. Weekly SD, window/hour counts and the strict-subset reference are saved. Full timestamped streams support uncertainty and lead-time analysis; those publication analyses remain Phase 3 work.
+- **Evidence/artifacts:** artifacts/coverage_reconsideration/experimental_summary.csv; artifacts/coverage_reconsideration/windows.csv; artifacts/coverage_reconsideration/runs/*/forecasts.csv.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.
@@ -469,8 +479,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Dependencies / overlap:** E4; final executable artifacts.
 - **Planned action / closure evidence:** Versioned source, dependencies, seeds, data instructions, reproduction commands, smoke check and DOI-linked release.
 - **Status:** In progress
-- **Changes performed:** Isolated revision source, observed dependencies, configuration/seeds, checkpointed forecasts, training diagnostics, explicit numerical-recovery provenance and verification/summary commands are available. The revision notebook has saved executed audit/check/result outputs. Original hashes remain unchanged. Clean-environment reproduction, final table/figure scripts and the versioned DOI release remain pending.
-- **Evidence/artifacts:** README.md; main_revision.ipynb; requirements-observed.txt; artifacts/phase2/verification.json; artifacts/phase2/verified_coverage.csv; reports/PHASE2_SUMMARY.md.
+- **Changes performed:** Separate locked strict/broader configurations, signatures, seeds, source-fit reuse records, model traces, forecasts, resource logs and verification commands are available. The revision notebook has saved executed audits, checks, results and coverage chart. Original fingerprints remain unchanged. Local Git milestones preserve the work; GitHub publication status is recorded separately. Clean-environment reproduction, final publication-output scripts and DOI release remain pending.
+- **Evidence/artifacts:** README.md; main_revision.ipynb; requirements-observed.txt; artifacts/coverage_reconsideration/verification.json; code/coverage_checks.py; reports/COVERAGE_RECONSIDERATION_RESULTS.md.
 - **Manuscript location:** Pending.
 - **Response status:** Scaffold only.
 - **Limitations or deviation:** Pending results; do not assume the requested conclusion.

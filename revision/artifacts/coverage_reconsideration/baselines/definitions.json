@@ -1,0 +1,25 @@
+{
+  "protocol_signature": "f1b785fcfd49bf50207714991659a0525b71ebbfb2b0f88d8ff0985494af6cdd",
+  "definitions": {
+    "persistence": {
+      "horizon_hours": 168,
+      "exogenous_inputs": [],
+      "definition": "Repeat the last original observed historical target",
+      "forecast_csv_sha256": "f459edfa0e0511b69f1b46b9c9982a39c56ffaed5d45fedc6f1f4e30bb6d066b"
+    },
+    "daily_persistence": {
+      "horizon_hours": 168,
+      "exogenous_inputs": [],
+      "definition": "Repeat the preceding 24 calendar hours, with the explicit causal seasonal history fill where necessary",
+      "forecast_csv_sha256": "4246065bb36dab1e91291c7d5c60698bb83bfea59c45be91ae984389b80dd49d"
+    },
+    "weekly_persistence": {
+      "horizon_hours": 168,
+      "exogenous_inputs": [],
+      "definition": "Repeat the preceding 168 calendar hours, with the explicit causal seasonal history fill where necessary",
+      "forecast_csv_sha256": "45b4bfc44bd8a9dd5d0514a1dc806e6a67a9b739a97d6140f2b006970a4969bc"
+    }
+  },
+  "final_baseline_producer": "revision/code/coverage_checks.py",
+  "final_baseline_producer_sha256": "c813c44db19fc5fc4b051961cdb5b64a3611639b64a258442a37eaf6bc8db415"
+}

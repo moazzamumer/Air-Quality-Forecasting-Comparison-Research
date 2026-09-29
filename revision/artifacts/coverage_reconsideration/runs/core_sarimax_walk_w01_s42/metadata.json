@@ -1,0 +1,131 @@
+{
+  "task": {
+    "id": "core_sarimax_walk_w01_s42",
+    "stage": "core",
+    "family": "sarimax",
+    "regime": "walk",
+    "seed": 42,
+    "week": 1,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "variant": "selected",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    }
+  },
+  "status": "completed",
+  "protocol_signature": "f1b785fcfd49bf50207714991659a0525b71ebbfb2b0f88d8ff0985494af6cdd",
+  "strict_protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-09-29T15:03:59.115517+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "preparation_seconds": 0.00849979600025108,
+    "scaler": {
+      "mean": {
+        "no": 151.1053243228117,
+        "no2": 94.20742444593688,
+        "co": 2421.8054958585176,
+        "so2": 137.74205618983657
+      },
+      "scale": {
+        "no": 183.84842157104896,
+        "no2": 93.3192014757024,
+        "co": 2469.87024524448,
+        "so2": 122.68265317602894
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "optimizer": {
+      "initial_iterations": 50,
+      "retry_performed": true,
+      "last_iterations": 106,
+      "converged": true,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals"
+      ]
+    },
+    "parameter_estimates": {
+      "no": -39.270508913322104,
+      "no2": 0.011434725850423511,
+      "co": 241.64235869611488,
+      "so2": 5.005104366945046,
+      "ar.L1": 0.9701036634939961,
+      "ma.L1": 0.6272096973319584,
+      "ar.S.L24": 0.9970118765582764,
+      "ma.S.L24": -0.9586151389929756,
+      "sigma2": 97.37791848036024
+    },
+    "fit_seconds": 512.4520041270007
+  },
+  "fit_executed": false,
+  "reused_from": "revision/artifacts/phase2/runs/core_sarimax_walk_w01_s42",
+  "original_source_metadata_sha256": "7ab38c6a025d3a4d2e685c84ff46aed9dfff672c10095dfdd9e77d66a635d33f",
+  "completed_weeks": [
+    {
+      "window": 1,
+      "history_target_filled_hours": 0,
+      "history_input_filled_cells": 0,
+      "future_placeholder_cells": 0,
+      "scored_hours": 168,
+      "placeholder_invariance_passed": true,
+      "placeholder_max_scored_prediction_difference": 0.0,
+      "forecast_seconds": 0.0,
+      "invariance_check_seconds": 0.0,
+      "reused_strict_forecast": true
+    }
+  ],
+  "completed_utc": "2026-09-29T15:03:59.121172+00:00",
+  "windows": 1,
+  "hours": 168,
+  "pooled_mae": 29.59428445173211,
+  "pooled_rmse": 37.18296592999007,
+  "mean_weekly_mae": 29.59428445173211,
+  "weekly_mae_sd": NaN,
+  "mean_weekly_rmse": 37.18296592999007,
+  "weekly_rmse_sd": NaN,
+  "sampled_self_peak_rss_mib": 199.3125
+}
