@@ -1,0 +1,18 @@
+09:26:56 - cmdstanpy - INFO - Chain [1] start processing
+09:27:06 - cmdstanpy - INFO - Chain [1] done processing
+ablate_prophet_no_inputs week 1 MAE 307.0966
+ablate_prophet_no_inputs week 2 MAE 372.5406
+ablate_prophet_no_inputs week 3 MAE 155.9167
+ablate_prophet_no_inputs week 4 MAE 225.0660
+ablate_prophet_no_inputs week 5 MAE 231.1161
+ablate_prophet_no_inputs week 6 MAE 166.2958
+ablate_prophet_no_inputs week 7 MAE 231.6600
+ablate_prophet_no_inputs week 10 MAE 88.7511
+ablate_prophet_no_inputs week 16 MAE 58.0567
+ablate_prophet_no_inputs week 17 MAE 61.3990
+ablate_prophet_no_inputs week 18 MAE 66.8709
+ablate_prophet_no_inputs week 19 MAE 88.1217
+ablate_prophet_no_inputs week 20 MAE 82.5389
+ablate_prophet_no_inputs week 21 MAE 84.6753
+ablate_prophet_no_inputs week 22 MAE 71.6212
+ablate_prophet_no_inputs week 23 MAE 57.7309

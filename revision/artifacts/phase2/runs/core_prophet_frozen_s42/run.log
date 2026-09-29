@@ -1,0 +1,18 @@
+04:34:27 - cmdstanpy - INFO - Chain [1] start processing
+04:34:52 - cmdstanpy - INFO - Chain [1] done processing
+core_prophet_frozen_s42 week 1 MAE 29.4953
+core_prophet_frozen_s42 week 2 MAE 40.6828
+core_prophet_frozen_s42 week 3 MAE 25.8000
+core_prophet_frozen_s42 week 4 MAE 16.4213
+core_prophet_frozen_s42 week 5 MAE 37.8159
+core_prophet_frozen_s42 week 6 MAE 39.8728
+core_prophet_frozen_s42 week 7 MAE 53.4085
+core_prophet_frozen_s42 week 10 MAE 58.6487
+core_prophet_frozen_s42 week 16 MAE 20.9293
+core_prophet_frozen_s42 week 17 MAE 36.6538
+core_prophet_frozen_s42 week 18 MAE 44.2420
+core_prophet_frozen_s42 week 19 MAE 61.2275
+core_prophet_frozen_s42 week 20 MAE 36.7064
+core_prophet_frozen_s42 week 21 MAE 37.3555
+core_prophet_frozen_s42 week 22 MAE 28.5997
+core_prophet_frozen_s42 week 23 MAE 23.5549

@@ -1,0 +1,22 @@
+Importing plotly failed. Interactive plots will not work.
+Importing plotly failed. Interactive plots will not work.
+WARNING - (py.warnings._showwarnmsg) - /home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/venv/lib/python3.11/site-packages/pytorch_lightning/utilities/data.py:79: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 128. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+WARNING - (py.warnings._showwarnmsg) - /home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/venv/lib/python3.11/site-packages/pytorch_lightning/utilities/data.py:79: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 87. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+ablate_neuralprophet_broad week 1 MAE 17.9025
+ablate_neuralprophet_broad week 2 MAE 20.8761
+ablate_neuralprophet_broad week 3 MAE 15.5193
+ablate_neuralprophet_broad week 4 MAE 18.1316
+ablate_neuralprophet_broad week 5 MAE 19.8692
+ablate_neuralprophet_broad week 6 MAE 17.4155
+ablate_neuralprophet_broad week 7 MAE 18.7336
+ablate_neuralprophet_broad week 10 MAE 40.3218
+ablate_neuralprophet_broad week 16 MAE 20.3172
+ablate_neuralprophet_broad week 17 MAE 22.6990
+ablate_neuralprophet_broad week 18 MAE 22.8496
+ablate_neuralprophet_broad week 19 MAE 20.0258
+ablate_neuralprophet_broad week 20 MAE 20.2482
+ablate_neuralprophet_broad week 21 MAE 25.3864
+ablate_neuralprophet_broad week 22 MAE 19.5869
+ablate_neuralprophet_broad week 23 MAE 14.0079

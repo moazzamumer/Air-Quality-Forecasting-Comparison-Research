@@ -1,0 +1,87 @@
+{
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "all_tasks_attempted": true,
+  "phase2_exit_evidence_ready": true,
+  "expected_core_ablation_tasks": 94,
+  "complete_tasks": 94,
+  "failure_exceptions": [
+    {
+      "run_id": "core_sarimax_walk_w02_s42",
+      "family": "sarimax",
+      "regime": "walk",
+      "variant": "selected",
+      "seed": 42,
+      "week": 2,
+      "reason": "RuntimeError: SARIMAX did not converge under bounded optimizer policy",
+      "resolved": true,
+      "recovery_run": "recover_core_sarimax_walk_w02_s42"
+    },
+    {
+      "run_id": "core_sarimax_walk_w17_s42",
+      "family": "sarimax",
+      "regime": "walk",
+      "variant": "selected",
+      "seed": 42,
+      "week": 17,
+      "reason": "RuntimeError: SARIMAX did not converge under bounded optimizer policy",
+      "resolved": true,
+      "recovery_run": "recover_core_sarimax_walk_w17_s42"
+    },
+    {
+      "run_id": "core_sarimax_walk_w18_s42",
+      "family": "sarimax",
+      "regime": "walk",
+      "variant": "selected",
+      "seed": 42,
+      "week": 18,
+      "reason": "RuntimeError: SARIMAX did not converge under bounded optimizer policy",
+      "resolved": true,
+      "recovery_run": "recover_core_sarimax_walk_w18_s42"
+    },
+    {
+      "run_id": "core_sarimax_walk_w20_s42",
+      "family": "sarimax",
+      "regime": "walk",
+      "variant": "selected",
+      "seed": 42,
+      "week": 20,
+      "reason": "RuntimeError: SARIMAX did not converge under bounded optimizer policy",
+      "resolved": true,
+      "recovery_run": "recover_core_sarimax_walk_w20_s42"
+    },
+    {
+      "run_id": "core_sarimax_walk_w21_s42",
+      "family": "sarimax",
+      "regime": "walk",
+      "variant": "selected",
+      "seed": 42,
+      "week": 21,
+      "reason": "RuntimeError: SARIMAX did not converge under bounded optimizer policy",
+      "resolved": true,
+      "recovery_run": "recover_core_sarimax_walk_w21_s42"
+    },
+    {
+      "run_id": "ablate_sarimax_clip",
+      "family": "sarimax",
+      "regime": "frozen",
+      "variant": "clip",
+      "seed": 42,
+      "week": null,
+      "reason": "RuntimeError: SARIMAX did not converge under bounded optimizer policy",
+      "resolved": true,
+      "recovery_run": "recover_ablate_sarimax_clip"
+    }
+  ],
+  "pending_tasks": [],
+  "integrity_errors": [],
+  "recovered_tasks": 6,
+  "unresolved_failed_tasks": 0,
+  "baselines": 3,
+  "correction_streams": 35,
+  "validation_completed": 7,
+  "validation_failures": [
+    "validate_sarimax_1"
+  ],
+  "original_files_verified": 21,
+  "checked_utc": "2026-09-28T05:37:17.187939+00:00"
+}

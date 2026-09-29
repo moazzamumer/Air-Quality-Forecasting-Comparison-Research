@@ -1,0 +1,127 @@
+{
+  "task": {
+    "id": "core_sarimax_walk_w06_s42",
+    "stage": "core",
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "walk",
+    "week": 6
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2025-02-17 01:00:00",
+  "started_utc": "2026-09-28T00:11:09.742794+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-02-17 01:00:00",
+    "training_calendar_hours": 37080,
+    "observed_training_targets": 36576,
+    "preparation_seconds": 0.008782367000094382,
+    "scaler": {
+      "mean": {
+        "no": 152.85065370734907,
+        "no2": 94.84779144794402,
+        "co": 2458.2196801181103,
+        "so2": 140.02081091426072
+      },
+      "scale": {
+        "no": 185.34066977024892,
+        "no2": 93.15130481690002,
+        "co": 2513.371515673572,
+        "so2": 126.26192153892552
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "optimizer": {
+      "initial_iterations": 50,
+      "retry_performed": true,
+      "last_iterations": 110,
+      "converged": true,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals"
+      ]
+    },
+    "parameter_estimates": {
+      "no": -38.123971186485036,
+      "no2": 0.013059935565604475,
+      "co": 244.42369443708196,
+      "so2": 5.121645051069972,
+      "ar.L1": 0.969886293495001,
+      "ma.L1": 0.626186230247856,
+      "ar.S.L24": 0.9970689566061771,
+      "ma.S.L24": -0.958341375356082,
+      "sigma2": 96.52947163338473
+    },
+    "fit_seconds": 528.3676252580008
+  },
+  "completed_weeks": [
+    {
+      "window": 6,
+      "origin": "2025-02-17 01:00:00",
+      "forecast_seconds": 0.008073474000411807,
+      "state_update_seconds": 0.0,
+      "mae": 8.686157993050704,
+      "rmse": 16.218598668480837
+    }
+  ],
+  "completed_utc": "2026-09-28T00:19:58.138058+00:00",
+  "scored_hours": 168,
+  "mean_weekly_mae": 8.686157993050704,
+  "pooled_rmse": 16.218598668480837,
+  "peak_rss_mib_self": 273.10546875
+}

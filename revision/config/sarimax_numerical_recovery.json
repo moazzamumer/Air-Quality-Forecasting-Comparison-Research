@@ -1,0 +1,12 @@
+{
+  "version": "warm_complex_step_v2",
+  "purpose": "Numerical recovery of final-comparison SARIMAX fits; selected forecasting model and information set remain fixed",
+  "defined_after": "Five core refits and clipped-input SARIMAX failed the original bounded L-BFGS policy. A derivative-free Powell initialization produced nonfinite likelihoods and was rejected without forecast scoring; its exact code/policy/logs are archived under recovery_attempts/powell_v1.",
+  "scope": "Failed core or controlled-ablation SARIMAX fits with validation-selected orders. Preserve original failures. Do not reopen validation-based configuration selection or choose a solver by test error.",
+  "unchanged": ["selected orders", "training end timestamp", "training observations", "exogenous features", "input preprocessing", "likelihood model", "missing-data policy", "forecast origin", "scoring mask"],
+  "initial_parameters": "Earlier converged core_sarimax_frozen_s42 fit, whose cutoff is no later than the task cutoff. Convert regressor slope initialization for input scale changes; initialize any additional regressors at zero. This vector initializes optimization only; all parameters are estimated again.",
+  "final_stage": {"method": "minimize", "min_method": "L-BFGS-B", "maxiter": 200, "maxls": 100, "optim_score": "approx", "optim_complex_step": true, "tolerances": "unchanged SciPy defaults"},
+  "acceptance": "Final optimizer convergence, finite likelihood/parameters, training likelihood no worse than the original failed point (1e-5 tolerance), and complete finite aligned predictions. Otherwise preserve unresolved failure.",
+  "resource_accounting": "Include original failed fit, rejected Powell attempt, and current recovery. Identify shared initial fits separately.",
+  "interpretation": "Recorded numerical-policy amendment after solver failures; changes initialization/derivative precision/line search, not forecasting orders or test-based model selection. Label recovered coverage transparently."
+}

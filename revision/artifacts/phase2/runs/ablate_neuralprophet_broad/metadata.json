@@ -1,0 +1,239 @@
+{
+  "task": {
+    "id": "ablate_neuralprophet_broad",
+    "stage": "ablate",
+    "family": "neuralprophet",
+    "candidate": {
+      "epochs": 50
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2",
+      "o3",
+      "nh3",
+      "temperature",
+      "dewpt",
+      "pm10"
+    ],
+    "clip_inputs": false,
+    "regime": "frozen",
+    "variant": "broad"
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-09-28T04:31:02.254419+00:00",
+  "fit": {
+    "family": "neuralprophet",
+    "candidate": {
+      "epochs": 50,
+      "n_lags": 168,
+      "n_forecasts": 168
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2",
+      "o3",
+      "nh3",
+      "temperature",
+      "dewpt",
+      "pm10"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "preparation_seconds": 0.014898592002282385,
+    "scaler": {
+      "mean": {
+        "no": 151.1053243228117,
+        "no2": 94.20742444593688,
+        "co": 2421.8054958585176,
+        "so2": 137.74205618983657,
+        "o3": 23.506890250727558,
+        "nh3": 26.652271099171703,
+        "temperature": 12.605249608238191,
+        "dewpt": 1.742520147750167,
+        "pm10": 267.83570601074547
+      },
+      "scale": {
+        "no": 183.84842157104896,
+        "no2": 93.3192014757024,
+        "co": 2469.87024524448,
+        "so2": 122.68265317602894,
+        "o3": 69.8333025156931,
+        "nh3": 34.50848838568285,
+        "temperature": 12.031080021256583,
+        "dewpt": 14.520656916806418,
+        "pm10": 277.43714713430705
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "training_episodes_retained": 15,
+    "training_samples": 30423,
+    "training_loss_first": 0.8361161947250366,
+    "training_loss_last": 0.0038002582732588053,
+    "training_loss_min": 0.0038002582732588053,
+    "epochs_completed": 50,
+    "target_normalization": {
+      "shift": 0.91,
+      "scale": 689.4650000000001
+    },
+    "fit_seconds": 201.14874967200012
+  },
+  "completed_weeks": [
+    {
+      "window": 1,
+      "origin": "2025-01-13 01:00:00",
+      "forecast_seconds": 0.18089655700168805,
+      "state_update_seconds": 0.0,
+      "mae": 17.90245184726658,
+      "rmse": 23.066198895366874
+    },
+    {
+      "window": 2,
+      "origin": "2025-01-20 01:00:00",
+      "forecast_seconds": 0.16315550199942663,
+      "state_update_seconds": 0.0,
+      "mae": 20.876107391289302,
+      "rmse": 25.97591862259505
+    },
+    {
+      "window": 3,
+      "origin": "2025-01-27 01:00:00",
+      "forecast_seconds": 0.1561309809985687,
+      "state_update_seconds": 0.0,
+      "mae": 15.519276588502386,
+      "rmse": 19.180390978174657
+    },
+    {
+      "window": 4,
+      "origin": "2025-02-03 01:00:00",
+      "forecast_seconds": 0.15404848800244508,
+      "state_update_seconds": 0.0,
+      "mae": 18.13162524693069,
+      "rmse": 21.68188623817505
+    },
+    {
+      "window": 5,
+      "origin": "2025-02-10 01:00:00",
+      "forecast_seconds": 0.15614278399880277,
+      "state_update_seconds": 0.0,
+      "mae": 19.869244415504593,
+      "rmse": 28.044503901551355
+    },
+    {
+      "window": 6,
+      "origin": "2025-02-17 01:00:00",
+      "forecast_seconds": 0.15319623299728846,
+      "state_update_seconds": 0.0,
+      "mae": 17.415495388252396,
+      "rmse": 22.197144816501357
+    },
+    {
+      "window": 7,
+      "origin": "2025-02-24 01:00:00",
+      "forecast_seconds": 0.15448768900387222,
+      "state_update_seconds": 0.0,
+      "mae": 18.733613682247345,
+      "rmse": 27.58433164490348
+    },
+    {
+      "window": 10,
+      "origin": "2025-03-17 01:00:00",
+      "forecast_seconds": 0.15633947599417297,
+      "state_update_seconds": 0.0,
+      "mae": 40.3218420290947,
+      "rmse": 60.345115656384934
+    },
+    {
+      "window": 16,
+      "origin": "2025-04-28 01:00:00",
+      "forecast_seconds": 0.16713875500136055,
+      "state_update_seconds": 0.0,
+      "mae": 20.317172918688684,
+      "rmse": 24.30395509762666
+    },
+    {
+      "window": 17,
+      "origin": "2025-05-05 01:00:00",
+      "forecast_seconds": 0.1524543289997382,
+      "state_update_seconds": 0.0,
+      "mae": 22.699004204386757,
+      "rmse": 34.35081144830293
+    },
+    {
+      "window": 18,
+      "origin": "2025-05-12 01:00:00",
+      "forecast_seconds": 0.13146403100108728,
+      "state_update_seconds": 0.0,
+      "mae": 22.849588728731586,
+      "rmse": 29.09211466406081
+    },
+    {
+      "window": 19,
+      "origin": "2025-05-19 01:00:00",
+      "forecast_seconds": 0.1290948749956442,
+      "state_update_seconds": 0.0,
+      "mae": 20.025818116977103,
+      "rmse": 24.3347821433806
+    },
+    {
+      "window": 20,
+      "origin": "2025-05-26 01:00:00",
+      "forecast_seconds": 0.13933341300435131,
+      "state_update_seconds": 0.0,
+      "mae": 20.248163965770175,
+      "rmse": 23.344125414066937
+    },
+    {
+      "window": 21,
+      "origin": "2025-06-02 01:00:00",
+      "forecast_seconds": 0.13043076399480924,
+      "state_update_seconds": 0.0,
+      "mae": 25.3863762211161,
+      "rmse": 29.58389737350083
+    },
+    {
+      "window": 22,
+      "origin": "2025-06-09 01:00:00",
+      "forecast_seconds": 0.13504823800030863,
+      "state_update_seconds": 0.0,
+      "mae": 19.586870507356668,
+      "rmse": 24.477562151325316
+    },
+    {
+      "window": 23,
+      "origin": "2025-06-16 01:00:00",
+      "forecast_seconds": 0.13114965600107098,
+      "state_update_seconds": 0.0,
+      "mae": 14.007946857327505,
+      "rmse": 17.274065535519277
+    }
+  ],
+  "completed_utc": "2026-09-28T04:34:25.962856+00:00",
+  "scored_hours": 2688,
+  "mean_weekly_mae": 20.86816238184016,
+  "pooled_rmse": 28.780764022981092,
+  "peak_rss_mib_self": 1855.078125
+}

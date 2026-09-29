@@ -1,0 +1,185 @@
+{
+  "task": {
+    "id": "ablate_prophet_no_inputs",
+    "stage": "ablate",
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "seed": 42,
+    "features": [],
+    "clip_inputs": false,
+    "regime": "frozen",
+    "variant": "no_inputs"
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-09-28T04:26:54.818515+00:00",
+  "fit": {
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "features": [],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "preparation_seconds": 0.001270185995963402,
+    "scaler": null,
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "observed_training_rows_used": 35736,
+    "fit_seconds": 12.181533921000664
+  },
+  "completed_weeks": [
+    {
+      "window": 1,
+      "origin": "2025-01-13 01:00:00",
+      "forecast_seconds": 0.010068926996609662,
+      "state_update_seconds": 0.0,
+      "mae": 307.0966481227369,
+      "rmse": 369.18732639554656
+    },
+    {
+      "window": 2,
+      "origin": "2025-01-20 01:00:00",
+      "forecast_seconds": 0.009221362000971567,
+      "state_update_seconds": 0.0,
+      "mae": 372.5406270051011,
+      "rmse": 442.71618222348405
+    },
+    {
+      "window": 3,
+      "origin": "2025-01-27 01:00:00",
+      "forecast_seconds": 0.008826183999190107,
+      "state_update_seconds": 0.0,
+      "mae": 155.91667414505844,
+      "rmse": 179.70262195689787
+    },
+    {
+      "window": 4,
+      "origin": "2025-02-03 01:00:00",
+      "forecast_seconds": 0.008804402001260314,
+      "state_update_seconds": 0.0,
+      "mae": 225.06601870992498,
+      "rmse": 247.90345466741923
+    },
+    {
+      "window": 5,
+      "origin": "2025-02-10 01:00:00",
+      "forecast_seconds": 0.008715333002328407,
+      "state_update_seconds": 0.0,
+      "mae": 231.11606462708238,
+      "rmse": 278.8300390714512
+    },
+    {
+      "window": 6,
+      "origin": "2025-02-17 01:00:00",
+      "forecast_seconds": 0.008702860002813395,
+      "state_update_seconds": 0.0,
+      "mae": 166.29583579593137,
+      "rmse": 180.76540349686175
+    },
+    {
+      "window": 7,
+      "origin": "2025-02-24 01:00:00",
+      "forecast_seconds": 0.008844427997246385,
+      "state_update_seconds": 0.0,
+      "mae": 231.6600491393904,
+      "rmse": 289.08101081398405
+    },
+    {
+      "window": 10,
+      "origin": "2025-03-17 01:00:00",
+      "forecast_seconds": 0.009128926998528186,
+      "state_update_seconds": 0.0,
+      "mae": 88.75108568731913,
+      "rmse": 106.05114015869849
+    },
+    {
+      "window": 16,
+      "origin": "2025-04-28 01:00:00",
+      "forecast_seconds": 0.00885964700137265,
+      "state_update_seconds": 0.0,
+      "mae": 58.0567061215384,
+      "rmse": 74.37070321008852
+    },
+    {
+      "window": 17,
+      "origin": "2025-05-05 01:00:00",
+      "forecast_seconds": 0.008763554003962781,
+      "state_update_seconds": 0.0,
+      "mae": 61.39899758546103,
+      "rmse": 76.35597028028296
+    },
+    {
+      "window": 18,
+      "origin": "2025-05-12 01:00:00",
+      "forecast_seconds": 0.00882913899840787,
+      "state_update_seconds": 0.0,
+      "mae": 66.87086612475022,
+      "rmse": 82.98042383109053
+    },
+    {
+      "window": 19,
+      "origin": "2025-05-19 01:00:00",
+      "forecast_seconds": 0.008980055004940368,
+      "state_update_seconds": 0.0,
+      "mae": 88.12171103187677,
+      "rmse": 108.98560872521087
+    },
+    {
+      "window": 20,
+      "origin": "2025-05-26 01:00:00",
+      "forecast_seconds": 0.009526588997687213,
+      "state_update_seconds": 0.0,
+      "mae": 82.53894333046357,
+      "rmse": 97.49203936934903
+    },
+    {
+      "window": 21,
+      "origin": "2025-06-02 01:00:00",
+      "forecast_seconds": 0.008900444001483265,
+      "state_update_seconds": 0.0,
+      "mae": 84.67532774929585,
+      "rmse": 104.37910324519729
+    },
+    {
+      "window": 22,
+      "origin": "2025-06-09 01:00:00",
+      "forecast_seconds": 0.008653547003632411,
+      "state_update_seconds": 0.0,
+      "mae": 71.6212119055164,
+      "rmse": 87.42995376013194
+    },
+    {
+      "window": 23,
+      "origin": "2025-06-16 01:00:00",
+      "forecast_seconds": 0.008570570003939793,
+      "state_update_seconds": 0.0,
+      "mae": 57.730949155887195,
+      "rmse": 69.88875439126868
+    }
+  ],
+  "completed_utc": "2026-09-28T04:27:07.280961+00:00",
+  "scored_hours": 2688,
+  "mean_weekly_mae": 146.84110726483337,
+  "pooled_rmse": 208.31707070613322,
+  "peak_rss_mib_self": 326.49609375
+}

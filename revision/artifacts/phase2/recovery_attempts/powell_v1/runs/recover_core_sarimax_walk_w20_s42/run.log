@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/code/phase2_recover.py", line 161, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/code/phase2_recover.py", line 157, in main
+    if args.child:recover(args.child)
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/code/phase2_recover.py", line 91, in recover
+    raise RuntimeError('Numerical recovery did not reach a valid converged fit')
+RuntimeError: Numerical recovery did not reach a valid converged fit

@@ -1,0 +1,176 @@
+{
+  "task": {
+    "id": "recover_core_sarimax_walk_w17_s42",
+    "stage": "recovery",
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "walk",
+    "week": 17,
+    "recovered_task_id": "core_sarimax_walk_w17_s42"
+  },
+  "status": "completed",
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "numerical_policy": {
+    "version": "warm_complex_step_v2",
+    "purpose": "Numerical recovery of final-comparison SARIMAX fits; selected forecasting model and information set remain fixed",
+    "defined_after": "Five core refits and clipped-input SARIMAX failed the original bounded L-BFGS policy. A derivative-free Powell initialization produced nonfinite likelihoods and was rejected without forecast scoring; its exact code/policy/logs are archived under recovery_attempts/powell_v1.",
+    "scope": "Failed core or controlled-ablation SARIMAX fits with validation-selected orders. Preserve original failures. Do not reopen validation-based configuration selection or choose a solver by test error.",
+    "unchanged": [
+      "selected orders",
+      "training end timestamp",
+      "training observations",
+      "exogenous features",
+      "input preprocessing",
+      "likelihood model",
+      "missing-data policy",
+      "forecast origin",
+      "scoring mask"
+    ],
+    "initial_parameters": "Earlier converged core_sarimax_frozen_s42 fit, whose cutoff is no later than the task cutoff. Convert regressor slope initialization for input scale changes; initialize any additional regressors at zero. This vector initializes optimization only; all parameters are estimated again.",
+    "final_stage": {
+      "method": "minimize",
+      "min_method": "L-BFGS-B",
+      "maxiter": 200,
+      "maxls": 100,
+      "optim_score": "approx",
+      "optim_complex_step": true,
+      "tolerances": "unchanged SciPy defaults"
+    },
+    "acceptance": "Final optimizer convergence, finite likelihood/parameters, training likelihood no worse than the original failed point (1e-5 tolerance), and complete finite aligned predictions. Otherwise preserve unresolved failure.",
+    "resource_accounting": "Include original failed fit, rejected Powell attempt, and current recovery. Identify shared initial fits separately.",
+    "interpretation": "Recorded numerical-policy amendment after solver failures; changes initialization/derivative precision/line search, not forecasting orders or test-based model selection. Label recovered coverage transparently."
+  },
+  "numerical_policy_sha256": "e76bf2936b57d11e630bde40da0bcecb2f7d21dbdb85bd3837773c1ff5cdde13",
+  "recovery_code_sha256": "ab64d741a986eea29a7d9eec6597da430fe0bcc1c0427479f31089f9b96715ad",
+  "recovered_from_failed_run": "core_sarimax_walk_w17_s42",
+  "fit_origin": "2025-05-05 01:00:00",
+  "original_failed_fit_seconds": 266.15630013600094,
+  "initialization_source_run": "core_sarimax_frozen_s42",
+  "initialization_source_cutoff": "2025-01-13 01:00:00",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "started_utc": "2026-09-28T05:24:54.675810+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-05-05 01:00:00",
+    "training_calendar_hours": 38928,
+    "observed_training_targets": 38184,
+    "preparation_seconds": 0.010395420998975169,
+    "scaler": {
+      "mean": {
+        "no": 149.19191965221034,
+        "no2": 93.70550099518124,
+        "co": 2416.4815302220823,
+        "so2": 137.99912266918082
+      },
+      "scale": {
+        "no": 183.90297669006733,
+        "no2": 92.17463472735155,
+        "co": 2498.578779401549,
+        "so2": 126.09710589739132
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "optimizer": {
+      "converged": true,
+      "recovery": true,
+      "initial_log_likelihood": -144903.0233245258,
+      "warm_start_log_likelihood": -141297.0846819125,
+      "method": {
+        "method": "minimize",
+        "min_method": "L-BFGS-B",
+        "maxiter": 200,
+        "maxls": 100,
+        "optim_score": "approx",
+        "optim_complex_step": true,
+        "tolerances": "unchanged SciPy defaults"
+      },
+      "final_iterations": 21,
+      "final_log_likelihood": -141292.2602464997,
+      "warnings": [
+        "Method L-BFGS-B does not use Hessian information (hess).",
+        "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+      ]
+    },
+    "parameter_estimates": {
+      "no": -39.28519175591549,
+      "no2": 0.010078355898349753,
+      "co": 244.4505452269294,
+      "so2": 5.137944423199002,
+      "ar.L1": 0.9697973680564002,
+      "ma.L1": 0.6199915208790268,
+      "ar.S.L24": 0.9972302106849946,
+      "ma.S.L24": -0.9599670511888893,
+      "sigma2": 95.91356720599062
+    },
+    "fit_seconds": 127.56620711600408
+  },
+  "completed_utc": "2026-09-28T05:27:02.262331+00:00",
+  "scored_hours": 168,
+  "completed_weeks": [
+    {
+      "window": 17,
+      "origin": "2025-05-05 01:00:00",
+      "forecast_seconds": 0.009053836001839954,
+      "state_update_seconds": 0.0,
+      "mae": 34.36939586336295,
+      "rmse": 48.20710016307196
+    }
+  ],
+  "mean_weekly_mae": 34.36939586336295,
+  "pooled_rmse": 48.20710016307196,
+  "peak_rss_mib_self": 236.72265625
+}

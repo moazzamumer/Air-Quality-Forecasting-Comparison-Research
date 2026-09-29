@@ -1,0 +1,99 @@
+{
+  "task": {
+    "id": "core_neuralprophet_walk_w06_s42",
+    "stage": "core",
+    "family": "neuralprophet",
+    "candidate": {
+      "epochs": 50
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "walk",
+    "week": 6
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2025-02-17 01:00:00",
+  "started_utc": "2026-09-28T01:47:49.000941+00:00",
+  "fit": {
+    "family": "neuralprophet",
+    "candidate": {
+      "epochs": 50,
+      "n_lags": 168,
+      "n_forecasts": 168
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-02-17 01:00:00",
+    "training_calendar_hours": 37080,
+    "observed_training_targets": 36576,
+    "preparation_seconds": 0.008793050001258962,
+    "scaler": {
+      "mean": {
+        "no": 152.85065370734907,
+        "no2": 94.84779144794402,
+        "co": 2458.2196801181103,
+        "so2": 140.02081091426072
+      },
+      "scale": {
+        "no": 185.34066977024892,
+        "no2": 93.15130481690002,
+        "co": 2513.371515673572,
+        "so2": 126.26192153892552
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "training_episodes_retained": 15,
+    "training_samples": 31263,
+    "training_loss_first": 1.494695782661438,
+    "training_loss_last": 0.008620302192866802,
+    "training_loss_min": 0.008620302192866802,
+    "epochs_completed": 50,
+    "target_normalization": {
+      "shift": 0.91,
+      "scale": 704.0500000000001
+    },
+    "fit_seconds": 202.13051923400053
+  },
+  "completed_weeks": [
+    {
+      "window": 6,
+      "origin": "2025-02-17 01:00:00",
+      "forecast_seconds": 0.13576620800085948,
+      "state_update_seconds": 0.0,
+      "mae": 27.41266280855451,
+      "rmse": 32.85483404847517
+    }
+  ],
+  "completed_utc": "2026-09-28T01:51:11.287160+00:00",
+  "scored_hours": 168,
+  "mean_weekly_mae": 27.41266280855451,
+  "pooled_rmse": 32.85483404847517,
+  "peak_rss_mib_self": 1660.234375
+}

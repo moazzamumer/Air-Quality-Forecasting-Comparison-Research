@@ -1,0 +1,154 @@
+{
+  "task": {
+    "id": "recover_core_sarimax_walk_w18_s42",
+    "stage": "recovery",
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "walk",
+    "week": 18,
+    "recovered_task_id": "core_sarimax_walk_w18_s42"
+  },
+  "status": "failed",
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "numerical_policy": {
+    "purpose": "Numerical recovery after final-comparison SARIMAX fits fail the locked L-BFGS retry policy; no model or information-set change",
+    "defined_after": "Weeks 2 and 17 failed; both L-BFGS retries reported zero iterations. No failed-fit forecast was scored.",
+    "scope": "Failed core or controlled-ablation SARIMAX fits with the validation-selected orders. Preserve original failures. Do not reopen validation-based configuration selection or choose a solver by test error. Ablation recovery coverage was included before sensitivity results were available.",
+    "unchanged": [
+      "selected orders",
+      "training end timestamp",
+      "training observations",
+      "exogenous features",
+      "input preprocessing",
+      "likelihood model",
+      "missing-data policy",
+      "forecast origin",
+      "scoring mask"
+    ],
+    "initial_parameters": "Failed fit's finite parameter vector, in model.param_names order",
+    "derivative_free_stage": {
+      "method": "powell",
+      "maxiter": 10,
+      "maxfun": 800
+    },
+    "final_stage": {
+      "method": "lbfgs",
+      "maxiter": 150
+    },
+    "acceptance": "Final L-BFGS convergence, finite log likelihood and parameter vector, training likelihood no worse than the failed starting point (1e-5 numeric tolerance), and 168 finite correctly aligned predictions. Otherwise preserve unresolved failure.",
+    "resource_accounting": "Report both the original failed attempt and recovery effort; never label reused or recovered fit time as a fresh uninterrupted fit.",
+    "interpretation": "This is a recorded numerical-policy amendment after convergence failures. It changes solver initialization, not selected forecasting model settings. Any recovered coverage must be labeled transparently."
+  },
+  "numerical_policy_sha256": "f805bc1de0f36a0d6fefccc29e8fe7c5e7ffe72934c977c1d31b661e64ec1e97",
+  "recovery_code_sha256": "a4e65256c57614f188bdb7ae27a5ab83edd9a9758fec6c7c6be86caac8b439ef",
+  "recovered_from_failed_run": "core_sarimax_walk_w18_s42",
+  "fit_origin": "2025-05-12 01:00:00",
+  "original_failed_fit_seconds": 258.35009318899756,
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "started_utc": "2026-09-28T04:59:03.339725+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-05-12 01:00:00",
+    "training_calendar_hours": 39096,
+    "observed_training_targets": 38352,
+    "preparation_seconds": 0.00919169100234285,
+    "scaler": {
+      "mean": {
+        "no": 148.5424481122236,
+        "no2": 93.36917422820193,
+        "co": 2407.294622705465,
+        "so2": 137.46079709011264
+      },
+      "scale": {
+        "no": 183.7608305867379,
+        "no2": 92.11437542290697,
+        "co": 2496.9510125377387,
+        "so2": 126.0829971018725
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "optimizer": {
+      "converged": false,
+      "recovery": true,
+      "initial_log_likelihood": -145096.77619973995,
+      "powell_seconds": 20.70040836300177,
+      "powell_converged": false,
+      "powell_iterations": 2,
+      "powell_function_calls": 78,
+      "powell_log_likelihood": NaN,
+      "final_iterations": 0,
+      "final_log_likelihood": NaN,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals"
+      ]
+    },
+    "parameter_estimates": {
+      "no": NaN,
+      "no2": NaN,
+      "co": NaN,
+      "so2": NaN,
+      "ar.L1": NaN,
+      "ma.L1": NaN,
+      "ar.S.L24": NaN,
+      "ma.S.L24": NaN,
+      "sigma2": NaN
+    },
+    "fit_seconds": 77.50827736599604
+  },
+  "error": "Traceback (most recent call last):\n  File \"/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/code/phase2_recover.py\", line 91, in recover\n    raise RuntimeError('Numerical recovery did not reach a valid converged fit')\nRuntimeError: Numerical recovery did not reach a valid converged fit\n"
+}

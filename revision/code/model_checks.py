@@ -11,7 +11,9 @@ def np_future(model, history, future_inputs):
     """Build a NaN-target future frame using observed context and PP inputs only."""
     future = model.make_future_dataframe(history, regressors_df=future_inputs,
                                           periods=model.n_forecasts, n_historic_predictions=False)
-    assert future.loc[future.ds >= future_inputs.ds.min(), "y"].isna().all()
+    first_future = (future_inputs.ds.min() if future_inputs is not None
+                    else history.ds.max() + pd.Timedelta(hours=1))
+    assert future.loc[future.ds >= first_future, "y"].isna().all()
     return future
 
 

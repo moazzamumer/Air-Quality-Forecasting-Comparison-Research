@@ -1,0 +1,122 @@
+{
+  "task": {
+    "id": "validate_neuralprophet_1",
+    "stage": "validate",
+    "family": "neuralprophet",
+    "candidate": {
+      "epochs": 50
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "frozen"
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2024-12-16 01:00:00",
+  "started_utc": "2026-09-27T23:22:09.871561+00:00",
+  "fit": {
+    "family": "neuralprophet",
+    "candidate": {
+      "epochs": 50,
+      "n_lags": 168,
+      "n_forecasts": 168
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2024-12-16 01:00:00",
+    "training_calendar_hours": 35568,
+    "observed_training_targets": 35064,
+    "preparation_seconds": 0.008519895000063116,
+    "scaler": {
+      "mean": {
+        "no": 150.46812685375312,
+        "no2": 93.83538529545973,
+        "co": 2401.7102569587037,
+        "so2": 136.3220642254164
+      },
+      "scale": {
+        "no": 183.07103249453283,
+        "no2": 93.45353521909288,
+        "co": 2441.1754751931267,
+        "so2": 120.03322753637514
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "training_episodes_retained": 15,
+    "training_samples": 29751,
+    "training_loss_first": 1.4866636991500854,
+    "training_loss_last": 0.009846328757703304,
+    "training_loss_min": 0.009846328757703304,
+    "epochs_completed": 50,
+    "target_normalization": {
+      "shift": 0.91,
+      "scale": 682.5775000000001
+    },
+    "fit_seconds": 198.7732590150008
+  },
+  "completed_weeks": [
+    {
+      "window": 1,
+      "origin": "2024-12-16 01:00:00",
+      "forecast_seconds": 0.13365466899995226,
+      "state_update_seconds": 0.0,
+      "mae": 17.223281012418727,
+      "rmse": 22.220520637896517
+    },
+    {
+      "window": 2,
+      "origin": "2024-12-23 01:00:00",
+      "forecast_seconds": 0.12546134399963194,
+      "state_update_seconds": 0.0,
+      "mae": 24.34405784335165,
+      "rmse": 33.87299576792034
+    },
+    {
+      "window": 3,
+      "origin": "2024-12-30 01:00:00",
+      "forecast_seconds": 0.12471839600038948,
+      "state_update_seconds": 0.0,
+      "mae": 24.164153553077156,
+      "rmse": 29.231782201328873
+    },
+    {
+      "window": 4,
+      "origin": "2025-01-06 01:00:00",
+      "forecast_seconds": 0.122581857998739,
+      "state_update_seconds": 0.0,
+      "mae": 19.797625057555383,
+      "rmse": 24.026604627036406
+    }
+  ],
+  "completed_utc": "2026-09-27T23:25:29.196062+00:00",
+  "scored_hours": 672,
+  "mean_weekly_mae": 21.382279366600727,
+  "pooled_rmse": 27.716900080468005,
+  "peak_rss_mib_self": 1644.5
+}

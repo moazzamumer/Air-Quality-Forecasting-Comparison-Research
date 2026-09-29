@@ -1,6 +1,6 @@
 # Scientific Reports revision plan
 
-Status: Phase 1 completed with audits, correctness checks and bounded training-only pilots. The full comparison experiments and manuscript edits have not started. See `reports/PHASE1_SUMMARY.md`.
+Status: Phases 1 and 2 completed. The agreed matrix has verified evidence for all 94 core/ablation tasks, three baselines and 35 correction streams. Six SARIMAX numerical recoveries retain selected settings and cutoffs with original failure records preserved. Phase 3 analysis and manuscript/response edits are pending. See `reports/PHASE2_SUMMARY.md` and `reports/PHASE2_VERIFICATION.md`.
 
 First author: Moazzam Umer Gondal. Corresponding author: Asma Ahmad Farhan.
 Decision: Major Revision. Submission deadline: October 6, 2026.
@@ -36,7 +36,7 @@ Exit evidence: provenance/coverage report, discrepancy log, frozen protocol/conf
 
 ### Proposed bounded validation and experiment matrix
 
-The comparison matrix is retained after Phase 1 feasibility checks. Final configurations still require training-only validation; no full comparison run has been completed.
+The agreed matrix below has now been executed. Training-only validation selected the final configurations before held-out fitting. Saved evidence and numerical-recovery exceptions are described in the Phase 2 reports.
 
 | ID | Experiment | Proposed configuration | New fitting? | Main reviewer coverage |
 |---|---|---|---|---|
@@ -116,7 +116,7 @@ Main dependency chain: provenance/calendar → forecast correctness and informat
 
 Independent writing edits can proceed after the protocol is settled: terminology, removal of unevaluated alternatives, literature compression, and PP claim boundaries. Final result-dependent prose must wait for Phase 3. Reviewer 2's stronger requests extend Reviewer 1's requests; they do not erase the need to answer Reviewer 1 individually.
 
-Phase 1 resolutions: strict availability retains 16 matched weeks (2,688 hours); targets are never imputed; NeuralProphet trains on contiguous observed episodes with globally shared components/normalization; CPU pilots pass with compatibility wrappers for installed versions. The full matrix remains retained on a rough 8–27 fit-hour estimate before overhead, expanding-history costs and convergence retries. Retrieval dates/raw API response metadata are unrecoverable from current files and remain explicit limitations. Final settings/convergence are Phase 2 validation tasks; publication permissions and portal requirements remain Phase 4/5 dependencies.
+Phase 1 resolutions: strict availability retains 16 matched weeks (2,688 hours); targets are never imputed; NeuralProphet trains on contiguous observed episodes with globally shared components/normalization; CPU pilots pass with compatibility wrappers for installed versions. The full matrix remains retained on a rough 8–27 fit-hour estimate before overhead, expanding-history costs and convergence retries. Retrieval dates/raw API response metadata are unrecoverable from current files and remain explicit limitations. Final settings were selected by Phase 2 training-only validation; accepted test fits and numerical-recovery provenance are verified; publication permissions and portal requirements remain Phase 4/5 dependencies.
 
 ## Technical references consulted for planning
 
@@ -124,4 +124,4 @@ Phase 1 resolutions: strict availability retains 16 matched weeks (2,688 hours);
 - Statsmodels documents state-space forecasting and updating fitted results without parameter refitting: [Forecasting in statsmodels](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_forecasting.html).
 - Zenodo documents versioned software archiving through GitHub: [GitHub and software](https://help.zenodo.org/docs/github/).
 
-Phase 1 has executed bounded training-only feasibility forecasts, not the revised model-comparison experiments. All 21 fingerprinted original files remain unchanged. The new work is isolated below `revision/`.
+Phase 1 feasibility checks and Phase 2 revised comparison experiments are complete. All 21 fingerprinted original files remain unchanged. The new work is isolated below `revision/`. Phase 3 analysis must establish the defensible interpretation before writing the manuscript and point-by-point response.

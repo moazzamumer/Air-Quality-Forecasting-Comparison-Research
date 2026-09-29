@@ -1,0 +1,10 @@
+RECOVER ablate_sarimax_clip
+{"original_id": "ablate_sarimax_clip", "returncode": 0, "elapsed_seconds": 988.335047669003, "sampled_peak_rss_mib": 287.41796875, "guard_reason": null}
+RECOVER core_sarimax_walk_w17_s42
+{"original_id": "core_sarimax_walk_w17_s42", "returncode": 0, "elapsed_seconds": 129.1632771079967, "sampled_peak_rss_mib": 233.765625, "guard_reason": null}
+RECOVER core_sarimax_walk_w18_s42
+{"original_id": "core_sarimax_walk_w18_s42", "returncode": 0, "elapsed_seconds": 301.9175630890022, "sampled_peak_rss_mib": 233.76953125, "guard_reason": null}
+RECOVER core_sarimax_walk_w20_s42
+{"original_id": "core_sarimax_walk_w20_s42", "returncode": 0, "elapsed_seconds": 109.63823414799845, "sampled_peak_rss_mib": 233.48046875, "guard_reason": null}
+RECOVER core_sarimax_walk_w21_s42
+{"original_id": "core_sarimax_walk_w21_s42", "returncode": 0, "elapsed_seconds": 131.17113857899676, "sampled_peak_rss_mib": 233.71875, "guard_reason": null}

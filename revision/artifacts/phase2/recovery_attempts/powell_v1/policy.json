@@ -1,0 +1,12 @@
+{
+  "purpose": "Numerical recovery after final-comparison SARIMAX fits fail the locked L-BFGS retry policy; no model or information-set change",
+  "defined_after": "Weeks 2 and 17 failed; both L-BFGS retries reported zero iterations. No failed-fit forecast was scored.",
+  "scope": "Failed core or controlled-ablation SARIMAX fits with the validation-selected orders. Preserve original failures. Do not reopen validation-based configuration selection or choose a solver by test error. Ablation recovery coverage was included before sensitivity results were available.",
+  "unchanged": ["selected orders", "training end timestamp", "training observations", "exogenous features", "input preprocessing", "likelihood model", "missing-data policy", "forecast origin", "scoring mask"],
+  "initial_parameters": "Failed fit's finite parameter vector, in model.param_names order",
+  "derivative_free_stage": {"method": "powell", "maxiter": 10, "maxfun": 800},
+  "final_stage": {"method": "lbfgs", "maxiter": 150},
+  "acceptance": "Final L-BFGS convergence, finite log likelihood and parameter vector, training likelihood no worse than the failed starting point (1e-5 numeric tolerance), and 168 finite correctly aligned predictions. Otherwise preserve unresolved failure.",
+  "resource_accounting": "Report both the original failed attempt and recovery effort; never label reused or recovered fit time as a fresh uninterrupted fit.",
+  "interpretation": "This is a recorded numerical-policy amendment after convergence failures. It changes solver initialization, not selected forecasting model settings. Any recovered coverage must be labeled transparently."
+}

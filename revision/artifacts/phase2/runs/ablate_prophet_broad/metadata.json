@@ -1,0 +1,302 @@
+{
+  "task": {
+    "id": "ablate_prophet_broad",
+    "stage": "ablate",
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2",
+      "o3",
+      "nh3",
+      "temperature",
+      "dewpt",
+      "pm10"
+    ],
+    "clip_inputs": false,
+    "regime": "frozen",
+    "variant": "broad"
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-09-28T04:27:08.337512+00:00",
+  "fit": {
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2",
+      "o3",
+      "nh3",
+      "temperature",
+      "dewpt",
+      "pm10"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "preparation_seconds": 0.015494140003283974,
+    "scaler": {
+      "mean": {
+        "no": 151.1053243228117,
+        "no2": 94.20742444593688,
+        "co": 2421.8054958585176,
+        "so2": 137.74205618983657,
+        "o3": 23.506890250727558,
+        "nh3": 26.652271099171703,
+        "temperature": 12.605249608238191,
+        "dewpt": 1.742520147750167,
+        "pm10": 267.83570601074547
+      },
+      "scale": {
+        "no": 183.84842157104896,
+        "no2": 93.3192014757024,
+        "co": 2469.87024524448,
+        "so2": 122.68265317602894,
+        "o3": 69.8333025156931,
+        "nh3": 34.50848838568285,
+        "temperature": 12.031080021256583,
+        "dewpt": 14.520656916806418,
+        "pm10": 277.43714713430705
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "observed_training_rows_used": 35736,
+    "prophet_regressor_coefficients": [
+      {
+        "regressor": "no",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -23.144758308,
+        "coef": -23.144758308,
+        "coef_upper": -23.144758308
+      },
+      {
+        "regressor": "no2",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 3.2037767780000004,
+        "coef": 3.2037767780000004,
+        "coef_upper": 3.2037767780000004
+      },
+      {
+        "regressor": "co",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 137.820831214,
+        "coef": 137.820831214,
+        "coef_upper": 137.820831214
+      },
+      {
+        "regressor": "so2",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -7.0444561993,
+        "coef": -7.0444561993,
+        "coef_upper": -7.0444561993
+      },
+      {
+        "regressor": "o3",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 3.4863942234,
+        "coef": 3.4863942234,
+        "coef_upper": 3.4863942234
+      },
+      {
+        "regressor": "nh3",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -3.7360536323,
+        "coef": -3.7360536323,
+        "coef_upper": -3.7360536323
+      },
+      {
+        "regressor": "temperature",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 5.2312164128,
+        "coef": 5.2312164128,
+        "coef_upper": 5.2312164128
+      },
+      {
+        "regressor": "dewpt",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 32.791511684,
+        "coef": 32.791511684,
+        "coef_upper": 32.791511684
+      },
+      {
+        "regressor": "pm10",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 117.23529639399999,
+        "coef": 117.23529639399999,
+        "coef_upper": 117.23529639399999
+      }
+    ],
+    "fit_seconds": 20.095285377996333
+  },
+  "completed_weeks": [
+    {
+      "window": 1,
+      "origin": "2025-01-13 01:00:00",
+      "forecast_seconds": 0.015999415998521727,
+      "state_update_seconds": 0.0,
+      "mae": 15.870771446894965,
+      "rmse": 18.95042274958418
+    },
+    {
+      "window": 2,
+      "origin": "2025-01-20 01:00:00",
+      "forecast_seconds": 0.015275015000952408,
+      "state_update_seconds": 0.0,
+      "mae": 22.368489849710734,
+      "rmse": 27.820118238221923
+    },
+    {
+      "window": 3,
+      "origin": "2025-01-27 01:00:00",
+      "forecast_seconds": 0.014675218997581396,
+      "state_update_seconds": 0.0,
+      "mae": 17.295225398340328,
+      "rmse": 22.238634792203275
+    },
+    {
+      "window": 4,
+      "origin": "2025-02-03 01:00:00",
+      "forecast_seconds": 0.015308658999856561,
+      "state_update_seconds": 0.0,
+      "mae": 19.60739456052673,
+      "rmse": 22.80232297355901
+    },
+    {
+      "window": 5,
+      "origin": "2025-02-10 01:00:00",
+      "forecast_seconds": 0.014039806002983823,
+      "state_update_seconds": 0.0,
+      "mae": 21.849650821155695,
+      "rmse": 29.165121015898567
+    },
+    {
+      "window": 6,
+      "origin": "2025-02-17 01:00:00",
+      "forecast_seconds": 0.014115690006292425,
+      "state_update_seconds": 0.0,
+      "mae": 11.182821505905705,
+      "rmse": 14.201554258070555
+    },
+    {
+      "window": 7,
+      "origin": "2025-02-24 01:00:00",
+      "forecast_seconds": 0.014157298995996825,
+      "state_update_seconds": 0.0,
+      "mae": 22.87833590419455,
+      "rmse": 35.450277165424964
+    },
+    {
+      "window": 10,
+      "origin": "2025-03-17 01:00:00",
+      "forecast_seconds": 0.013765105002676137,
+      "state_update_seconds": 0.0,
+      "mae": 30.87392587790616,
+      "rmse": 40.084020086801175
+    },
+    {
+      "window": 16,
+      "origin": "2025-04-28 01:00:00",
+      "forecast_seconds": 0.01408892899780767,
+      "state_update_seconds": 0.0,
+      "mae": 13.370279353728009,
+      "rmse": 16.79182256326772
+    },
+    {
+      "window": 17,
+      "origin": "2025-05-05 01:00:00",
+      "forecast_seconds": 0.01377025500551099,
+      "state_update_seconds": 0.0,
+      "mae": 16.67463636107406,
+      "rmse": 23.93728477018433
+    },
+    {
+      "window": 18,
+      "origin": "2025-05-12 01:00:00",
+      "forecast_seconds": 0.013761198999418411,
+      "state_update_seconds": 0.0,
+      "mae": 17.05478752871854,
+      "rmse": 22.121292764674255
+    },
+    {
+      "window": 19,
+      "origin": "2025-05-19 01:00:00",
+      "forecast_seconds": 0.01358239899855107,
+      "state_update_seconds": 0.0,
+      "mae": 24.343576924850964,
+      "rmse": 32.775914648501086
+    },
+    {
+      "window": 20,
+      "origin": "2025-05-26 01:00:00",
+      "forecast_seconds": 0.013698328999453224,
+      "state_update_seconds": 0.0,
+      "mae": 21.689335636399573,
+      "rmse": 24.572993437971405
+    },
+    {
+      "window": 21,
+      "origin": "2025-06-02 01:00:00",
+      "forecast_seconds": 0.013541262000217102,
+      "state_update_seconds": 0.0,
+      "mae": 32.84266366177293,
+      "rmse": 38.0572597791523
+    },
+    {
+      "window": 22,
+      "origin": "2025-06-09 01:00:00",
+      "forecast_seconds": 0.013730769998801406,
+      "state_update_seconds": 0.0,
+      "mae": 19.987956763847418,
+      "rmse": 25.487574367141967
+    },
+    {
+      "window": 23,
+      "origin": "2025-06-16 01:00:00",
+      "forecast_seconds": 0.017667656000412535,
+      "state_update_seconds": 0.0,
+      "mae": 10.879426488374392,
+      "rmse": 13.353608344290455
+    }
+  ],
+  "completed_utc": "2026-09-28T04:27:28.856207+00:00",
+  "scored_hours": 2688,
+  "mean_weekly_mae": 19.923079880212548,
+  "pooled_rmse": 26.64818587792932,
+  "peak_rss_mib_self": 363.0703125
+}

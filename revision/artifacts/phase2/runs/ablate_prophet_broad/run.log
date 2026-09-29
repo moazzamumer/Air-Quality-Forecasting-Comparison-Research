@@ -1,0 +1,18 @@
+09:27:10 - cmdstanpy - INFO - Chain [1] start processing
+09:27:28 - cmdstanpy - INFO - Chain [1] done processing
+ablate_prophet_broad week 1 MAE 15.8708
+ablate_prophet_broad week 2 MAE 22.3685
+ablate_prophet_broad week 3 MAE 17.2952
+ablate_prophet_broad week 4 MAE 19.6074
+ablate_prophet_broad week 5 MAE 21.8497
+ablate_prophet_broad week 6 MAE 11.1828
+ablate_prophet_broad week 7 MAE 22.8783
+ablate_prophet_broad week 10 MAE 30.8739
+ablate_prophet_broad week 16 MAE 13.3703
+ablate_prophet_broad week 17 MAE 16.6746
+ablate_prophet_broad week 18 MAE 17.0548
+ablate_prophet_broad week 19 MAE 24.3436
+ablate_prophet_broad week 20 MAE 21.6893
+ablate_prophet_broad week 21 MAE 32.8427
+ablate_prophet_broad week 22 MAE 19.9880
+ablate_prophet_broad week 23 MAE 10.8794

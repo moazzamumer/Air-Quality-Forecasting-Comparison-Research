@@ -1,0 +1,241 @@
+{
+  "task": {
+    "id": "core_prophet_frozen_s42",
+    "stage": "core",
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "frozen"
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-09-27T23:34:24.839671+00:00",
+  "fit": {
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "preparation_seconds": 0.008576643998821964,
+    "scaler": {
+      "mean": {
+        "no": 151.1053243228117,
+        "no2": 94.20742444593688,
+        "co": 2421.8054958585176,
+        "so2": 137.74205618983657
+      },
+      "scale": {
+        "no": 183.84842157104896,
+        "no2": 93.3192014757024,
+        "co": 2469.87024524448,
+        "so2": 122.68265317602894
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "observed_training_rows_used": 35736,
+    "prophet_regressor_coefficients": [
+      {
+        "regressor": "no",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -54.478082294000004,
+        "coef": -54.478082294000004,
+        "coef_upper": -54.478082294000004
+      },
+      {
+        "regressor": "no2",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 7.508406752999999,
+        "coef": 7.508406752999999,
+        "coef_upper": 7.508406752999999
+      },
+      {
+        "regressor": "co",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 288.84751856,
+        "coef": 288.84751856,
+        "coef_upper": 288.84751856
+      },
+      {
+        "regressor": "so2",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -12.4534999348,
+        "coef": -12.4534999348,
+        "coef_upper": -12.4534999348
+      }
+    ],
+    "fit_seconds": 27.60687562899693
+  },
+  "completed_weeks": [
+    {
+      "window": 1,
+      "origin": "2025-01-13 01:00:00",
+      "forecast_seconds": 0.012495859002228826,
+      "state_update_seconds": 0.0,
+      "mae": 29.495276034784496,
+      "rmse": 37.90583881242751
+    },
+    {
+      "window": 2,
+      "origin": "2025-01-20 01:00:00",
+      "forecast_seconds": 0.01185610599713982,
+      "state_update_seconds": 0.0,
+      "mae": 40.68278424757172,
+      "rmse": 51.39586205464021
+    },
+    {
+      "window": 3,
+      "origin": "2025-01-27 01:00:00",
+      "forecast_seconds": 0.011476345000119181,
+      "state_update_seconds": 0.0,
+      "mae": 25.799954244049694,
+      "rmse": 35.19530859806256
+    },
+    {
+      "window": 4,
+      "origin": "2025-02-03 01:00:00",
+      "forecast_seconds": 0.011954091998632066,
+      "state_update_seconds": 0.0,
+      "mae": 16.42134456861071,
+      "rmse": 19.852323890469343
+    },
+    {
+      "window": 5,
+      "origin": "2025-02-10 01:00:00",
+      "forecast_seconds": 0.011429886999394512,
+      "state_update_seconds": 0.0,
+      "mae": 37.81592301400191,
+      "rmse": 49.30198378303304
+    },
+    {
+      "window": 6,
+      "origin": "2025-02-17 01:00:00",
+      "forecast_seconds": 0.011500451000756584,
+      "state_update_seconds": 0.0,
+      "mae": 39.872813246687834,
+      "rmse": 46.50954233694083
+    },
+    {
+      "window": 7,
+      "origin": "2025-02-24 01:00:00",
+      "forecast_seconds": 0.011796883998613339,
+      "state_update_seconds": 0.0,
+      "mae": 53.40848622564096,
+      "rmse": 76.76074309856772
+    },
+    {
+      "window": 10,
+      "origin": "2025-03-17 01:00:00",
+      "forecast_seconds": 0.011491944998851977,
+      "state_update_seconds": 0.0,
+      "mae": 58.648661021119736,
+      "rmse": 64.17321659289627
+    },
+    {
+      "window": 16,
+      "origin": "2025-04-28 01:00:00",
+      "forecast_seconds": 0.01142033900032402,
+      "state_update_seconds": 0.0,
+      "mae": 20.92927016611415,
+      "rmse": 26.250676790118632
+    },
+    {
+      "window": 17,
+      "origin": "2025-05-05 01:00:00",
+      "forecast_seconds": 0.011599499001022195,
+      "state_update_seconds": 0.0,
+      "mae": 36.653796634785444,
+      "rmse": 47.006827173885775
+    },
+    {
+      "window": 18,
+      "origin": "2025-05-12 01:00:00",
+      "forecast_seconds": 0.011383528999431292,
+      "state_update_seconds": 0.0,
+      "mae": 44.24196511712957,
+      "rmse": 55.93936131734633
+    },
+    {
+      "window": 19,
+      "origin": "2025-05-19 01:00:00",
+      "forecast_seconds": 0.011281085000518942,
+      "state_update_seconds": 0.0,
+      "mae": 61.22748816505001,
+      "rmse": 79.69355505148725
+    },
+    {
+      "window": 20,
+      "origin": "2025-05-26 01:00:00",
+      "forecast_seconds": 0.011437421002483461,
+      "state_update_seconds": 0.0,
+      "mae": 36.70640138581637,
+      "rmse": 42.25006162168881
+    },
+    {
+      "window": 21,
+      "origin": "2025-06-02 01:00:00",
+      "forecast_seconds": 0.011279090998868924,
+      "state_update_seconds": 0.0,
+      "mae": 37.35550888106003,
+      "rmse": 46.73652454115258
+    },
+    {
+      "window": 22,
+      "origin": "2025-06-09 01:00:00",
+      "forecast_seconds": 0.011275925000518328,
+      "state_update_seconds": 0.0,
+      "mae": 28.599655861428374,
+      "rmse": 37.58628600634711
+    },
+    {
+      "window": 23,
+      "origin": "2025-06-16 01:00:00",
+      "forecast_seconds": 0.011389510000299197,
+      "state_update_seconds": 0.0,
+      "mae": 23.554946314073476,
+      "rmse": 27.95349541645073
+    }
+  ],
+  "completed_utc": "2026-09-27T23:34:52.808424+00:00",
+  "scored_hours": 2688,
+  "mean_weekly_mae": 36.963392195495274,
+  "pooled_rmse": 49.28105634713894,
+  "peak_rss_mib_self": 341.046875
+}

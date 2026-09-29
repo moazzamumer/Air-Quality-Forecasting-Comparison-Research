@@ -1,0 +1,9 @@
+run_id,family,candidate,status,mean_weekly_mae,pooled_rmse
+validate_neuralprophet_0,neuralprophet,"{""epochs"": 30}",completed,63.743184215007794,82.70855998488184
+validate_neuralprophet_1,neuralprophet,"{""epochs"": 50}",completed,21.382279366600727,27.716900080468005
+validate_prophet_0,prophet,"{""seasonality_mode"": ""additive""}",completed,24.978747232386095,34.04514439382456
+validate_prophet_1,prophet,"{""seasonality_mode"": ""multiplicative""}",completed,41.50074637939167,56.98816407114435
+validate_sarimax_0,sarimax,"{""order"": [1, 0, 1], ""seasonal_order"": [1, 0, 1, 24]}",completed,15.024756979720449,22.36972012292103
+validate_sarimax_1,sarimax,"{""order"": [1, 0, 1], ""seasonal_order"": [1, 1, 1, 24]}",failed,,
+validate_sarimax_2,sarimax,"{""order"": [1, 1, 1], ""seasonal_order"": [1, 0, 1, 24]}",completed,38.941065470785105,58.3268362756345
+validate_sarimax_3,sarimax,"{""order"": [1, 1, 1], ""seasonal_order"": [1, 1, 1, 24]}",completed,39.52602361473646,59.15069655682879

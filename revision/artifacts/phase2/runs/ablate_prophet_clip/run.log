@@ -1,0 +1,18 @@
+09:27:32 - cmdstanpy - INFO - Chain [1] start processing
+09:27:50 - cmdstanpy - INFO - Chain [1] done processing
+ablate_prophet_clip week 1 MAE 41.0481
+ablate_prophet_clip week 2 MAE 60.5317
+ablate_prophet_clip week 3 MAE 29.1098
+ablate_prophet_clip week 4 MAE 19.8945
+ablate_prophet_clip week 5 MAE 40.9639
+ablate_prophet_clip week 6 MAE 30.1821
+ablate_prophet_clip week 7 MAE 51.5941
+ablate_prophet_clip week 10 MAE 50.3739
+ablate_prophet_clip week 16 MAE 31.7459
+ablate_prophet_clip week 17 MAE 57.3606
+ablate_prophet_clip week 18 MAE 68.0984
+ablate_prophet_clip week 19 MAE 74.0725
+ablate_prophet_clip week 20 MAE 76.0555
+ablate_prophet_clip week 21 MAE 62.9054
+ablate_prophet_clip week 22 MAE 52.7084
+ablate_prophet_clip week 23 MAE 25.8305

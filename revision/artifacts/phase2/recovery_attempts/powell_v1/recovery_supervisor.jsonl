@@ -1,0 +1,6 @@
+{"original_id": "ablate_sarimax_clip", "returncode": 1, "elapsed_seconds": 72.09799510599987, "sampled_peak_rss_mib": 222.421875, "guard_reason": null}
+{"original_id": "core_sarimax_walk_w02_s42", "returncode": 1, "elapsed_seconds": 73.60205464500177, "sampled_peak_rss_mib": 222.953125, "guard_reason": null}
+{"original_id": "core_sarimax_walk_w17_s42", "returncode": 1, "elapsed_seconds": 79.10045646700019, "sampled_peak_rss_mib": 224.05859375, "guard_reason": null}
+{"original_id": "core_sarimax_walk_w18_s42", "returncode": 1, "elapsed_seconds": 79.1027140130027, "sampled_peak_rss_mib": 224.953125, "guard_reason": null}
+{"original_id": "core_sarimax_walk_w20_s42", "returncode": 1, "elapsed_seconds": 80.10747878299298, "sampled_peak_rss_mib": 224.9453125, "guard_reason": null}
+{"original_id": "core_sarimax_walk_w21_s42", "returncode": 1, "elapsed_seconds": 78.60008767300315, "sampled_peak_rss_mib": 223.92578125, "guard_reason": null}

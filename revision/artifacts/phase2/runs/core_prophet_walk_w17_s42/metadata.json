@@ -1,0 +1,122 @@
+{
+  "task": {
+    "id": "core_prophet_walk_w17_s42",
+    "stage": "core",
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "walk",
+    "week": 17
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2025-05-05 01:00:00",
+  "started_utc": "2026-09-28T01:31:09.887634+00:00",
+  "fit": {
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-05-05 01:00:00",
+    "training_calendar_hours": 38928,
+    "observed_training_targets": 38184,
+    "preparation_seconds": 0.009404331998666748,
+    "scaler": {
+      "mean": {
+        "no": 149.19191965221034,
+        "no2": 93.70550099518124,
+        "co": 2416.4815302220823,
+        "so2": 137.99912266918082
+      },
+      "scale": {
+        "no": 183.90297669006733,
+        "no2": 92.17463472735155,
+        "co": 2498.578779401549,
+        "so2": 126.09710589739132
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "observed_training_rows_used": 38184,
+    "prophet_regressor_coefficients": [
+      {
+        "regressor": "no",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -52.752213258,
+        "coef": -52.752213258,
+        "coef_upper": -52.752213258
+      },
+      {
+        "regressor": "no2",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 7.5203848537999995,
+        "coef": 7.5203848537999995,
+        "coef_upper": 7.5203848537999995
+      },
+      {
+        "regressor": "co",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 289.46650883,
+        "coef": 289.46650883,
+        "coef_upper": 289.46650883
+      },
+      {
+        "regressor": "so2",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -12.8437376944,
+        "coef": -12.8437376944,
+        "coef_upper": -12.8437376944
+      }
+    ],
+    "fit_seconds": 24.789800206999644
+  },
+  "completed_weeks": [
+    {
+      "window": 17,
+      "origin": "2025-05-05 01:00:00",
+      "forecast_seconds": 0.012411810999765294,
+      "state_update_seconds": 0.0,
+      "mae": 44.709813849564476,
+      "rmse": 57.76942249923374
+    }
+  ],
+  "completed_utc": "2026-09-28T01:31:34.710702+00:00",
+  "scored_hours": 168,
+  "mean_weekly_mae": 44.709813849564476,
+  "pooled_rmse": 57.76942249923374,
+  "peak_rss_mib_self": 348.90625
+}

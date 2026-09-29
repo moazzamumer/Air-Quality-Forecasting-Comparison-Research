@@ -1,0 +1,309 @@
+{
+  "task": {
+    "id": "recover_ablate_sarimax_clip",
+    "stage": "recovery",
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": true,
+    "regime": "frozen",
+    "variant": "clip",
+    "recovered_task_id": "ablate_sarimax_clip"
+  },
+  "status": "completed",
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "numerical_policy": {
+    "version": "warm_complex_step_v2",
+    "purpose": "Numerical recovery of final-comparison SARIMAX fits; selected forecasting model and information set remain fixed",
+    "defined_after": "Five core refits and clipped-input SARIMAX failed the original bounded L-BFGS policy. A derivative-free Powell initialization produced nonfinite likelihoods and was rejected without forecast scoring; its exact code/policy/logs are archived under recovery_attempts/powell_v1.",
+    "scope": "Failed core or controlled-ablation SARIMAX fits with validation-selected orders. Preserve original failures. Do not reopen validation-based configuration selection or choose a solver by test error.",
+    "unchanged": [
+      "selected orders",
+      "training end timestamp",
+      "training observations",
+      "exogenous features",
+      "input preprocessing",
+      "likelihood model",
+      "missing-data policy",
+      "forecast origin",
+      "scoring mask"
+    ],
+    "initial_parameters": "Earlier converged core_sarimax_frozen_s42 fit, whose cutoff is no later than the task cutoff. Convert regressor slope initialization for input scale changes; initialize any additional regressors at zero. This vector initializes optimization only; all parameters are estimated again.",
+    "final_stage": {
+      "method": "minimize",
+      "min_method": "L-BFGS-B",
+      "maxiter": 200,
+      "maxls": 100,
+      "optim_score": "approx",
+      "optim_complex_step": true,
+      "tolerances": "unchanged SciPy defaults"
+    },
+    "acceptance": "Final optimizer convergence, finite likelihood/parameters, training likelihood no worse than the original failed point (1e-5 tolerance), and complete finite aligned predictions. Otherwise preserve unresolved failure.",
+    "resource_accounting": "Include original failed fit, rejected Powell attempt, and current recovery. Identify shared initial fits separately.",
+    "interpretation": "Recorded numerical-policy amendment after solver failures; changes initialization/derivative precision/line search, not forecasting orders or test-based model selection. Label recovered coverage transparently."
+  },
+  "numerical_policy_sha256": "e76bf2936b57d11e630bde40da0bcecb2f7d21dbdb85bd3837773c1ff5cdde13",
+  "recovery_code_sha256": "ab64d741a986eea29a7d9eec6597da430fe0bcc1c0427479f31089f9b96715ad",
+  "recovered_from_failed_run": "ablate_sarimax_clip",
+  "fit_origin": "2025-01-13 01:00:00",
+  "original_failed_fit_seconds": 614.1632003749983,
+  "initialization_source_run": "core_sarimax_frozen_s42",
+  "initialization_source_cutoff": "2025-01-13 01:00:00",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "started_utc": "2026-09-28T05:08:26.276868+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": true,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "preparation_seconds": 0.016885754994291347,
+    "scaler": {
+      "mean": {
+        "no": 149.81915435415266,
+        "no2": 94.20060219386612,
+        "co": 2405.219825665995,
+        "so2": 136.76429454891425
+      },
+      "scale": {
+        "no": 178.55772570580652,
+        "no2": 52.121850180108666,
+        "co": 2396.2542569964307,
+        "so2": 118.02987084909627
+      }
+    },
+    "input_clip_bounds": {
+      "lower": {
+        "no": 0.0,
+        "no2": 12.34,
+        "co": 260.35,
+        "so2": 14.9
+      },
+      "upper": {
+        "no": 786.78,
+        "no2": 279.67,
+        "co": 11642.46,
+        "so2": 595.09
+      }
+    },
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "optimizer": {
+      "converged": true,
+      "recovery": true,
+      "initial_log_likelihood": -143532.9173484345,
+      "warm_start_log_likelihood": -149315.9236020236,
+      "method": {
+        "method": "minimize",
+        "min_method": "L-BFGS-B",
+        "maxiter": 200,
+        "maxls": 100,
+        "optim_score": "approx",
+        "optim_complex_step": true,
+        "tolerances": "unchanged SciPy defaults"
+      },
+      "final_iterations": 178,
+      "final_log_likelihood": -143528.07411424135,
+      "warnings": [
+        "Method L-BFGS-B does not use Hessian information (hess).",
+        "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+      ]
+    },
+    "parameter_estimates": {
+      "no": -13.026556411668883,
+      "no2": 11.111108842095767,
+      "co": 202.9426606079717,
+      "so2": 4.180252065078159,
+      "ar.L1": 0.9506084196327859,
+      "ma.L1": 0.5819450492505127,
+      "ar.S.L24": 0.9967755765351953,
+      "ma.S.L24": -0.948995878789203,
+      "sigma2": 180.74216137443838
+    },
+    "fit_seconds": 985.7758454840005
+  },
+  "completed_utc": "2026-09-28T05:24:52.712438+00:00",
+  "scored_hours": 2688,
+  "completed_weeks": [
+    {
+      "window": 1,
+      "origin": "2025-01-13 01:00:00",
+      "forecast_seconds": 0.00902240499999607,
+      "state_update_seconds": 0.0,
+      "mae": 36.94222734549783,
+      "rmse": 60.68564625713283
+    },
+    {
+      "window": 2,
+      "origin": "2025-01-20 01:00:00",
+      "forecast_seconds": 0.008675257995491847,
+      "state_update_seconds": 0.00932478599861497,
+      "mae": 39.34864262673292,
+      "rmse": 72.52842211501785
+    },
+    {
+      "window": 3,
+      "origin": "2025-01-27 01:00:00",
+      "forecast_seconds": 0.007530050999775995,
+      "state_update_seconds": 0.018131552998966072,
+      "mae": 19.442581726102784,
+      "rmse": 27.553187891512017
+    },
+    {
+      "window": 4,
+      "origin": "2025-02-03 01:00:00",
+      "forecast_seconds": 0.007777028004056774,
+      "state_update_seconds": 0.017433742999855895,
+      "mae": 12.420867488076814,
+      "rmse": 15.710335044886662
+    },
+    {
+      "window": 5,
+      "origin": "2025-02-10 01:00:00",
+      "forecast_seconds": 0.007211907999590039,
+      "state_update_seconds": 0.014242422999814153,
+      "mae": 31.551843383795845,
+      "rmse": 47.898230455225544
+    },
+    {
+      "window": 6,
+      "origin": "2025-02-17 01:00:00",
+      "forecast_seconds": 0.007411345002765302,
+      "state_update_seconds": 0.013979486000607722,
+      "mae": 12.043404646111151,
+      "rmse": 18.793600941373327
+    },
+    {
+      "window": 7,
+      "origin": "2025-02-24 01:00:00",
+      "forecast_seconds": 0.007018322001385968,
+      "state_update_seconds": 0.012681758998951409,
+      "mae": 67.25418022512932,
+      "rmse": 105.83453166707122
+    },
+    {
+      "window": 10,
+      "origin": "2025-03-17 01:00:00",
+      "forecast_seconds": 0.006850976002169773,
+      "state_update_seconds": 0.03673367699957453,
+      "mae": 24.005010161992416,
+      "rmse": 32.43382968350237
+    },
+    {
+      "window": 16,
+      "origin": "2025-04-28 01:00:00",
+      "forecast_seconds": 0.006762789002095815,
+      "state_update_seconds": 0.061720724996121135,
+      "mae": 16.691892710618443,
+      "rmse": 22.47172878569517
+    },
+    {
+      "window": 17,
+      "origin": "2025-05-05 01:00:00",
+      "forecast_seconds": 0.006978756995522417,
+      "state_update_seconds": 0.01979622399812797,
+      "mae": 36.92620344708451,
+      "rmse": 51.613985557855415
+    },
+    {
+      "window": 18,
+      "origin": "2025-05-12 01:00:00",
+      "forecast_seconds": 0.007004525003139861,
+      "state_update_seconds": 0.014286427001934499,
+      "mae": 46.630290363683876,
+      "rmse": 61.071846667001985
+    },
+    {
+      "window": 19,
+      "origin": "2025-05-19 01:00:00",
+      "forecast_seconds": 0.00688305599760497,
+      "state_update_seconds": 0.013673036002728622,
+      "mae": 54.07070266188409,
+      "rmse": 75.75742466840903
+    },
+    {
+      "window": 20,
+      "origin": "2025-05-26 01:00:00",
+      "forecast_seconds": 0.006645736997597851,
+      "state_update_seconds": 0.012821523996535689,
+      "mae": 39.73060596703018,
+      "rmse": 45.722920621757055
+    },
+    {
+      "window": 21,
+      "origin": "2025-06-02 01:00:00",
+      "forecast_seconds": 0.00658833900524769,
+      "state_update_seconds": 0.012427038003806956,
+      "mae": 43.6365368984324,
+      "rmse": 49.9210353021646
+    },
+    {
+      "window": 22,
+      "origin": "2025-06-09 01:00:00",
+      "forecast_seconds": 0.007074699002259877,
+      "state_update_seconds": 0.012320205001742579,
+      "mae": 30.433636285727786,
+      "rmse": 35.60242165970339
+    },
+    {
+      "window": 23,
+      "origin": "2025-06-16 01:00:00",
+      "forecast_seconds": 0.006795339999371208,
+      "state_update_seconds": 0.012130515999160707,
+      "mae": 11.348705490424,
+      "rmse": 14.376101803610691
+    }
+  ],
+  "mean_weekly_mae": 32.65483321427027,
+  "pooled_rmse": 52.16817378619017,
+  "peak_rss_mib_self": 367.33984375
+}

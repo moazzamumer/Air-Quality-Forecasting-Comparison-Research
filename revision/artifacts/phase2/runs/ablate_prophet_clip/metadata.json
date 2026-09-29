@@ -1,0 +1,255 @@
+{
+  "task": {
+    "id": "ablate_prophet_clip",
+    "stage": "ablate",
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": true,
+    "regime": "frozen",
+    "variant": "clip"
+  },
+  "protocol_signature": "f583830c5cb24b72c0ad5a60dccaf73314a2f8db54480e22a7e81fa9c51fb7c4",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-09-28T04:27:29.913821+00:00",
+  "fit": {
+    "family": "prophet",
+    "candidate": {
+      "seasonality_mode": "additive"
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": true,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "preparation_seconds": 0.018340890994295478,
+    "scaler": {
+      "mean": {
+        "no": 149.81915435415266,
+        "no2": 94.20060219386612,
+        "co": 2405.219825665995,
+        "so2": 136.76429454891425
+      },
+      "scale": {
+        "no": 178.55772570580652,
+        "no2": 52.121850180108666,
+        "co": 2396.2542569964307,
+        "so2": 118.02987084909627
+      }
+    },
+    "input_clip_bounds": {
+      "lower": {
+        "no": 0.0,
+        "no2": 12.34,
+        "co": 260.35,
+        "so2": 14.9
+      },
+      "upper": {
+        "no": 786.78,
+        "no2": 279.67,
+        "co": 11642.46,
+        "so2": 595.09
+      }
+    },
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "observed_training_rows_used": 35736,
+    "prophet_regressor_coefficients": [
+      {
+        "regressor": "no",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -51.587452511,
+        "coef": -51.587452511,
+        "coef_upper": -51.587452511
+      },
+      {
+        "regressor": "no2",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 37.758041284,
+        "coef": 37.758041284,
+        "coef_upper": 37.758041284
+      },
+      {
+        "regressor": "co",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": 271.07209001,
+        "coef": 271.07209001,
+        "coef_upper": 271.07209001
+      },
+      {
+        "regressor": "so2",
+        "regressor_mode": "additive",
+        "center": 0.0,
+        "coef_lower": -27.501609881000004,
+        "coef": -27.501609881000004,
+        "coef_upper": -27.501609881000004
+      }
+    ],
+    "fit_seconds": 20.268983854002727
+  },
+  "completed_weeks": [
+    {
+      "window": 1,
+      "origin": "2025-01-13 01:00:00",
+      "forecast_seconds": 0.012037364002026152,
+      "state_update_seconds": 0.0,
+      "mae": 41.04811689776435,
+      "rmse": 57.36307894251708
+    },
+    {
+      "window": 2,
+      "origin": "2025-01-20 01:00:00",
+      "forecast_seconds": 0.011096783004177269,
+      "state_update_seconds": 0.0,
+      "mae": 60.531709988478596,
+      "rmse": 81.6086788068282
+    },
+    {
+      "window": 3,
+      "origin": "2025-01-27 01:00:00",
+      "forecast_seconds": 0.011013875002390705,
+      "state_update_seconds": 0.0,
+      "mae": 29.10975603097008,
+      "rmse": 38.777770025684596
+    },
+    {
+      "window": 4,
+      "origin": "2025-02-03 01:00:00",
+      "forecast_seconds": 0.010989130001689773,
+      "state_update_seconds": 0.0,
+      "mae": 19.894505676606098,
+      "rmse": 25.660260771680004
+    },
+    {
+      "window": 5,
+      "origin": "2025-02-10 01:00:00",
+      "forecast_seconds": 0.010941939995973371,
+      "state_update_seconds": 0.0,
+      "mae": 40.96391796580441,
+      "rmse": 54.73195929637845
+    },
+    {
+      "window": 6,
+      "origin": "2025-02-17 01:00:00",
+      "forecast_seconds": 0.011416657995141577,
+      "state_update_seconds": 0.0,
+      "mae": 30.18213502665291,
+      "rmse": 39.30267763104229
+    },
+    {
+      "window": 7,
+      "origin": "2025-02-24 01:00:00",
+      "forecast_seconds": 0.011039675002393778,
+      "state_update_seconds": 0.0,
+      "mae": 51.594132114310405,
+      "rmse": 73.29655437786336
+    },
+    {
+      "window": 10,
+      "origin": "2025-03-17 01:00:00",
+      "forecast_seconds": 0.012655393999011721,
+      "state_update_seconds": 0.0,
+      "mae": 50.37385739428811,
+      "rmse": 60.95473195971494
+    },
+    {
+      "window": 16,
+      "origin": "2025-04-28 01:00:00",
+      "forecast_seconds": 0.011205638998944778,
+      "state_update_seconds": 0.0,
+      "mae": 31.74585948306711,
+      "rmse": 41.11040969730859
+    },
+    {
+      "window": 17,
+      "origin": "2025-05-05 01:00:00",
+      "forecast_seconds": 0.010962899003061466,
+      "state_update_seconds": 0.0,
+      "mae": 57.36064468644646,
+      "rmse": 72.06886725768548
+    },
+    {
+      "window": 18,
+      "origin": "2025-05-12 01:00:00",
+      "forecast_seconds": 0.010988387999532279,
+      "state_update_seconds": 0.0,
+      "mae": 68.09836806042836,
+      "rmse": 83.34814794908158
+    },
+    {
+      "window": 19,
+      "origin": "2025-05-19 01:00:00",
+      "forecast_seconds": 0.010904368995397817,
+      "state_update_seconds": 0.0,
+      "mae": 74.07248992929628,
+      "rmse": 100.70231874917116
+    },
+    {
+      "window": 20,
+      "origin": "2025-05-26 01:00:00",
+      "forecast_seconds": 0.011396471003536135,
+      "state_update_seconds": 0.0,
+      "mae": 76.05552213994915,
+      "rmse": 79.5300018700313
+    },
+    {
+      "window": 21,
+      "origin": "2025-06-02 01:00:00",
+      "forecast_seconds": 0.010896202998992521,
+      "state_update_seconds": 0.0,
+      "mae": 62.90543586738026,
+      "rmse": 75.09054438672604
+    },
+    {
+      "window": 22,
+      "origin": "2025-06-09 01:00:00",
+      "forecast_seconds": 0.010895021005126182,
+      "state_update_seconds": 0.0,
+      "mae": 52.708431006771306,
+      "rmse": 64.30818950094499
+    },
+    {
+      "window": 23,
+      "origin": "2025-06-16 01:00:00",
+      "forecast_seconds": 0.010889730998314917,
+      "state_update_seconds": 0.0,
+      "mae": 25.830535747351263,
+      "rmse": 32.0237338743847
+    }
+  ],
+  "completed_utc": "2026-09-28T04:27:50.562740+00:00",
+  "scored_hours": 2688,
+  "mean_weekly_mae": 48.27971362597282,
+  "pooled_rmse": 64.63230025783928,
+  "peak_rss_mib_self": 341.41796875
+}

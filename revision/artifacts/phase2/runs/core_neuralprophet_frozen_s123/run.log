@@ -1,0 +1,22 @@
+Importing plotly failed. Interactive plots will not work.
+Importing plotly failed. Interactive plots will not work.
+WARNING - (py.warnings._showwarnmsg) - /home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/venv/lib/python3.11/site-packages/pytorch_lightning/utilities/data.py:79: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 128. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+WARNING - (py.warnings._showwarnmsg) - /home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/venv/lib/python3.11/site-packages/pytorch_lightning/utilities/data.py:79: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 87. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+
+core_neuralprophet_frozen_s123 week 1 MAE 26.2494
+core_neuralprophet_frozen_s123 week 2 MAE 33.9056
+core_neuralprophet_frozen_s123 week 3 MAE 28.5782
+core_neuralprophet_frozen_s123 week 4 MAE 13.8774
+core_neuralprophet_frozen_s123 week 5 MAE 32.5740
+core_neuralprophet_frozen_s123 week 6 MAE 26.1595
+core_neuralprophet_frozen_s123 week 7 MAE 55.6049
+core_neuralprophet_frozen_s123 week 10 MAE 36.8991
+core_neuralprophet_frozen_s123 week 16 MAE 31.7352
+core_neuralprophet_frozen_s123 week 17 MAE 42.8505
+core_neuralprophet_frozen_s123 week 18 MAE 59.4088
+core_neuralprophet_frozen_s123 week 19 MAE 73.8422
+core_neuralprophet_frozen_s123 week 20 MAE 69.0034
+core_neuralprophet_frozen_s123 week 21 MAE 57.7129
+core_neuralprophet_frozen_s123 week 22 MAE 41.3985
+core_neuralprophet_frozen_s123 week 23 MAE 21.4181
