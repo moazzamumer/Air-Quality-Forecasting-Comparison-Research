@@ -82,11 +82,34 @@ def main():
     assert v['ready'] and v['additional_checks_passed'] and v['complete_tasks']==129
     results=pd.read_csv(REVISION/'artifacts/phase3/performance.csv')
     assert len(results)==27 and results.hours.eq(3624).all()
+    seed_summary=pd.read_csv(REVISION/'artifacts/phase3/neuralprophet_seed_summary.csv').set_index('regime')
+    for regime in ('frozen','walk'):
+        names=[f'neuralprophet_{regime}_s{seed}' for seed in (42,123,2026)]
+        values=results.set_index('stream').loc[names,'pooled_mae']
+        assert int(seed_summary.loc[regime,'seed_count'])==3
+        np.testing.assert_allclose([seed_summary.loc[regime,'pooled_mae_mean'],
+                                    seed_summary.loc[regime,'pooled_mae_sd']],
+                                   [values.mean(),values.std(ddof=1)])
+    components=pd.read_csv(REVISION/'artifacts/phase3/prophet_components.csv')
+    component_summary=pd.read_csv(REVISION/'artifacts/phase3/prophet_component_summary.csv').set_index('component')
+    for name,part in components.groupby('component'):
+        np.testing.assert_allclose(component_summary.loc[name,'hour_weighted_mean_absolute'],
+                                   np.average(part.mean_absolute,weights=part.hours))
+        assert int(component_summary.loc[name,'hours'])==3624
+    timing=pd.read_csv(REVISION/'artifacts/phase3/core_timing.csv')
+    for _,row in timing[timing.fit_timer_boundary=='reused_source'].iterrows():
+        assert row.source_forecast_seconds>0 and row.forecast_seconds==0
+    figures=REVISION/'artifacts/phase3/figures'
+    for stem in ['lead_hour_mae','lead_day_mae','weekly_mae_chronology',
+                 'weekly_mae_distribution','correction_diagnostics','regime_comparison']:
+        assert (figures/(stem+'.pdf')).exists() and (figures/(stem+'.png')).exists()
     evidence=dict(source_sha256=source_sha256,
                   protocol_signature=signature(),validation_signature=validation_signature(),
                   successful_validation_candidates=len(validation),corrected_runs_checked=len(reviewed),
                   pre_origin_scalers_checked=scalers,neural_episode_sample_counts_checked=neural_samples,
                   identical_first_origin_reuses_checked=reused,performance_streams=len(results),
+                  neuralprophet_seed_summary_checked=True,component_hour_weighting_checked=True,
+                  reused_forecast_source_cost_checked=True,figure_pairs_checked=6,
                   primary_origins=23,scored_hours=3624,ready_for_author_evidence_review=True)
     output=REVISION/'artifacts/phase3/postfit_audit.json'
     output.write_text(json.dumps(evidence,indent=2)+'\n')

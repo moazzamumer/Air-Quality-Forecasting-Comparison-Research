@@ -16,7 +16,7 @@ import psutil
 from .protocol import ROOT,REVISION,configuration,load_calendar,split_position,fit_input_scaler,transform_inputs
 from .phase2_models import Fitted,fit_model,advance_frozen_sarimax
 from .phase2_runner import OUT as STRICT,signature as strict_signature
-from .coverage_protocol import OUT,policy,signature,seasonal_past_fill,latest_observed_persistence,windows,forecast,rows,metrics,audit
+from .coverage_protocol import OUT,signature,seasonal_past_fill,latest_observed_persistence,windows,forecast,rows,metrics,audit
 from .phase2_status import markdown_table
 
 
@@ -38,7 +38,7 @@ def tasks():
     return core+ablation
 
 
-def strict_source(task):
+def first_origin_source(task):
     """Only the first walk forecast can share its identical corrected frozen fit."""
     if task['regime']!='walk' or task['week']!=1 or task['variant']!='selected':return None
     frozen=OUT/'runs'/f"core_{task['family']}_frozen_s{task['seed']}"
@@ -51,8 +51,8 @@ def strict_source(task):
     return frozen,meta
 
 
-def sarimax_model(grid,position,task,source=None):
-    """Restore a frozen fit exactly, or estimate additional refits with fixed policy."""
+def sarimax_model(grid,position,task):
+    """Estimate corrected later-origin SARIMAX fits with a fixed numerical policy."""
     from statsmodels.tsa.statespace.sarimax import SARIMAX
     began=time.perf_counter();features=task['features']
     history=grid.iloc[:position][['pm2_5']+features]
@@ -61,16 +61,6 @@ def sarimax_model(grid,position,task,source=None):
     model=SARIMAX(scaled.pm2_5,exog=scaled[features].ffill() if features else None,
         order=tuple(task['candidate']['order']),seasonal_order=tuple(task['candidate']['seasonal_order']),
         enforce_stationarity=False,enforce_invertibility=False)
-    if source is not None:
-        folder,reference=source
-        if reference['fit_origin']!=str(grid.index[position]):raise ValueError('Restore cutoff differs')
-        if features:
-            np.testing.assert_allclose(scaler.mean_,[reference['fit']['scaler']['mean'][f] for f in features],rtol=0,atol=1e-10)
-            np.testing.assert_allclose(scaler.scale_,[reference['fit']['scaler']['scale'][f] for f in features],rtol=0,atol=1e-10)
-        params=np.array([reference['fit']['parameter_estimates'][name] for name in model.param_names])
-        fitted=model.filter(params,low_memory=True,cov_type='none')
-        meta=reference['fit'].copy();meta['state_reconstruction_seconds']=time.perf_counter()-began
-        return Fitted('sarimax',fitted,features,scaler,bounds,position,meta),False,str(folder.relative_to(ROOT))
     reference=json.loads((OUT/'runs/core_sarimax_frozen_s42/metadata.json').read_text())
     if pd.Timestamp(reference['fit_origin'])>grid.index[position]:raise ValueError('Future initialization cutoff')
     initial=[]
@@ -105,7 +95,7 @@ def execute(task):
     folder=OUT/'runs'/task['id'];folder.mkdir(parents=True,exist_ok=True)
     _,grid=load_calendar();table=windows(grid);table=table[table.full_week]
     selected=table[table.window==task['week']] if task['regime']=='walk' else table
-    position=int(selected.iloc[0].position);source=strict_source(task)
+    position=int(selected.iloc[0].position);source=first_origin_source(task)
     meta=dict(task=task,status='running',protocol_signature=signature(),strict_protocol_signature=strict_signature(),
         fit_origin=str(grid.index[position]),started_utc=pd.Timestamp.now(tz='UTC').isoformat())
     mp=folder/'metadata.json';mp.write_text(json.dumps(meta,indent=2))
@@ -118,7 +108,7 @@ def execute(task):
             diag=dict(history_target_filled_hours=0,history_input_filled_cells=0,
                 future_placeholder_cells=0,scored_hours=168,placeholder_invariance_passed=True,
                 placeholder_max_scored_prediction_difference=0.,forecast_seconds=0.,invariance_check_seconds=0.,
-                reused_strict_forecast=True)
+                reused_identical_first_origin=True)
             row=selected.iloc[0];scores=np.ones(168,dtype=bool)
             combined=rows(task,grid,row,frame.base_prediction.to_numpy(),scores,diag)
             meta.update(fit=old['fit'],fit_executed=False,reused_from=str(src.relative_to(ROOT)),
@@ -129,37 +119,25 @@ def execute(task):
                 fitted=fit_model(grid,position,task['family'],task['candidate'],task['features'],
                                  task['clip_inputs'],task['seed'],folder)
                 fit_executed=True;restored=None
-            elif task['family']=='sarimax':fitted,fit_executed,restored=sarimax_model(grid,position,task,source)
+            elif task['family']=='sarimax':fitted,fit_executed,restored=sarimax_model(grid,position,task)
             else:
                 fitted=fit_model(grid,position,task['family'],task['candidate'],task['features'],task['clip_inputs'],task['seed'],folder)
                 fit_executed=True;restored=None
             meta.update(fit=fitted.metadata,fit_executed=fit_executed,restored_parameters_from=restored)
             if task['family']=='sarimax' and not fitted.metadata['optimizer']['converged']:
                 raise RuntimeError('Corrected SARIMAX fit did not converge under the fixed numerical policy')
-            if source is not None:
-                meta.update(strict_reference=str(source[0].relative_to(ROOT)),
-                    strict_reference_metadata_sha256=hashlib.sha256((source[0]/'metadata.json').read_bytes()).hexdigest())
-            parts=[];previous=position;week_meta=[];maximum_reproduction_difference=0.
-            strict_forecasts=pd.read_csv(source[0]/'forecasts.csv') if source is not None else None
+            parts=[];previous=position;week_meta=[]
             for row in selected.itertuples():
                 p=int(row.position);state_seconds=0.
                 if task['family']=='sarimax' and p>previous:
                     state_seconds=advance_frozen_sarimax(fitted,grid,previous,p);previous=p
                 prediction,score,diag,components=forecast(fitted,grid,p)
                 diag['state_update_seconds']=state_seconds
-                if strict_forecasts is not None:
-                    original=strict_forecasts[strict_forecasts.window==int(row.window)]
-                    if not original.empty:
-                        np.testing.assert_allclose(prediction,original.base_prediction.to_numpy(),
-                                                   **policy()['strict_forecast_reproduction_tolerance'])
-                        difference=float(np.max(np.abs(prediction-original.base_prediction.to_numpy())))
-                        maximum_reproduction_difference=max(maximum_reproduction_difference,difference)
-                        diag['strict_reproduction_max_difference']=difference
                 frame=rows(task,grid,row,prediction,score,diag);parts.append(frame)
                 frame.to_csv(folder/f'week_{int(row.window):02d}.csv',index=False)
                 if components is not None:components.to_csv(folder/f'components_w{int(row.window):02d}.csv',index=False)
                 week_meta.append(dict(window=int(row.window),**diag))
-                meta.update(completed_weeks=week_meta,strict_reproduction_max_difference=maximum_reproduction_difference)
+                meta.update(completed_weeks=week_meta)
                 mp.write_text(json.dumps(meta,indent=2))
                 print(task['id'],'week',row.window,'scored',diag['scored_hours'],flush=True)
             combined=pd.concat(parts,ignore_index=True)
@@ -272,10 +250,6 @@ def verify_and_report():
             np.testing.assert_allclose(frame.base_prediction,original.base_prediction,rtol=0,atol=1e-10)
             digest=hashlib.sha256((ROOT/meta['reused_from']/'metadata.json').read_bytes()).hexdigest()
             if digest!=meta['original_source_metadata_sha256']:errors.append(task['id']+': reused source changed')
-        if meta.get('strict_reference'):
-            original=pd.read_csv(ROOT/meta['strict_reference']/'forecasts.csv')
-            current=frame[frame.window.isin(original.window)].sort_values(['window','lead_hour'])
-            np.testing.assert_allclose(current.base_prediction,original.base_prediction,**policy()['strict_forecast_reproduction_tolerance'])
         records.append(dict(run_id=task['id'],family=task['family'],regime=task['regime'],variant=task['variant'],seed=task['seed'],
                             fit_executed=meta['fit_executed'],**metrics(frame)))
     baselines=list((OUT/'baselines').glob('*.csv'));corrections=list((OUT/'corrections').glob('*_alpha_*.csv'))

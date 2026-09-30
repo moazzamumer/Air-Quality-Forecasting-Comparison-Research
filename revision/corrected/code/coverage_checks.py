@@ -75,7 +75,7 @@ def main():
             if task['family']=='neuralprophet':
                 assert diag['history_target_filled_hours']==int(row.missing_context_target_hours)
             else:assert diag['history_target_filled_hours']==0
-            if not diag.get('reused_strict_forecast'):
+            if not diag.get('reused_identical_first_origin'):
                 h=grid.iloc[int(row.position)-168:int(row.position)][task['features']]
                 assert diag['history_input_filled_cells']==int(h.isna().sum().sum()) if task['family']=='neuralprophet' else diag['history_input_filled_cells']==0
                 assert diag['future_placeholder_cells']==int(grid.iloc[int(row.position):int(row.position)+168][task['features']].isna().sum().sum())
