@@ -13,6 +13,11 @@ found no additional definite leakage defect in the inspected paths; it explains
 the PP information boundary, repeated test-period exposure and provenance limits.
 The invalid-input blocker remains open.
 
+**Correction in progress:** [the versioned workspace](corrected/README.md) now
+applies the agreed input rule and has passed its input/coverage audit. Corrected
+validation and model fitting are separate from the preserved earlier artifacts.
+The manuscript gate remains open until those results are reviewed with Moazzam.
+
 All revision work belongs here. The original `main.ipynb`, raw/preprocessed CSVs,
 extraction notebook, supporting scripts, and submitted manuscript are preserved.
 Their SHA-256 baseline is in `artifacts/phase1/original_manifest.json`.

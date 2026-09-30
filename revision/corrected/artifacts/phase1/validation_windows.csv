@@ -1,0 +1,5 @@
+window,position,origin,last_target,calendar_hours,observed_target_hours,missing_context_hours,missing_future_hours,eligible,exclusion
+1,35568,2024-12-16 01:00:00,2024-12-23 00:00:00,168,168,0,0,True,
+2,35736,2024-12-23 01:00:00,2024-12-30 00:00:00,168,168,0,0,True,
+3,35904,2024-12-30 01:00:00,2025-01-06 00:00:00,168,168,0,0,True,
+4,36072,2025-01-06 01:00:00,2025-01-13 00:00:00,168,168,0,0,True,

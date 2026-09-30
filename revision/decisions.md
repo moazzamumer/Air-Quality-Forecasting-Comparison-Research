@@ -78,7 +78,7 @@ This is an author-readable decision record, not a list of every implementation d
 
 ## D10 — Correct invalid pollutant input codes before accepting final results
 
-**Proposed on 2026-09-30; NOT applied.** Replace only the four identified `-9999` pollutant input cells with missing values in a new working data view, preserving the raw CSV bytes and observed PM2.5. Retain legitimate negative weather values. Follow the existing model-specific missing-input policies, repeat training-only feature analysis and validation, then rerun affected models and downstream analyses under a new version/signature.
+**2026-09-30 implementation update: applied in the versioned working calendar; model validation and refitting are underway.** The former paragraph records the decision as originally proposed. Version `pollutant-invalid-input-v2` now replaces only the four identified `-9999` pollutant input cells with missing values in memory, preserving the raw CSV bytes and observed PM2.5. It rejects any other negative pollutant concentrations and retains legitimate negative weather values. The corrected input audit and training-only feature analysis passed; final model/analysis results remain pending. See [the locked v2 protocol](corrected/PROTOCOL.md) and [the input audit](corrected/artifacts/phase1/input_audit.json).
 
 **Reason:** two invalid NO₂ values enter every primary input-based model and validation candidate. Two more invalid values affect broad-input work. They are not ordinary high-pollution outliers. A diagnostic in-memory correction changes initial selected NO₂ scale from 93.3192 to 54.8353 and changes NeuralProphet's training-window construction. We cannot infer harmlessness from the small number of cells or merely rescore existing predictions.
 

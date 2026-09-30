@@ -1,0 +1,12 @@
+{
+  "version": "pollutant-invalid-input-v2",
+  "source_sha256": "77e164b3b74cc75adb7293803f69ba090b96ac7eaf1e5ddbd6179be8d95e3e64",
+  "corrected_cells": 4,
+  "training_target_unchanged": true,
+  "test_scored_hours_unchanged": 3624,
+  "test_origins_unchanged": 23,
+  "source_csv_preserved": true,
+  "input_changes_file": "invalid_input_changes.csv",
+  "scaling_file": "scaling_comparison.csv",
+  "sample_file": "neural_sample_comparison.csv"
+}

@@ -1,0 +1,89 @@
+{
+  "created_utc": "2026-09-30T15:10:29.939289+00:00",
+  "files": {
+    "main.ipynb": {
+      "sha256": "6535122588624fbb822155ca932d10b21318475f5dbc2a531ed837cd7a2b7e34",
+      "bytes": 3534249
+    },
+    "weather_data_extraction.ipynb": {
+      "sha256": "195f9e9657f4509ea18956b53c875ab561251c93eb04fcd8a8cd52200d11fe7f",
+      "bytes": 30163
+    },
+    "data/beijing.csv": {
+      "sha256": "77e164b3b74cc75adb7293803f69ba090b96ac7eaf1e5ddbd6179be8d95e3e64",
+      "bytes": 5150267
+    },
+    "data/beijing_preprocessed_unscaled.csv": {
+      "sha256": "9fdc9e2c69292861b6f284a8f36c30caf87b644a1af0f275f0f5d03c8d12ad14",
+      "bytes": 2924845
+    },
+    "regime1_all_models.py": {
+      "sha256": "3c32fba1337a6bcd444075dca9e59353c779ca8d99acb13baa19324325cc5244",
+      "bytes": 10838
+    },
+    "regime1_enhanced.py": {
+      "sha256": "a024560494cc5991507d3830446917067b8136327f55bc4ea60c959d08334002",
+      "bytes": 17438
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig1.png": {
+      "sha256": "6a7990045fd93875540980e525c80813d2962a69b00690e8983cfa06ccb74a1a",
+      "bytes": 7690924
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig2.png": {
+      "sha256": "9fe8d92da582ded2c81d218792a7e89c7768518acabb7d33c8acf907989dac84",
+      "bytes": 497370
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig3.png": {
+      "sha256": "a620efabb4921d8585ad62b1dbbd4bd3afac16f667be741a07821e0f569e3f8a",
+      "bytes": 124900
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig4.png": {
+      "sha256": "e0bce82c69eafaeb1c478bbce967ff60c120b6de84cb945d610840bc86d96d98",
+      "bytes": 686727
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig5.png": {
+      "sha256": "dadcc7471f294a793c148acf66b462833b9b5c528c0989d8cea8d9773714f43e",
+      "bytes": 505713
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig6.png": {
+      "sha256": "e473234a58ba7625d485163d66a2c44f883305cb01d9a25cd8f558ea6db2502e",
+      "bytes": 490132
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig7.png": {
+      "sha256": "ce77c3b0d2530981dc6cb6feb7888fc94a808d68725f04dab3ba5c57819b16dc",
+      "bytes": 814547
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig8.png": {
+      "sha256": "7c890d12df7518e95aa8dd6b0e855b417c2e29412f78e44025415630e949d756",
+      "bytes": 553021
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/Fig9.png": {
+      "sha256": "1f8f03b26b3b46e07bb1ab9e77a675186afa10d6a574c7d43ddbc5c47029dc94",
+      "bytes": 528954
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/manuscript.bbl": {
+      "sha256": "f66132035607fe6c9f008cb13138fa38b22db375873c17ca85a302eff1b588c1",
+      "bytes": 9535
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/manuscript.pdf": {
+      "sha256": "1c21314f7baf513afbca437d0959ee7b78dbac0af62351b410c6c22905473d1e",
+      "bytes": 10912214
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/manuscript.tex": {
+      "sha256": "696b1a89d70a76a42f8a82c4435011efe598425f0796a2bc930598aa1150c869",
+      "bytes": 60174
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/references.bib": {
+      "sha256": "b960594251f130fb3b69abcfc7d494c25dbb4afb861b69ba6062b57e2e865cf0",
+      "bytes": 14057
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/sn-basic.bst": {
+      "sha256": "4b368414cc5593169907933b417aacfdb0ce905866a39bdf55d21aad65e9d46c",
+      "bytes": 35515
+    },
+    "PM_Forecasting_Environmental_Modeling_Assessment_Submission/sn-jnl.cls": {
+      "sha256": "36d0c3273a59d48dc6a9c7b080dfa1ec50dc10229d8751568d1f2e490ffa5ecc",
+      "bytes": 55857
+    }
+  }
+}

@@ -1,0 +1,7 @@
+boundary,group,original_samples,corrected_samples,original_episodes,corrected_episodes
+validation,selected,29751,29319,15,15
+validation,broad,29751,28832,15,16
+validation,no_inputs,29751,29751,15,15
+initial_test,selected,30423,29991,15,15
+initial_test,broad,30423,29504,15,16
+initial_test,no_inputs,30423,30423,15,15
