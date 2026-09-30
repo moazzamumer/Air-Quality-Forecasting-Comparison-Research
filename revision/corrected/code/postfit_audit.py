@@ -13,6 +13,10 @@ from .phase2_runner import load_tasks, signature as validation_signature
 
 def main():
     cfg=configuration();_,grid=load_calendar();cutoff=split_position(grid)
+    source_sha256=hashlib.sha256((ROOT/cfg['source']).read_bytes()).hexdigest()
+    baseline_sha256=json.loads((ROOT/'revision/artifacts/phase1/original_manifest.json').read_text())['files'][cfg['source']]['sha256']
+    input_sha256=json.loads((REVISION/'artifacts/phase1/input_audit.json').read_text())['source_sha256']
+    assert source_sha256==baseline_sha256==input_sha256
     selection=json.loads((REVISION/'artifacts/phase2/selection.json').read_text())
     assert selection['protocol_signature']==validation_signature()
     validation=[]
@@ -78,7 +82,7 @@ def main():
     assert v['ready'] and v['additional_checks_passed'] and v['complete_tasks']==129
     results=pd.read_csv(REVISION/'artifacts/phase3/performance.csv')
     assert len(results)==27 and results.hours.eq(3624).all()
-    evidence=dict(source_sha256=hashlib.sha256((ROOT/cfg['source']).read_bytes()).hexdigest(),
+    evidence=dict(source_sha256=source_sha256,
                   protocol_signature=signature(),validation_signature=validation_signature(),
                   successful_validation_candidates=len(validation),corrected_runs_checked=len(reviewed),
                   pre_origin_scalers_checked=scalers,neural_episode_sample_counts_checked=neural_samples,

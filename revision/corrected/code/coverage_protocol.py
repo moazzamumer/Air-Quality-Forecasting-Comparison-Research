@@ -41,6 +41,13 @@ def seasonal_past_fill(history,period=168):
     return result
 
 
+def latest_observed_persistence(history,horizon=168):
+    """Repeat the last genuinely observed historical target at a forecast origin."""
+    observed=history.pm2_5.dropna()
+    if observed.empty:raise ValueError('Persistence needs an original observed historical target')
+    return np.repeat(float(observed.iloc[-1]),horizon)
+
+
 def windows(grid):
     cfg=configuration();start=split_position(grid);records=[]
     broad=[cfg['target']]+cfg['broad_features']

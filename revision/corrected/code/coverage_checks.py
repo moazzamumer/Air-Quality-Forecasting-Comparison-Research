@@ -5,14 +5,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from .protocol import ROOT,REVISION,configuration,load_calendar
-from .coverage_protocol import OUT,windows,seasonal_past_fill,metrics,signature
+from .coverage_protocol import OUT,windows,seasonal_past_fill,latest_observed_persistence,metrics,signature
 from .coverage_runner import tasks,verify_and_report
-
-
-def latest_observed_persistence(history,horizon=168):
-    observed=history.pm2_5.dropna()
-    if observed.empty:raise ValueError('Persistence needs an original observed historical target')
-    return np.repeat(float(observed.iloc[-1]),horizon)
 
 
 def enforce_baseline_definitions():

@@ -16,7 +16,7 @@ import psutil
 from .protocol import ROOT,REVISION,configuration,load_calendar,split_position,fit_input_scaler,transform_inputs
 from .phase2_models import Fitted,fit_model,advance_frozen_sarimax
 from .phase2_runner import OUT as STRICT,signature as strict_signature
-from .coverage_protocol import OUT,policy,signature,seasonal_past_fill,windows,forecast,rows,metrics,audit
+from .coverage_protocol import OUT,policy,signature,seasonal_past_fill,latest_observed_persistence,windows,forecast,rows,metrics,audit
 from .phase2_status import markdown_table
 
 
@@ -217,7 +217,7 @@ def baselines_and_corrections():
         parts=[]
         for row in table[table.full_week].itertuples():
             p=int(row.position);history=seasonal_past_fill(grid.iloc[:p][['pm2_5']])
-            values=(np.repeat(float(grid.iloc[:p].pm2_5.dropna().iloc[-1]),168) if cycle==1
+            values=(latest_observed_persistence(grid.iloc[:p][['pm2_5']]) if cycle==1
                     else np.resize(history.pm2_5.iloc[-cycle:].to_numpy(),168))
             mask=grid.iloc[p:p+168][['pm2_5']+cfg['broad_features']].notna().all(axis=1).to_numpy()
             task=dict(id=name,family=name,regime='baseline',seed=0)
