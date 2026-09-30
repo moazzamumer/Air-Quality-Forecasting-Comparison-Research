@@ -1,0 +1,15 @@
+{
+  "reviewed_commit": "8edeb86cd15253cecd00e46f2d9ad5dca529abfd",
+  "raw_data_sha256": "77e164b3b74cc75adb7293803f69ba090b96ac7eaf1e5ddbd6179be8d95e3e64",
+  "audit_code_sha256": "7fe5077a22c4db20a8fa20aa99d70b63af08d6e3c4f1c2de7a6b9a860bfba457",
+  "fitted_metadata_records_checked": 137,
+  "input_scalers_recomputed_from_pre_origin_history": 134,
+  "neural_target_normalizations_and_sample_counts_checked": 77,
+  "recorded_warm_start_cutoffs_checked": 7,
+  "successful_validation_candidates_recomputed": 7,
+  "selection_matches_training_only_validation": true,
+  "all_final_tasks_match_selection": true,
+  "performance_streams_recomputed": 27,
+  "conclusion": "No new leakage defect found in checked paths; invalid-input blocker and PP/provenance limitations remain.",
+  "scope": "Saved evidence and source audit; no new research model fits or independent upstream-data authentication."
+}

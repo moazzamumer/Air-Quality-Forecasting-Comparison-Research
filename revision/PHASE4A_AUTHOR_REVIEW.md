@@ -4,6 +4,8 @@
 
 **Purpose.** Review the revised study at a high level and check that every reviewer request has a concrete answer path. This is an author decision checkpoint. The submitted `PM_Forecasting_Environmental_Modeling_Assessment_Submission/manuscript.tex` and PDF remain untouched; no working manuscript copy is created in Phase 4A.
 
+**Lifecycle follow-up.** The [forecasting-methodology review](reports/PHASE4A_LIFECYCLE_REVIEW.md) checked preprocessing, validation, information boundaries and saved metrics. No additional definite leakage violation was found in the inspected paths. It retains the input-validity blocker and explicitly qualifies PP, prior test-period exposure, source provenance and inferential claims.
+
 **Current evidence.** The primary comparison is 23 consecutive weekly origins with 3,624 observed scoring hours (19 complete and four partial weeks). The original 16-week / 2,688-hour strict-availability experiment is a secondary sensitivity. All three families were evaluated in frozen and weekly-refit regimes. [The Phase 3 results](reports/PHASE3_RESULTS.md), [executed notebook](main_revision.ipynb), [Phase 3 findings ledger](reports/PHASE3_FINDINGS_LEDGER.md), and [full reviewer tracker](REVIEWER_TRACKER.md) are the review sources. The notebook presents results; model fits and provenance live in `artifacts/coverage_reconsideration/runs/` and `artifacts/phase2/runs/`.
 
 ## What to review first

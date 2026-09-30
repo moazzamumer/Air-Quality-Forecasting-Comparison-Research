@@ -8,6 +8,11 @@ model fitting to be repeated. Phase 4B is on hold. Start with [flow.md](flow.md)
 [decisions.md](decisions.md), and the [critical review](reports/PHASE4A_CRITICAL_REVIEW.md).
 The prior experiment files are preserved as pre-correction evidence.
 
+The follow-up [lifecycle and leakage review](reports/PHASE4A_LIFECYCLE_REVIEW.md)
+found no additional definite leakage defect in the inspected paths; it explains
+the PP information boundary, repeated test-period exposure and provenance limits.
+The invalid-input blocker remains open.
+
 All revision work belongs here. The original `main.ipynb`, raw/preprocessed CSVs,
 extraction notebook, supporting scripts, and submitted manuscript are preserved.
 Their SHA-256 baseline is in `artifacts/phase1/original_manifest.json`.
