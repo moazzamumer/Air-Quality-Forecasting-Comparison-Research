@@ -1,5 +1,7 @@
 # Phase 3 findings linked to reviewer points
 
+**Superseding review notice, 2026-09-30:** this ledger records the pre-correction Phase 3 analysis. The [Phase 4A critical review](PHASE4A_CRITICAL_REVIEW.md) found invalid pollutant inputs in training. Affected numerical conclusions need corrected validation/fitting and regeneration before manuscript use. Existing artifacts are preserved; Phase 4B is on hold.
+
 Status: Analysis complete; Phase 4 manuscript text and point-by-point responses pending. Numerical details and limitations are in [the generated results report](PHASE3_RESULTS.md). CSV/PDF evidence is under `../artifacts/phase3/`. The primary result uses the same 23 calendar origins and 3,624 observed target hours for every model; the strict 16-week analysis remains a separate sensitivity.
 
 | Reviewer point | Evidence now available | Implication for manuscript/response |

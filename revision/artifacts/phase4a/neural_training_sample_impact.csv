@@ -1,0 +1,7 @@
+boundary,variant,current_samples,candidate_samples,difference,current_retained_episodes,candidate_retained_episodes
+validation_fit,selected,29751,29319,-432,15,15
+validation_fit,broad,29751,28832,-919,15,16
+validation_fit,no_inputs,29751,29751,0,15,15
+initial_test_fit,selected,30423,29991,-432,15,15
+initial_test_fit,broad,30423,29504,-919,15,16
+initial_test_fit,no_inputs,30423,30423,0,15,15

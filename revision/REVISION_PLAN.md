@@ -1,5 +1,7 @@
 # Scientific Reports revision plan
 
+**Current gate, 2026-09-30: Phase 4B on hold.** Phase 4A's critical self-review found four invalid `-9999` pollutant inputs in training, including two primary NO₂ values. Historical Phase 2/3 execution is complete, but model selection, affected fits and numerical findings are provisional. The proposed correction preserves the 23-origin / 3,624-hour primary test mask. Read `reports/PHASE4A_CRITICAL_REVIEW.md` for the required correction and the runtime, baseline-finalization and reporting follow-ups. No repair fits or manuscript edits have been made. `flow.md` explains the current pipeline; `decisions.md` distinguishes applied choices from the proposed repair.
+
 Status: Phase 3 analysis completed from the verified 23-origin / 3,624-observed-hour primary evaluation; 19 weeks are complete and four partial. The 16-week strict experiment remains a sensitivity reference. All 129 broader tasks, three baselines and 35 correction streams pass verification. Phase 3 regenerates matched tables, five publication PDF/PNG figures, paired block-bootstrap sensitivity, high-concentration/lead-time diagnostics, interpretability and resource accounting from saved forecasts. The result and reviewer-linked finding records are `reports/PHASE3_RESULTS.md` and `reports/PHASE3_FINDINGS_LEDGER.md`. Phase 4A author review is prepared in `PHASE4A_AUTHOR_REVIEW.md`; no manuscript copy or edits have been made. Phase 4B writing follows the author's review.
 
 First author: Moazzam Umer Gondal. Corresponding author: Asma Ahmad Farhan.
@@ -122,8 +124,7 @@ no reviewer comment is closed solely by this checkpoint. Record concerns and
 any decisions in the tracker. Do not copy or edit the submitted manuscript in
 Phase 4A.
 
-Exit evidence: author-reviewed treatment map and agreed scientific/presentation
-scope. The original manuscript remains unchanged.
+Exit evidence: resolve the critical review's invalid-input finding and reporting/reproduction follow-ups, then obtain the author-reviewed treatment map and agreed scientific/presentation scope. Existing run-completeness tests alone do not clear numerical claims. The original manuscript remains unchanged.
 
 ### Phase 4B — Create a working manuscript copy and write the response
 
@@ -167,4 +168,4 @@ Phase 1 resolutions: strict availability retains 16 matched weeks (2,688 hours);
 - Statsmodels documents state-space forecasting and updating fitted results without parameter refitting: [Forecasting in statsmodels](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_forecasting.html).
 - Zenodo documents versioned software archiving through GitHub: [GitHub and software](https://help.zenodo.org/docs/github/).
 
-Phase 1 feasibility checks, Phase 2 revised comparison experiments, the coverage reconsideration, and Phase 3 publication analysis are complete. All 21 fingerprinted original files remain unchanged. The new work is isolated below `revision/`. Phase 4 can now rewrite the manuscript and point-by-point response against the documented findings.
+Phase 1 feasibility checks, Phase 2 comparison execution, the coverage reconsideration and Phase 3 analysis were completed and preserved. All 21 fingerprinted original files remain unchanged. Phase 4A subsequently identified invalid training inputs, so quantitative results are provisional and affected work must be corrected before Phase 4B. New work remains isolated below `revision/`.

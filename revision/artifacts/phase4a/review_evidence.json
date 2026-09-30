@@ -1,0 +1,67 @@
+{
+  "reviewed_commit": "39799ddd95c9b34c20188f75a9ab6624d6879a26",
+  "mode": "read-only audit; proposed cleaning is in-memory only",
+  "input_sha256": {
+    "data/beijing.csv": "77e164b3b74cc75adb7293803f69ba090b96ac7eaf1e5ddbd6179be8d95e3e64",
+    "revision/config/protocol.json": "20ae513a286b70699e85a0bf62cd3c43c7d37cd7290c92670740864e3ab5cd24",
+    "revision/config/coverage_reconsideration.json": "ad52e9b3217a1d06693a60899efe5c28e75ef0f5c346e84751ad43840676fe93",
+    "revision/code/protocol.py": "6edd15d285d157ee20bb1f41a789dbda7ce3830c487afcafdf9f78a480b886d9",
+    "revision/code/coverage_runner.py": "7eacca5a77ea1e040e3c839b1b88e674e5605c2e5ec9a9c912cf5bbe7d6a8221",
+    "revision/code/phase3_analysis.py": "b8bb3d9edf702f00bc4e0bc233f872b7acbecd0d00222a1770982754bde1e051",
+    "revision/artifacts/phase2/selection.json": "e08ac62cedb108a7e3da667dcaa0264072c4fb67eefe72fd8a25292283b4950f",
+    "revision/artifacts/coverage_reconsideration/verification.json": "988ed7237b6e78fa8fc370ee59554befb0091622d5c189c756db2e76d1041bd3",
+    "revision/artifacts/coverage_reconsideration/baselines/definitions.json": "fcf925ee04ddee36c4ed4768beeb8e3b3db5c9e80ef10e262941f839b6913427"
+  },
+  "invalid_pollutant_cells": [
+    {
+      "timestamp": "2024-02-07 23:00:00",
+      "feature": "pm10",
+      "value": -9999.0,
+      "partition": "training",
+      "selected_input": false
+    },
+    {
+      "timestamp": "2024-08-05 03:00:00",
+      "feature": "no2",
+      "value": -9999.0,
+      "partition": "training",
+      "selected_input": true
+    },
+    {
+      "timestamp": "2024-08-11 00:00:00",
+      "feature": "no2",
+      "value": -9999.0,
+      "partition": "training",
+      "selected_input": true
+    },
+    {
+      "timestamp": "2023-07-26 07:00:00",
+      "feature": "o3",
+      "value": -9999.0,
+      "partition": "training",
+      "selected_input": false
+    }
+  ],
+  "invalid_cells": 4,
+  "no_invalid_test_cells": true,
+  "candidate_test_mask_unchanged": true,
+  "scored_hours": 3624,
+  "completed_run_tasks": 129,
+  "same_calendar_target_mask_and_fit_cutoffs_checked": true,
+  "causal_correction_streams_checked": 35,
+  "last_genuine_observation_baseline_checked": true,
+  "original_hashes_checked": 21,
+  "training_validation_provisional": true,
+  "manuscript_numbers_provisional": true,
+  "baseline_finalization": {
+    "week": 12,
+    "standalone_finish_value": 14.75,
+    "saved_checked_value": 257.0
+  },
+  "reused_forecast_timing_example": {
+    "run": "core_prophet_walk_w02_s42",
+    "broader_forecast_seconds": 0.0,
+    "original_forecast_seconds": 0.012255647998244967
+  },
+  "verdict": "Hold Phase 4B scientific claims: correct invalid training inputs and assess/refit affected models first."
+}

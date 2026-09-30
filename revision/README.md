@@ -1,5 +1,13 @@
 # Revision workspace
 
+**Review update (2026-09-30): existing numerical results are provisional.** A
+critical review found four invalid `-9999` pollutant inputs in training, including
+two NO₂ values used by primary models. The proposed input correction leaves the
+23-origin / 3,624-hour test mask unchanged but requires affected validation and
+model fitting to be repeated. Phase 4B is on hold. Start with [flow.md](flow.md),
+[decisions.md](decisions.md), and the [critical review](reports/PHASE4A_CRITICAL_REVIEW.md).
+The prior experiment files are preserved as pre-correction evidence.
+
 All revision work belongs here. The original `main.ipynb`, raw/preprocessed CSVs,
 extraction notebook, supporting scripts, and submitted manuscript are preserved.
 Their SHA-256 baseline is in `artifacts/phase1/original_manifest.json`.
