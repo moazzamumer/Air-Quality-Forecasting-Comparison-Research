@@ -167,7 +167,8 @@ def supervise(only=None):
         folder=OUT/'runs'/task['id'];mp=folder/'metadata.json';csv=folder/'forecasts.csv'
         if mp.exists() and csv.exists():
             old=json.loads(mp.read_text())
-            if old['status']=='completed' and old['protocol_signature']==signature():continue
+            if old['status']=='completed' and old['protocol_signature']==signature() and old['task']==task:
+                continue
         folder.mkdir(parents=True,exist_ok=True);env=os.environ.copy()
         for key in ['OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','TF_NUM_INTRAOP_THREADS','TF_NUM_INTEROP_THREADS']:env[key]='2'
         env.update(MPLCONFIGDIR='/tmp/weather-revision-matplotlib',CUDA_VISIBLE_DEVICES='',TF_CPP_MIN_LOG_LEVEL='3')
@@ -238,6 +239,7 @@ def verify_and_report():
         if not mp.exists():pending.append(task['id']);continue
         meta=json.loads(mp.read_text())
         if meta['status']!='completed':pending.append(task['id']);continue
+        if meta['task']!=task:errors.append(task['id']+': task/selected settings differ')
         if meta['protocol_signature']!=signature():errors.append(task['id']+': signature differs')
         frame=pd.read_csv(csv,parse_dates=['forecast_origin','target_timestamp'])
         exp=expected[expected.window==task['week']] if task['regime']=='walk' else expected
