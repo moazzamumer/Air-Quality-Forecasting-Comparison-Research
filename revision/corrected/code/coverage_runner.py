@@ -21,7 +21,10 @@ from .phase2_status import markdown_table
 
 
 def tasks():
-    cfg=configuration();selection=json.loads((STRICT/'selection.json').read_text())['selected']
+    cfg=configuration();record=json.loads((STRICT/'selection.json').read_text())
+    if record['protocol_signature']!=strict_signature():
+        raise ValueError('Corrected validation selection has a stale protocol signature')
+    selection=record['selected']
     core=[dict(id=f'core_{f}_frozen_s{s}',stage='core',family=f,regime='frozen',seed=s,
                features=cfg['selected_features'],clip_inputs=False,variant='selected',candidate=selection[f])
           for f in selection for s in (cfg['seeds'] if f=='neuralprophet' else [42])]
@@ -131,6 +134,8 @@ def execute(task):
                 fitted=fit_model(grid,position,task['family'],task['candidate'],task['features'],task['clip_inputs'],task['seed'],folder)
                 fit_executed=True;restored=None
             meta.update(fit=fitted.metadata,fit_executed=fit_executed,restored_parameters_from=restored)
+            if task['family']=='sarimax' and not fitted.metadata['optimizer']['converged']:
+                raise RuntimeError('Corrected SARIMAX fit did not converge under the fixed numerical policy')
             if source is not None:
                 meta.update(strict_reference=str(source[0].relative_to(ROOT)),
                     strict_reference_metadata_sha256=hashlib.sha256((source[0]/'metadata.json').read_bytes()).hexdigest())

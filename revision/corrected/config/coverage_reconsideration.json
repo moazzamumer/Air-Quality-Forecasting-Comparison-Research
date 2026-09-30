@@ -1,7 +1,7 @@
 {
-  "version": "coverage-v1-observed-hours",
+  "version": "coverage-v2-observed-hours-invalid-pollutants",
   "purpose": "Retain all 23 full weekly calendar origins before Phase 3; strict 16-week evaluation becomes a sensitivity reference",
-  "source_protocol": "phase1-v1; training split, model selection, model families, fitting observations and preprocessing unchanged",
+  "source_protocol": "pollutant-invalid-input-v2; four invalid training pollutant input cells become missing in the versioned working calendar; target/schedule/score mask unchanged",
   "scheduled_weeks": 23,
   "scheduled_hours": 3864,
   "expected_observed_scoring_hours": 3624,
@@ -9,11 +9,17 @@
   "score_mask": "original PM2.5 and every broad-set PP covariate observed at that hour; identical for all families, regimes and sensitivities",
   "historical_gap_policy": "Inference context only: replace a missing historical value with the value 168 hours earlier, recursively using past values; fallback to latest prior available value only where no seasonal antecedent exists. Preserve every observed value. Never fill fitting targets or scoring targets.",
   "future_gap_policy": "Unavailable-input hours are excluded from scoring. Computational placeholders are the training mean in raw input units; perturb to mean plus ten training standard deviations and require scored forecasts unchanged before accepting each affected origin. Mask unavailable-input predictions in the stored stream.",
-  "placeholder_tolerance": {"atol": 0.0001, "rtol": 0.000001},
-  "strict_forecast_reproduction_tolerance": {"atol": 0.001, "rtol": 0.000001},
+  "placeholder_tolerance": {
+    "atol": 0.0001,
+    "rtol": 1e-06
+  },
+  "strict_forecast_reproduction_tolerance": {
+    "atol": 0.001,
+    "rtol": 1e-06
+  },
   "correction": "Recompute on all 23 origins. Apply bias before outcomes are available; update from the mean base residual of observed scored hours in that week. Save scored-hour counts. Alpha remains predefined; no test selection.",
   "additional_sarimax_solver": "Established Phase 2 recovery policy: initialize from earlier converged initial selected fit, adjust slope scales, optimize same likelihood using complex-step L-BFGS-B, maxiter 200/maxls 100 and default tolerances. Accept finite converged fits only. Save source/cutoff and resources.",
-  "reuse": "Reuse existing walk-forward fits/forecasts for the 16 complete-context/full-observation weeks with unchanged cutoffs. Reconstruct frozen SARIMAX from saved parameters and training filter. Refit frozen Prophet/NeuralProphet with identical seed/config/training, require reproduction on the strict 16 weeks before accepting the broader stream.",
+  "reuse": "Only an identical first-origin corrected frozen fit/forecast may be reused for its corresponding week-1 walk task, with task/signature/source checks. No pre-correction model forecast is reused.",
   "partial_week_metrics": "Report pooled hourly MAE/RMSE separately from unweighted mean weekly metrics and SD; variable scored-hour counts prevent equating pooled MAE with mean weekly MAE.",
-  "limitations": "Historical context filling is an assumption, including up to 120 missing context hours. Partially observed weeks do not establish full-week accuracy. Missingness can be informative. This protocol preserves the corrected calendar schedule, not the original irregular 168-row chunks."
+  "limitations": "Historical context filling is an assumption, including up to 120 missing context hours. Four partial weeks do not establish full-week accuracy. Missingness may be informative. This is revised retrospective Perfect Prognosis evaluation."
 }
