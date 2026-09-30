@@ -92,7 +92,7 @@ def main():
                 source_meta=json.loads((trace_folder/'metadata.json').read_text())
                 trace_folder=trace_folder.parent/source_meta['reused_from_run']
             trace=pd.read_csv(trace_folder/'training_trace.csv')
-            assert len(trace)==50 and np.isfinite(trace.Loss).all()
+            assert len(trace)==task['candidate']['epochs'] and np.isfinite(trace.Loss).all()
     for name,cycle in [('persistence',1),('daily_persistence',24),('weekly_persistence',168)]:
         frame=check_frame(pd.read_csv(OUT/'baselines'/f'{name}.csv'),grid,range(1,24))
         for row in full.itertuples():

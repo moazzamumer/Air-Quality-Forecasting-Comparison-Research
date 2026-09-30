@@ -252,7 +252,8 @@ def verify_and_report():
         if not np.isfinite(frame.loc[frame.score_eligible,'base_prediction']).all():errors.append(task['id']+': nonfinite scored forecast')
         if meta['fit_origin']!=str(frame.forecast_origin.min()):errors.append(task['id']+': training cutoff differs')
         if task['family']=='sarimax' and not meta['fit']['optimizer']['converged']:errors.append(task['id']+': unconverged fit')
-        if task['family']=='neuralprophet' and meta['fit']['epochs_completed']!=50:errors.append(task['id']+': epochs differ')
+        if task['family']=='neuralprophet' and meta['fit']['epochs_completed']!=task['candidate']['epochs']:
+            errors.append(task['id']+': epochs differ from corrected validation selection')
         for week in meta['completed_weeks']:
             if not week['placeholder_invariance_passed']:errors.append(task['id']+': failed placeholder invariance')
         if meta.get('reused_from'):
