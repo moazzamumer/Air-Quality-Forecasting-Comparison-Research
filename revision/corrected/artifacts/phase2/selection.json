@@ -1,0 +1,120 @@
+{
+  "status": "selected_from_training_only_validation",
+  "selection_rule": "mean weekly MAE, pooled RMSE tie break",
+  "selected": {
+    "sarimax": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "prophet": {
+      "seasonality_mode": "additive"
+    },
+    "neuralprophet": {
+      "epochs": 50
+    }
+  },
+  "candidates": {
+    "sarimax": [
+      {
+        "mean_weekly_mae": 14.991456517525354,
+        "pooled_rmse": 21.858607112865293,
+        "run_id": "validate_sarimax_0",
+        "candidate": {
+          "order": [
+            1,
+            0,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            24
+          ]
+        }
+      },
+      {
+        "mean_weekly_mae": 38.95373835748518,
+        "pooled_rmse": 58.060783746348775,
+        "run_id": "validate_sarimax_2",
+        "candidate": {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            0,
+            1,
+            24
+          ]
+        }
+      },
+      {
+        "mean_weekly_mae": 39.63015768121622,
+        "pooled_rmse": 59.0395650127908,
+        "run_id": "validate_sarimax_3",
+        "candidate": {
+          "order": [
+            1,
+            1,
+            1
+          ],
+          "seasonal_order": [
+            1,
+            1,
+            1,
+            24
+          ]
+        }
+      }
+    ],
+    "prophet": [
+      {
+        "mean_weekly_mae": 28.521583355736066,
+        "pooled_rmse": 38.87360654739367,
+        "run_id": "validate_prophet_0",
+        "candidate": {
+          "seasonality_mode": "additive"
+        }
+      },
+      {
+        "mean_weekly_mae": 34.87717526915242,
+        "pooled_rmse": 48.19386496803491,
+        "run_id": "validate_prophet_1",
+        "candidate": {
+          "seasonality_mode": "multiplicative"
+        }
+      }
+    ],
+    "neuralprophet": [
+      {
+        "mean_weekly_mae": 27.58708398392513,
+        "pooled_rmse": 36.061607191908976,
+        "run_id": "validate_neuralprophet_1",
+        "candidate": {
+          "epochs": 50
+        }
+      },
+      {
+        "mean_weekly_mae": 64.07712279937806,
+        "pooled_rmse": 84.93903172466118,
+        "run_id": "validate_neuralprophet_0",
+        "candidate": {
+          "epochs": 30
+        }
+      }
+    ]
+  },
+  "protocol_signature": "d7337574e73bbd3f69d8ffa161cb9ffab08496e92a7cf73b42e01b8520b3f9fc"
+}

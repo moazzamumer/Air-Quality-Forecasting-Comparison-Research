@@ -1,0 +1,8 @@
+{"task_id": "validate_sarimax_0", "returncode": 0, "elapsed_seconds": 480.1458354080023, "sampled_peak_rss_mib": 250.09765625, "guard_reason": null}
+{"task_id": "validate_sarimax_1", "returncode": 1, "elapsed_seconds": 869.6819302529984, "sampled_peak_rss_mib": 246.60546875, "guard_reason": null}
+{"task_id": "validate_sarimax_2", "returncode": 0, "elapsed_seconds": 537.7214361200022, "sampled_peak_rss_mib": 246.734375, "guard_reason": null}
+{"task_id": "validate_sarimax_3", "returncode": 0, "elapsed_seconds": 1650.6874795999975, "sampled_peak_rss_mib": 263.8203125, "guard_reason": null}
+{"task_id": "validate_prophet_0", "returncode": 0, "elapsed_seconds": 18.031010898994282, "sampled_peak_rss_mib": 408.25, "guard_reason": null}
+{"task_id": "validate_prophet_1", "returncode": 0, "elapsed_seconds": 31.054184207998333, "sampled_peak_rss_mib": 407.0, "guard_reason": null}
+{"task_id": "validate_neuralprophet_0", "returncode": 0, "elapsed_seconds": 127.19313295000029, "sampled_peak_rss_mib": 1636.11328125, "guard_reason": null}
+{"task_id": "validate_neuralprophet_1", "returncode": 0, "elapsed_seconds": 177.78016327899968, "sampled_peak_rss_mib": 1645.29296875, "guard_reason": null}

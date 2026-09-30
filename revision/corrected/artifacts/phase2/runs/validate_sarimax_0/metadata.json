@@ -1,0 +1,150 @@
+{
+  "task": {
+    "id": "validate_sarimax_0",
+    "stage": "validate",
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "frozen"
+  },
+  "protocol_signature": "d7337574e73bbd3f69d8ffa161cb9ffab08496e92a7cf73b42e01b8520b3f9fc",
+  "status": "completed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2024-12-16 01:00:00",
+  "started_utc": "2026-09-30T20:09:53.247017+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2024-12-16 01:00:00",
+    "training_calendar_hours": 35568,
+    "observed_training_targets": 35064,
+    "preparation_seconds": 0.009176893006952014,
+    "scaler": {
+      "mean": {
+        "no": 150.47211995892988,
+        "no2": 94.41109891050141,
+        "co": 2401.7859468940733,
+        "so2": 136.32556984769835
+      },
+      "scale": {
+        "no": 183.07488009895857,
+        "no2": 54.06613756650662,
+        "co": 2441.2242017318977,
+        "so2": 120.03571408843854
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "optimizer": {
+      "initial_iterations": 50,
+      "retry_performed": true,
+      "last_iterations": 61,
+      "converged": true,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals"
+      ]
+    },
+    "parameter_estimates": {
+      "no": -30.490923677657637,
+      "no2": 7.342423110126669,
+      "co": 226.26566284678103,
+      "so2": 3.488200475317513,
+      "ar.L1": 0.9691350857346498,
+      "ma.L1": 0.625507279778099,
+      "ar.S.L24": 0.9968029787484936,
+      "ma.S.L24": -0.9537337253598035,
+      "sigma2": 98.11456240677246
+    },
+    "fit_seconds": 400.23763534599857
+  },
+  "completed_weeks": [
+    {
+      "window": 1,
+      "origin": "2024-12-16 01:00:00",
+      "forecast_seconds": 0.008932932003517635,
+      "state_update_seconds": 0.0,
+      "mae": 8.946225710005615,
+      "rmse": 11.680718184179788
+    },
+    {
+      "window": 2,
+      "origin": "2024-12-23 01:00:00",
+      "forecast_seconds": 0.007177720995969139,
+      "state_update_seconds": 0.01754213999811327,
+      "mae": 18.146804292430016,
+      "rmse": 26.259140826017514
+    },
+    {
+      "window": 3,
+      "origin": "2024-12-30 01:00:00",
+      "forecast_seconds": 0.0071486859960714355,
+      "state_update_seconds": 0.012755864998325706,
+      "mae": 21.042332366980716,
+      "rmse": 29.318169271403484
+    },
+    {
+      "window": 4,
+      "origin": "2025-01-06 01:00:00",
+      "forecast_seconds": 0.007548923000285868,
+      "state_update_seconds": 0.015416980000736658,
+      "mae": 11.830463700685069,
+      "rmse": 15.021921182488782
+    }
+  ],
+  "completed_utc": "2026-09-30T20:16:33.622888+00:00",
+  "scored_hours": 672,
+  "mean_weekly_mae": 14.991456517525354,
+  "pooled_rmse": 21.858607112865293,
+  "peak_rss_mib_self": 269.22265625
+}

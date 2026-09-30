@@ -1,0 +1,12 @@
+# Observed local environment; not yet a clean-environment lockfile
+numpy==1.26.4
+pandas==2.3.1
+scipy==1.16.0
+scikit-learn==1.7.0
+statsmodels==0.14.5
+prophet==1.1.7
+neuralprophet==0.9.0
+torch==2.6.0
+pymrmr==0.1.11
+psutil==7.0.0
+pytorch-lightning==2.5.2

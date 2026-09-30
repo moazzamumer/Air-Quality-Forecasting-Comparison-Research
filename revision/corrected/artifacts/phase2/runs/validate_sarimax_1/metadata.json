@@ -1,0 +1,114 @@
+{
+  "task": {
+    "id": "validate_sarimax_1",
+    "stage": "validate",
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        1,
+        24
+      ]
+    },
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "regime": "frozen"
+  },
+  "protocol_signature": "d7337574e73bbd3f69d8ffa161cb9ffab08496e92a7cf73b42e01b8520b3f9fc",
+  "status": "failed",
+  "python": "3.11.2",
+  "platform": "Linux-6.12.74+deb12-amd64-x86_64-with-glibc2.36",
+  "package_versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "statsmodels": "0.14.5",
+    "prophet": "1.1.7",
+    "neuralprophet": "0.9.0",
+    "scikit-learn": "1.7.0"
+  },
+  "fit_origin": "2024-12-16 01:00:00",
+  "started_utc": "2026-09-30T20:16:34.729466+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        1,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2024-12-16 01:00:00",
+    "training_calendar_hours": 35568,
+    "observed_training_targets": 35064,
+    "preparation_seconds": 0.00879068199719768,
+    "scaler": {
+      "mean": {
+        "no": 150.47211995892988,
+        "no2": 94.41109891050141,
+        "co": 2401.7859468940733,
+        "so2": 136.32556984769835
+      },
+      "scale": {
+        "no": 183.07488009895857,
+        "no2": 54.06613756650662,
+        "co": 2441.2242017318977,
+        "so2": 120.03571408843854
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "optimizer": {
+      "initial_iterations": 50,
+      "retry_performed": true,
+      "last_iterations": 0,
+      "converged": false,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals"
+      ]
+    },
+    "parameter_estimates": {
+      "no": -45.57451083570491,
+      "no2": 8.052768055374925,
+      "co": 230.64469104838244,
+      "so2": -3.204224293065234,
+      "ar.L1": 0.9644746525439511,
+      "ma.L1": 0.6288884291158772,
+      "ar.S.L24": 0.0450138385689159,
+      "ma.S.L24": -0.9540410716282243,
+      "sigma2": 116.41409558590532
+    },
+    "fit_seconds": 710.9406029169986
+  },
+  "error": "Traceback (most recent call last):\n  File \"/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/phase2_runner.py\", line 121, in execute\n    raise RuntimeError('SARIMAX did not converge under bounded optimizer policy')\nRuntimeError: SARIMAX did not converge under bounded optimizer policy\n",
+  "peak_rss_mib_self": 268.65625
+}

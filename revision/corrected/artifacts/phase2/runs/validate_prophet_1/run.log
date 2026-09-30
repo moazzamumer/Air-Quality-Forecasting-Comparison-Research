@@ -1,0 +1,6 @@
+01:58:59 - cmdstanpy - INFO - Chain [1] start processing
+01:59:26 - cmdstanpy - INFO - Chain [1] done processing
+validate_prophet_1 week 1 MAE 29.8913
+validate_prophet_1 week 2 MAE 49.9715
+validate_prophet_1 week 3 MAE 35.6103
+validate_prophet_1 week 4 MAE 24.0356

@@ -1,0 +1,2 @@
+START validate_prophet_0 RSS limit GiB 3.47
+END {"task_id": "validate_prophet_0", "returncode": 0, "elapsed_seconds": 27.04198732000077, "sampled_peak_rss_mib": 404.48046875, "guard_reason": null}
