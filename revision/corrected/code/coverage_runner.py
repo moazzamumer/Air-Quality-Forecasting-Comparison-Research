@@ -51,6 +51,18 @@ def first_origin_source(task):
     return frozen,meta
 
 
+def sarimax_warm_start(param_names, reference_fit, features, scaler):
+    """Map an earlier selected fit to the current feature set for initialization."""
+    old=reference_fit['parameter_estimates'];old_features=reference_fit['features']
+    result=[]
+    for name in param_names:
+        value=old.get(name,0.)
+        if name in features and name in old_features:
+            value*=scaler.scale_[features.index(name)]/reference_fit['scaler']['scale'][name]
+        result.append(value)
+    return np.asarray(result,dtype=float)
+
+
 def sarimax_model(grid,position,task):
     """Estimate corrected later-origin SARIMAX fits with a fixed numerical policy."""
     from statsmodels.tsa.statespace.sarimax import SARIMAX
@@ -63,22 +75,21 @@ def sarimax_model(grid,position,task):
         enforce_stationarity=False,enforce_invertibility=False)
     reference=json.loads((OUT/'runs/core_sarimax_frozen_s42/metadata.json').read_text())
     if pd.Timestamp(reference['fit_origin'])>grid.index[position]:raise ValueError('Future initialization cutoff')
-    initial=[]
-    for name in model.param_names:
-        value=reference['fit']['parameter_estimates'][name]
-        if name in features:value*=scaler.scale_[features.index(name)]/reference['fit']['scaler']['scale'][name]
-        initial.append(value)
-    initial_llf=float(model.loglike(np.asarray(initial)))
+    initial=sarimax_warm_start(model.param_names,reference['fit'],features,scaler)
+    initial_llf=float(model.loglike(initial))
+    if not np.isfinite(initial_llf):raise RuntimeError('Nonfinite corrected SARIMAX warm-start likelihood')
     preparation=time.perf_counter()-began;began=time.perf_counter()
     with warnings.catch_warnings(record=True) as caught:
         warnings.simplefilter('always')
-        fitted=model.fit(start_params=np.asarray(initial),method='minimize',min_method='L-BFGS-B',
+        fitted=model.fit(start_params=initial,method='minimize',min_method='L-BFGS-B',
             maxiter=200,maxls=100,optim_score='approx',optim_complex_step=True,disp=False,low_memory=True,cov_type='none')
     meta=dict(family='sarimax',candidate=task['candidate'],features=features,clip_inputs=task['clip_inputs'],seed=task['seed'],
         fit_end_exclusive=str(grid.index[position]),training_calendar_hours=position,
         observed_training_targets=int(history.pm2_5.notna().sum()),target_imputed=False,target_clipped=False,
-        scaler={'mean':dict(zip(features,map(float,scaler.mean_))),'scale':dict(zip(features,map(float,scaler.scale_)))},
-        input_clip_bounds=None,device='cpu',cpu_threads=2,preparation_seconds=preparation,
+        scaler=None if scaler is None else {'mean':dict(zip(features,map(float,scaler.mean_))),
+                'scale':dict(zip(features,map(float,scaler.scale_)))},
+        input_clip_bounds=None if bounds is None else {'lower':bounds[0].to_dict(),'upper':bounds[1].to_dict()},
+        device='cpu',cpu_threads=2,preparation_seconds=preparation,
         fit_seconds=time.perf_counter()-began,
         parameter_estimates=dict(zip(fitted.param_names,map(float,fitted.params))),
         optimizer=dict(converged=bool(fitted.mle_retvals.get('converged')),iterations=int(fitted.mle_retvals.get('iterations',0)),

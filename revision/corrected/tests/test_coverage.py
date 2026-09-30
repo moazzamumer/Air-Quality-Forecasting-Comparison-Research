@@ -8,6 +8,7 @@ from revision.corrected.code.protocol import load_calendar,split_position
 from revision.corrected.code.phase2_models import Fitted
 from revision.corrected.code.coverage_protocol import seasonal_past_fill,windows,forecast,metrics,dense_prediction
 from revision.corrected.code.coverage_checks import latest_observed_persistence
+from revision.corrected.code.coverage_runner import sarimax_warm_start
 
 
 class CoverageTests(unittest.TestCase):
@@ -39,6 +40,15 @@ class CoverageTests(unittest.TestCase):
         history=pd.DataFrame({'pm2_5':[12.,42.,np.nan,np.nan]})
         np.testing.assert_array_equal(latest_observed_persistence(history,4),[42.]*4)
         with self.assertRaises(ValueError):latest_observed_persistence(pd.DataFrame({'pm2_5':[np.nan]}))
+
+    def test_sarimax_warm_start_handles_no_and_extra_inputs(self):
+        reference={'features':['no','no2'],'parameter_estimates':{'no':10.,'no2':20.,'ar.L1':.6},
+                   'scaler':{'scale':{'no':2.,'no2':4.}}}
+        broad=sarimax_warm_start(['no','no2','pm10','ar.L1'],reference,
+                                 ['no','no2','pm10'],SimpleNamespace(scale_=np.array([4.,8.,9.])))
+        np.testing.assert_allclose(broad,[20.,40.,0.,.6])
+        no_inputs=sarimax_warm_start(['ar.L1'],reference,[],None)
+        np.testing.assert_allclose(no_inputs,[.6])
 
     def test_masks_and_target_isolation_at_partially_observed_origin(self):
         p=self.position+7*168;fitted=Fitted('prophet',None,['no'],SimpleNamespace(mean_=np.array([10.]),scale_=np.array([2.]),transform=lambda x:(x-10)/2),None,p,{})
