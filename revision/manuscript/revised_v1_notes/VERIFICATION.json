@@ -18,8 +18,8 @@
   "remaining": [
     "data/code availability and DOI archive",
     "author scientific/text review",
-    "point-by-point response PDF",
-    "clean-environment reproduction and final release/submission checks"
+    "clean-environment reproduction and final release/submission checks",
+    "supervisor/author review of point-by-point response and refresh after manuscript edits"
   ],
   "pdf_sha256": "e747b01d1580c696ae143444ae62a7a3273c7d33e5fbf26bf9e187e0a3812b31",
   "latex_sha256": "2b11897a468beb15dce2cea5a8b27291f9f40b3b2a70c3d8597470db228b6f24",
@@ -29,5 +29,7 @@
   "results_text_identical_to_initial_v1": true,
   "all_12_table_contents_identical_to_initial_v1": true,
   "all_9_figures_unchanged": true,
-  "github_link_restored": true
+  "github_link_restored": true,
+  "point_by_point_response_pdf_prepared": true,
+  "response_contains_27_reviewer_and_5_editorial_replies": true
 }

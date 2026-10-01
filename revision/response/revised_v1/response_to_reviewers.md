@@ -1,0 +1,411 @@
+# Response to the editor and reviewers
+
+**Manuscript:** Interpretable PM2.5 Forecasting for Urban Air Quality: A Comparative Study of Adaptive Time-Series Models
+
+**Journal:** Scientific Reports
+
+**Submission ID:** ce621eeb-c97a-487c-92cf-d9f1057300d9
+
+**Review status:** Supervisor review draft — 1 October 2026. The scientific responses are drafted against revised v1. The DOI-linked public code release, final data-availability wording and clean-environment reproduction remain pending (R2.m6 and E4). Author approval and final submission checks also remain pending (E5). This draft has not been submitted.
+
+We thank the editor and both reviewers for their careful reading and constructive comments. We have revised the manuscript and repeated the affected experiments, while retaining the original study's three model families, two updating regimes and primary 23-week evaluation. The revised results replace the submitted numerical results where preprocessing, validation or completion of the evaluation required correction. The replies below describe each action and its limitations. Changes in the accompanying manuscript are highlighted in yellow.
+
+Locations refer to the accompanying 26-page revised v1 manuscript, using its printed page numbers. A section's cited page is its starting page; table, figure and equation pages identify the item itself. These references must be refreshed if the manuscript is edited. Reviewer wording is reproduced from the decision letter; numbering and whitespace are normalized.
+
+## Reviewer 1
+
+### Comment 1 (R1.1)
+
+> The SARIMAX walk-forward run stops at week 21 of 23 because increasing memory usage prevented completion in the available computing environment, yet the abstract, Results and Discussion often present it alongside the two fully completed models (Prophet, NeuralProphet) without flagging this difference. Please state explicitly, wherever SARIMAX walk-forward performance is mentioned, that the reported MAE/RMSE are cumulative over 21 of 23 weeks, and avoid phrasing that implies a like-for-like comparison with the complete runs. This is not a fatal flaw, but as written it could mislead readers about the comparability of the three models under this regime.
+
+**Response:**
+
+We agree that the original 21-week SARIMAX result was not directly comparable with the complete runs. We have repeated the primary experiments and completed SARIMAX at all 23 weekly forecast origins, as also requested in Reviewer 2's major comment 4. The revised comparison therefore supersedes the incomplete original run rather than retaining a 21-week result with a qualification.
+
+All primary models, regimes and seeds are evaluated on the same 3,624 observed hours within 3,864 scheduled hours. Nineteen weeks have complete scoring coverage; four have 120, 120, 48 and 144 scored hours. Missing targets are not imputed for evaluation. The revised SARIMAX weekly-refit pooled MAE/RMSE are 30.43/46.88 micrograms per cubic metre. The Abstract, Results and Conclusion now refer to the completed matched comparison. The earlier memory failure was specific to the original implementation and environment; it is not presented as an intrinsic limitation of SARIMAX.
+
+**Manuscript location:** Abstract, p. 1; Section 5, p. 14; Section 4.1, p. 8; Section 4.5, p. 13; Table 6, p. 14; Conclusion, p. 22.
+
+### Comment 2 (R1.2)
+
+> The Perfect Prognosis setting is used as an experimental simplification, with future values of the exogenous gases (NO, NO₂, CO, SO₂) supplied from the held-out test segment. In real deployment, these values would not normally be available as "observations" at the time of forecasting. Please add a short paragraph clarifying when this assumption reasonably approximates practice and when it remains an idealisation, so readers can properly calibrate the operational claims in the abstract and conclusion.
+
+**Response:**
+
+We have clarified that this is a retrospective Perfect Prognosis comparison: actual future NO, NO2, CO and SO2 are supplied, while future PM2.5 is withheld from prediction. Highly accurate externally available gas forecasts could approximate this information setting, but their forecast errors would be absent from our experiment. Without such inputs, this remains an idealized conditional evaluation.
+
+We have narrowed the Abstract and Conclusion and changed 'Operational' to 'Adaptive' in the title. We do not claim demonstrated deployment readiness or skill with gas inputs available at the forecast origin. Prospective evaluation with externally forecast predictors and independently verified station targets is identified as future work. This treatment is consistent with Reviewer 2's major comment 1.
+
+**Manuscript location:** Title and Abstract, p. 1; Section 3, p. 3; Discussion and future work, p. 21; Limitations, pp. 21–22; Conclusion, p. 22.
+
+### Comment 3 (R1.3)
+
+> Interpretability claims. The manuscript repeatedly calls Prophet and SARIMAX "interpretable," but does not show what the exogenous drivers (NO, NO₂, CO, SO₂) actually contribute inside the fitted models. If available from the fitted models, please report, even briefly, the SARIMAX β coefficients and/or Prophet regressor effect sizes; otherwise, please moderate the interpretability claim. If estimates are reported, specify the relevant fitted model or aggregation procedure.
+
+**Response:**
+
+We now report the initial frozen-fit SARIMAX and Prophet regressor coefficients, expressed as target change per one initial training-input standard deviation. For NO, NO2, CO and SO2 respectively, these are −36.62, 5.17, 237.06 and 3.22 for SARIMAX, and −46.32, 35.40, 265.48 and −24.94 for Prophet, in micrograms per cubic metre.
+
+We also describe coefficient stability across the 23 refits after conversion to raw-input units, and Prophet's mean absolute trend, seasonal and regressor contributions across the frozen evaluation. Component averages weight each of the 3,624 scored hours equally. These are conditional fitted associations: correlated regressors, temporal terms and cancelling signed components prevent interpreting them as causal effects or independent feature-importance scores.
+
+**Manuscript location:** Model interpretation and computational measurements, pp. 18–21; Table 11, p. 20; Limitations, pp. 21–22.
+
+### Comment 4 (R1.4)
+
+> NeuralProphet's performance deserves a fuller explanation. Please expand this briefly with a diagnosis of possible causes, clearly distinguishing documented results from tentative explanations.
+
+**Response:**
+
+We have checked NeuralProphet's normalization, contiguous training episodes, finite training losses, forecast timestamps and extraction of the 168 origin-specific leads. Training samples do not cross missing intervals, and predictions are returned to the original target scale. Completing 50 epochs is not interpreted as proof of optimization to a global minimum.
+
+Repeated runs with seeds 42, 123 and 2026 show substantial variability: frozen pooled MAE is 46.88 ± 10.40 across seeds, compared with 39.61 ± 4.33 for refits (mean ± sample SD). Seed 2026 is appreciably better before correction and becomes slightly worse after it. On the small high-concentration subset, seed-42 NeuralProphet outperforms the other frozen families. We distinguish these documented findings from tentative explanations involving optimization or seasonal generalization, and no longer infer an inherent weakness of NeuralProphet.
+
+**Manuscript location:** Section 4.3, p. 10; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Discussion and future work, p. 21.
+
+### Comment 5 (R1.5)
+
+> SARIMAX order selection. The order (1,1,1) and seasonal order (1,1,1,24) are stated in 4.3.1 but the manuscript does not indicate how they were chosen criterion search or fixed a priori from the known 24-hour cycle. Please clarify the selection procedure, since this affects how the SARIMAX–Prophet comparison should be read.
+
+**Response:**
+
+We have replaced the unexplained original orders with a documented, bounded training-only selection procedure. Four weekly validation origins run from 16 December 2024 to 6 January 2025, before the test period. The SARIMAX grid fixes p=q=P=Q=1 and s=24 and considers d,D in {0,1}. Candidates are ranked by mean weekly MAE, with pooled RMSE as tie-breaker; a nonconverged candidate is excluded.
+
+The selected specification is (1,0,1) × (1,0,1,24), without a constant. Its validation MAE is 14.99. These orders replace the original (1,1,1) × (1,1,1,24) specification and are used unchanged in both revised regimes. The manuscript states the grid, criterion, failed candidate and limited winter validation scope. This is not presented as exhaustive order optimization.
+
+**Manuscript location:** Section 4.3, p. 10; Table 4, p. 12; Equation 3, p. 5.
+
+### Comment 6 (R1.6)
+
+> It is not stated whether SARIMAX (statsmodels) and Prophet also ran with any hardware acceleration. Since these are typically CPU-bound implementations, please confirm the computing setup used for each model, so that the reported execution-time differences (Tables 2–3) can be attributed to the models themselves rather than partly to the hardware.
+
+**Response:**
+
+All revised models ran on the same AMD Ryzen 5 5500U CPU system, with two configured model threads and approximately 14.96 GiB of reported system RAM. No GPU was used, including for NeuralProphet. The Implementation section lists the relevant Python and library versions.
+
+We have also corrected the timing interpretation. SARIMAX fit timers cover optimization, whereas Prophet and NeuralProphet timers include initialization/import; preprocessing and prediction are excluded from the reported fit table and recorded separately. First-origin reuse retains the source computation cost. Because these boundaries differ, the revised manuscript reports measured times with explicit definitions and withdraws a controlled cross-family speed-ratio claim.
+
+**Manuscript location:** Implementation, pp. 7–8; Table 12, p. 21; Model interpretation and computational measurements, pp. 20–21.
+
+### Comment 7 (R1.7)
+
+> Sensitivity of the residual-correction mechanism. The EWMA bias correction uses a fixed smoothing factor (α = 0.3) throughout the manuscript. Please state whether nearby values of α were tried and, if so, whether they produced qualitatively similar conclusions. If not, acknowledge the absence of this sensitivity analysis as a limitation.
+
+**Response:**
+
+We have added a causal sensitivity replay with α=0.1, 0.2, 0.3, 0.5, 0.7 and 1.0, alongside the uncorrected base. The original α=0.3 remains predefined and is not replaced using test scores. α=1.0 is the previous-week mean-residual correction requested by Reviewer 2.
+
+The conclusions are conditional rather than uniform. SARIMAX mean weekly MAE is 29.50, 30.17 and 31.33 at α=0.1, 0.3 and 1.0, respectively, versus 30.66 without correction. Prophet improves at all tested nonzero factors. NeuralProphet seeds 42/123 improve, while seed 2026 becomes slightly worse throughout the tested range. The revised text reports this sensitivity and avoids claiming α=0.3 is optimal.
+
+**Manuscript location:** Section 4.4, p. 12; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19; Table 9, p. 17.
+
+### Comment 8 (R1.8)
+
+> Figure 1 lists "MAE, RMSE (Mean ± Std)" as part of the evaluation protocol, but Tables 2 and 3 report only the mean MAE/RMSE, with no accompanying measure of dispersion across the 23 weekly windows. Given that week-level MAE varies considerably for every model, please report the standard deviation or interquartile range of the weekly errors alongside each mean, so that comparisons between models — such as the corrected SARIMAX vs. Prophet result in Table 3 — can be assessed against this variability rather than as single point estimates. A paired comparison across the matched weekly windows would also help support the model ranking.
+
+**Response:**
+
+Tables 6 and 7 now distinguish pooled hourly MAE/RMSE from equally weighted mean weekly MAE/RMSE and include sample standard deviations across the 23 matched weeks. Figures 4–6 show the weekly distributions and chronology. Weekly RMSE is not labelled as pooled RMSE.
+
+We have added paired weekly MAE comparisons with descriptive 95% moving-block bootstrap intervals, using 2,000 replicates, a primary three-week block and two-/four-week sensitivities. For corrected SARIMAX minus corrected Prophet, the mean weekly difference is −7.90 with a primary interval of [−11.33, −3.63]. SARIMAX correction minus its own base is −0.49 with interval [−3.91, 2.25]. These comparisons use identical scoring masks. With only 23 dependent weeks and no multiplicity adjustment, they do not establish broad population-level significance.
+
+**Manuscript location:** Section 4.5, p. 13; Table 6, p. 14; Table 7, p. 15; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16.
+
+### Comment 9 (R1.9)
+
+> Manuscript length and density. At its current length, the manuscript is considerably longer than the journal's suggested format, and this affects readability. The Related Work section in particular could be shortened substantially without losing its core message. Similarly, the Discussion, Limitations and Conclusion sections partly repeat the same points and could be consolidated into fewer, more tightly written paragraphs.
+
+**Response:**
+
+We have condensed Related work into a focused discussion and a short comparison table, emphasizing the distinction between representation learning and the update policies evaluated here. We have also removed repeated deployment and superiority claims and tightened the Discussion, Limitations and Conclusion so that findings, unresolved constraints and future work have distinct roles.
+
+The six selected best-/worst-week illustrations have been replaced with all-week summaries and lead-time/correction diagnostics. We retained the preprocessing, validation and uncertainty details needed to address the methodological comments, while placing exact settings in Implementation rather than repeating them in Methodology.
+
+**Manuscript location:** Related work, pp. 3–4; Section 3, p. 3; Section 4, p. 7; Discussion, Limitations and Conclusion, pp. 21–22; Figures 4–9, pp. 15–19.
+
+### Comment 10 (R1.10)
+
+> Descriptive information on the PM2.5 series: Consider adding a brief descriptive summary of the PM2.5 series, including the mean and a clearly defined measure of range or variability, so that readers unfamiliar with Beijing's pollution levels can judge the practical magnitude of the reported MAE/RMSE values.
+
+**Response:**
+
+We have added a descriptive table for the original observed PM2.5 targets in each full chronological partition, including the unused final test remainder. Training has 35,736 observed values, with mean 217.54, sample SD 227.30, median 140.59 and range 0.91–1825.93 micrograms per cubic metre. Testing has 3,787 observed values, with mean 155.34, sample SD 216.57, median 72.02 and range 0.00–1407.51.
+
+The table also reports the interquartile interval. Its scope differs explicitly from the 3,624 hours used for the primary forecast scores. We identify the series as API-derived estimates rather than authenticated station measurements, so these summaries describe the supplied series and should not be treated as an independently verified description of Beijing exposure.
+
+**Manuscript location:** Section 4.1, p. 8; Table 2, p. 9; Limitations, pp. 21–22.
+
+## Reviewer 2 — major comments
+
+### Comment 1 (R2.M1)
+
+> Forecasting assumptions and operational relevance
+> Sections 3–4 explicitly assume that the actual future values of NO, NO2, CO, and SO2 are available throughout each 168-hour forecast window. This is a legitimate Perfect Prognosis experiment, but it does not establish performance under realistic operational conditions. The authors should either add an experiment using predictors available at the forecast origin or consistently restrict their claims to the Perfect Prognosis setting. The Abstract and Conclusion currently overstate readiness for real-world deployment.
+
+**Response:**
+
+We have followed the proposed route of consistently restricting claims to Perfect Prognosis. We have not added an experiment with forecast-origin gas inputs and do not imply that such an operational experiment has been performed. The information set and the distinction between future covariates and withheld future targets are now explicit.
+
+The title uses 'Adaptive' in place of 'Operational', and the Abstract, contributions, Discussion and Conclusion describe a retrospective conditional comparison of the three model families. We explain when accurate external gas forecasts might approximate this setting and why their errors would require separate evaluation. Operational skill and validation against independently verified station targets remain untested.
+
+**Manuscript location:** Title and Abstract, p. 1; Introduction, p. 2; Section 3, p. 3; Discussion, Limitations and Conclusion, pp. 21–22.
+
+### Comment 2 (R2.M2)
+
+> Dataset provenance and evaluation coverage
+> Please report the geographic coordinates, specific API endpoints, retrieval dates, time zone, exact date boundaries, and total observation counts. Provide the training and test dates, the number of evaluated hours, and the handling of any incomplete final weekly window. Because the target comprises model-based gridded estimates rather than direct station measurements, this distinction and its implications for validation should be emphasized. The approximately 23-week test period also limits conclusions about year-round performance.
+
+**Response:**
+
+We now report the requested coordinate (39.906217, 116.3912757), the CSV coordinate (39.9062, 116.3913), and the source endpoints: OpenWeather's /data/2.5/air_pollution/history and Open-Meteo's /v1/era5 archive endpoint. The source has 39,523 unique hourly rows from 25 November 2020 01:00 to 29 June 2025 19:00. The regular calendar has 40,267 hours, with 744 missing timestamps across 21 intervals. Training ends on 13 January 2025 00:00; testing starts at 01:00. Training/test counts are 36,240/4,027 calendar hours and 35,736/3,787 observed targets.
+
+The primary evaluation uses 23 weekly origins and 3,624 shared observed hours and ends on 23 June 2025 00:00. The final 163-hour calendar remainder is excluded from fixed 168-hour scoring. Four partial weeks are explicitly counted. The January–June period cannot support year-round conclusions.
+
+Some requested provenance cannot be recovered. UTC interpretation is supported by the extraction and provider defaults, but original response archives and retrieval dates are unavailable. Positional pollutant-field extraction cannot be independently authenticated, and the source starts before the provider-documented historical start. We disclose these unresolved limitations rather than invent retrieval metadata. The series is explicitly described as API-derived model/gridded estimates, not station ground truth.
+
+**Manuscript location:** Section 4.1, p. 8; Section 4.5, p. 13; Table 2, p. 9; Limitations, pp. 21–22.
+
+### Comment 3 (R2.M3)
+
+> Winsorization and evaluation of pollution extremes
+> Sections 3.1 and 4.1 describe percentile-based clipping, but it is unclear whether the held-out PM2.5 target was also clipped. Please specify which variables and data partitions were transformed. Performance should be reported against the original, unclipped test target, since high pollution concentrations may represent genuine events rather than measurement errors. A sensitivity analysis without winsorization would help establish whether the conclusions depend on suppressing extremes.
+
+**Response:**
+
+The audit found that the original notebook's global upper-tail row filtering did not match the manuscript's winsorization description. We have corrected this mismatch and repeated the revised primary experiments using all original observed target values, without positive target clipping or outlier removal. Four invalid −9999 predictor cells in training (two NO2, one O3 and one PM10) are masked as missing in a working copy; the raw file, PM2.5 targets and valid negative weather values are preserved. Affected predictor analysis, validation and fitting were repeated.
+
+A separate control clips predictors only at training-derived 1st/99th percentiles and scores against unchanged test targets. Clipping increases frozen MAE for all three families. We also report the 158 scored high-concentration hours above the training 95th percentile, 691.34 micrograms per cubic metre: frozen seed-42 NeuralProphet MAE is 32.32, versus 51.02 for SARIMAX and 50.60 for Prophet. These events span only six weeks, so the subset cannot establish general performance on extremes.
+
+**Manuscript location:** Section 4.1, p. 8; Lead time, concentration, and sensitivity, pp. 17–18; Table 10, p. 20; Limitations, pp. 21–22.
+
+### Comment 4 (R2.M4)
+
+> Benchmark adequacy and fair comparison
+> Include persistence and seasonal-persistence baselines to demonstrate forecasting skill beyond simple reference methods. Claims of competitiveness against more advanced approaches should either be supported by an appropriate additional comparator under the same protocol or narrowed to the three evaluated model families. Furthermore, Table 2 compares SARIMAX over 21 weeks with the other models over 23 weeks. Please provide a common-period comparison for all models and, if possible, complete the SARIMAX evaluation.
+
+**Response:**
+
+We have added last-observed-value, daily seasonal-persistence and weekly seasonal-persistence references on the same 3,624 scored hours. Their pooled MAEs are 125.74, 121.52 and 152.90, respectively. Missing historical context is handled by the documented causal filling policy, while the last-value reference uses the latest genuinely observed target. No future target is used to construct a reference forecast.
+
+All primary SARIMAX refits now complete the same 23 origins as Prophet and NeuralProphet, resolving the original 21-versus-23-week mismatch. We have narrowed comparative claims to the three evaluated families and these references rather than claiming superiority over advanced architectures. Target-only references lack the actual future gases supplied to the main models; no-input model controls and this information disadvantage are explicitly reported.
+
+**Manuscript location:** Section 4.1, p. 8; Section 4.5, p. 13; Table 6, p. 14; Table 10, p. 20; Discussion and future work, p. 21.
+
+### Comment 5 (R2.M5)
+
+> Model selection and NeuralProphet performance
+> Please justify the SARIMAX orders, Prophet configuration, and NeuralProphet training settings using a time-ordered validation procedure within the training data. The unusually large NeuralProphet errors warrant checks of training convergence, normalization, forecast–target alignment, and the extraction of its 168-step predictions. Report repeated runs with different seeds where relevant. The present results should not be interpreted as demonstrating an inherent weakness of NeuralProphet without these checks.
+
+**Response:**
+
+A bounded chronological validation within training now compares four SARIMAX differencing combinations, additive/multiplicative Prophet seasonality and 30/50 NeuralProphet epochs over four weekly origins. Selection uses mean weekly MAE and pooled RMSE as tie-breaker. Seven of eight candidates complete. The selected settings are (1,0,1) × (1,0,1,24), additive Prophet and 50-epoch NeuralProphet, with the remaining explicit settings reported in Table 4. This replaces an unexplained configuration choice with reproducible screening, while acknowledging that the grid and winter validation period are limited.
+
+NeuralProphet uses global normalization learned from pre-origin complete episodes, 168 lags and 168 direct leads, batch size 128 and learning rate 0.001. Finite losses, retained episode/sample counts, timestamps and lead extraction were checked, including prevention of samples crossing missing intervals. Seeds 42, 123 and 2026 are reported separately and summarized. These checks support correct execution and alignment; completing epochs does not prove optimization convergence to a global optimum. The remaining seed variation is reported without interpreting it as inherent architectural inferiority.
+
+**Manuscript location:** Section 4.1, p. 8; Section 4.3, p. 10; Table 4, p. 12; Table 9, p. 17; Limitations, pp. 21–22.
+
+### Comment 6 (R2.M6)
+
+> Frozen-model forecasting protocol
+> Clarify whether “frozen” means fixed parameters only or also a fixed internal model state. For each weekly forecast origin, specify whether SARIMAX incorporates newly observed target values through state updating and whether NeuralProphet receives the latest 168 observed target values. Provide concise pseudocode showing the information available to each model and when residual correction is applied. This distinction is essential for reproducibility and fair comparison.
+
+**Response:**
+
+'Frozen' now explicitly means fixed model parameters and the initial predictor scaler, with refreshed pre-origin state/context. SARIMAX filters newly revealed history without parameter fitting; NeuralProphet receives the latest 168-hour target context, including documented causal filling where history is missing; Prophet uses the actual future dates and Perfect Prognosis covariates. Walk-forward refits re-estimate parameters and transformations from expanding pre-origin history.
+
+Table 5 gives the weekly pseudocode and Figure 1 the workflow. The already available bias is added before the current week's targets are revealed. After the week, the correction is updated from observed base residuals only. No fitting or scoring target is imputed. The same forecast origins and observed-hour scoring mask are used throughout.
+
+**Manuscript location:** Section 3.4, p. 6; Section 4.1, p. 8; Section 4.4, p. 12; Table 5, p. 13; Figure 1, p. 8; Equation 9, p. 6.
+
+### Comment 7 (R2.M7)
+
+> Feature-selection procedure
+> Report the correlation and mutual-information rankings, mRMR configuration, any discretization, and the rule used to select four predictors. The exclusion of PM10 because it is strongly associated with the target requires clearer justification: relevance to the target is not the same as redundancy among predictors. An ablation comparing the selected subset with a broader predictor set and a model without exogenous inputs would clarify the value of feature selection.
+
+**Response:**
+
+We agree that high target association is relevance, not evidence of redundancy between predictors. The revised manuscript reports training-only Pearson and continuous mutual-information rankings on 35,732 complete rows. Continuous MI uses the nearest-neighbor estimator with seed 42. Descriptive mRMR uses MIQ on a target-first input table, with training-only quintile discretization of the target and candidates, removal of duplicate bin edges and five requested predictors. Its first five are PM10, dew point, NO2, NO and CO.
+
+The four gases are now described as a predefined study subset retained from the original experiment, not an optimal mRMR selection. Frozen no-input and nine-input controls retain the selected model settings. Broad inputs add O3, NH3, temperature, dew point and PM10; Prophet/NeuralProphet pooled MAEs improve to 15.87/22.35, with actual future PM10 providing additional information. No-input MAEs are 115.24, 134.07 and 119.50 for SARIMAX, Prophet and NeuralProphet.
+
+The broad-input SARIMAX control did not converge in either bounded attempt and has no accepted score. We disclose this incomplete control rather than infer a complete broad-input family ranking. The controls do not establish optimal predictor subsets or separately tuned model performance.
+
+**Manuscript location:** Section 4.2, p. 10; Table 3, p. 10; Figure 2, p. 11; Figure 3, p. 12; Table 10, p. 20; Limitations, pp. 21–22.
+
+### Comment 8 (R2.M8)
+
+> Residual correction and sensitivity analysis
+> The fixed EWMA smoothing parameter, α = 0.3, requires justification. Please provide a sensitivity analysis or select this parameter using historical validation data only. Comparison with a simple previous-week mean-residual correction would help establish the benefit of exponential smoothing. The authors should also explain why correction improves Prophet and SARIMAX but worsens NeuralProphet, using residual-bias patterns rather than speculation. EWMA correction should be positioned as an established technique applied within this evaluation, unless a distinct methodological innovation is demonstrated.
+
+**Response:**
+
+We now describe EWMA as an established bias-tracking method applied within the evaluation, not a new algorithm. α=0.3 remains predefined; sensitivities cover 0.1, 0.2, 0.5, 0.7 and 1.0, where 1.0 is the previous-week mean-residual correction. The available bias is applied before outcomes and updated afterwards using that week's observed base residual mean. Partial weeks update only from their observed scoring hours.
+
+The corrected experiments do not reproduce a uniform worsening for NeuralProphet. Mean weekly MAE reductions at α=0.3 are 14.83 and 13.53 for seeds 42/123, while seed 2026 worsens by 0.59. SARIMAX and Prophet reductions are 0.49 and 6.13. Figure 9 shows base residuals, the previously available bias and weekly benefits; the sensitivity text explains that tracking persistent offsets can help, while subsequent level changes can cause overcorrection. The previous-week alternative is not uniformly worse: for example, it benefits Prophet but worsens SARIMAX relative to no correction. We do not claim exponential smoothing always dominates it or select α from test performance.
+
+**Manuscript location:** Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.4, p. 12; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19.
+
+### Comment 9 (R2.M9)
+
+> Performance aggregation and uncertainty
+> Sections 3.5–3.6 describe averaging weekly metrics, whereas the tables label them as overall MAE and RMSE. Please distinguish mean weekly RMSE from pooled RMSE across all forecasted hours, as these are not equivalent. Report weekly error distributions and uncertainty around paired performance differences using an approach that respects temporal dependence. Also provide performance by forecast lead time, because an aggregate 168-hour score can conceal deterioration at longer horizons.
+
+**Response:**
+
+We have separated pooled hourly MAE/RMSE from equally weighted mean weekly MAE/RMSE. Each main table reports both aggregations and weekly sample SD. This distinction matters with partial weeks, and mean weekly RMSE is not mathematically equivalent to pooled RMSE.
+
+Figures 4–6 cover weekly error distributions and chronology; Figures 7 and 8 report errors by each of the 168 hourly leads and by forecast day, with matched observed-hour counts. Paired weekly differences use 2,000 moving-block bootstrap replicates with three-week blocks and two-/four-week sensitivities. NeuralProphet contrasts average seed-level weekly losses, not predictions. We state the short-series and multiple-comparison limitations and distinguish seed variation from temporal variability. For example, the seed-averaged correction interval excludes zero with three-week blocks but includes it with four-week blocks; this prevents an unqualified significance claim.
+
+**Manuscript location:** Section 3.5, p. 7; Section 4.5, p. 13; Table 6, p. 14; Table 7, p. 15; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16; Figure 7, p. 18; Figure 8, p. 19.
+
+### Comment 10 (R2.M10)
+
+> Interpretability and computational claims
+> Interpretability is central to the title but is not demonstrated sufficiently through the reported results. Please present relevant model components, regressor effects, or other interpretable outputs and discuss their stability and limitations without treating associations as causal effects. For runtime comparisons, report CPU, system RAM, software versions, actual GPU use, and whether training, preprocessing, and prediction are included. The SARIMAX memory failure should be described as an observation in the specific implementation and environment rather than a general property of the model.
+
+**Response:**
+
+We now show initial frozen-fit SARIMAX/Prophet coefficients, selected raw-unit stability ranges across 23 refits, and frozen Prophet trend/seasonal/regressor summaries weighted equally over scored hours. We explain conditioning, correlated gases and cancellation of signed components, and avoid causal or independent-importance interpretations.
+
+The Implementation section identifies the CPU, reported system RAM, two configured threads, software versions and absence of GPU use. Table 12 distinguishes optimization-only SARIMAX timings from Prophet/NeuralProphet timings including initialization/import; preprocessing and prediction are recorded separately and excluded from that table. Isolated correction arithmetic is approximately 0.002 seconds per complete stream, excluding fitting, file I/O and plotting. Sampled process-tree memory and recorded attempt time are qualified rather than treated as total project cost.
+
+All revised primary SARIMAX fits completed. The original memory failure is acknowledged here as implementation/environment-specific, while the revised manuscript avoids generalizing it to the model family. Different timer boundaries prevent a controlled speed-ratio claim.
+
+**Manuscript location:** Implementation, pp. 7–8; Table 11, p. 20; Table 12, p. 21; Model interpretation and computational measurements, pp. 18–21; Discussion and Limitations, pp. 21–22.
+
+### Comment 11 (R2.M11)
+
+> Recent literature and positioning
+> The literature review should more clearly position this work against recent particulate-matter prediction research involving multi-station modelling, advanced temporal learning, attention mechanisms, feature optimization, interpretability, and distributed learning. Where directly relevant, the authors may consider the following suggested studies, or suitable alternatives: 10.1371/journal.pone.0330465, 10.1038/s41598-025-16664-4, 10.1109/ACCESS.2024.3509142, 10.1088/2631-8695/ae2826, and 10.1016/j.rineng.2026.111937.
+> The purpose should be critical positioning, not merely expanding the reference list. Explain what the present comparison contributes regarding adaptation, computational cost, and interpretability, while distinguishing its single-city Perfect Prognosis setting from other forecasting protocols. Numerical results from different datasets should not be presented as directly comparable. These specific citations are optional and should be included only when substantively relevant.
+
+**Response:**
+
+We have assessed and incorporated four substantively relevant suggested studies: the wavelet/feature-optimization Bi-LSTM study (10.1371/journal.pone.0330465), winter temporal transfer with multi-head attention (10.1038/s41598-025-16664-4), spatial–temporal attention ConvLSTM multi-step forecasting (10.1109/ACCESS.2024.3509142), and centralized cross-pollutant transfer and attention (10.1088/2631-8695/ae2826). Related work and Table 1 discuss their distinct roles in multi-station representation, feature optimization, attention, transfer and interpretation. Existing distributed/federated-learning literature is retained; the optional fifth suggested citation is not added solely to expand the bibliography.
+
+We position our contribution as a comparison of parameter updating and scalar bias correction within three established families, with explicit computational boundaries and conditional fitted interpretations. The single-location, 168-hour Perfect Prognosis evaluation differs from the cited spatial, seasonal and transfer protocols. We make no numerical ranking across different datasets or claim superiority over those architectures.
+
+**Manuscript location:** Related work, pp. 3–4; Table 1, p. 4; Discussion and future work, p. 21; References, pp. 22–25.
+
+## Reviewer 2 — minor comments
+
+### Comment 1 (R2.m1)
+
+> Revise Equation (4) to accurately represent the implemented seasonal and non-seasonal differencing and multiplicative SARIMAX structure.
+
+**Response:**
+
+The SARIMAX equation, now Eq. (3), is rewritten in multiplicative lag-polynomial form with separate seasonal/nonseasonal autoregressive and moving-average factors and differencing operators acting on the regression residual. The polynomial products retain cross terms. Implementation specifies the selected p=q=P=Q=1, d=D=0, s=24 and no constant, matching the fitted revised specification rather than implying differencing that was not used.
+
+**Manuscript location:** Equation 3, p. 5; Section 4.3, p. 10; Table 4, p. 12.
+
+### Comment 2 (R2.m2)
+
+> Equation (8) describes a “one-step residual,” although the evaluation uses 168-step forecasts. Please correct this terminology.
+
+**Response:**
+
+We have replaced the one-step wording with an origin-/lead-indexed multi-step residual. Equation (7) defines the observed target minus its base prediction for week w and lead h. Equations (8) and (9) then apply the previously available scalar bias to all leads and update it from the completed week's observed base residual mean. The 168-hour horizon is specified in Implementation.
+
+**Manuscript location:** Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.5, p. 13.
+
+### Comment 3 (R2.m3)
+
+> Remove the statement that Kalman-filter implementation details are provided unless this alternative is actually described and evaluated.
+
+**Response:**
+
+We have removed the unsupported promise of Kalman bias-correction implementation details and state that no separate Kalman bias-correction alternative is evaluated. SARIMAX's standard state filtering remains part of the frozen-model forecasting protocol; it is distinct from adding a separate bias-correction algorithm. The evaluated correction is the explicitly defined EWMA procedure.
+
+**Manuscript location:** Section 4.4, p. 12; Equation 9, p. 6; Table 5, p. 13.
+
+### Comment 4 (R2.m4)
+
+> Supplement the best- and worst-week figures with a summary covering all evaluation weeks; these selected examples alone do not establish stability.
+
+**Response:**
+
+We have replaced the selected best-/worst-week illustrations with summaries covering every evaluation week: chronological frozen versus refitted weekly errors, the frozen-model chronology, and base versus corrected distributions. Hourly/day lead-time plots and correction diagnostics supplement these summaries. Captions identify the actual regime, seed and observed-hour coverage; selected weeks are no longer used as evidence of stability.
+
+**Manuscript location:** Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16; Figure 7, p. 18; Figure 8, p. 19; Figure 9, p. 19.
+
+### Comment 5 (R2.m5)
+
+> Reconcile the reported Prophet MAE reduction of 7.93 with the displayed values, 45.61 − 37.67 = 7.94, or explain rounding from unrounded results.
+
+**Response:**
+
+The reviewer is correct that the displayed original subtraction gives 7.94 rather than 7.93. The original claim has been superseded by the corrected reruns, and we have not retained either obsolete reduction. All revised differences are computed from saved full-precision errors and displayed consistently to two decimals, with pooled and weekly differences identified separately.
+
+For Prophet, the revised pooled frozen MAE changes from 43.93 to 37.69; the full-precision reduction rounds to 6.24. The equally weighted mean weekly reduction is 6.13. These are different aggregations, not an attempt to reconcile them through rounding.
+
+**Manuscript location:** Table 7, p. 15; Table 8, p. 17; Section 3.5, p. 7; Section 4.5, p. 13.
+
+### Comment 6 (R2.m6)
+
+> Provide a versioned code release, dependency specifications, seeds, data-processing instructions, and scripts reproducing each table and figure.
+
+**Response:**
+
+The revision code and saved results are versioned locally. The package separates preprocessing/validation, fitting and saved-forecast analysis, documents dependencies and seeds, and includes a presentation notebook and table/figure generation scripts. The current environment's execution and saved-evidence checks have completed; we do not claim a fresh clean-environment reproduction or a published corrected release has already occurred.
+
+The existing GitHub repository link is retained in Code availability. A DOI-linked versioned archive, a defensible data-availability statement and clean-environment reproduction remain to be finalized. This response is therefore provisional on the release requirement, as is our response to editorial requirement E4.
+
+**Manuscript location:** Implementation, pp. 7–8; Section 4.3, p. 10; Data and Code availability, p. 26.
+
+**Pending for submission:** Before submission: finalize the versioned public code/data release, DOI, availability wording and clean-environment reproduction.
+
+## Editorial requirements
+
+### Requirement 1 (E1)
+
+> Please ensure the results are accurately reported, any overstated conclusions are rewritten and the limitations of the work fully explained.
+
+**Response:**
+
+We have revised all result-dependent claims using the corrected matched 23-week evidence, preserved original observed targets and completed the primary SARIMAX run. Perfect Prognosis, API-derived targets, missing provenance, partial coverage, bounded validation, seed variability, the failed broad-input control and uncertainty/timing limitations are now explicit. Operational readiness, optimal-subset and general architecture-superiority claims have been narrowed.
+
+**Manuscript location:** Abstract, p. 1; Results, pp. 14–21; Discussion, Limitations and Conclusion, pp. 21–22.
+
+### Requirement 2 (E2)
+
+> Revise the manuscript thoroughly, addressing each reviewer comment.
+
+**Response:**
+
+This document reproduces and responds individually to all 10 Reviewer 1 comments, all 11 major and six minor Reviewer 2 comments, and the editorial requirements. Each reply identifies the change or remaining limitation and its location in revised v1. Shared work is explained under each relevant point, including the completed common-period comparison. Release-related requirements remain visibly pending rather than being described as fulfilled.
+
+**Manuscript location:** This response document; revised v1 throughout.
+
+### Requirement 3 (E3)
+
+> Improve clarity, structure, and language where necessary.
+
+**Response:**
+
+We have shortened and refocused Related work, reduced repetitive claims and replaced selected-week illustrations with all-week summaries. Methodology explains the general methods; exact preprocessing, model settings and evaluation choices are consolidated in Implementation. The original journal LaTeX class and bibliography style are preserved. Yellow highlighting identifies changed text, equations, tables, captions, figures and new references in the accompanying manuscript.
+
+**Manuscript location:** Related work, Methodology and Implementation, pp. 3–14; Discussion, Limitations and Conclusion, pp. 21–22.
+
+### Requirement 4 (E4)
+
+> Please note that if your manuscript uses any custom or bespoke computational tool or code, or reports a new algorithm, tool, software, or a pipeline (even if individual components are not new), the underlying code must be deposited in a recognised DOI-assigning repository (e.g. zenodo) and linked either from Methods or a dedicated Code Availability section.
+
+**Response:**
+
+This requirement is not yet complete. The existing GitHub link identifies the project repository, but does not meet the editor's separate DOI-archive requirement. The corrected code is versioned locally and can be prepared for deposit; no published archive or DOI is claimed. Code availability currently contains an author-input placeholder. The final response must identify the deposited version and its actual DOI after the archive is reviewed and published.
+
+**Manuscript location:** Code availability, p. 26.
+
+**Pending for submission:** Author decision required: provide an existing DOI record, or select the DOI-assigning repository for a reviewed versioned deposit.
+
+### Requirement 5 (E5)
+
+> When your revision is ready, please submit the updated manuscript and a point-by-point response.
+
+**Response:**
+
+A separately maintained, yellow-highlighted revised manuscript and this point-by-point response have been prepared for supervisor/author review. They have not been submitted to the journal. After author review, the archive and availability requirements must be completed, manuscript locations refreshed for any edits, and both final PDFs checked before submission.
+
+**Manuscript location:** Revised v1 manuscript and this response document.
+
+**Pending for submission:** Before submission: resolve the marked release items and obtain author approval of the final manuscript and response.

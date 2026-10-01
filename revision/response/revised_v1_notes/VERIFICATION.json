@@ -1,0 +1,239 @@
+{
+  "date": "2026-10-01",
+  "pdf_pages": 18,
+  "reviewer_points": 27,
+  "editorial_requirements": 5,
+  "all_32_responses_present_in_pdf": true,
+  "comments_match_preserved_scaffold": true,
+  "comments_match_original_letter": true,
+  "labelled_locations_resolved_from_current_manuscript": true,
+  "manuscript_and_scaffold_unchanged": true,
+  "raw_dataset_unchanged": true,
+  "numerical_claims_checked": 53,
+  "numerical_checks": [
+    {
+      "point": "R1.1",
+      "displayed_value": "30.43"
+    },
+    {
+      "point": "R1.1",
+      "displayed_value": "46.88"
+    },
+    {
+      "point": "R2.M4",
+      "displayed_value": "125.74"
+    },
+    {
+      "point": "R2.M4",
+      "displayed_value": "121.52"
+    },
+    {
+      "point": "R2.M4",
+      "displayed_value": "152.90"
+    },
+    {
+      "point": "R2.M7",
+      "displayed_value": "115.24"
+    },
+    {
+      "point": "R2.M7",
+      "displayed_value": "134.07"
+    },
+    {
+      "point": "R2.M7",
+      "displayed_value": "119.50"
+    },
+    {
+      "point": "R2.M7",
+      "displayed_value": "15.87"
+    },
+    {
+      "point": "R2.M7",
+      "displayed_value": "22.35"
+    },
+    {
+      "point": "R1.3",
+      "displayed_value": "-46.32"
+    },
+    {
+      "point": "R1.3",
+      "displayed_value": "35.40"
+    },
+    {
+      "point": "R1.3",
+      "displayed_value": "265.48"
+    },
+    {
+      "point": "R1.3",
+      "displayed_value": "-24.94"
+    },
+    {
+      "point": "R1.3",
+      "displayed_value": "-36.62"
+    },
+    {
+      "point": "R1.3",
+      "displayed_value": "5.17"
+    },
+    {
+      "point": "R1.3",
+      "displayed_value": "237.06"
+    },
+    {
+      "point": "R1.3",
+      "displayed_value": "3.22"
+    },
+    {
+      "point": "R1.4",
+      "displayed_value": "46.88"
+    },
+    {
+      "point": "R1.4",
+      "displayed_value": "10.40"
+    },
+    {
+      "point": "R1.4",
+      "displayed_value": "39.61"
+    },
+    {
+      "point": "R1.4",
+      "displayed_value": "4.33"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "217.54"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "227.30"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "140.59"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "0.91"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "1825.93"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "155.34"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "216.57"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "72.02"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "0.00"
+    },
+    {
+      "point": "R1.10",
+      "displayed_value": "1407.51"
+    },
+    {
+      "point": "R2.M8",
+      "displayed_value": "14.83"
+    },
+    {
+      "point": "R2.M8",
+      "displayed_value": "13.53"
+    },
+    {
+      "point": "R2.M8",
+      "displayed_value": "0.59"
+    },
+    {
+      "point": "R2.M8",
+      "displayed_value": "6.13"
+    },
+    {
+      "point": "R1.7",
+      "displayed_value": "30.66"
+    },
+    {
+      "point": "R1.7",
+      "displayed_value": "29.50"
+    },
+    {
+      "point": "R1.7",
+      "displayed_value": "30.17"
+    },
+    {
+      "point": "R2.M8",
+      "displayed_value": "0.49"
+    },
+    {
+      "point": "R1.7",
+      "displayed_value": "31.33"
+    },
+    {
+      "point": "R2.M3",
+      "displayed_value": "51.02"
+    },
+    {
+      "point": "R2.M3",
+      "displayed_value": "50.60"
+    },
+    {
+      "point": "R2.M3",
+      "displayed_value": "32.32"
+    },
+    {
+      "point": "R1.8",
+      "displayed_value": "-0.49"
+    },
+    {
+      "point": "R1.8",
+      "displayed_value": "-3.91"
+    },
+    {
+      "point": "R1.8",
+      "displayed_value": "2.25"
+    },
+    {
+      "point": "R1.8",
+      "displayed_value": "-7.90"
+    },
+    {
+      "point": "R1.8",
+      "displayed_value": "-11.33"
+    },
+    {
+      "point": "R1.8",
+      "displayed_value": "-3.63"
+    },
+    {
+      "point": "R2.m5",
+      "displayed_value": "6.24"
+    },
+    {
+      "point": "R2.m5",
+      "displayed_value": "6.13"
+    },
+    {
+      "point": "R1.5",
+      "displayed_value": "14.99"
+    }
+  ],
+  "typesetting_errors_or_overfull_boxes": 0,
+  "embedded_type1_fonts_and_extractable_text": true,
+  "pdf_sha256": "53a0470eab68d4c5731e0b2b2824521ca81bc5f9c9ba3fe8bfa964c03021de6c",
+  "tex_sha256": "b170d3fc5c78f52f3614199563c70998ee4bd2ff6c76fe58d298da38303db51f",
+  "submission_ready": false,
+  "pending": [
+    "DOI-linked versioned code release",
+    "final data-availability statement",
+    "clean-environment reproduction",
+    "supervisor/author review and final submission checks"
+  ],
+  "verification_scope": "Comment coverage, key displayed numerical claims, manuscript binding, source preservation and PDF quality. Scientific constraints and unresolved provenance are stated in the responses; this is not independent peer review."
+}

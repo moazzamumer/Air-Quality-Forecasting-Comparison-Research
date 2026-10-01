@@ -1,5 +1,7 @@
 # Corrected reviewer evidence ledger
 
+**Writing update, 1 October 2026:** The highlighted manuscript and [point-by-point response PDF](../../response/revised_v1/response_to_reviewers.pdf) are now drafted for supervisor review. [Response status by point](../../response/revised_v1_notes/POINT_STATUS.md) and its verification record document current manuscript locations and checked numerical replies. The table below records the evidence-stage checkpoint; writing-pending statements in that checkpoint are superseded by these draft documents. Release obligations and scientific limitations remain explicit; no comment is closed merely by drafting a response.
+
 Current evidence on 1 October 2026. All 120 main tasks and eight controls passed; broad-input SARIMAX failed bounded convergence. This supersedes earlier numerical readiness statements while preserving their historical records. Evidence ready does not close a reviewer point: every entry still needs manuscript/response treatment.
 
 The artifact paths below are relative to `revision/corrected/artifacts/`; paths beginning `../` refer to other files in the corrected directory.
