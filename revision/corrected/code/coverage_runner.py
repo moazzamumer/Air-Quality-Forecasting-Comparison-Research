@@ -64,7 +64,7 @@ def sarimax_warm_start(param_names, reference_fit, features, scaler):
 
 
 def sarimax_model(grid,position,task):
-    """Estimate corrected later-origin SARIMAX fits with a fixed numerical policy."""
+    """Estimate full-history SARIMAX fits from earlier corrected training fits."""
     from statsmodels.tsa.statespace.sarimax import SARIMAX
     began=time.perf_counter();features=task['features']
     history=grid.iloc[:position][['pm2_5']+features]
@@ -73,7 +73,20 @@ def sarimax_model(grid,position,task):
     model=SARIMAX(scaled.pm2_5,exog=scaled[features].ffill() if features else None,
         order=tuple(task['candidate']['order']),seasonal_order=tuple(task['candidate']['seasonal_order']),
         enforce_stationarity=False,enforce_invertibility=False)
-    reference=json.loads((OUT/'runs/core_sarimax_frozen_s42/metadata.json').read_text())
+    initial_selected=task['regime']=='frozen' and task['variant']=='selected'
+    if initial_selected:
+        choice=json.loads((STRICT/'selection.json').read_text())
+        selected=[c for c in choice['candidates']['sarimax'] if c['candidate']==task['candidate']]
+        if len(selected)!=1:raise ValueError('Selected SARIMAX has no unique validation fit')
+        reference=json.loads((STRICT/'runs'/selected[0]['run_id']/'metadata.json').read_text())
+        if reference['protocol_signature']!=strict_signature() or reference['status']!='completed':
+            raise ValueError('Stale or incomplete corrected SARIMAX validation source')
+        initialization_source=selected[0]['run_id']
+    else:
+        reference=json.loads((OUT/'runs/core_sarimax_frozen_s42/metadata.json').read_text())
+        if reference['protocol_signature']!=signature() or reference['status']!='completed':
+            raise ValueError('Stale or incomplete corrected SARIMAX core source')
+        initialization_source='corrected_core_sarimax_frozen_s42'
     if pd.Timestamp(reference['fit_origin'])>grid.index[position]:raise ValueError('Future initialization cutoff')
     initial=sarimax_warm_start(model.param_names,reference['fit'],features,scaler)
     initial_llf=float(model.loglike(initial))
@@ -94,7 +107,7 @@ def sarimax_model(grid,position,task):
         parameter_estimates=dict(zip(fitted.param_names,map(float,fitted.params))),
         optimizer=dict(converged=bool(fitted.mle_retvals.get('converged')),iterations=int(fitted.mle_retvals.get('iterations',0)),
             initial_log_likelihood=initial_llf,final_log_likelihood=float(fitted.llf),
-            initialization_source='corrected_core_sarimax_frozen_s42',initialization_source_cutoff=reference['fit_origin'],
+            initialization_source=initialization_source,initialization_source_cutoff=reference['fit_origin'],
             method='complex-step L-BFGS-B, maxiter200/maxls100, default tolerances',warnings=[str(w.message) for w in caught[-6:]]))
     if not meta['optimizer']['converged'] or not np.isfinite(fitted.params).all() or not np.isfinite(fitted.llf):
         raise RuntimeError('Additional SARIMAX refit did not converge')
@@ -126,11 +139,7 @@ def execute(task):
                         original_source_metadata_sha256=hashlib.sha256((src/'metadata.json').read_bytes()).hexdigest(),
                         completed_weeks=[dict(window=int(row.window),**diag)])
         else:
-            if task['family']=='sarimax' and task['regime']=='frozen' and task['variant']=='selected':
-                fitted=fit_model(grid,position,task['family'],task['candidate'],task['features'],
-                                 task['clip_inputs'],task['seed'],folder)
-                fit_executed=True;restored=None
-            elif task['family']=='sarimax':fitted,fit_executed,restored=sarimax_model(grid,position,task)
+            if task['family']=='sarimax':fitted,fit_executed,restored=sarimax_model(grid,position,task)
             else:
                 fitted=fit_model(grid,position,task['family'],task['candidate'],task['features'],task['clip_inputs'],task['seed'],folder)
                 fit_executed=True;restored=None

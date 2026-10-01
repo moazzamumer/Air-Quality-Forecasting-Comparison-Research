@@ -1,0 +1,107 @@
+{
+  "task": {
+    "id": "core_sarimax_frozen_s42",
+    "stage": "core",
+    "family": "sarimax",
+    "regime": "frozen",
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "variant": "selected",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    }
+  },
+  "status": "failed",
+  "protocol_signature": "da1a004501a7b95fd6635f59b98d838ad37002b9a0acbb2a3a0bf505cb98a0a5",
+  "strict_protocol_signature": "d7337574e73bbd3f69d8ffa161cb9ffab08496e92a7cf73b42e01b8520b3f9fc",
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-09-30T21:05:07.305874+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "preparation_seconds": 0.008766439001192339,
+    "scaler": {
+      "mean": {
+        "no": 151.10927799854483,
+        "no2": 94.7723322326076,
+        "co": 2421.880887110315,
+        "so2": 137.74557536239993
+      },
+      "scale": {
+        "no": 183.85221063263705,
+        "no2": 54.835300511290484,
+        "co": 2469.9184878549,
+        "so2": 122.68514668789183
+      }
+    },
+    "input_clip_bounds": null,
+    "target_clipped": false,
+    "target_imputed": false,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "optimizer": {
+      "initial_iterations": 50,
+      "retry_performed": true,
+      "last_iterations": 0,
+      "converged": false,
+      "warnings": [
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals"
+      ]
+    },
+    "parameter_estimates": {
+      "no": -33.96566392629587,
+      "no2": 19.110859080050997,
+      "co": 223.7798175131155,
+      "so2": -12.915835379341269,
+      "ar.L1": 0.9657817176594955,
+      "ma.L1": 0.6184365128366215,
+      "ar.S.L24": 0.9960752758242045,
+      "ma.S.L24": -0.9468588911955402,
+      "sigma2": 108.73280948022075
+    },
+    "fit_seconds": 207.60336965999886
+  },
+  "fit_executed": true,
+  "restored_parameters_from": null,
+  "error": "Traceback (most recent call last):\n  File \"/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py\", line 139, in execute\n    raise RuntimeError('Corrected SARIMAX fit did not converge under the fixed numerical policy')\nRuntimeError: Corrected SARIMAX fit did not converge under the fixed numerical policy\n"
+}

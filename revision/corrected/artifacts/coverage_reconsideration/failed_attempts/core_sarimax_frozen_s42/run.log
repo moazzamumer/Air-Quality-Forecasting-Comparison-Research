@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py", line 324, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py", line 319, in main
+    elif args.stage=='child':execute(json.loads(args.task))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py", line 139, in execute
+    raise RuntimeError('Corrected SARIMAX fit did not converge under the fixed numerical policy')
+RuntimeError: Corrected SARIMAX fit did not converge under the fixed numerical policy

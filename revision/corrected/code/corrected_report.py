@@ -43,7 +43,7 @@ def write_report(metrics, paired, alpha, high, high_week, descriptive,
     timing_summary.to_csv(REVISION/'artifacts/phase3/timing_by_boundary.csv',index=False)
     event_summary = events.groupby('phase').agg(events=('returncode','size'),
         failed=('returncode',lambda x:int((x!=0).sum())),
-        actual_wall_hours=('elapsed_seconds',lambda x:float(x.sum()/3600)),
+        recorded_attempt_wall_hours=('elapsed_seconds',lambda x:float(x.sum()/3600)),
         largest_sampled_peak_rss_mib=('sampled_peak_rss_mib','max')).reset_index()
     no_correction = strict[~strict.stream.str.endswith('ewma03')]
     assert no_correction.maximum_prediction_difference.max() < 1e-8
@@ -75,7 +75,7 @@ def write_report(metrics, paired, alpha, high, high_week, descriptive,
         '## Runtime and resources','',
         'The next table includes only newly fitted walk origins 2–23. Original fitting timers include import/model setup in some runs; numerical SARIMAX recovery timers cover optimization only. They are separated by timer boundary, and cannot be used as a single controlled speed ratio. Source forecast time for a reused first-origin prediction is preserved in `core_timing.csv`; reuse overhead does not mean zero model forecast cost.','',
         table(timing_summary),'',table(event_summary),'',
-        'Supervisor wall hours count actual sequential attempts including startup and failures. Peak RSS is sampled; a short-lived peak may be missed. All revised fits used local CPU with two configured model threads. EWMA arithmetic timings exclude model fitting, CSV I/O and plotting.','',
+        'Recorded supervisor attempt wall hours include startup, failures and superseded completions. Interrupted attempts and standalone diagnostic fits without finalized supervisor records are excluded; this is not total project time or a controlled speed comparison. Peak RSS is sampled; a short-lived peak may be missed. All revised fits used local CPU with two configured model threads. EWMA arithmetic timings exclude model fitting, CSV I/O and plotting.','',
         '## Complete-context sensitivity','',
         'The 16 complete-context weeks are selected from these corrected 23-week base streams. For alpha 0.3, the strict skip/carry policy updates bias only after those 16 completed weeks, while the primary policy updates after every partially observed week. The table reports both policies without mixing old uncorrected model forecasts.','',
         table(strict[['stream','strict_pooled_mae','broader_subset_pooled_mae','strict_minus_broader_subset_mae']]),'',
