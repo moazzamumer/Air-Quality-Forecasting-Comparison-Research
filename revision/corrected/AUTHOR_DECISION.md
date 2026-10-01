@@ -1,6 +1,6 @@
 # Phase 4A author decision checkpoint
 
-**Status: corrected evidence is ready; Moazzam's decision is pending.** The saved-evidence audit passes for 128 successful tasks, including all main experiments, and one explicitly declared failed control. This file records the author decision before any working manuscript copy is created. A completed technical audit is evidence for the decision, not the decision itself.
+**Status: Phase 4A approved by Moazzam on 1 October 2026; Phase 4B authorized.** The saved-evidence audit passes for 128 successful tasks, including all main experiments, and one explicitly declared failed control. This file records the author decision before any working manuscript copy is created. A completed technical audit is evidence for the decision, not the decision itself.
 
 The evidence package to review is:
 
@@ -12,8 +12,8 @@ The evidence package to review is:
 
 Moazzam's decision should state whether the corrected evidence supports proceeding to Phase 4B, or which further repair/analysis is needed. The review should explicitly consider the Perfect Prognosis information set, 23 origins with four partial weeks, API-derived estimate provenance, historical gap filling, model/seed uncertainty, and any changed rankings or conclusions. Do not assume the old ranking must survive.
 
-**Decision:** pending.
+**Decision:** approved. Moazzam explicitly authorized manuscript writing from the reviewed corrected evidence, in a separate directory with the original LaTeX structure preserved and changes highlighted in yellow.
 
-**Date and rationale:** pending.
+**Date and rationale:** 1 October 2026. Explicit author approval in this conversation to proceed to revised v1. Preserve the original tone and support revisions with actual evidence; pause for additional author decisions or material.
 
-**Manuscript copy status:** pending author decision.
+**Manuscript copy status:** created separately at `revision/manuscript/revised_v1/`; original files fingerprinted and preserved.

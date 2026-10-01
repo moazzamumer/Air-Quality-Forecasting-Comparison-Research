@@ -1,0 +1,4 @@
+*.log
+!final_build.log
+!bibtex_build.log
+__pycache__/

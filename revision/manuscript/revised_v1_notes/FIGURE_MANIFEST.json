@@ -1,0 +1,38 @@
+{
+  "Fig1.png": {
+    "source": "Approved corrected protocol; validation windows; shared scoring coverage",
+    "sha256": "e6bbbb5f3b6c3701a4a77f1d23ad7c00a745441eba8c4490c7071e7a28a62724"
+  },
+  "Fig2.png": {
+    "source": "Corrected hourly calendar before initial test origin; 35,732 complete training rows",
+    "sha256": "9bc2647d8f1453c9fa73efe95bd1da40ffd2e6d10d64821e94f769379510dd4c"
+  },
+  "Fig3.png": {
+    "source": "phase1/feature_rankings_training_only.csv; continuous MI estimator, seed 42",
+    "sha256": "75b13d41a8ccb446f8c251d53312df69348c7f9ae35b351dcb2d9b942af26882"
+  },
+  "Fig4.png": {
+    "source": "revision/corrected/artifacts/phase3/figures/regime_comparison.png",
+    "sha256": "271e6c341302646ec87f021be3f39bb86fbd374ba68cb95334ead7a82046f34b"
+  },
+  "Fig5.png": {
+    "source": "revision/corrected/artifacts/phase3/figures/weekly_mae_chronology.png",
+    "sha256": "deda769adbc451a48c079c35253d25aa98319abd9c24a51bf62d531e5d494aa8"
+  },
+  "Fig6.png": {
+    "source": "Saved weekly frozen base and EWMA alpha=0.3 metrics; seed 42",
+    "sha256": "4b1893a68899289c0df14749f3521d2941bf02a7e8d06619c110033a070a1504"
+  },
+  "Fig7.png": {
+    "source": "phase3/lead_hour.csv; frozen/refit/EWMA; seed 42; observed-hour scores",
+    "sha256": "bf77c87891cb6694ff106aea6427300d58b7e4af3baa193daf43309b3c508596"
+  },
+  "Fig8.png": {
+    "source": "revision/corrected/artifacts/phase3/figures/lead_day_mae.png",
+    "sha256": "8600c5599e1ef858c971a1c0b782fd4964e3371eb41c9ae89320ca9e584bfa31"
+  },
+  "Fig9.png": {
+    "source": "revision/corrected/artifacts/phase3/figures/correction_diagnostics.png",
+    "sha256": "7fb5e2ed5cc32061d2ebe9d162bda2666271d7fd698e5c2a75822655614e0394"
+  }
+}

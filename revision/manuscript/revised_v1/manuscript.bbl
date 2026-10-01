@@ -1,0 +1,108 @@
+\begin{thebibliography}{33}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\providecommand{\eprint}[2][]{\url{#2}}
+ \bibcommenthead
+
+\bibitem[{Abuouelezz et~al.(2025)Abuouelezz, Ali, Aung, Altunaiji, Shah, and Gliddon}]{bib15}
+Abuouelezz W, Ali N, Aung Z, et~al (2025) Exploring {PM}$_{2.5}$ and {PM}$_{10}$ {ML} forecasting models: A comparative study in the {UAE}. Scientific Reports 15:9797. \doi{10.1038/s41598-025-94013-1}
+
+\bibitem[{Ahmad and Kumar(2025{\natexlab{a}})}]{bibr1-3}
+Ahmad N, Kumar V (2025{\natexlab{a}}) Effective air pollution prediction using wavenet deep learning with {XGBoost} ({1DCNN-BiLSTM-XgRC}) for urban {US} embassies. Theoretical and Applied Climatology 156:464. \doi{10.1007/s00704-025-05715-5}
+
+\bibitem[{Ahmad and Kumar(2025{\natexlab{b}})}]{bibr1-2}
+Ahmad N, Kumar V (2025{\natexlab{b}}) Enhancing {PM}$_{2.5}$ air pollution forecasting with novel random imputation based on hybrid {RNN-Bidirectional GRU} ({nRI RNN-BiGRU}) model. SN Computer Science 6:637. \doi{10.1007/s42979-025-04167-y}
+
+\bibitem[{Ahmad and Kumar(2025{\natexlab{c}})}]{bibr1-1}
+Ahmad N, Kumar V (2025{\natexlab{c}}) Spatio-temporal forecasting using a hybrid {BiGRU-1DCNN} model for {PM}$_{2.5}$ concentrations in {Delhi, India} (2018--2023) across multiple monitoring stations. Water, Air, \& Soil Pollution 236:459. \doi{10.1007/s11270-025-08103-x}
+
+\bibitem[{Chhikara et~al.(2021)Chhikara, Tekchandani, Kumar, Guizani, and Hassan}]{bib10}
+Chhikara P, Tekchandani R, Kumar N, et~al (2021) Federated learning and autonomous {UAV}s for hazardous zone detection and {AQI} prediction in {IoT} environment. IEEE Internet of Things Journal 8(20):15456--15467. \doi{10.1109/JIOT.2021.3074523}
+
+\bibitem[{Drewil and Al-Bahadili(2022)}]{bib6}
+Drewil G, Al-Bahadili R (2022) Air pollution prediction using {LSTM} deep learning and metaheuristics algorithms. Measurement: Sensors 24:100546. \doi{10.1016/j.measen.2022.100546}
+
+\bibitem[{Garcia et~al.(2025)Garcia, Saez, Harris, Huang, and Collado}]{bib4}
+Garcia A, Saez Y, Harris I, et~al (2025) Advancements in air quality monitoring: A systematic review of {IoT}-based air quality monitoring and {AI} technologies. Artificial Intelligence Review 58:275. \doi{10.1007/s10462-025-11277-9}
+
+\bibitem[{Gu et~al.(2022)Gu, Liu, Liu, Yu, Qiao, and Shi}]{bib21}
+Gu K, Liu H, Liu J, et~al (2022) Air pollution prediction in mass rallies with a new temporally-weighted sample-based multi-task learner. IEEE Transactions on Instrumentation and Measurement 71:1--15. \doi{10.1109/TIM.2022.3157365}
+
+\bibitem[{Habibi et~al.(2017)Habibi, Alesheikh, Mohammadinia, and Sharif}]{bib2}
+Habibi R, Alesheikh A, Mohammadinia A, et~al (2017) An assessment of spatial pattern characterization of air pollution: A case study of {CO} and {PM}$_{2.5}$ in {Tehran}, {Iran}. ISPRS International Journal of Geo-Information 6(9):270. \doi{10.3390/ijgi6090270}
+
+\bibitem[{Hossen et~al.(2025)Hossen, Peng, Shao, and Chen}]{bib24}
+Hossen MK, Peng YT, Shao A, et~al (2025) An {ODE}-based neural network approach for {PM}$_{2.5}$ forecasting. Scientific Reports 15:24830. \doi{10.1038/s41598-025-05958-2}
+
+\bibitem[{Hu et~al.(2022)Hu, Wu, Li, Lu, Weng, and Xia}]{bib11}
+Hu K, Wu J, Li Y, et~al (2022) {FedGCN}: Federated learning-based graph convolutional networks for non-euclidean spatial data. Mathematics 10(6):1000. \doi{10.3390/math10061000}
+
+\bibitem[{Jia et~al.(2025)Jia, Ruan, Ma, Zhao, Wang, Xu, Zhou, Ge, and Xu}]{bib27}
+Jia D, Ruan W, Ma R, et~al (2025) Hybrid framework for improved {PM}$_{2.5}$ prediction based on seasonal-trend decomposition and tailored component processing. Scientific Reports 15:21601. \doi{10.1038/s41598-025-04597-x}
+
+\bibitem[{Kheder et~al.(2025)Kheder, Foreback, Wang, Liu, and Boy}]{bib3}
+Kheder A, Foreback B, Wang L, et~al (2025) Deep spatio-temporal neural network for air quality reanalysis. arXiv preprint arXiv:2502.11941. \doi{10.48550/arXiv.2502.11941}, feb 17, 2025
+
+\bibitem[{Kumar and Pande(2023)}]{bib18}
+Kumar K, Pande BP (2023) Air pollution prediction with machine learning: A case study of indian cities. International Journal of Environmental Science and Technology 20:5333--5348. \doi{10.1007/s13762-022-04241-5}
+
+\bibitem[{Lakshmi and Krishnamoorthy(2024)}]{revSTA}
+\rev{Lakshmi S, Krishnamoorthy A (2024) Effective multi-step PM2.5 and PM10 air quality forecasting using bidirectional ConvLSTM encoder-decoder with STA mechanism. IEEE Access 12:179628--179647.} \colorbox{yellow}{\strut\doi{10.1109/ACCESS.2024.3509142}}
+
+\bibitem[{Lakshmi and Krishnamoorthy(2025{\natexlab{a}})}]{revCrossPollutant}
+\rev{Lakshmi S, Krishnamoorthy A (2025a) Centralized transfer-learning LSTM with multi-head attention for interpretable multi-pollutant forecasting in Delhi's winter smog episodes. Engineering Research Express 7:0452e2.} \colorbox{yellow}{\strut\doi{10.1088/2631-8695/ae2826}}
+
+\bibitem[{Lakshmi and Krishnamoorthy(2025{\natexlab{b}})}]{revWinter}
+\rev{Lakshmi S, Krishnamoorthy A (2025b) Deep transfer learning and attention based P2.5 forecasting in Delhi using a decade of winter season data. Scientific Reports 15:31787.} \colorbox{yellow}{\strut\doi{10.1038/s41598-025-16664-4}}
+
+\bibitem[{Le et~al.(2022)Le, Tran, Dao, Nguyen-Ly, Le, Nguyen-Thi, Pham, Nguyen, and Nguyen-Thi}]{bib30}
+Le DD, Tran AK, Dao MS, et~al (2022) Insights into multi-model federated learning: An advanced approach for air quality index forecasting. Algorithms 15(11):434. \doi{10.3390/a15110434}
+
+\bibitem[{Liang et~al.(2020)Liang, Maimury, Chen, and Juarez}]{bib19}
+Liang YC, Maimury Y, Chen AHL, et~al (2020) Machine learning-based prediction of air quality. Applied Sciences 10(24):9151. \doi{10.3390/app10249151}
+
+\bibitem[{Liu and You(2022)}]{bib13}
+Liu T, You S (2022) Analysis and forecast of {Beijing's} air quality index based on {ARIMA} model and neural network model. Atmosphere 13(4):512. \doi{10.3390/atmos13040512}
+
+\bibitem[{Liu et~al.(2025)Liu, Fang, and Hu}]{bib28}
+Liu Z, Fang Z, Hu Y (2025) A deep learning-based hybrid method for {PM}$_{2.5}$ prediction in central and western china. Scientific Reports 15:10080. \doi{10.1038/s41598-025-95460-6}
+
+\bibitem[{Masood and Ahmad(2021)}]{bib16}
+Masood A, Ahmad K (2021) A review on emerging artificial intelligence ({AI}) techniques for air pollution forecasting: Fundamentals, application and performance. Journal of Cleaner Production 322:129072. \doi{10.1016/j.jclepro.2021.129072}
+
+\bibitem[{Nguyen and Zettsu(2021)}]{bib9}
+Nguyen DV, Zettsu K (2021) Spatially-distributed federated learning of convolutional recurrent neural networks for air pollution prediction. IEEE International Conference on Big Data (Big Data) pp 3601--3608
+
+\bibitem[{{Open-Meteo}(2025)}]{bibOpenMeteo}
+{Open-Meteo} (2025) Open-meteo: Free weather api for non-commercial use. \url{https://open-meteo.com/}, accessed: 2025-09-07
+
+\bibitem[{{OpenWeather}(2025)}]{bibOpenWeather}
+{OpenWeather} (2025) Openweather: Weather data, forecasts, and historical data api. \url{https://openweathermap.org/api}, accessed: 2025-09-07
+
+\bibitem[{Samal et~al.(2019)Samal, Babu, Das, and Acharya}]{bib14}
+Samal KKR, Babu KS, Das SK, et~al (2019) Time series based air pollution forecasting using {SARIMA} and {Prophet} model. Proceedings of the 2019 International Conference on Information Technology and Computer Communications ({ITCC}) pp 80--85. \doi{10.1145/3355402.3355417}
+
+\bibitem[{Saminathan and Chidambaranathan(2024)}]{bib23}
+Saminathan S, Chidambaranathan M (2024) {PM}$_{2.5}$ concentration estimation using {Bi-LSTM} with osprey optimization method. Nature Environment and Pollution Technology 23(3):1631--1638. \doi{10.46488/NEPT.2024.v23i03.033}
+
+\bibitem[{Sankar and Arasu(2025)}]{revWavelet}
+\rev{Sankar L, Arasu K (2025) Efficient multi-station air quality prediction in Delhi with wavelet and optimization-based models. PLOS ONE 20(8):e0330465.} \colorbox{yellow}{\strut\doi{10.1371/journal.pone.0330465}}
+
+\bibitem[{Wang et~al.(2023)Wang, Fan, Yang, and Zhou}]{bib5}
+Wang K, Fan X, Yang X, et~al (2023) An {AQI} decomposition ensemble model based on {SSA}-{LSTM} using improved {AMSSA}-{VMD} reconstruction technique. Environmental Research 232:116365. \doi{10.1016/j.envres.2023.116365}
+
+\bibitem[{Wang et~al.(2025)Wang, Crooks, Regan, and Karimzadeh}]{bib22}
+Wang Z, Crooks JL, Regan EA, et~al (2025) High-resolution estimation of daily {PM}$_{2.5}$ levels in the contiguous {US} using {Bi-LSTM} with attention. Remote Sensing 17(1):126. \doi{10.3390/rs17010126}
+
+\bibitem[{{World Health Organization}(2021)}]{bib1}
+{World Health Organization} (2021) Ambient (outdoor) air quality and health. \url{https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health}, accessed: 2025-09-07
+
+\bibitem[{Zhang et~al.(2023)Zhang, Jiang, and Li}]{bib7}
+Zhang X, Jiang X, Li Y (2023) Prediction of air quality index based on the {SSA}-{BiLSTM}-{LightGBM} model. Scientific Reports 13:5550. \doi{10.1038/s41598-023-32775-2}
+
+\bibitem[{Zhang et~al.(2019)Zhang, Wang, Gao, Ma, Zhao, He, and Wang}]{bib17}
+Zhang Y, Wang Y, Gao M, et~al (2019) A predictive data feature exploration-based air quality prediction approach. IEEE Access 7:30732--30743. \doi{10.1109/ACCESS.2019.2897754}
+
+\end{thebibliography}

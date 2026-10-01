@@ -1,0 +1,95 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./manuscript.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+(./sn-jnl.cls
+Document Class: sn-jnl 2019/11/18 v0.1: An authoring template for Springer Journal articles
+(/home/moazzam/.TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/moazzam/.TinyTeX/texmf-dist/tex/latex/base/fleqn.clo) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/base/size10.clo)) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty))) (/tmp/pm-revision-texmf/tex/latex/sttools/cuted.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics/rotating.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def))) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/base/ifthen.sty)) (/tmp/pm-revision-texmf/tex/latex/threeparttable/threeparttable.sty) (/tmp/pm-revision-texmf/tex/latex/appendix/appendix.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty))) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty))) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/url/url.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/tmp/pm-revision-texmf/tex/latex/wrapfig/wrapfig.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/base/fix-cm.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/base/ts1enc.def)) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty)) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty)) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/tools/array.sty) (/tmp/pm-revision-texmf/tex/latex/booktabs/booktabs.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/tools/tabularx.sty) (/tmp/pm-revision-texmf/tex/latex/placeins/placeins.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/tmp/pm-revision-texmf/tex/generic/soul/soul.sty (/tmp/pm-revision-texmf/tex/generic/soul/soul-ori.sty) (/home/moazzam/.TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty)) (/tmp/pm-revision-texmf/tex/latex/colortbl/colortbl.sty
+new hooks used!!
+) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/l3kernel/l3backend-pdftex.def) (./manuscript.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/home/moazzam/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg)) (./manuscript.out) (./manuscript.out) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd) (/home/moazzam/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \vbox (badness 10000) has occurred while \output is active [1{/home/moazzam/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active [2]
+Underfull \vbox (badness 10000) has occurred while \output is active [3]
+Underfull \vbox (badness 10000) has occurred while \output is active [4]
+Underfull \vbox (badness 10000) has occurred while \output is active [5 <./Fig1.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active [6]
+Underfull \vbox (badness 10000) has occurred while \output is active [7]
+Underfull \vbox (badness 10000) has occurred while \output is active [8]
+Underfull \hbox (badness 1038) in paragraph at lines 264--265
+[]\OT1/cmr/m/n/10 The[] [][][]requested[] [][][]coor[]-[]di[]-[]nate[] [][][]was[] [][][][],[] [][][]stored[] [][][]in[] [][][]the[] [][][]CSV[] [][][]as[]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [9]
+Underfull \vbox (badness 10000) has occurred while \output is active [10]
+Underfull \vbox (badness 10000) has occurred while \output is active [11 <./Fig2.png>]
+Underfull \hbox (badness 1571) in paragraph at lines 346--347
+[]\OT1/cmr/m/n/10 Walk[]-[]for[]-[]ward[] [][][]refits[] [][][]use[] [][][]all[] [][][]avail[]-[]able[] [][][]pre[]-[]ori[]-[]gin[] [][][]his[]-[]tory[] [][][]at[] [][][]each[] [][][]week.[] [][][]Frozen[]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [12 <./Fig3.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active [13]
+Underfull \hbox (badness 1127) in paragraph at lines 450--451
+[][]\OT1/cmr/m/n/10 Across[] [][][]seeds,[] [][][]mean[] [][][]pooled[] [][][]MAE[] [][][]is[] [][][][][] [][][]for[] [][][]frozen[] [][][]fore[]-[]casts[] [][][]and[]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [14 <./Fig4.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active [15 <./Fig5.png> <./Fig6.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active [16]
+Underfull \vbox (badness 10000) has occurred while \output is active [17 <./Fig7.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active [18 <./Fig8.png> <./Fig9.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active [19]
+Underfull \vbox (badness 10000) has occurred while \output is active [20] (./manuscript.bbl
+Underfull \hbox (badness 5802) in paragraph at lines 13--14
+[]\OT1/cmr/m/n/10 Ahmad N, Kumar V (2025) Effec-tive air pol-lu-tion pre-dic-tion using
+
+Underfull \vbox (badness 10000) has occurred while \output is active [21]
+Underfull \vbox (badness 10000) has occurred while \output is active [22]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+[][]\OT1/cmr/m/n/10 Lak[]-[]shmi[] [][][]S,[] [][][]Krish[]-[]namoor[]-[]thy[] [][][]A[] [][][](2024)[] [][][]Effec[]-[]tive[] [][][]multi[]-[]step[] [][][]PM2.5[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+[][][]\OT1/cmr/m/n/10 and[] [][][]PM10[] [][][]air[] [][][]qual[]-[]ity[] [][][]fore[]-[]cast[]-[]ing[] [][][]using[] [][][]bidi[]-[]rec[]-[]tional[] [][][]Con[]-[]vL[]-[]STM[]
+
+Underfull \hbox (badness 5374) in paragraph at lines 52--53
+[][][]\OT1/cmr/m/n/10 encoder[]-[]decoder[] [][][]with[] [][][]STA[] [][][]mech[]-[]a[]-[]nism.[] [][][]IEEE[] [][][]Access[] [][][]12:179628[]--[]179647.
+
+Underfull \hbox (badness 2134) in paragraph at lines 55--56
+[][][]\OT1/cmr/m/n/10 with[] [][][]multi[]-[]head[] [][][]atten[]-[]tion[] [][][]for[] [][][]inter[]-[]pretable[] [][][]multi[]-[]pol[]-[]lu[]-[]tant[] [][][]fore[]-[]cast[]-[]ing[] [][][]in[]
+
+Underfull \hbox (badness 5771) in paragraph at lines 55--56
+[][][]\OT1/cmr/m/n/10 Delhi's[] [][][]win[]-[]ter[] [][][]smog[] [][][]episodes.[] [][][]Engi[]-[]neer[]-[]ing[] [][][]Research[] [][][]Express[] [][][]7:0452e2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active [23]
+Underfull \hbox (badness 1400) in paragraph at lines 88--89
+\OT1/cmr/m/n/10 Pol-lu-tion Tech-nol-ogy 23(3):1631--1638. [][]$https : / / doi . org / 10 . 46488 / NEPT . 2024 .
+
+Underfull \hbox (badness 4341) in paragraph at lines 100--101
+[]\OT1/cmr/m/n/10 World Health Orga-ni-za-tion (2021) Ambi-ent (out-door) air qual-ity and
+
+Underfull \hbox (badness 6220) in paragraph at lines 100--101
+\OT1/cmr/m/n/10 health. [][]$https : / / www . who . int / news-[]room / fact-[]sheets / detail / ambient-[](outdoor )
+)
+
+Package hyperref Warning: Difference (4) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 581.
+
+
+Package hyperref Warning: Difference (3) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 585.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 589.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active [24]
+Underfull \vbox (badness 10000) has occurred while \output is active [25] (./manuscript.aux) )
+(see the transcript file for additional information) </tmp/pm-revision-texmf/fonts/pk/ljfour/jknappen/ec/tcrm1000.602pk></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/moazzam/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on manuscript.pdf (25 pages, 2046049 bytes).
+Transcript written on manuscript.log.

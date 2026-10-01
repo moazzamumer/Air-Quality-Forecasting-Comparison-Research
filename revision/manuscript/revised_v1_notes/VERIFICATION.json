@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-01",
+  "original_submission_files_unchanged": 15,
+  "journal_class_and_bst_unchanged": true,
+  "raw_input_sha256_unchanged": true,
+  "main_result_rows_verified_against_saved_csv": 9,
+  "scoring_hours_per_main_stream": 3624,
+  "origins_per_main_stream": 23,
+  "figures": 9,
+  "tables": 12,
+  "equations": 10,
+  "added_primary_literature_sources": 4,
+  "resolved_citations_and_cross_references": true,
+  "overfull_boxes": 0,
+  "pdf_pages": 25,
+  "author_input_placeholders": 2,
+  "submission_ready": false,
+  "remaining": [
+    "data/code availability and DOI archive",
+    "author scientific/text review",
+    "point-by-point response PDF",
+    "clean-environment reproduction and final release/submission checks"
+  ],
+  "pdf_sha256": "b8e0fccfc267a09951bd1b85f1412bc3ff78c6246ec528cb986dcfe4cac12fd4",
+  "latex_sha256": "90fd9b410a45400d2d85ac0fbe507241a5be05f8a9dfb6c02ea8f4b0fdaa52d3",
+  "warning_scope": "Only journal-template bookmark-level warnings and ordinary underfull typesetting notices remain.",
+  "whitespace_check_scope": "Authored files checked; copied journal class/style and baseline bibliography retain inherited whitespace to preserve the originals."
+}
