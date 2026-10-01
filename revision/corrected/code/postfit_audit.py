@@ -35,10 +35,14 @@ def main():
         candidates=[x[1:] for x in validation if x[0]==family]
         assert sorted(candidates)[0][3]==selection['selected'][family]
     mask=grid[['pm2_5']+cfg['broad_features']].notna().all(axis=1)
-    reviewed=[];scalers=0;neural_samples=0;reused=0
+    reviewed=[];scalers=0;neural_samples=0;reused=0;recoveries=0
     for task in tasks():
         folder=REVISION/'artifacts/coverage_reconsideration/runs'/task['id']
         m=json.loads((folder/'metadata.json').read_text());fit=m['fit']
+        if m.get('numerical_recovery'):
+            from .broad_sarimax_recovery import verify_metadata
+            verify_metadata(m)
+            recoveries+=1
         assert m['status']=='completed' and m['task']==task and m['protocol_signature']==signature()
         assert task['candidate']==selection['selected'][task['family']]
         origin=pd.Timestamp(m['fit_origin']);history=grid.loc[grid.index<origin]
@@ -108,6 +112,7 @@ def main():
                   successful_validation_candidates=len(validation),corrected_runs_checked=len(reviewed),
                   pre_origin_scalers_checked=scalers,neural_episode_sample_counts_checked=neural_samples,
                   identical_first_origin_reuses_checked=reused,performance_streams=len(results),
+                  separately_signed_numerical_recoveries_checked=recoveries,
                   neuralprophet_seed_summary_checked=True,component_hour_weighting_checked=True,
                   reused_forecast_source_cost_checked=True,figure_pairs_checked=6,
                   primary_origins=23,scored_hours=3624,ready_for_author_evidence_review=True)

@@ -64,6 +64,9 @@ def main():
     _,grid=load_calendar();table=windows(grid);full=table[table.full_week]
     for task in tasks():
         folder=OUT/'runs'/task['id'];meta=json.loads((folder/'metadata.json').read_text())
+        if meta.get('numerical_recovery'):
+            from .broad_sarimax_recovery import verify_metadata
+            verify_metadata(meta)
         assert meta['task']==task,'Run task/configuration changed'
         frame=check_frame(pd.read_csv(folder/'forecasts.csv'),grid,[task['week']] if task['regime']=='walk' else range(1,24))
         if task['regime']=='frozen':

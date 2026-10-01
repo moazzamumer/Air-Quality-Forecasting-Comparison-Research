@@ -20,6 +20,8 @@ Existing model recovery is a numerical issue. The selected forecasting orders an
 
 ## Predeclared reporting rules
 
+**Broad-control numerical supplement (1 October 2026):** the broad-input SARIMAX control alone exhausted the 200-iteration fit limit. Its failed attempt is preserved. A separately signed supplement uses conditional-sum-of-squares initialization from the same corrected training history and a 400-iteration complex-step L-BFGS-B bound. Convergence and training likelihood determine acceptance before forecasting. The 128 other successful tasks retain their original signature; their fitting and forecasts are unaffected. See `config/broad_sarimax_recovery.json` and `code/broad_sarimax_recovery.py`. The final audits also verify the supplement signature on this one task.
+
 - Recompute all correction streams after base forecasts. Main EWMA alpha remains 0.3, with the recorded alpha grid reported as sensitivity, never selected by test score.
 - Report both pooled hourly and equally weighted weekly errors, matched comparisons, partial-week counts, lead times, high-pollution performance and NeuralProphet seed variability.
 - Separate actual supervisor wall time from model fit/preparation/prediction timers. State timer boundaries and reused first-origin work. Do not assign zero prediction cost to a reused forecast or claim a controlled runtime ratio from incompatible timer boundaries.

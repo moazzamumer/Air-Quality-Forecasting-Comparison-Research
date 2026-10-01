@@ -1,0 +1,41 @@
+{
+  "task": {
+    "id": "ablate_sarimax_broad",
+    "stage": "ablate",
+    "family": "sarimax",
+    "regime": "frozen",
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2",
+      "o3",
+      "nh3",
+      "temperature",
+      "dewpt",
+      "pm10"
+    ],
+    "clip_inputs": false,
+    "variant": "broad",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    }
+  },
+  "status": "failed",
+  "protocol_signature": "cc1a6f6d34887f37052db3fb351fae65d6414e24c5e0e08f0061bf983382cdc7",
+  "strict_protocol_signature": "d7337574e73bbd3f69d8ffa161cb9ffab08496e92a7cf73b42e01b8520b3f9fc",
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-10-01T10:56:24.803672+00:00",
+  "error": "Traceback (most recent call last):\n  File \"/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py\", line 142, in execute\n    if task['family']=='sarimax':fitted,fit_executed,restored=sarimax_model(grid,position,task)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py\", line 113, in sarimax_model\n    raise RuntimeError('Additional SARIMAX refit did not converge')\nRuntimeError: Additional SARIMAX refit did not converge\n"
+}

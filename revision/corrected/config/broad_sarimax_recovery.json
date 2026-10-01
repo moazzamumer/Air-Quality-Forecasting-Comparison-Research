@@ -1,0 +1,11 @@
+{
+  "version": "broad-control-numerical-recovery-v1",
+  "task_id": "ablate_sarimax_broad",
+  "base_signature": "cc1a6f6d34887f37052db3fb351fae65d6414e24c5e0e08f0061bf983382cdc7",
+  "initialization": "statsmodels conditional-sum-of-squares start_params calculated only on the corrected pre-origin training history",
+  "solver": "complex-step L-BFGS-B",
+  "maxiter": 400,
+  "maxls": 100,
+  "acceptance": "finite converged parameters and likelihood; final training likelihood no lower than initialization; unchanged model order, training cutoff, features, scaling and forecast/scoring contracts",
+  "scope": "Only the failed broad-input SARIMAX control. No main experiment or other control changes. No test forecast scores used for recovery."
+}

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py", line 333, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py", line 328, in main
+    elif args.stage=='child':execute(json.loads(args.task))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py", line 142, in execute
+    if task['family']=='sarimax':fitted,fit_executed,restored=sarimax_model(grid,position,task)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/coverage_runner.py", line 113, in sarimax_model
+    raise RuntimeError('Additional SARIMAX refit did not converge')
+RuntimeError: Additional SARIMAX refit did not converge
