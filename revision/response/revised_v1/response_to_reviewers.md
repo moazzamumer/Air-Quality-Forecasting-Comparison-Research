@@ -24,7 +24,7 @@ We agree that the original 21-week SARIMAX result was not directly comparable wi
 
 All primary models, regimes and seeds are evaluated on the same 3,624 observed hours within 3,864 scheduled hours. Nineteen weeks have complete scoring coverage; four have 120, 120, 48 and 144 scored hours. Missing targets are not imputed for evaluation. The revised SARIMAX weekly-refit pooled MAE/RMSE are 30.43/46.88 micrograms per cubic metre. The Abstract, Results and Conclusion now refer to the completed matched comparison. The earlier memory failure was specific to the original implementation and environment; it is not presented as an intrinsic limitation of SARIMAX.
 
-**Manuscript location:** Abstract, p. 1; Section 5, p. 14; Section 4.1, p. 8; Section 4.5, p. 13; Table 6, p. 14; Conclusion, p. 22.
+**Manuscript location:** Abstract, p. 1; Section 5, p. 14; Section 4.1, p. 8; Section 4.5, p. 14; Table 6, p. 15; Conclusion, p. 22.
 
 ### Comment 2 (R1.2)
 
@@ -36,7 +36,7 @@ We have clarified that this is a retrospective Perfect Prognosis comparison: act
 
 We have narrowed the Abstract and Conclusion and changed 'Operational' to 'Adaptive' in the title. We do not claim demonstrated deployment readiness or skill with gas inputs available at the forecast origin. Prospective evaluation with externally forecast predictors and independently verified station targets is identified as future work. This treatment is consistent with Reviewer 2's major comment 1.
 
-**Manuscript location:** Title and Abstract, p. 1; Section 3, p. 3; Discussion and future work, p. 21; Limitations, pp. 21–22; Conclusion, p. 22.
+**Manuscript location:** Title and Abstract, p. 1; Section 3, p. 3; Discussion and future work, p. 21; Limitations, p. 22; Conclusion, p. 22.
 
 ### Comment 3 (R1.3)
 
@@ -48,7 +48,7 @@ We now report the initial frozen-fit SARIMAX and Prophet regressor coefficients,
 
 We also describe coefficient stability across the 23 refits after conversion to raw-input units, and Prophet's mean absolute trend, seasonal and regressor contributions across the frozen evaluation. Component averages weight each of the 3,624 scored hours equally. These are conditional fitted associations: correlated regressors, temporal terms and cancelling signed components prevent interpreting them as causal effects or independent feature-importance scores.
 
-**Manuscript location:** Model interpretation and computational measurements, pp. 18–21; Table 11, p. 20; Limitations, pp. 21–22.
+**Manuscript location:** Model interpretation and computational measurements, pp. 20–21; Table 11, p. 20; Limitations, p. 22.
 
 ### Comment 4 (R1.4)
 
@@ -60,7 +60,7 @@ We have checked NeuralProphet's normalization, contiguous training episodes, fin
 
 Repeated runs with seeds 42, 123 and 2026 show substantial variability: frozen pooled MAE is 46.88 ± 10.40 across seeds, compared with 39.61 ± 4.33 for refits (mean ± sample SD). Seed 2026 is appreciably better before correction and becomes slightly worse after it. On the small high-concentration subset, seed-42 NeuralProphet outperforms the other frozen families. We distinguish these documented findings from tentative explanations involving optimization or seasonal generalization, and no longer infer an inherent weakness of NeuralProphet.
 
-**Manuscript location:** Section 4.3, p. 10; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Discussion and future work, p. 21.
+**Manuscript location:** Section 4.3, p. 11; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Discussion and future work, p. 21.
 
 ### Comment 5 (R1.5)
 
@@ -72,7 +72,7 @@ We have replaced the unexplained original orders with a documented, bounded trai
 
 The selected specification is (1,0,1) × (1,0,1,24), without a constant. Its validation MAE is 14.99. These orders replace the original (1,1,1) × (1,1,1,24) specification and are used unchanged in both revised regimes. The manuscript states the grid, criterion, failed candidate and limited winter validation scope. This is not presented as exhaustive order optimization.
 
-**Manuscript location:** Section 4.3, p. 10; Table 4, p. 12; Equation 3, p. 5.
+**Manuscript location:** Section 4.3, p. 11; Table 4, p. 12; Equation 3, p. 5.
 
 ### Comment 6 (R1.6)
 
@@ -96,7 +96,7 @@ We have added a causal sensitivity replay with α=0.1, 0.2, 0.3, 0.5, 0.7 and 1.
 
 The conclusions are conditional rather than uniform. SARIMAX mean weekly MAE is 29.50, 30.17 and 31.33 at α=0.1, 0.3 and 1.0, respectively, versus 30.66 without correction. Prophet improves at all tested nonzero factors. NeuralProphet seeds 42/123 improve, while seed 2026 becomes slightly worse throughout the tested range. The revised text reports this sensitivity and avoids claiming α=0.3 is optimal.
 
-**Manuscript location:** Section 4.4, p. 12; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19; Table 9, p. 17.
+**Manuscript location:** Section 4.4, p. 13; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19; Table 9, p. 17.
 
 ### Comment 8 (R1.8)
 
@@ -108,7 +108,7 @@ Tables 6 and 7 now distinguish pooled hourly MAE/RMSE from equally weighted mean
 
 We have added paired weekly MAE comparisons with descriptive 95% moving-block bootstrap intervals, using 2,000 replicates, a primary three-week block and two-/four-week sensitivities. For corrected SARIMAX minus corrected Prophet, the mean weekly difference is −7.90 with a primary interval of [−11.33, −3.63]. SARIMAX correction minus its own base is −0.49 with interval [−3.91, 2.25]. These comparisons use identical scoring masks. With only 23 dependent weeks and no multiplicity adjustment, they do not establish broad population-level significance.
 
-**Manuscript location:** Section 4.5, p. 13; Table 6, p. 14; Table 7, p. 15; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16.
+**Manuscript location:** Section 4.5, p. 14; Table 6, p. 15; Table 7, p. 16; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16.
 
 ### Comment 9 (R1.9)
 
@@ -132,7 +132,7 @@ We have added a descriptive table for the original observed PM2.5 targets in eac
 
 The table also reports the interquartile interval. Its scope differs explicitly from the 3,624 hours used for the primary forecast scores. We identify the series as API-derived estimates rather than authenticated station measurements, so these summaries describe the supplied series and should not be treated as an independently verified description of Beijing exposure.
 
-**Manuscript location:** Section 4.1, p. 8; Table 2, p. 9; Limitations, pp. 21–22.
+**Manuscript location:** Section 4.1, p. 8; Table 2, p. 9; Limitations, p. 22.
 
 ## Reviewer 2 — major comments
 
@@ -162,7 +162,7 @@ The primary evaluation uses 23 weekly origins and 3,624 shared observed hours an
 
 Some requested provenance cannot be recovered. UTC interpretation is supported by the extraction and provider defaults, but original response archives and retrieval dates are unavailable. Positional pollutant-field extraction cannot be independently authenticated, and the source starts before the provider-documented historical start. We disclose these unresolved limitations rather than invent retrieval metadata. The series is explicitly described as API-derived model/gridded estimates, not station ground truth.
 
-**Manuscript location:** Section 4.1, p. 8; Section 4.5, p. 13; Table 2, p. 9; Limitations, pp. 21–22.
+**Manuscript location:** Section 4.1, p. 8; Section 4.5, p. 14; Table 2, p. 9; Limitations, p. 22.
 
 ### Comment 3 (R2.M3)
 
@@ -175,7 +175,7 @@ The audit found that the original notebook's global upper-tail row filtering did
 
 A separate control clips predictors only at training-derived 1st/99th percentiles and scores against unchanged test targets. Clipping increases frozen MAE for all three families. We also report the 158 scored high-concentration hours above the training 95th percentile, 691.34 micrograms per cubic metre: frozen seed-42 NeuralProphet MAE is 32.32, versus 51.02 for SARIMAX and 50.60 for Prophet. These events span only six weeks, so the subset cannot establish general performance on extremes.
 
-**Manuscript location:** Section 4.1, p. 8; Lead time, concentration, and sensitivity, pp. 17–18; Table 10, p. 20; Limitations, pp. 21–22.
+**Manuscript location:** Section 4.1, p. 8; Lead time, concentration, and sensitivity, pp. 17–18; Table 10, p. 20; Limitations, p. 22.
 
 ### Comment 4 (R2.M4)
 
@@ -188,7 +188,7 @@ We have added last-observed-value, daily seasonal-persistence and weekly seasona
 
 All primary SARIMAX refits now complete the same 23 origins as Prophet and NeuralProphet, resolving the original 21-versus-23-week mismatch. We have narrowed comparative claims to the three evaluated families and these references rather than claiming superiority over advanced architectures. Target-only references lack the actual future gases supplied to the main models; no-input model controls and this information disadvantage are explicitly reported.
 
-**Manuscript location:** Section 4.1, p. 8; Section 4.5, p. 13; Table 6, p. 14; Table 10, p. 20; Discussion and future work, p. 21.
+**Manuscript location:** Section 4.1, p. 8; Section 4.5, p. 14; Table 6, p. 15; Table 10, p. 20; Discussion and future work, p. 21.
 
 ### Comment 5 (R2.M5)
 
@@ -201,7 +201,7 @@ A bounded chronological validation within training now compares four SARIMAX dif
 
 NeuralProphet uses global normalization learned from pre-origin complete episodes, 168 lags and 168 direct leads, batch size 128 and learning rate 0.001. Finite losses, retained episode/sample counts, timestamps and lead extraction were checked, including prevention of samples crossing missing intervals. Seeds 42, 123 and 2026 are reported separately and summarized. These checks support correct execution and alignment; completing epochs does not prove optimization convergence to a global optimum. The remaining seed variation is reported without interpreting it as inherent architectural inferiority.
 
-**Manuscript location:** Section 4.1, p. 8; Section 4.3, p. 10; Table 4, p. 12; Table 9, p. 17; Limitations, pp. 21–22.
+**Manuscript location:** Section 4.1, p. 8; Section 4.3, p. 11; Table 4, p. 12; Table 9, p. 17; Limitations, p. 22.
 
 ### Comment 6 (R2.M6)
 
@@ -214,7 +214,7 @@ NeuralProphet uses global normalization learned from pre-origin complete episode
 
 Table 5 gives the weekly pseudocode and Figure 1 the workflow. The already available bias is added before the current week's targets are revealed. After the week, the correction is updated from observed base residuals only. No fitting or scoring target is imputed. The same forecast origins and observed-hour scoring mask are used throughout.
 
-**Manuscript location:** Section 3.4, p. 6; Section 4.1, p. 8; Section 4.4, p. 12; Table 5, p. 13; Figure 1, p. 8; Equation 9, p. 6.
+**Manuscript location:** Section 3.4, p. 6; Section 4.1, p. 8; Section 4.4, p. 13; Table 5, p. 13; Figure 1, p. 8; Equation 9, p. 6.
 
 ### Comment 7 (R2.M7)
 
@@ -225,11 +225,20 @@ Table 5 gives the weekly pseudocode and Figure 1 the workflow. The already avail
 
 We agree that high target association is relevance, not evidence of redundancy between predictors. The revised manuscript reports training-only Pearson and continuous mutual-information rankings on 35,732 complete rows. Continuous MI uses the nearest-neighbor estimator with seed 42. Descriptive mRMR uses MIQ on a target-first input table, with training-only quintile discretization of the target and candidates, removal of duplicate bin edges and five requested predictors. Its first five are PM10, dew point, NO2, NO and CO.
 
-The four gases are now described as a predefined study subset retained from the original experiment, not an optimal mRMR selection. Frozen no-input and nine-input controls retain the selected model settings. Broad inputs add O3, NH3, temperature, dew point and PM10; Prophet/NeuralProphet pooled MAEs improve to 15.87/22.35, with actual future PM10 providing additional information. No-input MAEs are 115.24, 134.07 and 119.50 for SARIMAX, Prophet and NeuralProphet.
+The physical overlap provides a separate reason to exclude PM10 from the primary gas-conditioned comparison. PM10 includes the fine-particle fraction as well as coarse particles (United States EPA, n.d.); it is not simply another name for PM2.5. With training correlation r=0.992, same-hour PM10 is a close proxy for the target in this series. Including actual future PM10 conditions the prediction on a particulate aggregate containing the fraction being predicted. Its exclusion restricts the primary comparison to gases rather than that overlapping particulate input; it is not evidence that PM10 is irrelevant or that the four gases are statistically optimal.
+
+Leakage depends on the legitimacy and availability of the information for the task, not high correlation alone (Kapoor and Narayanan, 2023). Actual future PM10 would raise an unavailable-information leakage concern if these scores were presented as operational forecasts. Under our declared Perfect Prognosis protocol, the broader control is a conditional diagnostic and is not described as operational skill. Actual future gases are also unavailable operationally unless supplied externally. Lagged or independently forecast PM10 could legitimately be used in a different protocol. The supplied API estimates do not establish that the provider calculated one pollutant field from another. We clarify this rationale in the revision without claiming it was a documented original selection rule.
+
+The four gases remain a predefined subset retained from the original experiment. Frozen no-input and nine-input controls retain the selected settings. Broad inputs add O3, NH3, temperature, dew point and PM10; Prophet/NeuralProphet pooled MAEs are 15.87/22.35, with actual future PM10 among the added inputs. Because five predictors change together, these results do not isolate PM10's individual benefit. No-input MAEs are 115.24, 134.07 and 119.50 for SARIMAX, Prophet and NeuralProphet.
 
 The broad-input SARIMAX control did not converge in either bounded attempt and has no accepted score. We disclose this incomplete control rather than infer a complete broad-input family ranking. The controls do not establish optimal predictor subsets or separately tuned model performance.
 
-**Manuscript location:** Section 4.2, p. 10; Table 3, p. 10; Figure 2, p. 11; Figure 3, p. 12; Table 10, p. 20; Limitations, pp. 21–22.
+**Manuscript location:** Section 4.2, p. 10; Table 3, p. 10; Figure 2, p. 11; Figure 3, p. 12; Table 10, p. 20; Limitations, p. 22.
+
+**Sources supporting this clarification:**
+
+- [United States EPA. What is Particle Pollution? (n.d.; accessed 1 October 2026).](https://www.epa.gov/pmcourse/what-particle-pollution)
+- [Kapoor S, Narayanan A (2023). Leakage and the reproducibility crisis in machine-learning-based science. Patterns 4(9):100804.](https://doi.org/10.1016/j.patter.2023.100804)
 
 ### Comment 8 (R2.M8)
 
@@ -242,7 +251,7 @@ We now describe EWMA as an established bias-tracking method applied within the e
 
 The corrected experiments do not reproduce a uniform worsening for NeuralProphet. Mean weekly MAE reductions at α=0.3 are 14.83 and 13.53 for seeds 42/123, while seed 2026 worsens by 0.59. SARIMAX and Prophet reductions are 0.49 and 6.13. Figure 9 shows base residuals, the previously available bias and weekly benefits; the sensitivity text explains that tracking persistent offsets can help, while subsequent level changes can cause overcorrection. The previous-week alternative is not uniformly worse: for example, it benefits Prophet but worsens SARIMAX relative to no correction. We do not claim exponential smoothing always dominates it or select α from test performance.
 
-**Manuscript location:** Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.4, p. 12; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19.
+**Manuscript location:** Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.4, p. 13; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19.
 
 ### Comment 9 (R2.M9)
 
@@ -255,7 +264,7 @@ We have separated pooled hourly MAE/RMSE from equally weighted mean weekly MAE/R
 
 Figures 4–6 cover weekly error distributions and chronology; Figures 7 and 8 report errors by each of the 168 hourly leads and by forecast day, with matched observed-hour counts. Paired weekly differences use 2,000 moving-block bootstrap replicates with three-week blocks and two-/four-week sensitivities. NeuralProphet contrasts average seed-level weekly losses, not predictions. We state the short-series and multiple-comparison limitations and distinguish seed variation from temporal variability. For example, the seed-averaged correction interval excludes zero with three-week blocks but includes it with four-week blocks; this prevents an unqualified significance claim.
 
-**Manuscript location:** Section 3.5, p. 7; Section 4.5, p. 13; Table 6, p. 14; Table 7, p. 15; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16; Figure 7, p. 18; Figure 8, p. 19.
+**Manuscript location:** Section 3.5, p. 7; Section 4.5, p. 14; Table 6, p. 15; Table 7, p. 16; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16; Figure 7, p. 18; Figure 8, p. 19.
 
 ### Comment 10 (R2.M10)
 
@@ -270,7 +279,7 @@ The Implementation section identifies the CPU, reported system RAM, two configur
 
 All revised primary SARIMAX fits completed. The original memory failure is acknowledged here as implementation/environment-specific, while the revised manuscript avoids generalizing it to the model family. Different timer boundaries prevent a controlled speed-ratio claim.
 
-**Manuscript location:** Implementation, pp. 7–8; Table 11, p. 20; Table 12, p. 21; Model interpretation and computational measurements, pp. 18–21; Discussion and Limitations, pp. 21–22.
+**Manuscript location:** Implementation, pp. 7–8; Table 11, p. 20; Table 12, p. 21; Model interpretation and computational measurements, pp. 20–21; Discussion and Limitations, pp. 21–22.
 
 ### Comment 11 (R2.M11)
 
@@ -296,7 +305,7 @@ We position our contribution as a comparison of parameter updating and scalar bi
 
 The SARIMAX equation, now Eq. (3), is rewritten in multiplicative lag-polynomial form with separate seasonal/nonseasonal autoregressive and moving-average factors and differencing operators acting on the regression residual. The polynomial products retain cross terms. Implementation specifies the selected p=q=P=Q=1, d=D=0, s=24 and no constant, matching the fitted revised specification rather than implying differencing that was not used.
 
-**Manuscript location:** Equation 3, p. 5; Section 4.3, p. 10; Table 4, p. 12.
+**Manuscript location:** Equation 3, p. 5; Section 4.3, p. 11; Table 4, p. 12.
 
 ### Comment 2 (R2.m2)
 
@@ -306,7 +315,7 @@ The SARIMAX equation, now Eq. (3), is rewritten in multiplicative lag-polynomial
 
 We have replaced the one-step wording with an origin-/lead-indexed multi-step residual. Equation (7) defines the observed target minus its base prediction for week w and lead h. Equations (8) and (9) then apply the previously available scalar bias to all leads and update it from the completed week's observed base residual mean. The 168-hour horizon is specified in Implementation.
 
-**Manuscript location:** Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.5, p. 13.
+**Manuscript location:** Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.5, p. 14.
 
 ### Comment 3 (R2.m3)
 
@@ -316,7 +325,7 @@ We have replaced the one-step wording with an origin-/lead-indexed multi-step re
 
 We have removed the unsupported promise of Kalman bias-correction implementation details and state that no separate Kalman bias-correction alternative is evaluated. SARIMAX's standard state filtering remains part of the frozen-model forecasting protocol; it is distinct from adding a separate bias-correction algorithm. The evaluated correction is the explicitly defined EWMA procedure.
 
-**Manuscript location:** Section 4.4, p. 12; Equation 9, p. 6; Table 5, p. 13.
+**Manuscript location:** Section 4.4, p. 13; Equation 9, p. 6; Table 5, p. 13.
 
 ### Comment 4 (R2.m4)
 
@@ -338,7 +347,7 @@ The reviewer is correct that the displayed original subtraction gives 7.94 rathe
 
 For Prophet, the revised pooled frozen MAE changes from 43.93 to 37.69; the full-precision reduction rounds to 6.24. The equally weighted mean weekly reduction is 6.13. These are different aggregations, not an attempt to reconcile them through rounding.
 
-**Manuscript location:** Table 7, p. 15; Table 8, p. 17; Section 3.5, p. 7; Section 4.5, p. 13.
+**Manuscript location:** Table 7, p. 16; Table 8, p. 17; Section 3.5, p. 7; Section 4.5, p. 14.
 
 ### Comment 6 (R2.m6)
 
@@ -350,7 +359,7 @@ The revision code and saved results are versioned locally. The package separates
 
 The existing GitHub repository link is retained in Code availability. A DOI-linked versioned archive, a defensible data-availability statement and clean-environment reproduction remain to be finalized. This response is therefore provisional on the release requirement, as is our response to editorial requirement E4.
 
-**Manuscript location:** Implementation, pp. 7–8; Section 4.3, p. 10; Data and Code availability, p. 26.
+**Manuscript location:** Implementation, pp. 7–8; Section 4.3, p. 11; Data and Code availability, p. 26.
 
 **Pending for submission:** Before submission: finalize the versioned public code/data release, DOI, availability wording and clean-environment reproduction.
 

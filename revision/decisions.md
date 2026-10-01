@@ -109,3 +109,11 @@ This is an author-readable decision record, not a list of every implementation d
 **Reason:** extending optimizer limits until obtaining a favorable answer is unnecessary for the completed primary comparison. Nonconvergence is a result to report. It limits the broad-feature three-family comparison and the strength of R2.M7's ablation evidence; it does not imply failure of the primary selected-gas SARIMAX model. No unconverged-fit forecasts enter the analysis.
 
 **Reporting and author gate:** the final saved-evidence audit passes for the accepted streams, corrections, common mask, summaries and six figure pairs. The explicit three-seed mean/SD, hourly-weighted components, baseline producer and timing definitions resolve the outstanding reporting checks. [Fresh review](corrected/reports/PHASE4A_REVIEW.md) and [individual reviewer ledger](corrected/reports/REVIEWER_EVIDENCE.md) are ready. Moazzam's decision remains pending; no manuscript copy has been made.
+
+## D14 — Clarify the PM10 exclusion as scope and information overlap
+
+**Reporting clarification on 1 October 2026 at Moazzam’s request.** PM10 includes fine and coarse particle mass; excluding actual same-hour PM10 from the retained primary gas-only set avoids conditioning that comparison on a particulate aggregate containing the fine fraction being predicted. The observed training correlation is 0.992. High correlation alone does not establish leakage, statistical redundancy or optimality of the four gases.
+
+**Reason:** a physical overlap argument is more specific than an unexplained relevance-based exclusion. Leakage depends on legitimate information for the task. The broad-input run remains a disclosed Perfect Prognosis control; actual future gases also require that qualification. Lagged or separately forecast PM10 could be legitimate in a different protocol. Five added predictors prevent isolating PM10’s individual effect from the broad control.
+
+**Evidence and scope:** [primary-source rationale](manuscript/revised_v1_notes/PM10_RATIONALE.md), revised Implementation and response R2.M7. No experiment, score, input set or selection rule changed. The revision does not claim this was a documented original selection rule or that provider fields were derived from one another.

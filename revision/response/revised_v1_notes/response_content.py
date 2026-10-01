@@ -13,14 +13,14 @@ RESPONSES = {
             "We have clarified that this is a retrospective Perfect Prognosis comparison: actual future NO, NO2, CO and SO2 are supplied, while future PM2.5 is withheld from prediction. Highly accurate externally available gas forecasts could approximate this information setting, but their forecast errors would be absent from our experiment. Without such inputs, this remains an idealized conditional evaluation.",
             "We have narrowed the Abstract and Conclusion and changed 'Operational' to 'Adaptive' in the title. We do not claim demonstrated deployment readiness or skill with gas inputs available at the forecast origin. Prospective evaluation with externally forecast predictors and independently verified station targets is identified as future work. This treatment is consistent with Reviewer 2's major comment 1."
         ],
-        "locations": ["Title and Abstract, p. 1", "sec:methodology", "Discussion and future work, p. 21", "Limitations, pp. 21–22", "Conclusion, p. 22"]
+        "locations": ["Title and Abstract, p. 1", "sec:methodology", "Discussion and future work, p. 21", "Limitations, p. 22", "Conclusion, p. 22"]
     },
     "R1.3": {
         "paragraphs": [
             "We now report the initial frozen-fit SARIMAX and Prophet regressor coefficients, expressed as target change per one initial training-input standard deviation. For NO, NO2, CO and SO2 respectively, these are −36.62, 5.17, 237.06 and 3.22 for SARIMAX, and −46.32, 35.40, 265.48 and −24.94 for Prophet, in micrograms per cubic metre.",
             "We also describe coefficient stability across the 23 refits after conversion to raw-input units, and Prophet's mean absolute trend, seasonal and regressor contributions across the frozen evaluation. Component averages weight each of the 3,624 scored hours equally. These are conditional fitted associations: correlated regressors, temporal terms and cancelling signed components prevent interpreting them as causal effects or independent feature-importance scores."
         ],
-        "locations": ["Model interpretation and computational measurements, pp. 18–21", "tab:effects", "Limitations, pp. 21–22"]
+        "locations": ["Model interpretation and computational measurements, pp. 20–21", "tab:effects", "Limitations, p. 22"]
     },
     "R1.4": {
         "paragraphs": [
@@ -69,7 +69,7 @@ RESPONSES = {
             "We have added a descriptive table for the original observed PM2.5 targets in each full chronological partition, including the unused final test remainder. Training has 35,736 observed values, with mean 217.54, sample SD 227.30, median 140.59 and range 0.91–1825.93 micrograms per cubic metre. Testing has 3,787 observed values, with mean 155.34, sample SD 216.57, median 72.02 and range 0.00–1407.51.",
             "The table also reports the interquartile interval. Its scope differs explicitly from the 3,624 hours used for the primary forecast scores. We identify the series as API-derived estimates rather than authenticated station measurements, so these summaries describe the supplied series and should not be treated as an independently verified description of Beijing exposure."
         ],
-        "locations": ["subsec:impl_data", "tab:descriptive", "Limitations, pp. 21–22"]
+        "locations": ["subsec:impl_data", "tab:descriptive", "Limitations, p. 22"]
     },
     "R2.M1": {
         "paragraphs": [
@@ -84,14 +84,14 @@ RESPONSES = {
             "The primary evaluation uses 23 weekly origins and 3,624 shared observed hours and ends on 23 June 2025 00:00. The final 163-hour calendar remainder is excluded from fixed 168-hour scoring. Four partial weeks are explicitly counted. The January–June period cannot support year-round conclusions.",
             "Some requested provenance cannot be recovered. UTC interpretation is supported by the extraction and provider defaults, but original response archives and retrieval dates are unavailable. Positional pollutant-field extraction cannot be independently authenticated, and the source starts before the provider-documented historical start. We disclose these unresolved limitations rather than invent retrieval metadata. The series is explicitly described as API-derived model/gridded estimates, not station ground truth."
         ],
-        "locations": ["subsec:impl_data", "subsec:impl_evaluation", "tab:descriptive", "Limitations, pp. 21–22"]
+        "locations": ["subsec:impl_data", "subsec:impl_evaluation", "tab:descriptive", "Limitations, p. 22"]
     },
     "R2.M3": {
         "paragraphs": [
             "The audit found that the original notebook's global upper-tail row filtering did not match the manuscript's winsorization description. We have corrected this mismatch and repeated the revised primary experiments using all original observed target values, without positive target clipping or outlier removal. Four invalid −9999 predictor cells in training (two NO2, one O3 and one PM10) are masked as missing in a working copy; the raw file, PM2.5 targets and valid negative weather values are preserved. Affected predictor analysis, validation and fitting were repeated.",
             "A separate control clips predictors only at training-derived 1st/99th percentiles and scores against unchanged test targets. Clipping increases frozen MAE for all three families. We also report the 158 scored high-concentration hours above the training 95th percentile, 691.34 micrograms per cubic metre: frozen seed-42 NeuralProphet MAE is 32.32, versus 51.02 for SARIMAX and 50.60 for Prophet. These events span only six weeks, so the subset cannot establish general performance on extremes."
         ],
-        "locations": ["subsec:impl_data", "Lead time, concentration, and sensitivity, pp. 17–18", "tab:controls", "Limitations, pp. 21–22"]
+        "locations": ["subsec:impl_data", "Lead time, concentration, and sensitivity, pp. 17–18", "tab:controls", "Limitations, p. 22"]
     },
     "R2.M4": {
         "paragraphs": [
@@ -105,7 +105,7 @@ RESPONSES = {
             "A bounded chronological validation within training now compares four SARIMAX differencing combinations, additive/multiplicative Prophet seasonality and 30/50 NeuralProphet epochs over four weekly origins. Selection uses mean weekly MAE and pooled RMSE as tie-breaker. Seven of eight candidates complete. The selected settings are (1,0,1) × (1,0,1,24), additive Prophet and 50-epoch NeuralProphet, with the remaining explicit settings reported in Table 4. This replaces an unexplained configuration choice with reproducible screening, while acknowledging that the grid and winter validation period are limited.",
             "NeuralProphet uses global normalization learned from pre-origin complete episodes, 168 lags and 168 direct leads, batch size 128 and learning rate 0.001. Finite losses, retained episode/sample counts, timestamps and lead extraction were checked, including prevention of samples crossing missing intervals. Seeds 42, 123 and 2026 are reported separately and summarized. These checks support correct execution and alignment; completing epochs does not prove optimization convergence to a global optimum. The remaining seed variation is reported without interpreting it as inherent architectural inferiority."
         ],
-        "locations": ["subsec:impl_data", "subsec:impl_models", "tab:configuration", "tab:seeds", "Limitations, pp. 21–22"]
+        "locations": ["subsec:impl_data", "subsec:impl_models", "tab:configuration", "tab:seeds", "Limitations, p. 22"]
     },
     "R2.M6": {
         "paragraphs": [
@@ -117,10 +117,16 @@ RESPONSES = {
     "R2.M7": {
         "paragraphs": [
             "We agree that high target association is relevance, not evidence of redundancy between predictors. The revised manuscript reports training-only Pearson and continuous mutual-information rankings on 35,732 complete rows. Continuous MI uses the nearest-neighbor estimator with seed 42. Descriptive mRMR uses MIQ on a target-first input table, with training-only quintile discretization of the target and candidates, removal of duplicate bin edges and five requested predictors. Its first five are PM10, dew point, NO2, NO and CO.",
-            "The four gases are now described as a predefined study subset retained from the original experiment, not an optimal mRMR selection. Frozen no-input and nine-input controls retain the selected model settings. Broad inputs add O3, NH3, temperature, dew point and PM10; Prophet/NeuralProphet pooled MAEs improve to 15.87/22.35, with actual future PM10 providing additional information. No-input MAEs are 115.24, 134.07 and 119.50 for SARIMAX, Prophet and NeuralProphet.",
+            "The physical overlap provides a separate reason to exclude PM10 from the primary gas-conditioned comparison. PM10 includes the fine-particle fraction as well as coarse particles (United States EPA, n.d.); it is not simply another name for PM2.5. With training correlation r=0.992, same-hour PM10 is a close proxy for the target in this series. Including actual future PM10 conditions the prediction on a particulate aggregate containing the fraction being predicted. Its exclusion restricts the primary comparison to gases rather than that overlapping particulate input; it is not evidence that PM10 is irrelevant or that the four gases are statistically optimal.",
+            "Leakage depends on the legitimacy and availability of the information for the task, not high correlation alone (Kapoor and Narayanan, 2023). Actual future PM10 would raise an unavailable-information leakage concern if these scores were presented as operational forecasts. Under our declared Perfect Prognosis protocol, the broader control is a conditional diagnostic and is not described as operational skill. Actual future gases are also unavailable operationally unless supplied externally. Lagged or independently forecast PM10 could legitimately be used in a different protocol. The supplied API estimates do not establish that the provider calculated one pollutant field from another. We clarify this rationale in the revision without claiming it was a documented original selection rule.",
+            "The four gases remain a predefined subset retained from the original experiment. Frozen no-input and nine-input controls retain the selected settings. Broad inputs add O3, NH3, temperature, dew point and PM10; Prophet/NeuralProphet pooled MAEs are 15.87/22.35, with actual future PM10 among the added inputs. Because five predictors change together, these results do not isolate PM10's individual benefit. No-input MAEs are 115.24, 134.07 and 119.50 for SARIMAX, Prophet and NeuralProphet.",
             "The broad-input SARIMAX control did not converge in either bounded attempt and has no accepted score. We disclose this incomplete control rather than infer a complete broad-input family ranking. The controls do not establish optimal predictor subsets or separately tuned model performance."
         ],
-        "locations": ["subsec:impl_feature_selection", "tab:features", "fig:corr_heatmap", "fig:mi_bar", "tab:controls", "Limitations, pp. 21–22"]
+        "locations": ["subsec:impl_feature_selection", "tab:features", "fig:corr_heatmap", "fig:mi_bar", "tab:controls", "Limitations, p. 22"],
+        "sources": [
+            ["United States EPA. What is Particle Pollution? (n.d.; accessed 1 October 2026).", "https://www.epa.gov/pmcourse/what-particle-pollution"],
+            ["Kapoor S, Narayanan A (2023). Leakage and the reproducibility crisis in machine-learning-based science. Patterns 4(9):100804.", "https://doi.org/10.1016/j.patter.2023.100804"]
+        ]
     },
     "R2.M8": {
         "paragraphs": [
@@ -142,7 +148,7 @@ RESPONSES = {
             "The Implementation section identifies the CPU, reported system RAM, two configured threads, software versions and absence of GPU use. Table 12 distinguishes optimization-only SARIMAX timings from Prophet/NeuralProphet timings including initialization/import; preprocessing and prediction are recorded separately and excluded from that table. Isolated correction arithmetic is approximately 0.002 seconds per complete stream, excluding fitting, file I/O and plotting. Sampled process-tree memory and recorded attempt time are qualified rather than treated as total project cost.",
             "All revised primary SARIMAX fits completed. The original memory failure is acknowledged here as implementation/environment-specific, while the revised manuscript avoids generalizing it to the model family. Different timer boundaries prevent a controlled speed-ratio claim."
         ],
-        "locations": ["Implementation, pp. 7–8", "tab:effects", "tab:timing", "Model interpretation and computational measurements, pp. 18–21", "Discussion and Limitations, pp. 21–22"]
+        "locations": ["Implementation, pp. 7–8", "tab:effects", "tab:timing", "Model interpretation and computational measurements, pp. 20–21", "Discussion and Limitations, pp. 21–22"]
     },
     "R2.M11": {
         "paragraphs": [

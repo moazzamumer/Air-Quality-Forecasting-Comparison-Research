@@ -117,9 +117,16 @@ for group, points in GROUPS:
         if response.get("pending"):
             md += ["**Pending for submission:** " + response["pending"], ""]
             tex += [r"\reviewnote{" + latex(response["pending"]) + "}"]
+        if response.get("sources"):
+            md += ["**Sources supporting this clarification:**", ""]
+            tex += [r"\textbf{Sources supporting this clarification:}"]
+            for title, url in response["sources"]:
+                md += [f"- [{title}]({url})"]
+                tex += [latex(title) + r" \url{" + url + r"}\par"]
+            md += [""]
         records.append({"id": point, "comment": comments[point], "locations": resolved,
                         "status": "response_drafted_release_pending" if response.get("pending") else "response_drafted_with_stated_limits",
-                        "pending": response.get("pending")})
+                        "pending": response.get("pending"), "sources": response.get("sources", [])})
 tex += [r"\end{document}"]
 (OUTPUT / "response_to_reviewers.md").write_text("\n".join(md))
 (OUTPUT / "response_to_reviewers.tex").write_text("\n".join(tex) + "\n")

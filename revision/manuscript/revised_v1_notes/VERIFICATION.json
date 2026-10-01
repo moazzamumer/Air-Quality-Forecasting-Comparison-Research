@@ -9,7 +9,7 @@
   "figures": 9,
   "tables": 12,
   "equations": 10,
-  "added_primary_literature_sources": 4,
+  "added_primary_literature_sources": 5,
   "resolved_citations_and_cross_references": true,
   "overfull_boxes": 0,
   "pdf_pages": 26,
@@ -21,15 +21,19 @@
     "clean-environment reproduction and final release/submission checks",
     "supervisor/author review of point-by-point response and refresh after manuscript edits"
   ],
-  "pdf_sha256": "e747b01d1580c696ae143444ae62a7a3273c7d33e5fbf26bf9e187e0a3812b31",
-  "latex_sha256": "2b11897a468beb15dce2cea5a8b27291f9f40b3b2a70c3d8597470db228b6f24",
+  "pdf_sha256": "bf13840686a5292a69dffe0c0b15328f321abb5ef4f37734dec8e4e449ab0170",
+  "latex_sha256": "85e6ebff95d6620f34b46f94420eb8a4e5831026720abb93ddadfba96eed5e19",
   "warning_scope": "Only journal-template bookmark-level warnings and ordinary underfull typesetting notices remain.",
   "whitespace_check_scope": "Authored files checked; copied journal class/style and baseline bibliography retain inherited whitespace to preserve the originals.",
   "author_structural_feedback_applied": true,
-  "results_text_identical_to_initial_v1": true,
+  "results_text_identical_to_initial_v1": false,
   "all_12_table_contents_identical_to_initial_v1": true,
   "all_9_figures_unchanged": true,
   "github_link_restored": true,
   "point_by_point_response_pdf_prepared": true,
-  "response_contains_27_reviewer_and_5_editorial_replies": true
+  "response_contains_27_reviewer_and_5_editorial_replies": true,
+  "added_authoritative_web_sources": 1,
+  "added_bibliography_entries": 6,
+  "results_numerical_tables_and_figures_unchanged_after_R2_M7": true,
+  "R2_M7_PM10_rationale_sourced": true
 }

@@ -4,234 +4,275 @@
   "reviewer_points": 27,
   "editorial_requirements": 5,
   "submission_ready": false,
-  "manuscript_pdf_sha256": "e747b01d1580c696ae143444ae62a7a3273c7d33e5fbf26bf9e187e0a3812b31",
-  "manuscript_tex_sha256": "2b11897a468beb15dce2cea5a8b27291f9f40b3b2a70c3d8597470db228b6f24",
-  "manuscript_aux_sha256": "ecf8d69f2738201d98971423a4f81df2c958c753af62f6a6c5f9d8c990bd2aaa",
+  "manuscript_pdf_sha256": "bf13840686a5292a69dffe0c0b15328f321abb5ef4f37734dec8e4e449ab0170",
+  "manuscript_tex_sha256": "85e6ebff95d6620f34b46f94420eb8a4e5831026720abb93ddadfba96eed5e19",
+  "manuscript_aux_sha256": "3e346e6489079696446c868eaef2e32aeb989e2cfebe462dba2d0b81fa7a74ec",
   "preserved_scaffold_sha256": "5221dffec35f0390064e64dbf94aa4fe08c8ae3fb321837af762ba1ce1048ab1",
   "responses": [
     {
       "id": "R1.1",
       "comment": "The SARIMAX walk-forward run stops at week 21 of 23 because increasing memory usage prevented completion in the available computing environment, yet the abstract, Results and Discussion often present it alongside the two fully completed models (Prophet, NeuralProphet) without flagging this difference. Please state explicitly, wherever SARIMAX walk-forward performance is mentioned, that the reported MAE/RMSE are cumulative over 21 of 23 weeks, and avoid phrasing that implies a like-for-like comparison with the complete runs. This is not a fatal flaw, but as written it could mislead readers about the comparability of the three models under this regime.",
-      "locations": "Abstract, p. 1; Section 5, p. 14; Section 4.1, p. 8; Section 4.5, p. 13; Table 6, p. 14; Conclusion, p. 22.",
+      "locations": "Abstract, p. 1; Section 5, p. 14; Section 4.1, p. 8; Section 4.5, p. 14; Table 6, p. 15; Conclusion, p. 22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.2",
       "comment": "The Perfect Prognosis setting is used as an experimental simplification, with future values of the exogenous gases (NO, NO₂, CO, SO₂) supplied from the held-out test segment. In real deployment, these values would not normally be available as \"observations\" at the time of forecasting. Please add a short paragraph clarifying when this assumption reasonably approximates practice and when it remains an idealisation, so readers can properly calibrate the operational claims in the abstract and conclusion.",
-      "locations": "Title and Abstract, p. 1; Section 3, p. 3; Discussion and future work, p. 21; Limitations, pp. 21–22; Conclusion, p. 22.",
+      "locations": "Title and Abstract, p. 1; Section 3, p. 3; Discussion and future work, p. 21; Limitations, p. 22; Conclusion, p. 22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.3",
       "comment": "Interpretability claims. The manuscript repeatedly calls Prophet and SARIMAX \"interpretable,\" but does not show what the exogenous drivers (NO, NO₂, CO, SO₂) actually contribute inside the fitted models. If available from the fitted models, please report, even briefly, the SARIMAX β coefficients and/or Prophet regressor effect sizes; otherwise, please moderate the interpretability claim. If estimates are reported, specify the relevant fitted model or aggregation procedure.",
-      "locations": "Model interpretation and computational measurements, pp. 18–21; Table 11, p. 20; Limitations, pp. 21–22.",
+      "locations": "Model interpretation and computational measurements, pp. 20–21; Table 11, p. 20; Limitations, p. 22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.4",
       "comment": "NeuralProphet's performance deserves a fuller explanation. Please expand this briefly with a diagnosis of possible causes, clearly distinguishing documented results from tentative explanations.",
-      "locations": "Section 4.3, p. 10; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Discussion and future work, p. 21.",
+      "locations": "Section 4.3, p. 11; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Discussion and future work, p. 21.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.5",
       "comment": "SARIMAX order selection. The order (1,1,1) and seasonal order (1,1,1,24) are stated in 4.3.1 but the manuscript does not indicate how they were chosen criterion search or fixed a priori from the known 24-hour cycle. Please clarify the selection procedure, since this affects how the SARIMAX–Prophet comparison should be read.",
-      "locations": "Section 4.3, p. 10; Table 4, p. 12; Equation 3, p. 5.",
+      "locations": "Section 4.3, p. 11; Table 4, p. 12; Equation 3, p. 5.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.6",
       "comment": "It is not stated whether SARIMAX (statsmodels) and Prophet also ran with any hardware acceleration. Since these are typically CPU-bound implementations, please confirm the computing setup used for each model, so that the reported execution-time differences (Tables 2–3) can be attributed to the models themselves rather than partly to the hardware.",
       "locations": "Implementation, pp. 7–8; Table 12, p. 21; Model interpretation and computational measurements, pp. 20–21.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.7",
       "comment": "Sensitivity of the residual-correction mechanism. The EWMA bias correction uses a fixed smoothing factor (α = 0.3) throughout the manuscript. Please state whether nearby values of α were tried and, if so, whether they produced qualitatively similar conclusions. If not, acknowledge the absence of this sensitivity analysis as a limitation.",
-      "locations": "Section 4.4, p. 12; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19; Table 9, p. 17.",
+      "locations": "Section 4.4, p. 13; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19; Table 9, p. 17.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.8",
       "comment": "Figure 1 lists \"MAE, RMSE (Mean ± Std)\" as part of the evaluation protocol, but Tables 2 and 3 report only the mean MAE/RMSE, with no accompanying measure of dispersion across the 23 weekly windows. Given that week-level MAE varies considerably for every model, please report the standard deviation or interquartile range of the weekly errors alongside each mean, so that comparisons between models — such as the corrected SARIMAX vs. Prophet result in Table 3 — can be assessed against this variability rather than as single point estimates. A paired comparison across the matched weekly windows would also help support the model ranking.",
-      "locations": "Section 4.5, p. 13; Table 6, p. 14; Table 7, p. 15; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16.",
+      "locations": "Section 4.5, p. 14; Table 6, p. 15; Table 7, p. 16; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.9",
       "comment": "Manuscript length and density. At its current length, the manuscript is considerably longer than the journal's suggested format, and this affects readability. The Related Work section in particular could be shortened substantially without losing its core message. Similarly, the Discussion, Limitations and Conclusion sections partly repeat the same points and could be consolidated into fewer, more tightly written paragraphs.",
       "locations": "Related work, pp. 3–4; Section 3, p. 3; Section 4, p. 7; Discussion, Limitations and Conclusion, pp. 21–22; Figures 4–9, pp. 15–19.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R1.10",
       "comment": "Descriptive information on the PM2.5 series: Consider adding a brief descriptive summary of the PM2.5 series, including the mean and a clearly defined measure of range or variability, so that readers unfamiliar with Beijing's pollution levels can judge the practical magnitude of the reported MAE/RMSE values.",
-      "locations": "Section 4.1, p. 8; Table 2, p. 9; Limitations, pp. 21–22.",
+      "locations": "Section 4.1, p. 8; Table 2, p. 9; Limitations, p. 22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M1",
       "comment": "Forecasting assumptions and operational relevance\nSections 3–4 explicitly assume that the actual future values of NO, NO2, CO, and SO2 are available throughout each 168-hour forecast window. This is a legitimate Perfect Prognosis experiment, but it does not establish performance under realistic operational conditions. The authors should either add an experiment using predictors available at the forecast origin or consistently restrict their claims to the Perfect Prognosis setting. The Abstract and Conclusion currently overstate readiness for real-world deployment.",
       "locations": "Title and Abstract, p. 1; Introduction, p. 2; Section 3, p. 3; Discussion, Limitations and Conclusion, pp. 21–22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M2",
       "comment": "Dataset provenance and evaluation coverage\nPlease report the geographic coordinates, specific API endpoints, retrieval dates, time zone, exact date boundaries, and total observation counts. Provide the training and test dates, the number of evaluated hours, and the handling of any incomplete final weekly window. Because the target comprises model-based gridded estimates rather than direct station measurements, this distinction and its implications for validation should be emphasized. The approximately 23-week test period also limits conclusions about year-round performance.",
-      "locations": "Section 4.1, p. 8; Section 4.5, p. 13; Table 2, p. 9; Limitations, pp. 21–22.",
+      "locations": "Section 4.1, p. 8; Section 4.5, p. 14; Table 2, p. 9; Limitations, p. 22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M3",
       "comment": "Winsorization and evaluation of pollution extremes\nSections 3.1 and 4.1 describe percentile-based clipping, but it is unclear whether the held-out PM2.5 target was also clipped. Please specify which variables and data partitions were transformed. Performance should be reported against the original, unclipped test target, since high pollution concentrations may represent genuine events rather than measurement errors. A sensitivity analysis without winsorization would help establish whether the conclusions depend on suppressing extremes.",
-      "locations": "Section 4.1, p. 8; Lead time, concentration, and sensitivity, pp. 17–18; Table 10, p. 20; Limitations, pp. 21–22.",
+      "locations": "Section 4.1, p. 8; Lead time, concentration, and sensitivity, pp. 17–18; Table 10, p. 20; Limitations, p. 22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M4",
       "comment": "Benchmark adequacy and fair comparison\nInclude persistence and seasonal-persistence baselines to demonstrate forecasting skill beyond simple reference methods. Claims of competitiveness against more advanced approaches should either be supported by an appropriate additional comparator under the same protocol or narrowed to the three evaluated model families. Furthermore, Table 2 compares SARIMAX over 21 weeks with the other models over 23 weeks. Please provide a common-period comparison for all models and, if possible, complete the SARIMAX evaluation.",
-      "locations": "Section 4.1, p. 8; Section 4.5, p. 13; Table 6, p. 14; Table 10, p. 20; Discussion and future work, p. 21.",
+      "locations": "Section 4.1, p. 8; Section 4.5, p. 14; Table 6, p. 15; Table 10, p. 20; Discussion and future work, p. 21.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M5",
       "comment": "Model selection and NeuralProphet performance\nPlease justify the SARIMAX orders, Prophet configuration, and NeuralProphet training settings using a time-ordered validation procedure within the training data. The unusually large NeuralProphet errors warrant checks of training convergence, normalization, forecast–target alignment, and the extraction of its 168-step predictions. Report repeated runs with different seeds where relevant. The present results should not be interpreted as demonstrating an inherent weakness of NeuralProphet without these checks.",
-      "locations": "Section 4.1, p. 8; Section 4.3, p. 10; Table 4, p. 12; Table 9, p. 17; Limitations, pp. 21–22.",
+      "locations": "Section 4.1, p. 8; Section 4.3, p. 11; Table 4, p. 12; Table 9, p. 17; Limitations, p. 22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M6",
       "comment": "Frozen-model forecasting protocol\nClarify whether “frozen” means fixed parameters only or also a fixed internal model state. For each weekly forecast origin, specify whether SARIMAX incorporates newly observed target values through state updating and whether NeuralProphet receives the latest 168 observed target values. Provide concise pseudocode showing the information available to each model and when residual correction is applied. This distinction is essential for reproducibility and fair comparison.",
-      "locations": "Section 3.4, p. 6; Section 4.1, p. 8; Section 4.4, p. 12; Table 5, p. 13; Figure 1, p. 8; Equation 9, p. 6.",
+      "locations": "Section 3.4, p. 6; Section 4.1, p. 8; Section 4.4, p. 13; Table 5, p. 13; Figure 1, p. 8; Equation 9, p. 6.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M7",
       "comment": "Feature-selection procedure\nReport the correlation and mutual-information rankings, mRMR configuration, any discretization, and the rule used to select four predictors. The exclusion of PM10 because it is strongly associated with the target requires clearer justification: relevance to the target is not the same as redundancy among predictors. An ablation comparing the selected subset with a broader predictor set and a model without exogenous inputs would clarify the value of feature selection.",
-      "locations": "Section 4.2, p. 10; Table 3, p. 10; Figure 2, p. 11; Figure 3, p. 12; Table 10, p. 20; Limitations, pp. 21–22.",
+      "locations": "Section 4.2, p. 10; Table 3, p. 10; Figure 2, p. 11; Figure 3, p. 12; Table 10, p. 20; Limitations, p. 22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": [
+        [
+          "United States EPA. What is Particle Pollution? (n.d.; accessed 1 October 2026).",
+          "https://www.epa.gov/pmcourse/what-particle-pollution"
+        ],
+        [
+          "Kapoor S, Narayanan A (2023). Leakage and the reproducibility crisis in machine-learning-based science. Patterns 4(9):100804.",
+          "https://doi.org/10.1016/j.patter.2023.100804"
+        ]
+      ]
     },
     {
       "id": "R2.M8",
       "comment": "Residual correction and sensitivity analysis\nThe fixed EWMA smoothing parameter, α = 0.3, requires justification. Please provide a sensitivity analysis or select this parameter using historical validation data only. Comparison with a simple previous-week mean-residual correction would help establish the benefit of exponential smoothing. The authors should also explain why correction improves Prophet and SARIMAX but worsens NeuralProphet, using residual-bias patterns rather than speculation. EWMA correction should be positioned as an established technique applied within this evaluation, unless a distinct methodological innovation is demonstrated.",
-      "locations": "Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.4, p. 12; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19.",
+      "locations": "Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.4, p. 13; Table 9, p. 17; Lead time, concentration, and sensitivity, pp. 17–18; Figure 9, p. 19.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M9",
       "comment": "Performance aggregation and uncertainty\nSections 3.5–3.6 describe averaging weekly metrics, whereas the tables label them as overall MAE and RMSE. Please distinguish mean weekly RMSE from pooled RMSE across all forecasted hours, as these are not equivalent. Report weekly error distributions and uncertainty around paired performance differences using an approach that respects temporal dependence. Also provide performance by forecast lead time, because an aggregate 168-hour score can conceal deterioration at longer horizons.",
-      "locations": "Section 3.5, p. 7; Section 4.5, p. 13; Table 6, p. 14; Table 7, p. 15; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16; Figure 7, p. 18; Figure 8, p. 19.",
+      "locations": "Section 3.5, p. 7; Section 4.5, p. 14; Table 6, p. 15; Table 7, p. 16; Table 8, p. 17; Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16; Figure 7, p. 18; Figure 8, p. 19.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M10",
       "comment": "Interpretability and computational claims\nInterpretability is central to the title but is not demonstrated sufficiently through the reported results. Please present relevant model components, regressor effects, or other interpretable outputs and discuss their stability and limitations without treating associations as causal effects. For runtime comparisons, report CPU, system RAM, software versions, actual GPU use, and whether training, preprocessing, and prediction are included. The SARIMAX memory failure should be described as an observation in the specific implementation and environment rather than a general property of the model.",
-      "locations": "Implementation, pp. 7–8; Table 11, p. 20; Table 12, p. 21; Model interpretation and computational measurements, pp. 18–21; Discussion and Limitations, pp. 21–22.",
+      "locations": "Implementation, pp. 7–8; Table 11, p. 20; Table 12, p. 21; Model interpretation and computational measurements, pp. 20–21; Discussion and Limitations, pp. 21–22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.M11",
       "comment": "Recent literature and positioning\nThe literature review should more clearly position this work against recent particulate-matter prediction research involving multi-station modelling, advanced temporal learning, attention mechanisms, feature optimization, interpretability, and distributed learning. Where directly relevant, the authors may consider the following suggested studies, or suitable alternatives: 10.1371/journal.pone.0330465, 10.1038/s41598-025-16664-4, 10.1109/ACCESS.2024.3509142, 10.1088/2631-8695/ae2826, and 10.1016/j.rineng.2026.111937.\nThe purpose should be critical positioning, not merely expanding the reference list. Explain what the present comparison contributes regarding adaptation, computational cost, and interpretability, while distinguishing its single-city Perfect Prognosis setting from other forecasting protocols. Numerical results from different datasets should not be presented as directly comparable. These specific citations are optional and should be included only when substantively relevant.",
       "locations": "Related work, pp. 3–4; Table 1, p. 4; Discussion and future work, p. 21; References, pp. 22–25.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.m1",
       "comment": "Revise Equation (4) to accurately represent the implemented seasonal and non-seasonal differencing and multiplicative SARIMAX structure.",
-      "locations": "Equation 3, p. 5; Section 4.3, p. 10; Table 4, p. 12.",
+      "locations": "Equation 3, p. 5; Section 4.3, p. 11; Table 4, p. 12.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.m2",
       "comment": "Equation (8) describes a “one-step residual,” although the evaluation uses 168-step forecasts. Please correct this terminology.",
-      "locations": "Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.5, p. 13.",
+      "locations": "Equation 7, p. 6; Equation 8, p. 6; Equation 9, p. 6; Section 4.5, p. 14.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.m3",
       "comment": "Remove the statement that Kalman-filter implementation details are provided unless this alternative is actually described and evaluated.",
-      "locations": "Section 4.4, p. 12; Equation 9, p. 6; Table 5, p. 13.",
+      "locations": "Section 4.4, p. 13; Equation 9, p. 6; Table 5, p. 13.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.m4",
       "comment": "Supplement the best- and worst-week figures with a summary covering all evaluation weeks; these selected examples alone do not establish stability.",
       "locations": "Figure 4, p. 15; Figure 5, p. 16; Figure 6, p. 16; Figure 7, p. 18; Figure 8, p. 19; Figure 9, p. 19.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.m5",
       "comment": "Reconcile the reported Prophet MAE reduction of 7.93 with the displayed values, 45.61 − 37.67 = 7.94, or explain rounding from unrounded results.",
-      "locations": "Table 7, p. 15; Table 8, p. 17; Section 3.5, p. 7; Section 4.5, p. 13.",
+      "locations": "Table 7, p. 16; Table 8, p. 17; Section 3.5, p. 7; Section 4.5, p. 14.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "R2.m6",
       "comment": "Provide a versioned code release, dependency specifications, seeds, data-processing instructions, and scripts reproducing each table and figure.",
-      "locations": "Implementation, pp. 7–8; Section 4.3, p. 10; Data and Code availability, p. 26.",
+      "locations": "Implementation, pp. 7–8; Section 4.3, p. 11; Data and Code availability, p. 26.",
       "status": "response_drafted_release_pending",
-      "pending": "Before submission: finalize the versioned public code/data release, DOI, availability wording and clean-environment reproduction."
+      "pending": "Before submission: finalize the versioned public code/data release, DOI, availability wording and clean-environment reproduction.",
+      "sources": []
     },
     {
       "id": "E1",
       "comment": "Please ensure the results are accurately reported, any overstated conclusions are rewritten and the limitations of the work fully explained.",
       "locations": "Abstract, p. 1; Results, pp. 14–21; Discussion, Limitations and Conclusion, pp. 21–22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "E2",
       "comment": "Revise the manuscript thoroughly, addressing each reviewer comment.",
       "locations": "This response document; revised v1 throughout.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "E3",
       "comment": "Improve clarity, structure, and language where necessary.",
       "locations": "Related work, Methodology and Implementation, pp. 3–14; Discussion, Limitations and Conclusion, pp. 21–22.",
       "status": "response_drafted_with_stated_limits",
-      "pending": null
+      "pending": null,
+      "sources": []
     },
     {
       "id": "E4",
       "comment": "Please note that if your manuscript uses any custom or bespoke computational tool or code, or reports a new algorithm, tool, software, or a pipeline (even if individual components are not new), the underlying code must be deposited in a recognised DOI-assigning repository (e.g. zenodo) and linked either from Methods or a dedicated Code Availability section.",
       "locations": "Code availability, p. 26.",
       "status": "response_drafted_release_pending",
-      "pending": "Author decision required: provide an existing DOI record, or select the DOI-assigning repository for a reviewed versioned deposit."
+      "pending": "Author decision required: provide an existing DOI record, or select the DOI-assigning repository for a reviewed versioned deposit.",
+      "sources": []
     },
     {
       "id": "E5",
       "comment": "When your revision is ready, please submit the updated manuscript and a point-by-point response.",
       "locations": "Revised v1 manuscript and this response document.",
       "status": "response_drafted_release_pending",
-      "pending": "Before submission: resolve the marked release items and obtain author approval of the final manuscript and response."
+      "pending": "Before submission: resolve the marked release items and obtain author approval of the final manuscript and response.",
+      "sources": []
     }
   ]
 }

@@ -9,6 +9,8 @@ Send these two existing PDFs together for review:
 
 The response contains all 27 reviewer comments and five editorial requirements, their individual replies and manuscript section/item/page locations. Reviewer wording is preserved from the supplied decision letter. Scientific replies use the approved corrected experiments; local evidence paths are not used as academic citations. Missing retrieval metadata, the failed broad-input SARIMAX control and other substantive limitations are acknowledged.
 
+R2.M7 now gives the physical-overlap rationale for excluding same-hour PM10 from the primary gas-only comparison, supported by EPA and Kapoor/Narayanan. It distinguishes high correlation from information-availability leakage, retains the Perfect Prognosis qualification for all future inputs and states that the grouped broad-set control cannot isolate PM10's effect. The manuscript was updated consistently; scores are unchanged.
+
 Yellow review notes flag the DOI-linked code release, final data-availability wording, clean-environment reproduction and author/final submission checks. These are not described as completed. Resolve them after supervisor review before preparing the journal version.
 
 `revised_v1/` contains the PDF, editable Markdown and LaTeX source. `revised_v1_notes/` contains authored response prose, generation/build tools, per-point tracking, manuscript binding and verification. The earlier `revision/RESPONSE_TO_REVIEWERS.md` remains an unchanged planning scaffold.

@@ -62,6 +62,9 @@ for stream in ["persistence", "daily_persistence", "weekly_persistence"]:
     contains("R2.M4", performance[stream]["pooled_mae"])
 for stream in ["sarimax_frozen_no_inputs", "prophet_frozen_no_inputs", "neuralprophet_frozen_no_inputs", "prophet_frozen_broad", "neuralprophet_frozen_broad"]:
     contains("R2.M7", performance[stream]["pooled_mae"])
+pm10 = next(row for row in csv_rows("phase1/feature_rankings_training_only.csv") if row["feature"] == "pm10")
+contains("R2.M7", pm10["pearson_r"], digits=3)
+assert len(RESPONSES["R2.M7"]["sources"]) == 2
 for row in csv_rows("phase3/coefficients.csv"):
     if row["regime"] == "frozen":
         contains("R1.3", row["coefficient_scaled_input"])
@@ -107,6 +110,7 @@ record = {
     "comments_match_preserved_scaffold": True,
     "comments_match_original_letter": original_letter.exists(),
     "labelled_locations_resolved_from_current_manuscript": True,
+    "R2_M7_PM10_correlation_and_two_primary_sources_checked": True,
     "manuscript_and_scaffold_unchanged": True,
     "raw_dataset_unchanged": True,
     "numerical_claims_checked": len(checked), "numerical_checks": checked,

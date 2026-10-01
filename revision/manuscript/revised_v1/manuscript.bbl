@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -41,6 +41,9 @@ Hu K, Wu J, Li Y, et~al (2022) {FedGCN}: Federated learning-based graph convolut
 
 \bibitem[{Jia et~al.(2025)Jia, Ruan, Ma, Zhao, Wang, Xu, Zhou, Ge, and Xu}]{bib27}
 Jia D, Ruan W, Ma R, et~al (2025) Hybrid framework for improved {PM}$_{2.5}$ prediction based on seasonal-trend decomposition and tailored component processing. Scientific Reports 15:21601. \doi{10.1038/s41598-025-04597-x}
+
+\bibitem[{Kapoor and Narayanan(2023)}]{revLeakage}
+\rev{Kapoor S, Narayanan A (2023) Leakage and the reproducibility crisis in machine-learning-based science. Patterns 4(9):100804.} \colorbox{yellow}{\strut\doi{10.1016/j.patter.2023.100804}}
 
 \bibitem[{Kheder et~al.(2025)Kheder, Foreback, Wang, Liu, and Boy}]{bib3}
 Kheder A, Foreback B, Wang L, et~al (2025) Deep spatio-temporal neural network for air quality reanalysis. arXiv preprint arXiv:2502.11941. \doi{10.48550/arXiv.2502.11941}, feb 17, 2025
@@ -89,6 +92,9 @@ Saminathan S, Chidambaranathan M (2024) {PM}$_{2.5}$ concentration estimation us
 
 \bibitem[{Sankar and Arasu(2025)}]{revWavelet}
 \rev{Sankar L, Arasu K (2025) Efficient multi-station air quality prediction in Delhi with wavelet and optimization-based models. PLOS ONE 20(8):e0330465.} \colorbox{yellow}{\strut\doi{10.1371/journal.pone.0330465}}
+
+\bibitem[{{United States Environmental Protection Agency}(n.d.)}]{revPMFractions}
+\rev{United States Environmental Protection Agency (n.d.) What is particle pollution?} \colorbox{yellow}{\strut\url{https://www.epa.gov/pmcourse/what-particle-pollution}} \rev{, accessed: 2026-10-01}
 
 \bibitem[{Wang et~al.(2023)Wang, Fan, Yang, and Zhou}]{bib5}
 Wang K, Fan X, Yang X, et~al (2023) An {AQI} decomposition ensemble model based on {SSA}-{LSTM} using improved {AMSSA}-{VMD} reconstruction technique. Environmental Research 232:116365. \doi{10.1016/j.envres.2023.116365}

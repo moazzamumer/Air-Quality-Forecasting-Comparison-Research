@@ -7,9 +7,10 @@
   "comments_match_preserved_scaffold": true,
   "comments_match_original_letter": true,
   "labelled_locations_resolved_from_current_manuscript": true,
+  "R2_M7_PM10_correlation_and_two_primary_sources_checked": true,
   "manuscript_and_scaffold_unchanged": true,
   "raw_dataset_unchanged": true,
-  "numerical_claims_checked": 53,
+  "numerical_claims_checked": 54,
   "numerical_checks": [
     {
       "point": "R1.1",
@@ -50,6 +51,10 @@
     {
       "point": "R2.M7",
       "displayed_value": "22.35"
+    },
+    {
+      "point": "R2.M7",
+      "displayed_value": "0.992"
     },
     {
       "point": "R1.3",
@@ -226,8 +231,8 @@
   ],
   "typesetting_errors_or_overfull_boxes": 0,
   "embedded_type1_fonts_and_extractable_text": true,
-  "pdf_sha256": "53a0470eab68d4c5731e0b2b2824521ca81bc5f9c9ba3fe8bfa964c03021de6c",
-  "tex_sha256": "b170d3fc5c78f52f3614199563c70998ee4bd2ff6c76fe58d298da38303db51f",
+  "pdf_sha256": "4fba08bfb0cc7874564d7c5d01b50485e99874911422f532536d9ad58110c516",
+  "tex_sha256": "1e3bb37c151b6a4b8dddbbe28d61b960ce5484a88205399b243d961151982609",
   "submission_ready": false,
   "pending": [
     "DOI-linked versioned code release",
