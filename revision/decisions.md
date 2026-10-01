@@ -91,3 +91,11 @@ This is an author-readable decision record, not a list of every implementation d
 **Reason:** the authors need a clear, reviewable scientific basis before changing the manuscript. Every reviewer comment still needs its own response, even where the same experiment addresses multiple points.
 
 **Current gate:** hold Phase 4B pending D10 and the reporting/reproduction follow-ups in [the critical review](reports/PHASE4A_CRITICAL_REVIEW.md). Literature assessment, manuscript equations/wording, final reproduction/DOI release and submission packaging remain explicit later tasks. No manuscript copy has been created by this review.
+
+## D12 — Recover corrected SARIMAX fitting using earlier corrected fits
+
+**Applied on 1 October 2026, before accepting corrected test results.** The default bounded first-origin solver failed after invalid-input correction. Preserve that attempt and initialize the unchanged selected model from its converged corrected training-only validation fit. Use the fixed complex-step L-BFGS-B solver (200 iterations, 100 line searches); later fits and controls start from the corrected first-origin fit, with slopes mapped to the current input scales.
+
+**Reason:** the earlier validation fit supplies a valid past-only starting point. Recovery converged and increased training likelihood; no test-error ranking was used to choose the optimizer or starting point. All actual fits still use history before their respective forecast origin. The validation selection signature remains unchanged; the experiment signature changed and earlier matrix outputs were regenerated.
+
+**Evidence and limits:** [numerical recovery record](corrected/reports/SARIMAX_NUMERICAL_RECOVERY.md). Convergence is a numerical acceptance condition, not proof of a global optimum. Timing summaries distinguish finalized supervisor attempts from interrupted or standalone diagnostic work. The full corrected campaign and final author review remain pending at [this execution checkpoint](corrected/reports/EXECUTION_STATUS.md).

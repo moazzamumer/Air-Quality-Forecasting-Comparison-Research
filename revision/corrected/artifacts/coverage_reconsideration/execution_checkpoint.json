@@ -1,0 +1,17 @@
+{
+  "checkpoint_time_karachi": "2026-10-01T11:45:28.061400+05:00",
+  "protocol_signature": "cc1a6f6d34887f37052db3fb351fae65d6414e24c5e0e08f0061bf983382cdc7",
+  "completed_tasks": [
+    "core_neuralprophet_frozen_s123",
+    "core_neuralprophet_frozen_s2026",
+    "core_neuralprophet_frozen_s42",
+    "core_prophet_frozen_s42",
+    "core_sarimax_frozen_s42",
+    "core_sarimax_walk_w01_s42",
+    "core_sarimax_walk_w02_s42",
+    "core_sarimax_walk_w03_s42"
+  ],
+  "expected_tasks": 129,
+  "campaign_complete": false,
+  "next_gate": "full coverage checks, analysis and postfit audit; then author review"
+}

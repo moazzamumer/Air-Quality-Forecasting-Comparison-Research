@@ -1,3 +1,5 @@
 artifacts/phase1/audit.log
 artifacts/phase1/calendar_observation_mask.csv
 artifacts/phase1/notebook_inventory.csv
+artifacts/phase2/runs/*/training_logs/
+artifacts/coverage_reconsideration/runs/*/training_logs/
