@@ -1,5 +1,7 @@
 # Revision workspace
 
+**Current corrected revision, 1 October 2026:** [fresh evidence review](corrected/reports/PHASE4A_REVIEW.md), [corrected notebook](corrected/main_revision.ipynb), [reviewer evidence ledger](corrected/reports/REVIEWER_EVIDENCE.md) and [author decision](corrected/AUTHOR_DECISION.md). All 120 main tasks and eight controls passed; one broad-input SARIMAX control failed bounded convergence and is excluded transparently. Final saved-evidence checks and 25 contract tests pass. The earlier artifacts below are preserved pre-correction evidence. Manuscript editing awaits Moazzam’s decision.
+
 **Review update (2026-09-30): existing numerical results are provisional.** A
 critical review found four invalid `-9999` pollutant inputs in training, including
 two NO₂ values used by primary models. The proposed input correction leaves the

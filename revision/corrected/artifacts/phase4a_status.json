@@ -1,0 +1,14 @@
+{
+  "updated_karachi": "2026-10-01T18:36:24.687678+05:00",
+  "experimental_campaign_finished": true,
+  "main_tasks_successful": 120,
+  "successful_tasks": 128,
+  "attempted_tasks": 129,
+  "declared_failed_control": "ablate_sarimax_broad",
+  "analysis_and_evidence_checks_passed": true,
+  "contract_tests_passed": 25,
+  "figure_pairs": 6,
+  "author_decision": "pending",
+  "manuscript_copy_created": false,
+  "review": "reports/PHASE4A_REVIEW.md"
+}

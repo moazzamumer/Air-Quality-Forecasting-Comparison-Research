@@ -1,0 +1,141 @@
+{
+  "task": {
+    "id": "ablate_sarimax_broad",
+    "stage": "ablate",
+    "family": "sarimax",
+    "regime": "frozen",
+    "seed": 42,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2",
+      "o3",
+      "nh3",
+      "temperature",
+      "dewpt",
+      "pm10"
+    ],
+    "clip_inputs": false,
+    "variant": "broad",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    }
+  },
+  "status": "failed",
+  "protocol_signature": "cc1a6f6d34887f37052db3fb351fae65d6414e24c5e0e08f0061bf983382cdc7",
+  "strict_protocol_signature": "d7337574e73bbd3f69d8ffa161cb9ffab08496e92a7cf73b42e01b8520b3f9fc",
+  "fit_origin": "2025-01-13 01:00:00",
+  "started_utc": "2026-10-01T12:05:25.083647+00:00",
+  "fit_executed": true,
+  "restored_parameters_from": null,
+  "numerical_recovery": {
+    "version": "broad-control-numerical-recovery-v1",
+    "signature": "def89f83734ad91d3223aa0d5a32204be3627ab847a5c0a06c133b63e546f016",
+    "policy": "config/broad_sarimax_recovery.json"
+  },
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2",
+      "o3",
+      "nh3",
+      "temperature",
+      "dewpt",
+      "pm10"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-01-13 01:00:00",
+    "training_calendar_hours": 36240,
+    "observed_training_targets": 35736,
+    "target_imputed": false,
+    "target_clipped": false,
+    "scaler": {
+      "mean": {
+        "no": 151.11428159632823,
+        "no2": 94.77396311429531,
+        "co": 2421.9260209336167,
+        "so2": 137.7470133213926,
+        "o3": 23.786605283779245,
+        "nh3": 26.650788089107802,
+        "temperature": 12.604346244262846,
+        "dewpt": 1.741223553117653,
+        "pm10": 268.1350884361357
+      },
+      "scale": {
+        "no": 183.8555936823365,
+        "no2": 54.83612056407665,
+        "co": 2469.9706263885746,
+        "so2": 122.68828383970951,
+        "o3": 45.45071133317149,
+        "nh3": 34.504455130055184,
+        "temperature": 12.030351177894083,
+        "dewpt": 14.519750247670821,
+        "pm10": 272.0808878325723
+      }
+    },
+    "input_clip_bounds": null,
+    "preparation_seconds": 0.4363144499984628,
+    "fit_seconds": 3736.730700944998,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "parameter_estimates": {
+      "no": -2.687717351819367,
+      "no2": 9.687609612031723,
+      "co": 51.76058565258876,
+      "so2": -4.644720336237279,
+      "o3": 5.135003938471636,
+      "nh3": -2.7402165147817703,
+      "temperature": 2.6232423674617786,
+      "dewpt": 0.29263201903948705,
+      "pm10": 177.842062981451,
+      "ar.L1": 0.9436253133063928,
+      "ma.L1": 0.5848637584408527,
+      "ar.S.L24": 0.9998560770445978,
+      "ma.S.L24": -0.9764361382912028,
+      "sigma2": 30.239562029928557
+    },
+    "optimizer": {
+      "converged": false,
+      "iterations": 400,
+      "initial_log_likelihood": -119959.14029190359,
+      "final_log_likelihood": -111568.67146477102,
+      "initialization_source": "corrected_training_conditional_sum_of_squares",
+      "initialization_source_cutoff": "2025-01-13 01:00:00",
+      "method": "complex-step L-BFGS-B, maxiter400/maxls100, default tolerances",
+      "warnings": [
+        "Method L-BFGS-B does not use Hessian information (hess).",
+        "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0.",
+        "Maximum Likelihood optimization failed to converge. Check mle_retvals"
+      ]
+    }
+  },
+  "error": "Traceback (most recent call last):\n  File \"/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/broad_sarimax_recovery.py\", line 98, in main\n    verify_metadata(meta)\n  File \"/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/broad_sarimax_recovery.py\", line 38, in verify_metadata\n    assert opt['converged'] and opt['iterations']<=policy['maxiter']\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

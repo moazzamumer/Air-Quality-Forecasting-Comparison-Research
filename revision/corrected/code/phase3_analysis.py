@@ -1,7 +1,7 @@
 """Rebuild Phase 3 publication evidence from verified, saved forecast streams.
 
 No model fit or test-informed configuration choice occurs here. Run from the
-project root with ``venv/bin/python -m revision.code.phase3_analysis``.
+project root with ``venv/bin/python -m revision.corrected.code.phase3_analysis``.
 """
 from __future__ import annotations
 
@@ -28,9 +28,9 @@ DAY_COLORS = {'sarimax': '#277da1', 'prophet': '#e67e22',
 
 def verified_source():
     v = json.loads((SOURCE / 'verification.json').read_text())
-    assert v['ready'] and v['additional_checks_passed']
-    assert v['complete_tasks'] == v['expected_tasks'] == 129
-    assert not v['pending_tasks'] and not v['integrity_errors']
+    from .analysis_completion import declared_failure
+    declared_failure(v)
+    assert v['ready_for_analysis_with_declared_failure'] and v['additional_checks_passed']
     assert v['observed_scoring_hours'] == 3624 and v['scheduled_weeks'] == 23
     return v
 
@@ -73,6 +73,7 @@ def load_streams():
         streams[name] = stream(SOURCE / 'baselines' / f'{name}.csv', name)
     for family in FAMILIES:
         for variant in ('no_inputs', 'broad', 'clip'):
+            if family=='sarimax' and variant=='broad':continue
             name = f'{family}_frozen_{variant}'
             streams[name] = stream(SOURCE / 'runs' / f'ablate_{family}_{variant}' / 'forecasts.csv', name)
     ref = next(iter(streams.values()))
@@ -130,9 +131,9 @@ def paired_table(week_metrics):
         contrasts.append((f'{family}: EWMA 0.3 − base',
                           vec(family, 'frozen', True), vec(family, 'frozen')))
     contrasts.extend([
-        ('corrected frozen SARIMAX − corrected frozen Prophet',
+        ('EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet',
          vec('sarimax', 'frozen', True), vec('prophet', 'frozen', True)),
-        ('corrected frozen Prophet − weekly-refit Prophet',
+        ('EWMA(0.3) frozen Prophet − weekly-refit Prophet',
          vec('prophet', 'frozen', True), vec('prophet', 'walk'))])
     baseline = weekly['weekly_persistence'].to_numpy()
     for family in FAMILIES:

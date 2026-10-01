@@ -1,0 +1,4 @@
+family,fit_timer_boundary,fits,median_fit_seconds,minimum_fit_seconds,maximum_fit_seconds
+neuralprophet,fit_including_initialization,66,182.0162886170001,170.6299126670001,202.58844039699943
+prophet,fit_including_initialization,22,23.914134207499956,16.220052376999774,33.739160289999745
+sarimax,optimization_only,22,110.12507665349995,51.17852321500004,215.05829995900058

@@ -1,0 +1,22 @@
+{
+  "protocol_signature": "cc1a6f6d34887f37052db3fb351fae65d6414e24c5e0e08f0061bf983382cdc7",
+  "expected_tasks": 129,
+  "complete_tasks": 128,
+  "pending_tasks": [
+    "ablate_sarimax_broad"
+  ],
+  "integrity_errors": [],
+  "ready": false,
+  "scheduled_weeks": 23,
+  "scheduled_hours": 3864,
+  "observed_scoring_hours": 3624,
+  "full_observed_weeks": 19,
+  "partially_observed_weeks": 4,
+  "original_files_verified": 21,
+  "additional_checks_passed": true,
+  "ready_for_analysis_with_declared_failure": true,
+  "declared_failed_controls": [
+    "ablate_sarimax_broad"
+  ],
+  "checks_source": "revision/corrected/code/coverage_checks.py"
+}

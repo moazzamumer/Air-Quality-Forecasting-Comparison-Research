@@ -60,10 +60,12 @@ def main():
     enforce_baseline_definitions()
     verify_and_report()
     info=json.loads((OUT/'verification.json').read_text())
-    if not info['ready']:raise RuntimeError('Broader evidence not ready')
+    from .analysis_completion import declared_failure
+    failed_task=declared_failure(info)
     _,grid=load_calendar();table=windows(grid);full=table[table.full_week]
     for task in tasks():
         folder=OUT/'runs'/task['id'];meta=json.loads((folder/'metadata.json').read_text())
+        if task['id']==failed_task:continue
         if meta.get('numerical_recovery'):
             from .broad_sarimax_recovery import verify_metadata
             verify_metadata(meta)
@@ -111,19 +113,21 @@ def main():
         frame=check_frame(pd.read_csv(file),grid,range(1,24));alpha=float(frame.alpha.iloc[0])
         assert frame.alpha.eq(alpha).all()
         assert np.isfinite(frame.loc[frame.score_eligible,'corrected_prediction']).all()
-    info.update(additional_checks_passed=True,checks_source='revision/corrected/code/coverage_checks.py')
+    info.update(additional_checks_passed=True,ready_for_analysis_with_declared_failure=True,
+        declared_failed_controls=[failed_task],checks_source='revision/corrected/code/coverage_checks.py')
     (OUT/'verification.json').write_text(json.dumps(info,indent=2))
-    run_metadata=[json.loads(p.read_text()) for p in (OUT/'runs').glob('*/metadata.json')]
+    run_metadata=[json.loads(p.read_text()) for p in (OUT/'runs').glob('*/metadata.json')
+                  if p.parent.name!=failed_task]
     placeholder=max(w.get('placeholder_max_scored_prediction_difference',0.)
                     for r in run_metadata for w in r['completed_weeks'])
     appendix=['','## Final evidence checks','',
         f"The final checker accepted {info['complete_tasks']}/{info['expected_tasks']} tasks, all three baselines and 35 correction streams with no integrity errors. The input audit verified all {info['original_files_verified']} original file fingerprints.",
-        '',f"Of the 129 tasks, {sum(r['fit_executed'] for r in run_metadata)} execute new fits and {sum(bool(r.get('reused_from')) for r in run_metadata)} reuse an identical first-origin frozen forecast. The largest scored-forecast change under unavailable-input placeholder perturbation is {placeholder:.2g}.",
+        '',f"Among the 128 accepted tasks, {sum(r['fit_executed'] for r in run_metadata)} execute new fits and {sum(bool(r.get('reused_from')) for r in run_metadata)} reuse an identical first-origin frozen forecast. The broad-input SARIMAX control failed convergence and has no accepted forecasts. The largest scored-forecast change under unavailable-input placeholder perturbation is {placeholder:.2g}.",
         '', 'Week 12 persistence repeats the last genuinely observed target, 257.0 at 2025-03-30 00:00, rather than a filled last hour. Source timestamps and all baseline definitions/checksums are in `artifacts/coverage_reconsideration/baselines/definitions.json`.',
-        '', 'The completed [coverage chart](../artifacts/coverage_reconsideration/coverage.png) separates the original 16 complete-context weeks from the additional observed hours and missing hours. The notebook contains the executed chart and result tables. Twenty-two scientific-contract tests pass. These checks establish the saved evidence and scope; Phase 3 paired inference and manuscript interpretation remain pending.']
+        '', 'All 120 main experiment tasks and eight controls pass saved-evidence checks. The declared failed control is excluded transparently; the all-task success flag remains false. Phase 3 uses these accepted streams.']
     report=REVISION/'reports/COVERAGE_RECONSIDERATION_RESULTS.md'
     report.write_text(report.read_text()+'\n'.join(appendix)+'\n')
-    print('Broader checks passed: 129 tasks, 23 origins, 3,624 observed hours; baseline causality, missingness and training diagnostics verified.')
+    print('Checks passed for 128 successful tasks; one declared failed control excluded. All main experiments: 23 origins, 3,624 observed hours.')
 
 
 if __name__=='__main__':main()

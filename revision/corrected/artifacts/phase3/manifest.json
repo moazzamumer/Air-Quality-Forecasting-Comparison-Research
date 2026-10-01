@@ -1,0 +1,15 @@
+{
+  "source_protocol_signature": "cc1a6f6d34887f37052db3fb351fae65d6414e24c5e0e08f0061bf983382cdc7",
+  "streams": 26,
+  "paired_contrasts": 11,
+  "training_q95_threshold": 691.335,
+  "high_hours": 158,
+  "figure_stems": [
+    "lead_hour_mae",
+    "lead_day_mae",
+    "weekly_mae_chronology",
+    "weekly_mae_distribution",
+    "correction_diagnostics",
+    "regime_comparison"
+  ]
+}

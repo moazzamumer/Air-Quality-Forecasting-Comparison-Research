@@ -78,6 +78,8 @@ This is an author-readable decision record, not a list of every implementation d
 
 ## D10 — Correct invalid pollutant input codes before accepting final results
 
+**Final corrected evidence, 1 October 2026:** the rule, fitting/episode/scaling audits, repeated validation, all main fits and downstream analyses are complete. All 120 main tasks and eight controls passed. One broad-input SARIMAX control failed bounded recovery and is declared unavailable under D13. Numerical effects are now known and recorded in [the fresh review](corrected/reports/PHASE4A_REVIEW.md); the paragraphs below preserve the rationale recorded before those effects were known.
+
 **2026-09-30 implementation update: applied in the versioned working calendar; model validation and refitting are underway.** The former paragraph records the decision as originally proposed. Version `pollutant-invalid-input-v2` now replaces only the four identified `-9999` pollutant input cells with missing values in memory, preserving the raw CSV bytes and observed PM2.5. It rejects any other negative pollutant concentrations and retains legitimate negative weather values. The corrected input audit and training-only feature analysis passed; final model/analysis results remain pending. See [the locked v2 protocol](corrected/PROTOCOL.md) and [the input audit](corrected/artifacts/phase1/input_audit.json).
 
 **Reason:** two invalid NO₂ values enter every primary input-based model and validation candidate. Two more invalid values affect broad-input work. They are not ordinary high-pollution outliers. A diagnostic in-memory correction changes initial selected NO₂ scale from 93.3192 to 54.8353 and changes NeuralProphet's training-window construction. We cannot infer harmlessness from the small number of cells or merely rescore existing predictions.
@@ -90,7 +92,7 @@ This is an author-readable decision record, not a list of every implementation d
 
 **Reason:** the authors need a clear, reviewable scientific basis before changing the manuscript. Every reviewer comment still needs its own response, even where the same experiment addresses multiple points.
 
-**Current gate:** hold Phase 4B pending D10 and the reporting/reproduction follow-ups in [the critical review](reports/PHASE4A_CRITICAL_REVIEW.md). Literature assessment, manuscript equations/wording, final reproduction/DOI release and submission packaging remain explicit later tasks. No manuscript copy has been created by this review.
+**Current gate, 1 October 2026:** the corrected evidence and reporting checks are complete with the declared control failure under D13. Phase 4B awaits Moazzam's recorded decision after [the fresh review](corrected/reports/PHASE4A_REVIEW.md). Literature assessment, manuscript equations/wording, clean-environment reproduction/DOI release and submission packaging remain explicit later tasks. No manuscript copy has been created.
 
 ## D12 — Recover corrected SARIMAX fitting using earlier corrected fits
 
@@ -98,4 +100,12 @@ This is an author-readable decision record, not a list of every implementation d
 
 **Reason:** the earlier validation fit supplies a valid past-only starting point. Recovery converged and increased training likelihood; no test-error ranking was used to choose the optimizer or starting point. All actual fits still use history before their respective forecast origin. The validation selection signature remains unchanged; the experiment signature changed and earlier matrix outputs were regenerated.
 
-**Evidence and limits:** [numerical recovery record](corrected/reports/SARIMAX_NUMERICAL_RECOVERY.md). Convergence is a numerical acceptance condition, not proof of a global optimum. Timing summaries distinguish finalized supervisor attempts from interrupted or standalone diagnostic work. The full corrected campaign and final author review remain pending at [this execution checkpoint](corrected/reports/EXECUTION_STATUS.md).
+**Evidence and limits:** [numerical recovery record](corrected/reports/SARIMAX_NUMERICAL_RECOVERY.md). Convergence is a numerical acceptance condition, not proof of a global optimum. Timing summaries distinguish finalized supervisor attempts from interrupted or standalone diagnostic work. The corrected campaign and analysis are complete with the declared control failure under D13; Moazzam's final review remains pending.
+
+## D13 — Report a bounded control failure without using its forecasts
+
+**Applied on 1 October 2026.** Broad-input SARIMAX exhausted the initial 200-iteration limit and a separately signed 400-iteration training-only recovery. Retain both attempts and estimates; exclude the failed fit from performance analysis. Accept the 128 successful tasks for analysis only after explicitly verifying that all 120 main tasks and the eight other controls succeeded. Keep the all-task success flag false. The exact failed metadata hash is locked in [the failure declaration](corrected/config/analysis_completion.json).
+
+**Reason:** extending optimizer limits until obtaining a favorable answer is unnecessary for the completed primary comparison. Nonconvergence is a result to report. It limits the broad-feature three-family comparison and the strength of R2.M7's ablation evidence; it does not imply failure of the primary selected-gas SARIMAX model. No unconverged-fit forecasts enter the analysis.
+
+**Reporting and author gate:** the final saved-evidence audit passes for the accepted streams, corrections, common mask, summaries and six figure pairs. The explicit three-seed mean/SD, hourly-weighted components, baseline producer and timing definitions resolve the outstanding reporting checks. [Fresh review](corrected/reports/PHASE4A_REVIEW.md) and [individual reviewer ledger](corrected/reports/REVIEWER_EVIDENCE.md) are ready. Moazzam's decision remains pending; no manuscript copy has been made.

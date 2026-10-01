@@ -1,0 +1,9 @@
+{
+  "version": "bounded-control-failure-declaration-v1",
+  "failed_task": "ablate_sarimax_broad",
+  "failed_metadata_sha256": "12e3642c7c25bad2e4bcfe1ba39ced7d110bb7cf8b23e8754701a1d31dda2c28",
+  "successful_tasks": 128,
+  "attempted_tasks": 129,
+  "reason": "Nonconvergence at the predeclared 400-iteration recovery bound. No forecasts from the failed fit are included. All 120 main-regime/seed tasks and eight other controls succeeded.",
+  "decision": "Analyze verified successful streams; disclose unavailable broad-input SARIMAX control. Do not relax convergence or continue increasing solver bounds."
+}

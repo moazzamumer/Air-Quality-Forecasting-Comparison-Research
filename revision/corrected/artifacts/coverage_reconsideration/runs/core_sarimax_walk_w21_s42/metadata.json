@@ -1,0 +1,136 @@
+{
+  "task": {
+    "id": "core_sarimax_walk_w21_s42",
+    "stage": "core",
+    "family": "sarimax",
+    "regime": "walk",
+    "seed": 42,
+    "week": 21,
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "variant": "selected",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    }
+  },
+  "status": "completed",
+  "protocol_signature": "cc1a6f6d34887f37052db3fb351fae65d6414e24c5e0e08f0061bf983382cdc7",
+  "strict_protocol_signature": "d7337574e73bbd3f69d8ffa161cb9ffab08496e92a7cf73b42e01b8520b3f9fc",
+  "fit_origin": "2025-06-02 01:00:00",
+  "started_utc": "2026-10-01T07:16:28.004402+00:00",
+  "fit": {
+    "family": "sarimax",
+    "candidate": {
+      "order": [
+        1,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        24
+      ]
+    },
+    "features": [
+      "no",
+      "no2",
+      "co",
+      "so2"
+    ],
+    "clip_inputs": false,
+    "seed": 42,
+    "fit_end_exclusive": "2025-06-02 01:00:00",
+    "training_calendar_hours": 39600,
+    "observed_training_targets": 38856,
+    "target_imputed": false,
+    "target_clipped": false,
+    "scaler": {
+      "mean": {
+        "no": 146.63125341020228,
+        "no2": 92.86731070160087,
+        "co": 2380.691287640912,
+        "so2": 135.9289869768878
+      },
+      "scale": {
+        "no": 183.3312337304961,
+        "no2": 56.68710193025232,
+        "co": 2491.670579598476,
+        "so2": 125.98481276418286
+      }
+    },
+    "input_clip_bounds": null,
+    "device": "cpu",
+    "cpu_threads": 2,
+    "preparation_seconds": 0.2698669809997227,
+    "fit_seconds": 111.26975523400051,
+    "parameter_estimates": {
+      "no": -36.516354393971746,
+      "no2": 5.337370309099373,
+      "co": 239.1488659530174,
+      "so2": 3.296088125652366,
+      "ar.L1": 0.969308674432932,
+      "ma.L1": 0.6174201762866192,
+      "ar.S.L24": 0.9971548342234519,
+      "ma.S.L24": -0.9573303559609158,
+      "sigma2": 94.31759742341065
+    },
+    "optimizer": {
+      "converged": true,
+      "iterations": 14,
+      "initial_log_likelihood": -143458.85870754995,
+      "final_log_likelihood": -143449.95015258034,
+      "initialization_source": "corrected_core_sarimax_frozen_s42",
+      "initialization_source_cutoff": "2025-01-13 01:00:00",
+      "method": "complex-step L-BFGS-B, maxiter200/maxls100, default tolerances",
+      "warnings": [
+        "Method L-BFGS-B does not use Hessian information (hess).",
+        "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+      ]
+    }
+  },
+  "fit_executed": true,
+  "restored_parameters_from": null,
+  "completed_weeks": [
+    {
+      "window": 21,
+      "history_context_consumed": false,
+      "history_context_missing_target_hours": 0,
+      "history_target_filled_hours": 0,
+      "history_input_filled_cells": 0,
+      "future_placeholder_cells": 0,
+      "scored_hours": 168,
+      "placeholder_max_scored_prediction_difference": 0.0,
+      "placeholder_invariance_passed": true,
+      "forecast_seconds": 0.009133216999543947,
+      "invariance_check_seconds": 0.0,
+      "state_update_seconds": 0.0
+    }
+  ],
+  "completed_utc": "2026-10-01T07:18:19.596480+00:00",
+  "windows": 1,
+  "hours": 168,
+  "pooled_mae": 43.38351121092838,
+  "pooled_rmse": 49.5342725904956,
+  "mean_weekly_mae": 43.38351121092838,
+  "weekly_mae_sd": NaN,
+  "mean_weekly_rmse": 49.5342725904956,
+  "weekly_rmse_sd": NaN,
+  "sampled_self_peak_rss_mib": 235.01171875
+}

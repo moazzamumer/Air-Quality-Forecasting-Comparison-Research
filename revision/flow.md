@@ -1,5 +1,7 @@
 # The experiment pipeline, explained for Moazzam
 
+**Current pipeline amendment, 1 October 2026:** use `corrected/` for the completed corrected-input experiments. Mask four invalid pollutant predictor cells in memory → repeat training-only feature analysis/validation → fit the same two-regime, 23-origin matrix → generate common-mask scores/corrections → run `bash revision/corrected/run_analysis.sh` → author evidence review. All 120 main tasks and eight controls passed; one bounded control fit failed and is explicitly unavailable. [Current protocol](corrected/PROTOCOL.md), [notebook](corrected/main_revision.ipynb) and [review](corrected/reports/PHASE4A_REVIEW.md) supersede the numerical-readiness statements in the earlier pipeline account below.
+
 **Read this first:** this describes what the saved revision experiments actually did. The critical author review found four invalid `-9999` pollutant input values in training. The existing numbers are now provisional, pending correction and rerunning affected work. The raw dataset and the saved experiments have not been changed. See [the review](reports/PHASE4A_CRITICAL_REVIEW.md) and [decisions](decisions.md).
 
 The overall flow is: **raw data → hourly calendar → training/test split → training-only validation → frozen and weekly-refit forecasts → residual correction → matched scoring → tables and figures.** The notebook displays this work; scripts carry out fitting and analysis.

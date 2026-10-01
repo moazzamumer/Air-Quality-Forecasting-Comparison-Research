@@ -1,0 +1,6 @@
+stream,iterations,correction_arithmetic_seconds_median
+sarimax_frozen_s42,20,0.0019852684999932535
+prophet_frozen_s42,20,0.002017303999309661
+neuralprophet_frozen_s42,20,0.0020550165008899057
+neuralprophet_frozen_s123,20,0.002151138000044739
+neuralprophet_frozen_s2026,20,0.0021141724992048694

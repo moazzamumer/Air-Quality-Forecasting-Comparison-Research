@@ -1,5 +1,7 @@
 # Reviewer revision tracker
 
+**Current corrected evidence, 1 October 2026:** all 120 main tasks and eight controls passed. One broad-input SARIMAX control failed both bounded fits and is declared unavailable; no failed-fit forecasts enter results. Corrected analyses, six figure pairs and the independent saved-evidence audit passed; 25 contract tests passed. [Fresh review](corrected/reports/PHASE4A_REVIEW.md), [individual evidence ledger](corrected/reports/REVIEWER_EVIDENCE.md), and [author decision](corrected/AUTHOR_DECISION.md). Moazzam’s decision is pending. Numerical statements and artifact links below refer to the preserved pre-correction history unless specifically marked as corrected.
+
 **Critical review update, 2026-09-30: numerical clearance withdrawn; Phase 4B on hold.** Four invalid `-9999` pollutant input cells were found in training, including two in primary NO₂. Experiments genuinely completed, but affected validation, model fitting and downstream results need correction/re-evaluation. The original 23-origin / 3,624-hour test mask is unchanged by the proposed cleaning. Historical “Evidence ready” and completed-phase notes below record execution, not final scientific clearance. See [the critical review](reports/PHASE4A_CRITICAL_REVIEW.md), [pipeline](flow.md), and [decision record](decisions.md). No training or manuscript changes were made during the review.
 
 | Review finding | Required follow-up | Main linked comments |
@@ -90,6 +92,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R1.1
 
+**Corrected evidence update (1 October 2026): Evidence ready.** All 23 SARIMAX refit origins completed; all models use the common 3,624-hour mask. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Replace incomplete-run claims and report partial weeks.
+
 > The SARIMAX walk-forward run stops at week 21 of 23 because increasing memory usage prevented completion in the available computing environment, yet the abstract, Results and Discussion often present it alongside the two fully completed models (Prophet, NeuralProphet) without flagging this difference. Please state explicitly, wherever SARIMAX walk-forward performance is mentioned, that the reported MAE/RMSE are cumulative over 21 of 23 weeks, and avoid phrasing that implies a like-for-like comparison with the complete runs. This is not a fatal flaw, but as written it could mislead readers about the comparability of the three models under this regime.
 
 - **Type / phase:** Experiment + reporting; 2–5.
@@ -107,6 +111,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R1.2
 
+**Corrected evidence update (1 October 2026): Writing pending.** Perfect Prognosis scope and unavailable operational future gases are documented. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Qualify Abstract/Conclusion and deployment statements.
+
 > The Perfect Prognosis setting is used as an experimental simplification, with future values of the exogenous gases (NO, NO₂, CO, SO₂) supplied from the held-out test segment. In real deployment, these values would not normally be available as "observations" at the time of forecasting. Please add a short paragraph clarifying when this assumption reasonably approximates practice and when it remains an idealisation, so readers can properly calibrate the operational claims in the abstract and conclusion.
 
 - **Type / phase:** Writing; 1, 4–5.
@@ -121,6 +127,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** PP-only route agreed; manuscript/response claim boundaries remain to be written.
 
 ### R1.3
+
+**Corrected evidence update (1 October 2026): Evidence ready.** SARIMAX and Prophet effects saved per fit; Prophet components weight scored hours. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Identify fit/aggregation; interpret correlated associations cautiously.
 
 > Interpretability claims. The manuscript repeatedly calls Prophet and SARIMAX "interpretable," but does not show what the exogenous drivers (NO, NO₂, CO, SO₂) actually contribute inside the fitted models. If available from the fitted models, please report, even briefly, the SARIMAX β coefficients and/or Prophet regressor effect sizes; otherwise, please moderate the interpretability claim. If estimates are reported, specify the relevant fitted model or aggregation procedure.
 
@@ -139,6 +147,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R1.4
 
+**Corrected evidence update (1 October 2026): Evidence ready.** Corrected episodes, timestamp contracts, raw forecast extraction and three seeds audited. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Explain seed-dependent outcomes without asserting inherent model weakness.
+
 > NeuralProphet's performance deserves a fuller explanation. Please expand this briefly with a diagnosis of possible causes, clearly distinguishing documented results from tentative explanations.
 
 - **Type / phase:** Experiment + diagnosis + writing; 1–4.
@@ -156,6 +166,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R1.5
 
+**Corrected evidence update (1 October 2026): Evidence ready.** Eight bounded validation candidates attempted; seven succeeded; selection unchanged. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Report selected settings and failed candidate; acknowledge limited search.
+
 > SARIMAX order selection. The order (1,1,1) and seasonal order (1,1,1,24) are stated in 4.3.1 but the manuscript does not indicate how they were chosen criterion search or fixed a priori from the known 24-hour cycle. Please clarify the selection procedure, since this affects how the SARIMAX–Prophet comparison should be read.
 
 - **Type / phase:** Experiment + writing; 1–4.
@@ -171,6 +183,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Protocol/experiment evidence is available; manuscript/response wording remains pending.
 
 ### R1.6
+
+**Corrected evidence update (1 October 2026): Evidence ready.** Hardware/software, timer boundaries, actual attempts and source prediction costs saved. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Narrow speed claims; distinguish optimization, initialization and reuse.
 
 > It is not stated whether SARIMAX (statsmodels) and Prophet also ran with any hardware acceleration. Since these are typically CPU-bound implementations, please confirm the computing setup used for each model, so that the reported execution-time differences (Tables 2–3) can be attributed to the models themselves rather than partly to the hardware.
 
@@ -189,6 +203,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R1.7
 
+**Corrected evidence update (1 October 2026): Evidence ready.** Predefined alpha grid replayed causally; seed-dependent correction benefits quantified. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Explain why alpha remains 0.3; report sensitivity rather than test-optimal tuning.
+
 > Sensitivity of the residual-correction mechanism. The EWMA bias correction uses a fixed smoothing factor (α = 0.3) throughout the manuscript. Please state whether nearby values of α were tried and, if so, whether they produced qualitatively similar conclusions. If not, acknowledge the absence of this sensitivity analysis as a limitation.
 
 - **Type / phase:** Forecast reuse + analysis; 2–4.
@@ -205,6 +221,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R1.8
+
+**Corrected evidence update (1 October 2026): Evidence ready.** Matched weekly errors, descriptive block intervals and all-week figures regenerated. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Define pooled versus weekly aggregation and uncertainty limits.
 
 > Figure 1 lists "MAE, RMSE (Mean ± Std)" as part of the evaluation protocol, but Tables 2 and 3 report only the mean MAE/RMSE, with no accompanying measure of dispersion across the 23 weekly windows. Given that week-level MAE varies considerably for every model, please report the standard deviation or interquartile range of the weekly errors alongside each mean, so that comparisons between models — such as the corrected SARIMAX vs. Prophet result in Table 3 — can be assessed against this variability rather than as single point estimates. A paired comparison across the matched weekly windows would also help support the model ranking.
 
@@ -223,6 +241,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R1.9
 
+**Corrected evidence update (1 October 2026): Writing pending.** Experimental package supports a shorter focused narrative. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Condense literature and remove repetitive claims.
+
 > Manuscript length and density. At its current length, the manuscript is considerably longer than the journal's suggested format, and this affects readability. The Related Work section in particular could be shortened substantially without losing its core message. Similarly, the Discussion, Limitations and Conclusion sections partly repeat the same points and could be consolidated into fewer, more tightly written paragraphs.
 
 - **Type / phase:** Writing; 4–5.
@@ -237,6 +257,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Writing action remains pending; do not mark this reviewer point closed before the manuscript and response are checked.
 
 ### R1.10
+
+**Corrected evidence update (1 October 2026): Evidence ready.** Original-target train/test distributions and high-event subsets are saved. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Add concise descriptive statistics with units and source limitations.
 
 > Descriptive information on the PM2.5 series: Consider adding a brief descriptive summary of the PM2.5 series, including the mean and a clearly defined measure of range or variability, so that readers unfamiliar with Beijing's pollution levels can judge the practical magnitude of the reported MAE/RMSE values.
 
@@ -254,6 +276,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.M1
 
+**Corrected evidence update (1 October 2026): Writing pending.** The information set is retrospective Perfect Prognosis. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Distinguish conditional forecasting from deployment.
+
 > Forecasting assumptions and operational relevance
 > Sections 3–4 explicitly assume that the actual future values of NO, NO2, CO, and SO2 are available throughout each 168-hour forecast window. This is a legitimate Perfect Prognosis experiment, but it does not establish performance under realistic operational conditions. The authors should either add an experiment using predictors available at the forecast origin or consistently restrict their claims to the Perfect Prognosis setting. The Abstract and Conclusion currently overstate readiness for real-world deployment.
 
@@ -269,6 +293,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** PP-only route agreed; manuscript/response claim boundaries remain to be written.
 
 ### R2.M2
+
+**Corrected evidence update (1 October 2026): Evidence with provenance limits.** Calendar gaps, invalid-input correction, source bytes and extraction limitations documented. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Disclose API estimates and missing original response/retrieval metadata.
 
 > Dataset provenance and evaluation coverage
 > Please report the geographic coordinates, specific API endpoints, retrieval dates, time zone, exact date boundaries, and total observation counts. Provide the training and test dates, the number of evaluated hours, and the handling of any incomplete final weekly window. Because the target comprises model-based gridded estimates rather than direct station measurements, this distinction and its implications for validation should be emphasized. The approximately 23-week test period also limits conclusions about year-round performance.
@@ -288,6 +314,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.M3
 
+**Corrected evidence update (1 October 2026): Evidence ready.** Original targets retained; train-only input clipping and high-event comparisons repeated. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Correct outlier-processing description and discuss extremes.
+
 > Winsorization and evaluation of pollution extremes
 > Sections 3.1 and 4.1 describe percentile-based clipping, but it is unclear whether the held-out PM2.5 target was also clipped. Please specify which variables and data partitions were transformed. Performance should be reported against the original, unclipped test target, since high pollution concentrations may represent genuine events rather than measurement errors. A sensitivity analysis without winsorization would help establish whether the conclusions depend on suppressing extremes.
 
@@ -305,6 +333,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M4
+
+**Corrected evidence update (1 October 2026): Evidence ready.** Three baselines finalized; both regimes cover matching 23 origins and observed hours. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Disclose baseline information disadvantage and historical filling.
 
 > Benchmark adequacy and fair comparison
 > Include persistence and seasonal-persistence baselines to demonstrate forecasting skill beyond simple reference methods. Claims of competitiveness against more advanced approaches should either be supported by an appropriate additional comparator under the same protocol or narrowed to the three evaluated model families. Furthermore, Table 2 compares SARIMAX over 21 weeks with the other models over 23 weeks. Please provide a common-period comparison for all models and, if possible, complete the SARIMAX evaluation.
@@ -324,6 +354,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.M5
 
+**Corrected evidence update (1 October 2026): Evidence ready.** Training-only validation, preprocessing, episodes, epochs and seed evidence checked. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Document bounded tuning and training choices; avoid optimality claims.
+
 > Model selection and NeuralProphet performance
 > Please justify the SARIMAX orders, Prophet configuration, and NeuralProphet training settings using a time-ordered validation procedure within the training data. The unusually large NeuralProphet errors warrant checks of training convergence, normalization, forecast–target alignment, and the extraction of its 168-step predictions. Report repeated runs with different seeds where relevant. The present results should not be interpreted as demonstrating an inherent weakness of NeuralProphet without these checks.
 
@@ -342,6 +374,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.M6
 
+**Corrected evidence update (1 October 2026): Method ready; writing pending.** Frozen state/context refresh and expanding refits are explicit and audited. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Add pipeline/pseudocode, horizons and causal missing-context policy.
+
 > Frozen-model forecasting protocol
 > Clarify whether “frozen” means fixed parameters only or also a fixed internal model state. For each weekly forecast origin, specify whether SARIMAX incorporates newly observed target values through state updating and whether NeuralProphet receives the latest 168 observed target values. Provide concise pseudocode showing the information available to each model and when residual correction is applied. This distinction is essential for reproducibility and fair comparison.
 
@@ -357,6 +391,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Protocol/experiment evidence is available; manuscript/response wording remains pending.
 
 ### R2.M7
+
+**Corrected evidence update (1 October 2026): Evidence partial; failure disclosed.** Corrected rankings/mRMR and eight controls exist; broad SARIMAX is unavailable. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Explain predefined four gases, future PM10 advantage and failed control; no optimal-subset claim.
 
 > Feature-selection procedure
 > Report the correlation and mutual-information rankings, mRMR configuration, any discretization, and the rule used to select four predictors. The exclusion of PM10 because it is strongly associated with the target requires clearer justification: relevance to the target is not the same as redundancy among predictors. An ablation comparing the selected subset with a broader predictor set and a model without exogenous inputs would clarify the value of feature selection.
@@ -376,6 +412,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.M8
 
+**Corrected evidence update (1 October 2026): Evidence ready.** Correction residuals, alpha alternatives and timing are saved. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: State apply-before-observe/update-after-week mechanics and mixed benefits.
+
 > Residual correction and sensitivity analysis
 > The fixed EWMA smoothing parameter, α = 0.3, requires justification. Please provide a sensitivity analysis or select this parameter using historical validation data only. Comparison with a simple previous-week mean-residual correction would help establish the benefit of exponential smoothing. The authors should also explain why correction improves Prophet and SARIMAX but worsens NeuralProphet, using residual-bias patterns rather than speculation. EWMA correction should be positioned as an established technique applied within this evaluation, unless a distinct methodological innovation is demonstrated.
 
@@ -393,6 +431,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.M9
+
+**Corrected evidence update (1 October 2026): Evidence ready.** All-week variability, matched intervals, hourly/day lead and seed summaries saved. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Present results with coverage, dependence and small-sample qualifications.
 
 > Performance aggregation and uncertainty
 > Sections 3.5–3.6 describe averaging weekly metrics, whereas the tables label them as overall MAE and RMSE. Please distinguish mean weekly RMSE from pooled RMSE across all forecasted hours, as these are not equivalent. Report weekly error distributions and uncertainty around paired performance differences using an approach that respects temporal dependence. Also provide performance by forecast lead time, because an aggregate 168-hour score can conceal deterioration at longer horizons.
@@ -412,6 +452,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.M10
 
+**Corrected evidence update (1 October 2026): Evidence ready.** Fit-specific effects, hourly components, resource attempts and timer boundaries saved. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Show model interpretation; qualify causality, stability and implementation-specific memory.
+
 > Interpretability and computational claims
 > Interpretability is central to the title but is not demonstrated sufficiently through the reported results. Please present relevant model components, regressor effects, or other interpretable outputs and discuss their stability and limitations without treating associations as causal effects. For runtime comparisons, report CPU, system RAM, software versions, actual GPU use, and whether training, preprocessing, and prediction are included. The SARIMAX memory failure should be described as an observation in the specific implementation and environment rather than a general property of the model.
 
@@ -430,6 +472,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.M11
 
+**Corrected evidence update (1 October 2026): Writing/research pending.** No suggested-study citation has been marked accepted solely because requested. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Verify suggested sources and assess substantive relevance in Phase 4B.
+
 > Recent literature and positioning
 > The literature review should more clearly position this work against recent particulate-matter prediction research involving multi-station modelling, advanced temporal learning, attention mechanisms, feature optimization, interpretability, and distributed learning. Where directly relevant, the authors may consider the following suggested studies, or suitable alternatives: 10.1371/journal.pone.0330465, 10.1038/s41598-025-16664-4, 10.1109/ACCESS.2024.3509142, 10.1088/2631-8695/ae2826, and 10.1016/j.rineng.2026.111937.
 > The purpose should be critical positioning, not merely expanding the reference list. Explain what the present comparison contributes regarding adaptation, computational cost, and interpretability, while distinguishing its single-city Perfect Prognosis setting from other forecasting protocols. Numerical results from different datasets should not be presented as directly comparable. These specific citations are optional and should be included only when substantively relevant.
@@ -447,6 +491,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.m1
 
+**Corrected evidence update (1 October 2026): Writing pending.** Final SARIMAX order is (1,0,1) x (1,0,1,24). See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Rewrite equation to match actual multiplicative structure and differencing.
+
 > Revise Equation (4) to accurately represent the implemented seasonal and non-seasonal differencing and multiplicative SARIMAX structure.
 
 - **Type / phase:** Writing + formula verification; 4–5.
@@ -461,6 +507,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Writing action remains pending; do not mark this reviewer point closed before the manuscript and response are checked.
 
 ### R2.m2
+
+**Corrected evidence update (1 October 2026): Writing pending.** Forecasts contain 168 origin-specific leads. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Replace one-step residual terminology.
 
 > Equation (8) describes a “one-step residual,” although the evaluation uses 168-step forecasts. Please correct this terminology.
 
@@ -477,6 +525,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.m3
 
+**Corrected evidence update (1 October 2026): Writing pending.** No separate Kalman bias-correction alternative was implemented. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Remove its unsupported implementation promise.
+
 > Remove the statement that Kalman-filter implementation details are provided unless this alternative is actually described and evaluated.
 
 - **Type / phase:** Writing; 4–5.
@@ -491,6 +541,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Writing action remains pending; do not mark this reviewer point closed before the manuscript and response are checked.
 
 ### R2.m4
+
+**Corrected evidence update (1 October 2026): Evidence ready.** All-week chronology/distribution and both-regime figure pairs generated. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Select figures and label regime, seed, coverage and units.
 
 > Supplement the best- and worst-week figures with a summary covering all evaluation weeks; these selected examples alone do not establish stability.
 
@@ -509,6 +561,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### R2.m5
 
+**Corrected evidence update (1 October 2026): Evidence ready.** Differences derive from full-precision revised forecasts. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Replace old rounding claims and use consistent displayed precision.
+
 > Reconcile the reported Prophet MAE reduction of 7.93 with the displayed values, 45.61 − 37.67 = 7.94, or explain rounding from unrounded results.
 
 - **Type / phase:** Generated arithmetic + writing; 3–5.
@@ -525,6 +579,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Limitations or deviation:** Phase 3 analysis is available; manuscript/response wording and final claim limits remain pending.
 
 ### R2.m6
+
+**Corrected evidence update (1 October 2026): Reproduction/release pending.** Versioned code, saved forecasts, seeds, dependencies, notebook and analysis command exist. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Complete clean-environment reproduction, redistribution review and versioned release.
 
 > Provide a versioned code release, dependency specifications, seeds, data-processing instructions, and scripts reproducing each table and figure.
 
@@ -544,6 +600,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### E1
 
+**Corrected evidence update (1 October 2026): Writing pending.** Verified corrected numbers and a restrained fresh review are available. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Align every manuscript claim with corrected evidence and limits.
+
 > Please ensure the results are accurately reported, any overstated conclusions are rewritten and the limitations of the work fully explained.
 
 - **Type / phase:** Evidence-based writing and consistency audit; 3–5.
@@ -554,6 +612,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Manuscript location:** Pending.
 
 ### E2
+
+**Corrected evidence update (1 October 2026): Response pending.** All 27 reviewer points remain individually tracked. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Write and verify every response; add final page/line references.
 
 > Revise the manuscript thoroughly, addressing each reviewer comment.
 
@@ -566,6 +626,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### E3
 
+**Corrected evidence update (1 October 2026): Writing pending.** No manuscript copy has yet been made. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Edit clarity, structure and language after author decision.
+
 > Improve clarity, structure, and language where necessary.
 
 - **Type / phase:** Writing; 4–5.
@@ -575,6 +637,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 
 ### E4
 
+**Corrected evidence update (1 October 2026): Release pending.** Local versioned checkpoints exist; DOI publication is outstanding. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Create reviewed DOI-linked code release and availability statement.
+
 > Please note that if your manuscript uses any custom or bespoke computational tool or code, or reports a new algorithm, tool, software, or a pipeline (even if individual components are not new), the underlying code must be deposited in a recognised DOI-assigning repository (e.g. zenodo) and linked either from Methods or a dedicated Code Availability section.
 
 - **Type / phase:** Versioned DOI release; 4–5.
@@ -583,6 +647,8 @@ Workflow: Planned → In progress → Evidence ready → Manuscript updated → 
 - **Changes performed / evidence / manuscript location:** Pending.
 
 ### E5
+
+**Corrected evidence update (1 October 2026): Submission pending.** Manuscript/response PDFs are not yet prepared; deadline is October 6. See corrected/reports/REVIEWER_EVIDENCE.md. Remaining: Check final PDFs and supplementary material; submission remains an author action.
 
 > When your revision is ready, please submit the updated manuscript and a point-by-point response.
 

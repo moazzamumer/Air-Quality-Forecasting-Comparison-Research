@@ -1,0 +1,52 @@
+training optimizer iteration 10
+training optimizer iteration 20
+training optimizer iteration 30
+training optimizer iteration 40
+training optimizer iteration 50
+training optimizer iteration 60
+training optimizer iteration 70
+training optimizer iteration 80
+training optimizer iteration 90
+training optimizer iteration 100
+training optimizer iteration 110
+training optimizer iteration 120
+training optimizer iteration 130
+training optimizer iteration 140
+training optimizer iteration 150
+training optimizer iteration 160
+training optimizer iteration 170
+training optimizer iteration 180
+training optimizer iteration 190
+training optimizer iteration 200
+training optimizer iteration 210
+training optimizer iteration 220
+training optimizer iteration 230
+training optimizer iteration 240
+training optimizer iteration 250
+training optimizer iteration 260
+training optimizer iteration 270
+training optimizer iteration 280
+training optimizer iteration 290
+training optimizer iteration 300
+training optimizer iteration 310
+training optimizer iteration 320
+training optimizer iteration 330
+training optimizer iteration 340
+training optimizer iteration 350
+training optimizer iteration 360
+training optimizer iteration 370
+training optimizer iteration 380
+training optimizer iteration 390
+training optimizer iteration 400
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/broad_sarimax_recovery.py", line 123, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/broad_sarimax_recovery.py", line 98, in main
+    verify_metadata(meta)
+  File "/home/moazzam/Documents/Windows/VS Code/Python/Research/Weather Forecasting - Experiments/revision/corrected/code/broad_sarimax_recovery.py", line 38, in verify_metadata
+    assert opt['converged'] and opt['iterations']<=policy['maxiter']
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

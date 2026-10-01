@@ -49,6 +49,7 @@ def write_report(metrics, paired, alpha, high, high_week, descriptive,
     assert no_correction.maximum_prediction_difference.max() < 1e-8
     lines = [
         '# Corrected-input Phase 3 analysis','',
+        '**Campaign status: 128 successful tasks, one declared failed broad-input SARIMAX control. All 120 main experiment tasks succeeded. The failed control exhausted both bounded solver attempts; its nonconverged estimates are preserved, and no forecasts or performance claims from that control enter these tables.**','',
         'Generated from the verified pollutant-invalid-input-v2 run streams. All model settings were selected on corrected training-only validation. This is retrospective Perfect Prognosis evaluation, with actual future gas inputs supplied to each core model. The source PM2.5 targets, 23 weekly origins, 3,624 scored hours and common mask are unchanged.','',
         '## Main results','',table(main[['stream','hours','pooled_mae','pooled_rmse','mean_weekly_mae','weekly_mae_sd']]),'',
         'Pooled errors weight scored hours equally; weekly means weight the 23 calendar origins equally. Four weeks have partial target coverage. A table value alone does not establish a universal ordering.','',
@@ -83,4 +84,4 @@ def write_report(metrics, paired, alpha, high, high_week, descriptive,
         'Input invalid codes have been marked missing only in the versioned working calendar. Historical inference filling, including a 120-hour gap, remains an assumption; its reconstruction errors are documented. Baselines lack future gases. The source series comprises API-derived estimates rather than independently authenticated station readings, and original API response archives are unavailable. The test period was examined during the earlier study and revision, so these results are a transparent revised retrospective analysis rather than a previously untouched confirmatory evaluation. The short test season cannot establish year-round or geographic generalization.','',
         'These results are evidence for author review. Manuscript wording and the point-by-point response remain separate tasks.',''
     ]
-    (REVISION/'reports/PHASE3_RESULTS.md').write_text('\n'.join(lines)+'\n')
+    (REVISION/'reports/PHASE3_RESULTS.md').write_text('\n'.join(lines).rstrip()+'\n')

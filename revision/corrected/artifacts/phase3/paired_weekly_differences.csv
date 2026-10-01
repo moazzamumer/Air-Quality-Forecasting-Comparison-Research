@@ -1,0 +1,254 @@
+contrast,window,difference
+sarimax: EWMA 0.3 − base,1,0.0
+sarimax: EWMA 0.3 − base,2,-3.043161497767951
+sarimax: EWMA 0.3 − base,3,2.8577054700142615
+sarimax: EWMA 0.3 − base,4,-3.6035383054768264
+sarimax: EWMA 0.3 − base,5,-2.076949656174712
+sarimax: EWMA 0.3 − base,6,2.8789549514793364
+sarimax: EWMA 0.3 − base,7,-3.5624379924244067
+sarimax: EWMA 0.3 − base,8,3.353192312907076
+sarimax: EWMA 0.3 − base,9,6.50870320118311
+sarimax: EWMA 0.3 − base,10,10.783002373557608
+sarimax: EWMA 0.3 − base,11,7.404859363377213
+sarimax: EWMA 0.3 − base,12,-1.645678342883052
+sarimax: EWMA 0.3 − base,13,-7.890408933917154
+sarimax: EWMA 0.3 − base,14,-10.105339383805635
+sarimax: EWMA 0.3 − base,15,-1.4932357957545825
+sarimax: EWMA 0.3 − base,16,-1.2255336068778568
+sarimax: EWMA 0.3 − base,17,-4.0582498513996015
+sarimax: EWMA 0.3 − base,18,-8.599314425092608
+sarimax: EWMA 0.3 − base,19,-0.07669514409771949
+sarimax: EWMA 0.3 − base,20,-13.395269268865189
+sarimax: EWMA 0.3 − base,21,-0.7178963590714034
+sarimax: EWMA 0.3 − base,22,5.7831283285451285
+sarimax: EWMA 0.3 − base,23,10.60902261469571
+prophet: EWMA 0.3 − base,1,0.0
+prophet: EWMA 0.3 − base,2,-1.242515361804685
+prophet: EWMA 0.3 − base,3,-0.9073555555740356
+prophet: EWMA 0.3 − base,4,1.554330929134938
+prophet: EWMA 0.3 − base,5,-0.30318428095390715
+prophet: EWMA 0.3 − base,6,-5.1968854561212225
+prophet: EWMA 0.3 − base,7,-1.0573258412300675
+prophet: EWMA 0.3 − base,8,-7.17018490831655
+prophet: EWMA 0.3 − base,9,-4.815474669132968
+prophet: EWMA 0.3 − base,10,-13.145437366003165
+prophet: EWMA 0.3 − base,11,-14.898185681696411
+prophet: EWMA 0.3 − base,12,-1.1643168064906604
+prophet: EWMA 0.3 − base,13,12.972421057656852
+prophet: EWMA 0.3 − base,14,5.002746726545141
+prophet: EWMA 0.3 − base,15,2.9805647763760845
+prophet: EWMA 0.3 − base,16,-3.9546582402844557
+prophet: EWMA 0.3 − base,17,-8.77453374238798
+prophet: EWMA 0.3 − base,18,-15.351217501125646
+prophet: EWMA 0.3 − base,19,-9.468200829763468
+prophet: EWMA 0.3 − base,20,-42.87042837103445
+prophet: EWMA 0.3 − base,21,-28.230352793934202
+prophet: EWMA 0.3 − base,22,-19.544330370411696
+prophet: EWMA 0.3 − base,23,14.516553310229966
+neuralprophet: EWMA 0.3 − base,1,0.0
+neuralprophet: EWMA 0.3 − base,2,-0.08928181502222543
+neuralprophet: EWMA 0.3 − base,3,-0.06504209162319796
+neuralprophet: EWMA 0.3 − base,4,0.8390705810458137
+neuralprophet: EWMA 0.3 − base,5,-0.036784860237744965
+neuralprophet: EWMA 0.3 − base,6,0.007087925376364268
+neuralprophet: EWMA 0.3 − base,7,1.0391029489315287
+neuralprophet: EWMA 0.3 − base,8,0.9190046046291798
+neuralprophet: EWMA 0.3 − base,9,-0.03604661290084721
+neuralprophet: EWMA 0.3 − base,10,-0.4029794577920143
+neuralprophet: EWMA 0.3 − base,11,-2.320173745154122
+neuralprophet: EWMA 0.3 − base,12,-0.015837155269665004
+neuralprophet: EWMA 0.3 − base,13,7.500068699045038
+neuralprophet: EWMA 0.3 − base,14,0.08877646036354747
+neuralprophet: EWMA 0.3 − base,15,-8.322642804262358
+neuralprophet: EWMA 0.3 − base,16,-11.188463114887814
+neuralprophet: EWMA 0.3 − base,17,-17.68881990075507
+neuralprophet: EWMA 0.3 − base,18,-28.00136406447063
+neuralprophet: EWMA 0.3 − base,19,-28.41776858670356
+neuralprophet: EWMA 0.3 − base,20,-42.72064266467425
+neuralprophet: EWMA 0.3 − base,21,-32.766529240746806
+neuralprophet: EWMA 0.3 − base,22,-29.040088619493964
+neuralprophet: EWMA 0.3 − base,23,-22.134717899809235
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,1,-2.1953964907966466
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,2,-21.894626047924852
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,3,-9.631561239526294
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,4,-9.562688158409244
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,5,-4.305849340709312
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,6,-13.682987991668277
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,7,18.159439045759804
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,8,-5.246922595535388
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,9,-6.848238023748209
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,10,-6.269701442444422
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,11,-6.936902350416197
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,12,-13.580810549154911
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,13,-16.736406913467466
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,14,-9.921719526195375
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,15,-16.51436021369793
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,16,-8.490666156881236
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,17,-14.049819208977041
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,18,-13.387234072516009
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,19,-10.479853070206133
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,20,-5.810878828535458
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,21,9.520366270796714
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,22,4.051539658612821
+EWMA(0.3) frozen SARIMAX − EWMA(0.3) frozen Prophet,23,-17.92949187947393
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,1,0.0
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,2,0.32086046780818833
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,3,0.47028519762505994
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,4,-0.2649572373577662
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,5,0.6656776071621806
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,6,1.3344170287144834
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,7,-0.2404537211161255
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,8,1.9813235511878275
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,9,0.6982402080544716
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,10,2.456845617444266
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,11,1.2804801199815898
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,12,-0.09181545146586245
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,13,-4.278957283265093
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,14,-1.9703996394100827
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,15,-4.625186797888325
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,16,-2.06303826185216
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,17,-2.880295427632227
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,18,-1.8797592584369838
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,19,0.35054240386789104
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,20,2.6578414705784823
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,21,1.4463190846418854
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,22,-2.976738095224352
+EWMA(0.3) frozen Prophet − weekly-refit Prophet,23,-14.098198279579677
+sarimax frozen − weekly persistence,1,-287.77706825063706
+sarimax frozen − weekly persistence,2,-264.34240532224163
+sarimax frozen − weekly persistence,3,-370.3582567340386
+sarimax frozen − weekly persistence,4,-194.5643476460536
+sarimax frozen − weekly persistence,5,-333.01877366575377
+sarimax frozen − weekly persistence,6,-260.7452409149896
+sarimax frozen − weekly persistence,7,-207.2709474908816
+sarimax frozen − weekly persistence,8,-157.83338651346537
+sarimax frozen − weekly persistence,9,-230.9535496326731
+sarimax frozen − weekly persistence,10,-127.59897534491861
+sarimax frozen − weekly persistence,11,-76.0323169361484
+sarimax frozen − weekly persistence,12,-46.10890874675841
+sarimax frozen − weekly persistence,13,-37.6739267430676
+sarimax frozen − weekly persistence,14,-0.19676098935519093
+sarimax frozen − weekly persistence,15,-32.247268565649165
+sarimax frozen − weekly persistence,16,-20.987891388021218
+sarimax frozen − weekly persistence,17,-2.8326005844617868
+sarimax frozen − weekly persistence,18,-14.74133447820072
+sarimax frozen − weekly persistence,19,-5.262563637532352
+sarimax frozen − weekly persistence,20,-38.80960509191673
+sarimax frozen − weekly persistence,21,2.6051651339650945
+sarimax frozen − weekly persistence,22,-9.82147951049743
+sarimax frozen − weekly persistence,23,-23.962510906079167
+sarimax walk − weekly persistence,1,-287.77706825063706
+sarimax walk − weekly persistence,2,-264.3501686941379
+sarimax walk − weekly persistence,3,-370.34718722197266
+sarimax walk − weekly persistence,4,-194.5980943994164
+sarimax walk − weekly persistence,5,-333.02589674415356
+sarimax walk − weekly persistence,6,-260.77970278369133
+sarimax walk − weekly persistence,7,-207.42149333944883
+sarimax walk − weekly persistence,8,-157.96620856652908
+sarimax walk − weekly persistence,9,-230.7392188352482
+sarimax walk − weekly persistence,10,-127.43328241091373
+sarimax walk − weekly persistence,11,-75.75237159931365
+sarimax walk − weekly persistence,12,-46.431477589753705
+sarimax walk − weekly persistence,13,-38.058040686268875
+sarimax walk − weekly persistence,14,-0.5486322514926698
+sarimax walk − weekly persistence,15,-32.32212238045786
+sarimax walk − weekly persistence,16,-21.14951003673194
+sarimax walk − weekly persistence,17,-2.9139023125442876
+sarimax walk − weekly persistence,18,-14.81261373205794
+sarimax walk − weekly persistence,19,-5.2447241559589415
+sarimax walk − weekly persistence,20,-39.00559377130585
+sarimax walk − weekly persistence,21,2.4536302585474203
+sarimax walk − weekly persistence,22,-9.881642207429081
+sarimax walk − weekly persistence,23,-23.84257472770733
+prophet frozen − weekly persistence,1,-285.5816717598404
+prophet frozen − weekly persistence,2,-244.24842541028008
+prophet frozen − weekly persistence,3,-356.961634468924
+prophet frozen − weekly persistence,4,-190.1595287222561
+prophet frozen − weekly persistence,5,-330.48668970026523
+prophet frozen − weekly persistence,6,-238.9864125157208
+prophet frozen − weekly persistence,7,-227.93549868783575
+prophet frozen − weekly persistence,8,-142.06308669670636
+prophet frozen − weekly persistence,9,-212.78113373860882
+prophet frozen − weekly persistence,10,-97.40083416291341
+prophet frozen − weekly persistence,11,-46.792369540658584
+prophet frozen − weekly persistence,12,-33.00945973399589
+prophet frozen − weekly persistence,13,-41.80034982117414
+prophet frozen − weekly persistence,14,-5.383127573510592
+prophet frozen − weekly persistence,15,-20.2067089240819
+prophet frozen − weekly persistence,16,-9.768100597733383
+prophet frozen − weekly persistence,17,15.933502515503633
+prophet frozen − weekly persistence,18,5.397802670348327
+prophet frozen − weekly persistence,19,14.608795118339529
+prophet frozen − weekly persistence,20,-3.5235671612120143
+prophet frozen − weekly persistence,21,20.59725529803118
+prophet frozen − weekly persistence,22,11.454439529846574
+prophet frozen − weekly persistence,23,-9.940549722139494
+prophet walk − weekly persistence,1,-285.5816717598404
+prophet walk − weekly persistence,2,-245.81180123989293
+prophet walk − weekly persistence,3,-358.3392752221231
+prophet walk − weekly persistence,4,-188.34024055576342
+prophet walk − weekly persistence,5,-331.45555158838135
+prophet walk − weekly persistence,6,-245.5177150005565
+prophet walk − weekly persistence,7,-228.7523708079497
+prophet walk − weekly persistence,8,-151.21459515621072
+prophet walk − weekly persistence,9,-218.29484861579624
+prophet walk − weekly persistence,10,-113.00311714636085
+prophet walk − weekly persistence,11,-62.971035342336585
+prophet walk − weekly persistence,12,-34.08196108902069
+prophet walk − weekly persistence,13,-24.54897148025219
+prophet walk − weekly persistence,14,1.5900187924446314
+prophet walk − weekly persistence,15,-12.600957349817492
+prophet walk − weekly persistence,16,-11.659720576165679
+prophet walk − weekly persistence,17,10.03926420074788
+prophet walk − weekly persistence,18,-8.073655572340336
+prophet walk − weekly persistence,19,4.79005188470817
+prophet walk − weekly persistence,20,-49.05183700282494
+prophet walk − weekly persistence,21,-9.079416580544908
+prophet walk − weekly persistence,22,-5.11315274534077
+prophet walk − weekly persistence,23,18.67420186767015
+neuralprophet frozen − weekly persistence,1,-288.79270731825204
+neuralprophet frozen − weekly persistence,2,-257.20103263901814
+neuralprophet frozen − weekly persistence,3,-355.71403890711923
+neuralprophet frozen − weekly persistence,4,-192.5128367151864
+neuralprophet frozen − weekly persistence,5,-335.660067555611
+neuralprophet frozen − weekly persistence,6,-248.19235052582764
+neuralprophet frozen − weekly persistence,7,-228.93562804596763
+neuralprophet frozen − weekly persistence,8,-140.07396363490156
+neuralprophet frozen − weekly persistence,9,-222.48274557378556
+neuralprophet frozen − weekly persistence,10,-108.21192639223642
+neuralprophet frozen − weekly persistence,11,-49.43689888372686
+neuralprophet frozen − weekly persistence,12,-31.816601918621195
+neuralprophet frozen − weekly persistence,13,-29.990693353329377
+neuralprophet frozen − weekly persistence,14,3.691338105538378
+neuralprophet frozen − weekly persistence,15,-15.638920705431978
+neuralprophet frozen − weekly persistence,16,3.4625687829156746
+neuralprophet frozen − weekly persistence,17,20.791777079043882
+neuralprophet frozen − weekly persistence,18,15.763621236417038
+neuralprophet frozen − weekly persistence,19,32.59484535532813
+neuralprophet frozen − weekly persistence,20,-0.7228023554503125
+neuralprophet frozen − weekly persistence,21,30.53444721477844
+neuralprophet frozen − weekly persistence,22,22.192907712790714
+neuralprophet frozen − weekly persistence,23,13.011918490902765
+neuralprophet walk − weekly persistence,1,-288.79270731825204
+neuralprophet walk − weekly persistence,2,-257.9862759880745
+neuralprophet walk − weekly persistence,3,-355.920837906618
+neuralprophet walk − weekly persistence,4,-192.94603715023825
+neuralprophet walk − weekly persistence,5,-336.34675222495713
+neuralprophet walk − weekly persistence,6,-246.19013247104158
+neuralprophet walk − weekly persistence,7,-228.429071173947
+neuralprophet walk − weekly persistence,8,-140.8283578983214
+neuralprophet walk − weekly persistence,9,-222.2737382107311
+neuralprophet walk − weekly persistence,10,-107.23706856177441
+neuralprophet walk − weekly persistence,11,-49.97084999733501
+neuralprophet walk − weekly persistence,12,-32.78540188593997
+neuralprophet walk − weekly persistence,13,-30.860238357082245
+neuralprophet walk − weekly persistence,14,2.784750127786836
+neuralprophet walk − weekly persistence,15,-16.21542830868372
+neuralprophet walk − weekly persistence,16,2.44689786027822
+neuralprophet walk − weekly persistence,17,18.095747546134966
+neuralprophet walk − weekly persistence,18,3.3137370015929193
+neuralprophet walk − weekly persistence,19,13.516940808043273
+neuralprophet walk − weekly persistence,20,-31.97089065762097
+neuralprophet walk − weekly persistence,21,0.7526215760711423
+neuralprophet walk − weekly persistence,22,-7.832760648704646
+neuralprophet walk − weekly persistence,23,-15.859459764312898

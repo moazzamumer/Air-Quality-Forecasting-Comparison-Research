@@ -1,5 +1,7 @@
 # Corrected experiment execution checkpoint
 
+**Final update, 1 October 2026:** all 120 main tasks and eight controls completed successfully. Broad-input SARIMAX failed both bounded fits and is explicitly unavailable. Final analyses, six figure pairs, the independent saved-evidence audit and 25 contract tests passed for the accepted evidence. See [the fresh review](PHASE4A_REVIEW.md) and [author decision checkpoint](../AUTHOR_DECISION.md). The snapshot below is the earlier execution checkpoint.
+
 Snapshot on 1 October 2026 (Karachi time), while the complete 129-task campaign is running. This document is not a completion certificate. The timestamp and signed completed-task list are saved in `../artifacts/coverage_reconsideration/execution_checkpoint.json`.
 
 Completed and checked at this checkpoint:

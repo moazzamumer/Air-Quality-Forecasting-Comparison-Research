@@ -35,8 +35,12 @@ def main():
         candidates=[x[1:] for x in validation if x[0]==family]
         assert sorted(candidates)[0][3]==selection['selected'][family]
     mask=grid[['pm2_5']+cfg['broad_features']].notna().all(axis=1)
+    v=json.loads((REVISION/'artifacts/coverage_reconsideration/verification.json').read_text())
+    from .analysis_completion import declared_failure
+    failed_task=declared_failure(v)
     reviewed=[];scalers=0;neural_samples=0;reused=0;recoveries=0
     for task in tasks():
+        if task['id']==failed_task:continue
         folder=REVISION/'artifacts/coverage_reconsideration/runs'/task['id']
         m=json.loads((folder/'metadata.json').read_text());fit=m['fit']
         if m.get('numerical_recovery'):
@@ -82,10 +86,9 @@ def main():
     for _,d in b.groupby('window'):
         origin=pd.Timestamp(d.forecast_origin.iloc[0]);past=grid.loc[grid.index<origin,'pm2_5'].dropna()
         np.testing.assert_allclose(d.base_prediction,past.iloc[-1],rtol=0,atol=1e-10)
-    v=json.loads((REVISION/'artifacts/coverage_reconsideration/verification.json').read_text())
-    assert v['ready'] and v['additional_checks_passed'] and v['complete_tasks']==129
+    assert v['ready_for_analysis_with_declared_failure'] and v['additional_checks_passed'] and v['complete_tasks']==128
     results=pd.read_csv(REVISION/'artifacts/phase3/performance.csv')
-    assert len(results)==27 and results.hours.eq(3624).all()
+    assert len(results)==26 and results.hours.eq(3624).all()
     seed_summary=pd.read_csv(REVISION/'artifacts/phase3/neuralprophet_seed_summary.csv').set_index('regime')
     for regime in ('frozen','walk'):
         names=[f'neuralprophet_{regime}_s{seed}' for seed in (42,123,2026)]
@@ -113,6 +116,7 @@ def main():
                   pre_origin_scalers_checked=scalers,neural_episode_sample_counts_checked=neural_samples,
                   identical_first_origin_reuses_checked=reused,performance_streams=len(results),
                   separately_signed_numerical_recoveries_checked=recoveries,
+                  declared_failed_controls_checked=[failed_task],all_tasks_successful=False,
                   neuralprophet_seed_summary_checked=True,component_hour_weighting_checked=True,
                   reused_forecast_source_cost_checked=True,figure_pairs_checked=6,
                   primary_origins=23,scored_hours=3624,ready_for_author_evidence_review=True)

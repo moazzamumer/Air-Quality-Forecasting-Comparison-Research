@@ -1,0 +1,23 @@
+{
+  "source_sha256": "77e164b3b74cc75adb7293803f69ba090b96ac7eaf1e5ddbd6179be8d95e3e64",
+  "protocol_signature": "cc1a6f6d34887f37052db3fb351fae65d6414e24c5e0e08f0061bf983382cdc7",
+  "validation_signature": "d7337574e73bbd3f69d8ffa161cb9ffab08496e92a7cf73b42e01b8520b3f9fc",
+  "successful_validation_candidates": 7,
+  "corrected_runs_checked": 128,
+  "pre_origin_scalers_checked": 125,
+  "neural_episode_sample_counts_checked": 75,
+  "identical_first_origin_reuses_checked": 5,
+  "performance_streams": 26,
+  "separately_signed_numerical_recoveries_checked": 0,
+  "declared_failed_controls_checked": [
+    "ablate_sarimax_broad"
+  ],
+  "all_tasks_successful": false,
+  "neuralprophet_seed_summary_checked": true,
+  "component_hour_weighting_checked": true,
+  "reused_forecast_source_cost_checked": true,
+  "figure_pairs_checked": 6,
+  "primary_origins": 23,
+  "scored_hours": 3624,
+  "ready_for_author_evidence_review": true
+}
