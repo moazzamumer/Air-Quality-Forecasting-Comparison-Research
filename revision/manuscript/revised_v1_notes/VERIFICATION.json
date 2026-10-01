@@ -12,7 +12,7 @@
   "added_primary_literature_sources": 4,
   "resolved_citations_and_cross_references": true,
   "overfull_boxes": 0,
-  "pdf_pages": 25,
+  "pdf_pages": 26,
   "author_input_placeholders": 2,
   "submission_ready": false,
   "remaining": [
@@ -21,8 +21,13 @@
     "point-by-point response PDF",
     "clean-environment reproduction and final release/submission checks"
   ],
-  "pdf_sha256": "b8e0fccfc267a09951bd1b85f1412bc3ff78c6246ec528cb986dcfe4cac12fd4",
-  "latex_sha256": "90fd9b410a45400d2d85ac0fbe507241a5be05f8a9dfb6c02ea8f4b0fdaa52d3",
+  "pdf_sha256": "e747b01d1580c696ae143444ae62a7a3273c7d33e5fbf26bf9e187e0a3812b31",
+  "latex_sha256": "2b11897a468beb15dce2cea5a8b27291f9f40b3b2a70c3d8597470db228b6f24",
   "warning_scope": "Only journal-template bookmark-level warnings and ordinary underfull typesetting notices remain.",
-  "whitespace_check_scope": "Authored files checked; copied journal class/style and baseline bibliography retain inherited whitespace to preserve the originals."
+  "whitespace_check_scope": "Authored files checked; copied journal class/style and baseline bibliography retain inherited whitespace to preserve the originals.",
+  "author_structural_feedback_applied": true,
+  "results_text_identical_to_initial_v1": true,
+  "all_12_table_contents_identical_to_initial_v1": true,
+  "all_9_figures_unchanged": true,
+  "github_link_restored": true
 }

@@ -103,30 +103,19 @@ Study & Focus & Relation to this study \\
 
 \section{Methodology}\label{sec:methodology}
 
-\rev{We formulate hourly PM\textsubscript{2.5} forecasting as a multistep prediction task with exogenous drivers. At an hourly forecast origin $o_w$, a model predicts $y_{o_w+h-1}$ for leads $h=1,\ldots,168$. The complete hourly calendar is partitioned chronologically into 90\% initial training and 10\% testing. Four weekly validation origins within the training period determine the bounded model settings. Test origins are separated by 168 hours. Figure~\ref{fig:framework} shows the workflow.}
+\rev{We formulate hourly PM\textsubscript{2.5} forecasting as a multistep prediction task with exogenous drivers. At forecast origin $o_w$, a model predicts $y_{o_w+h-1}$ for leads $h=1,\ldots,H$, where $H$ denotes the forecast horizon. Chronological partitioning and validation separate model development from subsequent evaluation. We compare parameter refitting with fixed-parameter forecasting and online residual correction; the specific experimental settings are given in Section~\ref{sec:implementation}.}
 
-\rev{Perfect Prognosis supplies the actual future NO, NO$_2$, CO, and SO$_2$ values over each horizon. Future PM$_{2.5}$ is withheld from prediction and used only for scoring and subsequent updates. This assumption can approximate a setting with highly accurate external gas forecasts, but those forecasts would introduce errors absent here. Without such externally available inputs, the experiment remains an idealized conditional evaluation and cannot establish operational forecast skill.}
-
-\begin{figure}[htbp]
-\centering
-\fcolorbox{yellow}{white}{\includegraphics[width=0.96\linewidth,keepaspectratio]{Fig1.png}}
-\caption{\rev{Revised forecasting workflow. All fitting and preprocessing use history before each origin. Actual future covariates are supplied under Perfect Prognosis; future targets enter only scoring and subsequent updates.}}
-\label{fig:framework}
-\end{figure}
+\rev{Under Perfect Prognosis, future values of the exogenous regressors are treated as known over the forecast horizon. Future PM\textsubscript{2.5} is withheld from prediction and used only for scoring and subsequent updates. This assumption can approximate a setting with highly accurate external predictor forecasts, but those forecasts would introduce errors absent here. Without such externally available inputs, the evaluation remains an idealized conditional comparison and cannot establish operational forecast skill.}
 
 \subsection{Data preprocessing}\label{subsec:preprocessing}
 
-\rev{Pollutant concentrations were assembled through the OpenWeather Air Pollution history API \citep{bibOpenWeather}, and temperature and dew point through the Open-Meteo ERA5 archive endpoint \citep{bibOpenMeteo}. These series are API-derived model or gridded estimates at a requested Beijing coordinate, rather than authenticated observations from an identifiable monitoring station. Pollutants are expressed in \PMunit{} and weather variables in degrees Celsius under provider defaults.}
+\rev{Hourly timestamps are ordered on a regular calendar so that missing intervals retain their temporal meaning. Input validity and missingness are distinguished from high pollutant concentrations, which may represent genuine events. The original target scale is retained for interpretation and evaluation.}
 
-\rev{The source timestamps are sorted and reindexed to an hourly calendar without compressing gaps. Four chemically invalid predictor values of $-9999$ (two NO$_2$, one O$_3$, and one PM$_{10}$) are treated as missing in a working copy; the raw file and every PM$_{2.5}$ value are preserved. Negative temperatures and dew points remain valid. No positive target extremes are removed or clipped in the primary evaluation. A separate sensitivity clips predictors only at training-derived 1st and 99th percentiles.}
-
-\rev{Input standardization uses means and standard deviations from complete predictor rows before the fitting origin. Frozen fits retain their initial scaler; refits recompute it from expanding history. Prophet fits observed complete target--predictor rows. SARIMAX retains missing targets in its state-space likelihood and forward-fills historical exogenous inputs using past values only. NeuralProphet trains on complete contiguous episodes of at least 336 hours, with shared model parameters and global target/time normalization. Its 168-lag/168-lead samples never cross a missing interval. Fitting and scoring targets are never imputed.}
-
-\rev{For inference requiring dense history, missing past values are filled causally from the value 168 hours earlier, recursively where necessary, with the latest preceding value as fallback. NeuralProphet consumes the latest 168-hour context; seasonal-persistence references also use this filled history. This policy changes computational context only. Missing future inputs receive temporary mean placeholders to construct a forecast, but unavailable-input hours are masked from saved predictions and scoring. Perturbing those placeholders to 10 standardized units leaves every scored prediction unchanged in the implemented models.}
+\rev{To avoid information leakage, transformations are estimated using data available before each fitting origin. Standardization expresses predictors relative to historical means and standard deviations. Missing-data handling must respect temporal order and distinguish fitting labels, inference history, and scoring targets; the model-specific policies are described in the implementation.}
 
 \subsection{\texorpdfstring{\rev{Predictor analysis}}{Predictor analysis}}\label{subsec:feature_selection}
 
-\rev{Pearson correlation and mutual information describe candidate associations on complete initial-training rows only. For continuous variables, the definitions are}
+\rev{Pearson correlation and mutual information describe linear and potentially nonlinear associations between candidate predictors and PM\textsubscript{2.5}, using training data only. For continuous variables, their definitions are}
 
 \begin{equation}
 \revmath{\rho_{X,Y}=\frac{\mathrm{Cov}(X,Y)}{\sigma_X\sigma_Y}}
@@ -138,50 +127,48 @@ Study & Focus & Relation to this study \\
 \label{eq:mi}
 \end{equation}
 
-\rev{Continuous MI is estimated with scikit-learn's nearest-neighbor estimator using seed 42. Descriptive mRMR uses the MIQ relevance-to-redundancy criterion after training-only quintile discretization, removing duplicate bin edges. At each selection step, candidate relevance $I(X_j;Y)$ is divided by its average mutual information with the already selected predictors; the initial step uses relevance alone. Five predictors are requested. These analyses describe associations, not causality.}
-
-\rev{The primary four-gas set $\{\mathrm{NO},\mathrm{NO}_2,\mathrm{CO},\mathrm{SO}_2\}$ is retained as a predefined subset to build on the original experiment. It is not claimed to be the optimal mRMR output. A broader nine-predictor set adds O$_3$, NH$_3$, temperature, dew point, and PM$_{10}$; no-input controls remove all exogenous variables. All frozen controls retain the selected model settings, so they assess input changes rather than separately tuned competitors.}
+\rev{Minimum redundancy--maximum relevance (mRMR) balances association with the target against dependence among selected predictors. In the relevance-to-redundancy quotient formulation (MIQ), candidate relevance $I(X_j;Y)$ is divided by its average mutual information with already selected predictors; the initial step uses relevance alone. These analyses describe associations, not causal effects. Strong target association indicates relevance and does not by itself establish redundancy among predictors.}
 
 \subsection{Forecasting models}\label{subsec:models}
 
-\rev{We benchmark a classical state-space regression model (SARIMAX), a decomposable additive model (Facebook Prophet), and its autoregressive neural extension (NeuralProphet). Each produces 168 hourly leads on the same calendar under Perfect Prognosis.}
+\rev{We benchmark a classical state-space regression model (SARIMAX), a decomposable additive model (Facebook Prophet), and its autoregressive neural extension (NeuralProphet). Each supports multistep forecasting with external drivers under Perfect Prognosis.}
 
 \subsubsection{SARIMAX}
 
-\rev{The selected SARIMAX specification has order $(1,0,1)$ and seasonal order $(1,0,1,24)$. For standardized predictor vector $x_t$, regression residual $u_t=y_t-\beta^{\mathsf T}x_t$, and lag operator $B$, its multiplicative form is}
+\rev{SARIMAX combines a regression on exogenous predictors with seasonal and nonseasonal temporal dependence. For predictor vector $x_t$, regression residual $u_t=y_t-\beta^{\mathsf T}x_t$, and lag operator $B$, a general multiplicative form is}
 
 \begin{equation}
-\revmath{(1-\phi B)(1-\Phi B^{24})u_t=(1+\theta B)(1+\Theta B^{24})\varepsilon_t}
+\revmath{\phi(B)\Phi(B^s)(1-B)^d(1-B^s)^D u_t=c+\theta(B)\Theta(B^s)\varepsilon_t}
 \label{eq:sarimax}
 \end{equation}
 
-\rev{Both differencing orders are zero; no constant is included. The products retain the seasonal/nonseasonal cross terms, unlike a purely additive ARMA expression. The coefficients describe conditional associations given the temporal structure and other inputs.}
+\rev{Here $s$ is the seasonal period, $d$ and $D$ are nonseasonal and seasonal differencing orders, and $c$ is a constant where included. The polynomials $\phi$ and $\Phi$ represent autoregressive terms of orders $p$ and $P$, while $\theta$ and $\Theta$ represent moving-average terms of orders $q$ and $Q$. Their products retain seasonal/nonseasonal cross terms. The regression coefficients describe conditional associations given the temporal structure and other inputs; the selected specification is reported in Section~\ref{subsec:impl_models}.}
 
 \subsubsection{Facebook Prophet (FBP)}
 
-\rev{Prophet represents the forecast using a piecewise-linear trend, Fourier seasonalities, and additive external regressors:}
+\rev{Prophet represents a series through a trend, recurring seasonal patterns, and external-regressor contributions. In the additive formulation,}
 
 \begin{equation}
-\revmath{y_t=g(t)+s_{\mathrm{daily}}(t)+s_{\mathrm{weekly}}(t)+s_{\mathrm{yearly}}(t)+\beta^{\mathsf T}x_t+\varepsilon_t}
+\revmath{y_t=g(t)+s(t)+\beta^{\mathsf T}x_t+\varepsilon_t}
 \label{eq:prophet}
 \end{equation}
 
-\rev{Daily, weekly, and yearly seasonalities and default changepoint handling are retained. Additional regressor standardization is disabled because inputs have already been transformed using training-only statistics.}
+\rev{The trend $g(t)$ can accommodate changepoints, while $s(t)$ represents periodic structure through Fourier terms. External regressors provide additional explanatory components. This decomposition permits inspection of trend, seasonal, and regressor contributions; the seasonalities and transformation choices used here are specified in the implementation.}
 
 \subsubsection{NeuralProphet (NP)}
 
-\rev{The implemented NeuralProphet forecast combines trend, seasonal, autoregressive, and future-regressor components:}
+\rev{NeuralProphet extends decomposable forecasting with learned autoregressive and regressor components. A representation combining trend, seasonality, lagged targets, and future-known inputs is}
 
 \begin{equation}
-\revmath{\hat y_{w,h}=T_{w,h}+S_{w,h}+A_h(y_{o_w-168:o_w-1})+F_h(x_{o_w:o_w+167})}
+\revmath{\hat y_{w,h}=T_{w,h}+S_{w,h}+A_h(y_{o_w-L:o_w-1})+F_h(x_{o_w:o_w+H-1})}
 \label{eq:neuralprophet}
 \end{equation}
 
-\rev{The configuration uses 168 lags and 168 direct forecast leads, daily/weekly/yearly seasonalities, and default linear autoregressive and future-regressor modules. Events, holidays, lagged exogenous regressors, and hidden autoregressive layers are not added. Global normalization is learned from the retained pre-origin training episodes and predictions are returned to the original concentration scale. Finite training losses and exact origin/lead extraction are checked; completing the specified epochs does not prove optimization to a global minimum.}
+\rev{Here $L$ denotes the historical target-context length, $H$ the forecast horizon, and $h$ the forecast lead. The autoregressive contribution $A_h$ summarizes recent target history, while $F_h$ represents future-known regressors. The component parameterization and training configuration determine the flexibility of the model; their specific choices are reported in Section~\ref{subsec:impl_models}.}
 
 \subsection{Adaptive forecasting regimes}\label{subsec:regimes}
 
-\rev{Both regimes use the same forecast origins, selected settings, and scoring hours. They differ in parameter updating; each may use observations revealed before the current origin.}
+\rev{The two regimes differ in parameter updating while sharing forecast origins and evaluation criteria. Each may use observations revealed before the current origin.}
 
 \subsubsection{Regime 1: Weekly walk-forward refit}
 
@@ -192,11 +179,11 @@ Study & Focus & Relation to this study \\
 \label{eq:expanding}
 \end{equation}
 
-\rev{The scaler and model parameters are re-estimated from this expanding history, with the same missing-data policies. Earlier test outcomes may enter subsequent fitting, but the current forecast week's target is unavailable. The first-origin fit and forecast are identical to the corresponding frozen fit and are reused only after exact configuration and signature checks.}
+\rev{Model parameters and preprocessing are re-estimated from this expanding history. Earlier test outcomes may enter subsequent fitting, but the current forecast week's target remains unavailable. This regime incorporates newly revealed data at the cost of repeated parameter estimation.}
 
 \subsubsection{Regime 2: Frozen base model with online residual correction}
 
-\rev{A base model is fitted once on the initial training period. Frozen means fixed fitted parameters and preprocessing, rather than fixed information: SARIMAX filters newly revealed history without refitting, NeuralProphet receives recent 168-hour target context, and Prophet evaluates the actual future dates and covariates. The base multi-step residual for week $w$ and lead $h$ is}
+\rev{A base model is fitted once and retains its parameters and preprocessing during evaluation. Recent observations can still refresh its state or inference context. Adaptation is introduced through a bias applied to its forecast, with the model-specific information handling described in Section~\ref{subsec:impl_regimes}. The base multi-step residual for week $w$ and lead $h$ is}
 
 \begin{equation}
 \revmath{e_{w,h}=y_{o_w+h-1}-\hat y^{\mathrm{base}}_{w,h}}
@@ -215,28 +202,11 @@ Study & Focus & Relation to this study \\
 \label{eq:ewma}
 \end{equation}
 
-\rev{The primary smoothing factor $\alpha=0.3$ is predefined. Sensitivities use 0.1, 0.2, 0.5, 0.7, and 1.0; the latter is the previous-week mean-residual correction. No value is selected from test performance. Four partial weeks update the primary bias using their observed scoring hours. EWMA is an established bias-tracking method applied here, rather than a new algorithm; no separate Kalman bias-correction alternative is evaluated.}
-
-\begin{table}[htbp]
-\caption{\rev{Weekly forecasting sequence and information boundaries.}}
-\label{tab:pseudocode}
-\begingroup\small\setlength{\tabcolsep}{4pt}\rowcolors{1}{yellow}{yellow}
-\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X@{}}
-\toprule
-Step & Operation \\
-\midrule
-1 & At origin $o_w$, isolate history with timestamps earlier than $o_w$ and obtain future covariates under Perfect Prognosis. \\
-2 & Refit parameters/scaler from history (Regime 1), or retain them and refresh state/context (Regime 2). \\
-3 & Produce 168 aligned base predictions; apply $b_w$ for frozen correction before current outcomes are revealed. \\
-4 & After the week, score only shared observed target/covariate hours; retain partial-week coverage counts. \\
-5 & Use base residuals from scored hours to update $b_{w+1}$; make revealed history available at the next origin. \\
-\botrule
-\end{tabularx}\endgroup
-\end{table}
+\rev{The smoothing factor $\alpha$ controls the weight assigned to the latest completed week's residual mean. Larger values respond more strongly to recent bias; $\alpha=1$ gives the previous-week mean-residual correction. EWMA is an established bias-tracking method applied within this comparison.}
 
 \subsection{Rolling evaluation protocol}\label{subsec:evaluation}
 
-\rev{The primary schedule retains all 23 complete calendar weeks (3,864 scheduled hours), including four partially observed weeks. A shared mask requires the original target and all broad-set covariates to be observed, producing 3,624 scored hours for every method. The final 163-hour calendar remainder is reported but excluded from the fixed 168-hour evaluation. A secondary sensitivity uses 16 weeks with fully observed future and prior 168-hour context (2,688 hours); it is not the primary result.}
+\rev{Forecasts are evaluated at consecutive weekly origins using a common observed-hour mask. Incomplete coverage is reported separately, and only original available target values enter scoring. This keeps the evaluated information and timestamps comparable across methods.}
 
 \rev{Pooled hourly MAE and RMSE give each scored hour equal weight:}
 
@@ -245,21 +215,34 @@ Step & Operation \\
 \label{eq:metrics}
 \end{equation}
 
-\rev{Separately, mean weekly MAE and mean weekly RMSE give each of the 23 origins equal weight; their sample standard deviations summarize variation across weeks. Mean weekly RMSE is not pooled RMSE. Results also report lead-hour/day errors and a high-concentration subset above the initial-training 95th percentile. MAPE and SMAPE are omitted because near-zero concentrations make percentage errors unstable.}
+\rev{Separately, mean weekly MAE and mean weekly RMSE give each origin equal weight; their sample standard deviations summarize variation across weeks. Mean weekly RMSE is not pooled RMSE. Lead-specific errors reveal how performance changes over the horizon. MAPE and SMAPE are omitted because near-zero concentrations make percentage errors unstable.}
 
-\rev{Persistence repeats the last genuinely observed target before the origin. Daily and weekly seasonal persistence repeat the preceding 24- or 168-hour history across the horizon, with causal historical filling when needed. These references use no future gases and therefore have an information disadvantage relative to Perfect Prognosis models; their comparison is contextual rather than a claim of equal-input superiority.}
+\rev{Persistence repeats the last observed target before an origin. Seasonal persistence repeats a preceding seasonal pattern across the forecast horizon. Such references use past targets only and therefore have a different information set from models supplied with future covariates under Perfect Prognosis.}
 
 \subsection{Statistical analysis}
 
-\rev{Paired weekly MAE differences use identical origins and scoring masks. Descriptive 95\% intervals are obtained from 2,000 moving-block bootstrap replicates with a primary block length of three weeks and sensitivities of two and four weeks. NeuralProphet paired losses average the three seed-level weekly losses, rather than averaging forecasts. Negative A--B differences favor A. Intervals are not adjusted for multiple comparisons and rely on only 23 dependent weeks; they do not establish broad population-level significance. Seed means and sample standard deviations are reported separately from temporal dispersion.}
-
-\rev{The revised test period had already been examined during the original research and earlier revision analysis. This is therefore a revised retrospective evaluation, rather than a previously untouched confirmatory test. The corrected-input rule, candidate grid, primary scoring coverage, and EWMA factor were specified before inspecting corrected test results.}
+\rev{Paired weekly error differences compare methods on identical origins and scoring masks. Moving-block bootstrap intervals retain contiguous groups of weekly differences to account for temporal dependence. Negative A--B differences favor A. With a short dependent evaluation period, the intervals are descriptive and do not establish broad population-level significance. Variation across repeated training seeds is distinguished from temporal variation across forecast weeks.}
 
 \section{Implementation}\label{sec:implementation}
+
+\begin{figure}[htbp]
+\centering
+\fcolorbox{yellow}{white}{\includegraphics[width=0.96\linewidth,keepaspectratio]{Fig1.png}}
+\caption{\rev{Revised forecasting workflow. All fitting and preprocessing use history before each origin. Actual future covariates are supplied under Perfect Prognosis; future targets enter only scoring and subsequent updates.}}
+\label{fig:framework}
+\end{figure}
 
 \rev{All revised fits used the same local AMD Ryzen 5 5500U system on CPU, with two configured model threads and approximately 14.96 GiB of reported system RAM; no GPU was used. The environment used Python 3.11.2, NumPy 1.26.4, pandas 2.3.1, scikit-learn 1.7.0, statsmodels 0.14.5, Prophet 1.1.7, NeuralProphet 0.9.0, and PyTorch 2.6.0. Descriptive mRMR used pymrmr 0.1.11 and figures used matplotlib. Model fitting, analysis, and notebook presentation are separate reproducible stages.}
 
 \subsection{Data assembly and preprocessing}\label{subsec:impl_data}
+
+\rev{Pollutant concentrations were assembled through the OpenWeather Air Pollution history API \citep{bibOpenWeather}, and temperature and dew point through the Open-Meteo ERA5 archive endpoint \citep{bibOpenMeteo}. These series are API-derived model or gridded estimates at a requested Beijing coordinate, rather than authenticated observations from an identifiable monitoring station. Pollutants are expressed in \PMunit{} and weather variables in degrees Celsius under provider defaults.}
+
+\rev{The source timestamps are sorted and reindexed to an hourly calendar without compressing gaps. Four chemically invalid predictor values of $-9999$ (two NO$_2$, one O$_3$, and one PM$_{10}$) are treated as missing in a working copy; the raw file and every PM$_{2.5}$ value are preserved. Negative temperatures and dew points remain valid. No positive target extremes are removed or clipped in the primary evaluation. A separate sensitivity clips predictors only at training-derived 1st and 99th percentiles.}
+
+\rev{Input standardization uses means and standard deviations from complete predictor rows before the fitting origin. Frozen fits retain their initial scaler; refits recompute it from expanding history. Prophet fits observed complete target--predictor rows. SARIMAX retains missing targets in its state-space likelihood and forward-fills historical exogenous inputs using past values only. NeuralProphet trains on complete contiguous episodes of at least 336 hours, with shared model parameters and global target/time normalization. Its 168-lag/168-lead samples never cross a missing interval. Fitting and scoring targets are never imputed.}
+
+\rev{For inference requiring dense history, missing past values are filled causally from the value 168 hours earlier, recursively where necessary, with the latest preceding value as fallback. NeuralProphet consumes the latest 168-hour context; seasonal-persistence references also use this filled history. This policy changes computational context only. Missing future inputs receive temporary mean placeholders to construct a forecast, but unavailable-input hours are masked from saved predictions and scoring. Perturbing those placeholders to 10 standardized units leaves every scored prediction unchanged in the implemented models.}
 
 \rev{The requested coordinate was $(39.906217,116.3912757)$, stored in the CSV as $(39.9062,116.3913)$. The extraction uses the OpenWeather air-pollution history endpoint and Open-Meteo's ERA5 archive endpoint. The source contains 39,523 unique hourly rows from 25 November 2020 01:00 to 29 June 2025 19:00. Reindexing produces 40,267 hours with 744 absent timestamps across 21 intervals. The initial training period ends on 13 January 2025 00:00; testing begins one hour later. Training contains 36,240 calendar hours and 35,736 observed targets; testing contains 4,027 calendar hours and 3,787 observed targets.}
 
@@ -282,6 +265,10 @@ Test & 3787 & 155.34 & 216.57 & 72.02 & 27.68--163.12 & 0.00--1407.51 \\
 \end{table}
 
 \subsection{\texorpdfstring{\rev{Predictor analysis}}{Predictor analysis}}\label{subsec:impl_feature_selection}
+
+\rev{Continuous MI is estimated with scikit-learn's nearest-neighbor estimator using seed 42. Descriptive mRMR uses the MIQ relevance-to-redundancy criterion after training-only quintile discretization, removing duplicate bin edges. At each selection step, candidate relevance $I(X_j;Y)$ is divided by its average mutual information with the already selected predictors; the initial step uses relevance alone. Five predictors are requested. These analyses describe associations, not causality.}
+
+\rev{The primary four-gas set $\{\mathrm{NO},\mathrm{NO}_2,\mathrm{CO},\mathrm{SO}_2\}$ is retained as a predefined subset to build on the original experiment. It is not claimed to be the optimal mRMR output. A broader nine-predictor set adds O$_3$, NH$_3$, temperature, dew point, and PM$_{10}$; no-input controls remove all exogenous variables. All frozen controls retain the selected model settings, so they assess input changes rather than separately tuned competitors.}
 
 \rev{Training-only complete-row analysis uses 35,732 hours. PM$_{10}$ has the largest Pearson correlation and MI with PM$_{2.5}$, followed by CO and NO (Table~\ref{tab:features}; Figs.~\ref{fig:corr_heatmap}--\ref{fig:mi_bar}). MIQ mRMR ranks PM$_{10}$, dew point, NO$_2$, NO, and CO as its first five predictors. This differs from the primary four-gas subset and does not validate that subset as optimal. High target association is relevance, not evidence of redundancy among predictors; the broader-input control examines the consequences of excluding PM$_{10}$ and other candidates.}
 
@@ -322,6 +309,12 @@ PM$_{10}$ & 0.992 & 2.424 & 1 & 1 \\
 
 \subsection{Model configuration}\label{subsec:impl_models}
 
+\rev{For SARIMAX, the selected specification sets $p=q=P=Q=1$, $d=D=0$, $s=24$, and $c=0$ in Eq.~\ref{eq:sarimax}; the multiplicative seasonal/nonseasonal cross terms are retained.}
+
+\rev{Daily, weekly, and yearly seasonalities and default changepoint handling are retained. Additional regressor standardization is disabled because inputs have already been transformed using training-only statistics.}
+
+\rev{The configuration uses 168 lags and 168 direct forecast leads, daily/weekly/yearly seasonalities, and default linear autoregressive and future-regressor modules. Events, holidays, lagged exogenous regressors, and hidden autoregressive layers are not added. Global normalization is learned from the retained pre-origin training episodes and predictions are returned to the original concentration scale. Finite training losses and exact origin/lead extraction are checked; completing the specified epochs does not prove optimization to a global minimum.}
+
 \rev{Time-ordered validation uses four consecutive weekly origins from 16 December 2024 01:00 through 6 January 2025 01:00, all before testing. The screening base fit precedes the first validation origin and produces the subsequent weekly forecasts with frozen parameters and refreshed state/context. The bounded grid contains four SARIMAX combinations with $p=q=P=Q=1$, $d,D\in\{0,1\}$, and period 24; additive/multiplicative Prophet seasonality; and 30/50 NeuralProphet epochs. Candidates are selected by mean weekly MAE, with pooled RMSE as tie-breaker. Seven of eight candidates complete; SARIMAX $(1,0,1)\times(1,1,1,24)$ fails and is excluded. This limited winter validation is not an exhaustive hyperparameter search.}
 
 \begin{table}[htbp]
@@ -343,7 +336,38 @@ NeuralProphet & 168 lags/leads; 50 epochs; batch 128; learning rate 0.001; no ea
 
 \subsection{Adaptive regime implementation}\label{subsec:impl_regimes}
 
+\rev{In the frozen regime, SARIMAX filters newly revealed history without refitting, NeuralProphet receives the latest 168-hour target context, and Prophet evaluates the actual future dates and covariates. Walk-forward refits re-estimate their parameters and scaler using all observed pre-origin history. The first-origin fit and forecast are identical to the corresponding frozen fit and are reused only after exact configuration and signature checks.}
+
+\rev{The primary smoothing factor $\alpha=0.3$ is predefined. Sensitivities use 0.1, 0.2, 0.5, 0.7, and 1.0; the latter is the previous-week mean-residual correction. No value is selected from test performance. Four partial weeks update the primary bias using their observed scoring hours. EWMA is an established bias-tracking method applied here, rather than a new algorithm; no separate Kalman bias-correction alternative is evaluated.}
+
 \rev{Walk-forward refits use all available pre-origin history at each week. Frozen streams retain their initial scaler and parameters while refreshing the model-specific state/context described above. EWMA is applied before outcomes and updated afterwards from base residuals. The common observed-only score mask is identical across models, regimes, seeds, and controls. The strict 16-week sensitivity carries the bias forward across excluded weeks and updates only after eligible weeks, whereas the primary 23-week policy also updates after partially observed weeks.}
+
+\begin{table}[htbp]
+\caption{\rev{Weekly forecasting sequence and information boundaries.}}
+\label{tab:pseudocode}
+\begingroup\small\setlength{\tabcolsep}{4pt}\rowcolors{1}{yellow}{yellow}
+\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X@{}}
+\toprule
+Step & Operation \\
+\midrule
+1 & At origin $o_w$, isolate history with timestamps earlier than $o_w$ and obtain future covariates under Perfect Prognosis. \\
+2 & Refit parameters/scaler from history (Regime 1), or retain them and refresh state/context (Regime 2). \\
+3 & Produce 168 aligned base predictions; apply $b_w$ for frozen correction before current outcomes are revealed. \\
+4 & After the week, score only shared observed target/covariate hours; retain partial-week coverage counts. \\
+5 & Use base residuals from scored hours to update $b_{w+1}$; make revealed history available at the next origin. \\
+\botrule
+\end{tabularx}\endgroup
+\end{table}
+
+\subsection{\texorpdfstring{\rev{Evaluation and statistical settings}}{Evaluation and statistical settings}}\label{subsec:impl_evaluation}
+
+\rev{The complete hourly calendar is split chronologically into 90\% initial training and 10\% testing. Forecast horizon and origin step are both 168 hours.}
+
+\rev{The primary schedule retains all 23 complete calendar weeks (3,864 scheduled hours), including four partially observed weeks. A shared mask requires the original target and all broad-set covariates to be observed, producing 3,624 scored hours for every method. The final 163-hour calendar remainder is reported but excluded from the fixed 168-hour evaluation. A secondary sensitivity uses 16 weeks with fully observed future and prior 168-hour context (2,688 hours); it is not the primary result.}
+
+\rev{Paired weekly MAE differences use identical origins and scoring masks. Descriptive 95\% intervals are obtained from 2,000 moving-block bootstrap replicates with a primary block length of three weeks and sensitivities of two and four weeks. NeuralProphet paired losses average the three seed-level weekly losses, rather than averaging forecasts. Negative A--B differences favor A. Intervals are not adjusted for multiple comparisons and rely on only 23 dependent weeks; they do not establish broad population-level significance. Seed means and sample standard deviations are reported separately from temporal dispersion.}
+
+\rev{The revised test period had already been examined during the original research and earlier revision analysis. This is therefore a revised retrospective evaluation, rather than a previously untouched confirmatory test. The corrected-input rule, candidate grid, primary scoring coverage, and EWMA factor were specified before inspecting corrected test results.}
 
 \section{Results}\label{sec:results}
 
@@ -594,7 +618,7 @@ All authors contributed to developing the study methodology and experimental dir
 
 \bmhead{Code availability}
 
-\rev{[Author input pending: provide the DOI-linked versioned code archive required by the editor.]}
+\rev{The project repository is} \url{https://github.com/moazzamumer/Adaptive-Air-Quality-Forcasting}. \rev{[Author input pending: add the DOI-linked versioned archive required by the editor.]}
 
 \bmhead{Ethics approval}
 
